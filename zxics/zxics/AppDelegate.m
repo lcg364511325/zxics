@@ -25,13 +25,13 @@
     }
     
     //初始化实体
-    self.entityl=[[LoginEntity alloc] init];
+    //self.entityl=[[LoginEntity alloc] init];
     
     //设置ios不锁屏
     //[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     //系统新安装未初始化
-    login * lo = [[login alloc] init];
+    fontindex * lo = [[fontindex alloc] init];
     //Index *lo = [[Index alloc] initWithNibName:@"Index" bundle:nil] ;
     
     UINavigationController * loginNav = [[UINavigationController alloc] initWithRootViewController:lo];

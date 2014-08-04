@@ -10,6 +10,7 @@
 #import "FileHelpers.h"
 #import "LoginEntity.h"
 #import "login.h"
+#import "fontindex.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -50,25 +50,6 @@ NSInteger i=0;
     
     [_submitlogin setTitle:@"" forState:UIControlStateNormal];
     
-//    NSURL *imgUrl=[NSURL URLWithString:[NSString stringWithFormat:@""]];
-//    if (hasCachedImage(imgUrl)) {
-//        [logoshengyu setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
-//    }else
-//    {
-//        [logoshengyu setImage:[UIImage imageNamed:@"logoshengyu"]];
-//        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",logoshengyu,@"imageView",nil];
-//        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
-//        
-//    }
-//    
-    NSString *logopath = [[Tool getTargetFloderPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"logopath.png"]];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:logopath]) {
-        [logoshengyu setImage:[[UIImage alloc] initWithContentsOfFile:logopath]];
-    }
-    else {
-        [logoshengyu setImage:[UIImage imageNamed:@"logoshengyu"]];
-    }
-    
     //设置此输入框可以隐藏键盘
     _account.delegate=self;
     //[_account setKeyboardType:UIKeyboardTypeDecimalPad];
@@ -213,6 +194,13 @@ NSInteger i=0;
     
     UITapGestureRecognizer *tapGestureRecognizer=(UITapGestureRecognizer *)sender;
     [tapGestureRecognizer setEnabled:NO];
+}
+
+-(IBAction)goback:(id)sender
+{
+    fontindex * _fontindex=[[fontindex alloc] init];
+    
+    [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

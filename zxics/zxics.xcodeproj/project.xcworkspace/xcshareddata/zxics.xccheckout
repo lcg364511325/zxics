@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5F2BD42A-3283-4C4C-96F9-0CF6A999F416</string>
+	<key>IDESourceControlProjectName</key>
+	<string>zxics</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F9E1EB28-97C9-45FD-830F-0D76F755893F</key>
+		<string>https://github.com/lcg364511325/zxics.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>zxics/zxics.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F9E1EB28-97C9-45FD-830F-0D76F755893F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lcg364511325/zxics.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F9E1EB28-97C9-45FD-830F-0D76F755893F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F9E1EB28-97C9-45FD-830F-0D76F755893F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zxics</string>
+		</dict>
+	</array>
+</dict>
+</plist>

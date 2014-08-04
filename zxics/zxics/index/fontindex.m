@@ -37,6 +37,7 @@
     functionscroll.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     functionscroll.showsVerticalScrollIndicator=NO;//不显示垂直滑动线
     functionscroll.pagingEnabled=YES;//scrollView不会停在页面之间，即只会显示第一页或者第二页，不会各一半显示
+    functionscroll.delegate=self;
     
     //设置pagecontroller
     functionpage.numberOfPages=2;//设置页数为2
@@ -61,6 +62,13 @@
     SpecialPeople * _SpecialPeople=[[SpecialPeople alloc] init];
     
     [self.navigationController pushViewController:_SpecialPeople animated:NO];
+}
+
+-(IBAction)lifemd:(id)sender
+{
+    lifemd * _lifemd=[[lifemd alloc] init];
+    
+    [self.navigationController pushViewController:_lifemd animated:NO];
 }
 
 //登录页面跳转

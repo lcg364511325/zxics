@@ -161,6 +161,8 @@
 		2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F679198F785B004F2A38 /* UIView+Extension.m */; };
 		2C42F686198F7934004F2A38 /* lifemd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F684198F7934004F2A38 /* lifemd.m */; };
 		2C42F687198F7934004F2A38 /* lifemd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F685198F7934004F2A38 /* lifemd.xib */; };
+		2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */; };
+		2C42F68E198F7A1F004F2A38 /* lifemdcellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */; };
 		7CE63124198C7A8100730C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63123198C7A8100730C64 /* Foundation.framework */; };
 		7CE63126198C7A8100730C64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63125198C7A8100730C64 /* CoreGraphics.framework */; };
 		7CE63128198C7A8100730C64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63127198C7A8100730C64 /* UIKit.framework */; };
@@ -383,6 +385,9 @@
 		2C42F683198F7934004F2A38 /* lifemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemd.h; path = lifemd/lifemd.h; sourceTree = "<group>"; };
 		2C42F684198F7934004F2A38 /* lifemd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemd.m; path = lifemd/lifemd.m; sourceTree = "<group>"; };
 		2C42F685198F7934004F2A38 /* lifemd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemd.xib; path = lifemd/lifemd.xib; sourceTree = "<group>"; };
+		2C42F68A198F7A1F004F2A38 /* lifemdcellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemdcellTableViewCell.h; path = Cell/lifemdcell/lifemdcellTableViewCell.h; sourceTree = "<group>"; };
+		2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemdcellTableViewCell.m; path = Cell/lifemdcell/lifemdcellTableViewCell.m; sourceTree = "<group>"; };
+		2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemdcellTableViewCell.xib; path = Cell/lifemdcell/lifemdcellTableViewCell.xib; sourceTree = "<group>"; };
 		7CE63120198C7A8100730C64 /* zxics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zxics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE63123198C7A8100730C64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CE63125198C7A8100730C64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -540,6 +545,24 @@
 			name = lifemd;
 			sourceTree = "<group>";
 		};
+		2C42F688198F79B4004F2A38 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C42F689198F79C2004F2A38 /* lifemdcell */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2C42F689198F79C2004F2A38 /* lifemdcell */ = {
+			isa = PBXGroup;
+			children = (
+				2C42F68A198F7A1F004F2A38 /* lifemdcellTableViewCell.h */,
+				2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */,
+				2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */,
+			);
+			name = lifemdcell;
+			sourceTree = "<group>";
+		};
 		7CE63117198C7A8100730C64 = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +604,7 @@
 		7CE63129198C7A8100730C64 /* zxics */ = {
 			isa = PBXGroup;
 			children = (
+				2C42F688198F79B4004F2A38 /* Cell */,
 				2C42F682198F790F004F2A38 /* lifemd */,
 				2C42F653198F6C4F004F2A38 /* SpecialPeople */,
 				2C42F639198F20AE004F2A38 /* index */,
@@ -1020,6 +1044,7 @@
 				2C393A13198C8B830045F1F3 /* logo.png in Resources */,
 				7CE6319E198C7C2A00730C64 /* login.xib in Resources */,
 				2C393A3F198C8B830045F1F3 /* t_bg.png in Resources */,
+				2C42F68E198F7A1F004F2A38 /* lifemdcellTableViewCell.xib in Resources */,
 				2C393A1C198C8B830045F1F3 /* my_log.png in Resources */,
 				2C393A46198C8B830045F1F3 /* transpond.png in Resources */,
 				2C393A42198C8B830045F1F3 /* t_man.png in Resources */,
@@ -1151,6 +1176,7 @@
 				7CE63196198C7C2A00730C64 /* WebService.m in Sources */,
 				2C42F667198F6D24004F2A38 /* fontindex.m in Sources */,
 				2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */,
+				2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */,
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,

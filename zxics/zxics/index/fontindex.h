@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SpecialPeople.h"
 #import "login.h"
+#import "lifemd.h"
 
 @interface fontindex : UIViewController<UIScrollViewDelegate>
 

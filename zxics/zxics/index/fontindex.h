@@ -10,6 +10,11 @@
 #import "SpecialPeople.h"
 #import "login.h"
 #import "lifemd.h"
+#import "complainlist.h"
+#import "surveylist.h"
+#import "cplist.h"
+#import "repairlist.h"
+#import "personIndex.h"
 
 @interface fontindex : UIViewController<UIScrollViewDelegate>
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "fontindex.h"
+#import "SpecialPeopleDetail.h"
 
 @interface SpecialPeople : UIViewController
 

@@ -33,7 +33,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     //设置scrollview属性
-    functionscroll.contentSize=CGSizeMake(functionscroll.frame.size.width*2, functionscroll.frame.size.height);
+    functionscroll.contentSize=CGSizeMake(self.view.frame.size.width*2, functionscroll.frame.size.height);
     functionscroll.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     functionscroll.showsVerticalScrollIndicator=NO;//不显示垂直滑动线
     functionscroll.pagingEnabled=YES;//scrollView不会停在页面之间，即只会显示第一页或者第二页，不会各一半显示
@@ -43,7 +43,6 @@
     functionpage.numberOfPages=2;//设置页数为2
     functionpage.currentPage=1;//初始页码为 0
     functionpage.userInteractionEnabled=NO;//pagecontroller不响应点击操作
-    [self scrollViewDidEndDecelerating:functionscroll];
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -64,11 +63,51 @@
     [self.navigationController pushViewController:_SpecialPeople animated:NO];
 }
 
+//生活管家页面跳转
 -(IBAction)lifemd:(id)sender
 {
     lifemd * _lifemd=[[lifemd alloc] init];
     
     [self.navigationController pushViewController:_lifemd animated:NO];
+}
+
+//投诉管理页面跳转
+-(IBAction)complainlist:(id)sender
+{
+    complainlist * _complainlist=[[complainlist alloc] init];
+    
+    [self.navigationController pushViewController:_complainlist animated:NO];
+}
+
+//社区活动，物业通知页面跳转
+-(IBAction)cplist:(id)sender
+{
+    cplist * _cplist=[[cplist alloc] init];
+    
+    [self.navigationController pushViewController:_cplist animated:NO];
+}
+
+//个人管理首页
+-(IBAction)personindex:(id)sender
+{
+    personIndex * _personIndex=[[personIndex alloc] init];
+    
+    [self.navigationController pushViewController:_personIndex animated:NO];
+}
+
+-(IBAction)repairlist:(id)sender
+{
+    repairlist * _repairlist=[[repairlist alloc] init];
+    
+    [self.navigationController pushViewController:_repairlist animated:NO];
+}
+
+//在线调查页面跳转
+-(IBAction)surveylist:(id)sender
+{
+    surveylist * _surveylist=[[surveylist alloc] init];
+    
+    [self.navigationController pushViewController:_surveylist animated:NO];
 }
 
 //登录页面跳转

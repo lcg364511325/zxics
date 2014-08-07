@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "lifemdcellTableViewCell.h"
 #import "MJRefresh.h"
+#import "lifemdDetail.h"
 
 @interface lifemd : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *lifetable;

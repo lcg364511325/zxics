@@ -1,18 +1,18 @@
 //
-//  SpecialPeople.m
+//  cpdetali.m
 //  zxics
 //
-//  Created by johnson on 14-8-4.
+//  Created by johnson on 14-8-5.
 //  Copyright (c) 2014年 moko. All rights reserved.
 //
 
-#import "SpecialPeople.h"
+#import "cpdetali.h"
 
-@interface SpecialPeople ()
+@interface cpdetali ()
 
 @end
 
-@implementation SpecialPeople
+@implementation cpdetali
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,17 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES];
 }
-
-
--(IBAction)goback:(id)sender
-{
-    fontindex * _fontindex=[[fontindex alloc] init];
-    
-    [self.navigationController pushViewController:_fontindex animated:NO];
-}
-
 
 - (void)didReceiveMemoryWarning
 {

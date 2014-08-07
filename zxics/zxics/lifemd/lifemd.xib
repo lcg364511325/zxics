@@ -21,7 +21,11 @@
                     <color key="backgroundColor" red="0.028033638610000002" green="0.01277089878" blue="0.64225924739999996" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
                         <navigationItem title="生活管家" id="FTq-kv-lTj">
-                            <barButtonItem key="leftBarButtonItem" title=" 返回" id="4lp-Mu-zRs"/>
+                            <barButtonItem key="leftBarButtonItem" title=" 返回" id="4lp-Mu-zRs">
+                                <connections>
+                                    <action selector="goback:" destination="-1" id="wCC-Vy-FBJ"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

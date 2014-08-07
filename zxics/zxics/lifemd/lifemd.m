@@ -37,6 +37,11 @@
     }];
 }
 
+-(IBAction)goback:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -44,7 +49,7 @@
     //只有一组，数组数即为行数。
 }
 
-// 购物车数据显示
+// tableview数据显示
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *TableSampleIdentifier = @"lifemdcellTableViewCell";
@@ -63,6 +68,10 @@
 {
     //NSString *rowString = [self.list objectAtIndex:[indexPath row]];
     //Nakeddisplay.hidden=YES;
+    lifemdDetail * _lifemdDetail=[[lifemdDetail alloc] init];
+    
+    [self.navigationController pushViewController:_lifemdDetail animated:NO];
+    
 }
 
 - (void)didReceiveMemoryWarning

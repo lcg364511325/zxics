@@ -10,4 +10,10 @@
 
 @interface lifemdcellTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *businessLable;
+@property (weak, nonatomic) IBOutlet UILabel *orgLabel;
+@property (weak, nonatomic) IBOutlet UILabel *telLabel;
+@property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end

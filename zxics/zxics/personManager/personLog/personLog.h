@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "personlogCellTableViewCell.h"
+#import "personLogDetail.h"
 
 @interface personLog : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @end

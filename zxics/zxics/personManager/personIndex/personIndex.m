@@ -51,6 +51,51 @@
     [self.navigationController pushViewController:_personInfo animated:NO];
 }
 
+
+//个人日志
+-(IBAction)personlog:(id)sender
+{
+    personLog * _personLog=[[personLog alloc] init];
+    
+    [self.navigationController pushViewController:_personLog animated:NO];
+}
+
+//欠费（缴费）查询页面跳转
+-(IBAction)arrearagelist:(id)sender
+{
+    UIButton *btn=(UIButton *)sender;
+    NSInteger btntag=btn.tag;
+    arrearagecheck * _arrearagecheck=[[arrearagecheck alloc] init];
+    _arrearagecheck.btntag=[NSString stringWithFormat:@"%d",btntag];
+    [self.navigationController pushViewController:_arrearagecheck animated:NO];
+}
+
+//消费查询，停车记录页面跳转
+-(IBAction)consumelist:(id)sender
+{
+    UIButton *btn=(UIButton *)sender;
+    NSInteger btntag=btn.tag;
+    consumelist * _consumelist=[[consumelist alloc] init];
+    _consumelist.btntag=[NSString stringWithFormat:@"%d",btntag];
+    [self.navigationController pushViewController:_consumelist animated:NO];
+}
+
+//余额查询
+-(IBAction)balancelist:(id)sender
+{
+    balancelist * _balancelist=[[balancelist alloc] init];
+    
+    [self.navigationController pushViewController:_balancelist animated:NO];
+}
+
+//会员中心页面跳转
+-(IBAction)membercenter:(id)sender
+{
+    membercenter * _membercenter=[[membercenter alloc] init];
+    
+    [self.navigationController pushViewController:_membercenter animated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

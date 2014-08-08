@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "fontindex.h"
 #import "personInfo.h"
+#import "personLog.h"
+#import "arrearagecheck.h"
+#import "consumelist.h"
+#import "balancelist.h"
+#import "membercenter.h"
 
 @interface personIndex : UIViewController
 

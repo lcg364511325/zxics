@@ -33,15 +33,16 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     //设置scrollview属性
-    functionscroll.contentSize=CGSizeMake(self.view.frame.size.width*2, functionscroll.frame.size.height);
+    _secondview.frame=CGRectMake(functionscroll.frame.size.width,               functionscroll.contentOffset.y, 320, 284);
+    [functionscroll addSubview:_secondview];
+    functionscroll.contentSize=CGSizeMake(functionscroll.frame.size.width*2, functionscroll.frame.size.height);
     functionscroll.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     functionscroll.showsVerticalScrollIndicator=NO;//不显示垂直滑动线
     functionscroll.pagingEnabled=YES;//scrollView不会停在页面之间，即只会显示第一页或者第二页，不会各一半显示
-    functionscroll.delegate=self;
     
     //设置pagecontroller
     functionpage.numberOfPages=2;//设置页数为2
-    functionpage.currentPage=1;//初始页码为 0
+    functionpage.currentPage=0;//初始页码为 0
     functionpage.userInteractionEnabled=NO;//pagecontroller不响应点击操作
 }
 

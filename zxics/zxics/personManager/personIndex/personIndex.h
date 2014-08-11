@@ -17,6 +17,7 @@
 #import "communitylist.h"
 #import "changecom.h"
 #import "ViewController.h"
+#import "serviceIndex.h"
 
 @interface personIndex : UIViewController
 

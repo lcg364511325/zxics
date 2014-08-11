@@ -15,6 +15,12 @@
 #import "cplist.h"
 #import "repairlist.h"
 #import "personIndex.h"
+#import "consultlist.h"
+#import "Merchantslist.h"
+#import "questionslist.h"
+#import "rentorshelllist.h"
+#import "prowantedlist.h"
+#import "serviceIndex.h"
 
 @interface fontindex : UIViewController<UIScrollViewDelegate>
 

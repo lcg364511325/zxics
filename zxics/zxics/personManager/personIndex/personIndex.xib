@@ -257,6 +257,9 @@
                     <state key="normal" title="社区商城" image="t_mall.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goodslist:" destination="-1" eventType="touchDown" id="pYs-W8-tFW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-Jy-TqO">
                     <rect key="frame" x="261" y="533" width="20" height="20"/>
@@ -264,6 +267,9 @@
                     <state key="normal" title="服务指南" image="guide.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="frontindex:" destination="-1" eventType="touchDown" id="9dM-ff-d20"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="首页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UW-dA-1O2">
                     <rect key="frame" x="36" y="555" width="20" height="10"/>

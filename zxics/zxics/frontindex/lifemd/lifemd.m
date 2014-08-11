@@ -7,6 +7,8 @@
 //
 
 #import "lifemd.h"
+#import "DataService.h"
+#import "AppDelegate.h"
 
 @interface lifemd ()
 
@@ -30,6 +32,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    //加载数据
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    DataService *ds=[[DataService alloc]init];
+    
     //上拉刷新下拉加载提示
     [lifetable addHeaderWithCallback:^{
         [lifetable reloadData];

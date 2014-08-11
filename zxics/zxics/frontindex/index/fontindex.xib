@@ -272,6 +272,9 @@
                     <state key="normal" title="社区商城" image="t_mall.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goodslist:" destination="-1" eventType="touchDown" id="p9y-d5-sJF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OZZ-dx-iEJ">
                     <rect key="frame" x="261" y="533" width="20" height="20"/>
@@ -279,6 +282,9 @@
                     <state key="normal" title="服务指南" image="guide.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="serviceIndex:" destination="-1" eventType="touchDown" id="VgX-jK-VwY"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HV9-8T-U71">
                     <rect key="frame" x="36" y="555" width="20" height="10"/>
@@ -324,7 +330,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="personindex:" destination="-1" eventType="touchDown" id="Gzh-C7-jzG"/>
+                        <action selector="download:" destination="-1" eventType="touchDown" id="RE3-fb-iXh"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dwc-S1-xCV">
@@ -333,6 +339,9 @@
                     <state key="normal" title="Button" image="consult.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="consultlist:" destination="-1" eventType="touchDown" id="COp-ID-TWu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AnV-d7-zuX">
                     <rect key="frame" x="177" y="19" width="50" height="50"/>
@@ -340,6 +349,9 @@
                     <state key="normal" title="Button" image="seller.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="Merchantslist:" destination="-1" eventType="touchDown" id="FeA-hz-No1"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W2O-hz-6uE">
                     <rect key="frame" x="250" y="19" width="50" height="50"/>
@@ -347,6 +359,9 @@
                     <state key="normal" title="Button" image="problem.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="questionslist:" destination="-1" eventType="touchDown" id="Vom-r9-u2K"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载管理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UEb-LC-s8n">
                     <rect key="frame" x="24" y="72" width="42" height="10"/>
@@ -378,13 +393,19 @@
                     <state key="normal" title="Button" image="hire.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="rentorshelllist:" destination="-1" eventType="touchDown" id="llh-vP-cRa"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iqf-61-61y">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iqf-61-61y">
                     <rect key="frame" x="97" y="90" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button" image="sell.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="rentorshelllist:" destination="-1" eventType="touchDown" id="Dxj-FN-G5O"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fwr-ag-d99">
                     <rect key="frame" x="177" y="90" width="50" height="50"/>
@@ -392,6 +413,9 @@
                     <state key="normal" title="Button" image="rent.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="prowantedlist:" destination="-1" eventType="touchDown" id="EUc-vN-WfO"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物业出租" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l2f-cr-a0n">
                     <rect key="frame" x="24" y="142" width="42" height="10"/>

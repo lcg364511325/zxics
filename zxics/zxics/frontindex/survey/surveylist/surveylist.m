@@ -32,7 +32,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //初始化tableview数据

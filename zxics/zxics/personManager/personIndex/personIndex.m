@@ -7,6 +7,7 @@
 //
 
 #import "personIndex.h"
+#import "goodslist.h"
 
 @interface personIndex ()
 
@@ -43,6 +44,14 @@
     [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
+//首页跳转
+-(IBAction)frontindex:(id)sender
+{
+    serviceIndex * _serviceIndex=[[serviceIndex alloc] init];
+    
+    [self.navigationController pushViewController:_serviceIndex animated:NO];
+}
+
 //个人信息
 -(IBAction)personinfo:(id)sender
 {
@@ -58,6 +67,14 @@
     personLog * _personLog=[[personLog alloc] init];
     
     [self.navigationController pushViewController:_personLog animated:NO];
+}
+
+//社区商城页面跳转
+-(IBAction)goodslist:(id)sender
+{
+    goodslist * _goodslist=[[goodslist alloc] init];
+    
+    [self.navigationController pushViewController:_goodslist animated:NO];
 }
 
 //欠费（缴费）查询页面跳转

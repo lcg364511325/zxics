@@ -7,6 +7,8 @@
 //
 
 #import "fontindex.h"
+#import "download.h"
+#import "goodslist.h"
 
 @interface fontindex ()
 
@@ -111,6 +113,72 @@
     surveylist * _surveylist=[[surveylist alloc] init];
     
     [self.navigationController pushViewController:_surveylist animated:NO];
+}
+
+//下载管理页面跳转
+-(IBAction)download:(id)sender
+{
+    download * _download=[[download alloc] init];
+    
+    [self.navigationController pushViewController:_download animated:NO];
+}
+
+//用户咨询页面跳转
+-(IBAction)consultlist:(id)sender
+{
+    consultlist * _consultlist=[[consultlist alloc] init];
+    
+    [self.navigationController pushViewController:_consultlist animated:NO];
+}
+
+//招商信息页面跳转
+-(IBAction)Merchantslist:(id)sender
+{
+    Merchantslist * _Merchantslist=[[Merchantslist alloc] init];
+    
+    [self.navigationController pushViewController:_Merchantslist animated:NO];
+}
+
+//常见问题页面跳转
+-(IBAction)questionslist:(id)sender
+{
+    questionslist * _questionslist=[[questionslist alloc] init];
+    
+    [self.navigationController pushViewController:_questionslist animated:NO];
+}
+
+//物业出租出售页面跳转
+-(IBAction)rentorshelllist:(id)sender
+{
+    UIButton *btn=(UIButton *)sender;
+    NSInteger btntag=btn.tag;
+    rentorshelllist * _rentorshelllist=[[rentorshelllist alloc] init];
+    _rentorshelllist.btntag=[NSString stringWithFormat:@"%d",btntag];
+    [self.navigationController pushViewController:_rentorshelllist animated:NO];
+}
+
+//求租求购页面跳转
+-(IBAction)prowantedlist:(id)sender
+{
+    prowantedlist * _prowantedlist=[[prowantedlist alloc] init];
+    
+    [self.navigationController pushViewController:_prowantedlist animated:NO];
+}
+
+//服务指南页面跳转
+-(IBAction)serviceIndex:(id)sender
+{
+    serviceIndex * _serviceIndex=[[serviceIndex alloc] init];
+    
+    [self.navigationController pushViewController:_serviceIndex animated:NO];
+}
+
+//社区商城页面跳转
+-(IBAction)goodslist:(id)sender
+{
+    goodslist * _goodslist=[[goodslist alloc] init];
+    
+    [self.navigationController pushViewController:_goodslist animated:NO];
 }
 
 //登录页面跳转

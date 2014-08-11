@@ -9,11 +9,15 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize url;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    
+    //初始化url
+    url=@"http://192.168.1.140:8080/zx_ics/";
     
     //初始化
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

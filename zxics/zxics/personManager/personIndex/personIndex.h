@@ -14,6 +14,9 @@
 #import "consumelist.h"
 #import "balancelist.h"
 #import "membercenter.h"
+#import "communitylist.h"
+#import "changecom.h"
+#import "ViewController.h"
 
 @interface personIndex : UIViewController
 

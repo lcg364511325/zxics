@@ -7,35 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1FE5E31995AB32008DBB58 /* selectaddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E11995AB32008DBB58 /* selectaddress.m */; };
+		2C1FE5E41995AB32008DBB58 /* selectaddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E21995AB32008DBB58 /* selectaddress.xib */; };
+		2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E81995ACA7008DBB58 /* communitylist.m */; };
+		2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E91995ACA7008DBB58 /* communitylist.xib */; };
+		2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EE1995AEB1008DBB58 /* communityCell.m */; };
+		2C1FE5F11995AEB1008DBB58 /* communityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EF1995AEB1008DBB58 /* communityCell.xib */; };
+		2C1FE5F61995B433008DBB58 /* floorlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5F41995B433008DBB58 /* floorlist.m */; };
+		2C1FE5F71995B433008DBB58 /* floorlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5F51995B433008DBB58 /* floorlist.xib */; };
+		2C1FE5FC1995BD86008DBB58 /* changecom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5FA1995BD86008DBB58 /* changecom.m */; };
+		2C1FE5FD1995BD86008DBB58 /* changecom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5FB1995BD86008DBB58 /* changecom.xib */; };
+		2C1FE6031995C077008DBB58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6011995C077008DBB58 /* ViewController.m */; };
+		2C1FE6041995C077008DBB58 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6021995C077008DBB58 /* ViewController.xib */; };
+		2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6081995C221008DBB58 /* VicecardDetail.m */; };
+		2C1FE60B1995C221008DBB58 /* VicecardDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6091995C221008DBB58 /* VicecardDetail.xib */; };
+		2C1FE6101995C568008DBB58 /* Vicecardadd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE60E1995C568008DBB58 /* Vicecardadd.m */; };
+		2C1FE6111995C568008DBB58 /* Vicecardadd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE60F1995C568008DBB58 /* Vicecardadd.xib */; };
+		2C1FE6501995C8AC008DBB58 /* complainAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6161995C8AC008DBB58 /* complainAdd.m */; };
+		2C1FE6511995C8AC008DBB58 /* complainAdd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6171995C8AC008DBB58 /* complainAdd.xib */; };
+		2C1FE6521995C8AC008DBB58 /* complainDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE61A1995C8AC008DBB58 /* complainDetail.m */; };
+		2C1FE6531995C8AC008DBB58 /* complainDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE61B1995C8AC008DBB58 /* complainDetail.xib */; };
+		2C1FE6541995C8AC008DBB58 /* complainlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE61E1995C8AC008DBB58 /* complainlist.m */; };
+		2C1FE6551995C8AC008DBB58 /* complainlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE61F1995C8AC008DBB58 /* complainlist.xib */; };
+		2C1FE6561995C8AC008DBB58 /* cpdetali.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6231995C8AC008DBB58 /* cpdetali.m */; };
+		2C1FE6571995C8AC008DBB58 /* cpdetali.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6241995C8AC008DBB58 /* cpdetali.xib */; };
+		2C1FE6581995C8AC008DBB58 /* cplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6271995C8AC008DBB58 /* cplist.m */; };
+		2C1FE6591995C8AC008DBB58 /* cplist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6281995C8AC008DBB58 /* cplist.xib */; };
+		2C1FE65A1995C8AC008DBB58 /* fontindex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE62B1995C8AC008DBB58 /* fontindex.m */; };
+		2C1FE65B1995C8AC008DBB58 /* fontindex.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE62C1995C8AC008DBB58 /* fontindex.xib */; };
+		2C1FE65C1995C8AC008DBB58 /* lifemd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE62F1995C8AC008DBB58 /* lifemd.m */; };
+		2C1FE65D1995C8AC008DBB58 /* lifemd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6301995C8AC008DBB58 /* lifemd.xib */; };
+		2C1FE65E1995C8AC008DBB58 /* lifemdDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6331995C8AC008DBB58 /* lifemdDetail.m */; };
+		2C1FE65F1995C8AC008DBB58 /* lifemdDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6341995C8AC008DBB58 /* lifemdDetail.xib */; };
+		2C1FE6601995C8AC008DBB58 /* repairadd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6381995C8AC008DBB58 /* repairadd.m */; };
+		2C1FE6611995C8AC008DBB58 /* repairadd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6391995C8AC008DBB58 /* repairadd.xib */; };
+		2C1FE6621995C8AC008DBB58 /* repairlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE63C1995C8AC008DBB58 /* repairlist.m */; };
+		2C1FE6631995C8AC008DBB58 /* repairlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE63D1995C8AC008DBB58 /* repairlist.xib */; };
+		2C1FE6641995C8AC008DBB58 /* SpecialPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6411995C8AC008DBB58 /* SpecialPeople.m */; };
+		2C1FE6651995C8AC008DBB58 /* SpecialPeople.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6421995C8AC008DBB58 /* SpecialPeople.xib */; };
+		2C1FE6661995C8AC008DBB58 /* SpecialPeopleDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6451995C8AC008DBB58 /* SpecialPeopleDetail.m */; };
+		2C1FE6671995C8AC008DBB58 /* SpecialPeopleDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE6461995C8AC008DBB58 /* SpecialPeopleDetail.xib */; };
+		2C1FE6681995C8AC008DBB58 /* specialPeopleIntroduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE6491995C8AC008DBB58 /* specialPeopleIntroduce.m */; };
+		2C1FE6691995C8AC008DBB58 /* specialPeopleIntroduce.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE64A1995C8AC008DBB58 /* specialPeopleIntroduce.xib */; };
+		2C1FE66A1995C8AC008DBB58 /* surveylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE64E1995C8AC008DBB58 /* surveylist.m */; };
+		2C1FE66B1995C8AC008DBB58 /* surveylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE64F1995C8AC008DBB58 /* surveylist.xib */; };
 		2C280676199067B3007838A6 /* SpecialPeopleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C280674199067B3007838A6 /* SpecialPeopleDetailCell.m */; };
 		2C280677199067B3007838A6 /* SpecialPeopleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C280675199067B3007838A6 /* SpecialPeopleDetailCell.xib */; };
-		2C28067D19906E14007838A6 /* lifemdDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28067B19906E14007838A6 /* lifemdDetail.m */; };
-		2C28067E19906E14007838A6 /* lifemdDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C28067C19906E14007838A6 /* lifemdDetail.xib */; };
 		2C28068619907457007838A6 /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28068519907457007838A6 /* myLabel.m */; };
 		2C2806971990AD69007838A6 /* complainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806951990AD69007838A6 /* complainCell.m */; };
 		2C2806981990AD69007838A6 /* complainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806961990AD69007838A6 /* complainCell.xib */; };
-		2C2806A31990B868007838A6 /* complainDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806A11990B868007838A6 /* complainDetail.m */; };
-		2C2806A41990B868007838A6 /* complainDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806A21990B868007838A6 /* complainDetail.xib */; };
-		2C2806A81990B873007838A6 /* complainlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806A61990B873007838A6 /* complainlist.m */; };
-		2C2806A91990B873007838A6 /* complainlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806A71990B873007838A6 /* complainlist.xib */; };
-		2C2806AE1990B904007838A6 /* specialPeopleIntroduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806AC1990B904007838A6 /* specialPeopleIntroduce.m */; };
-		2C2806AF1990B904007838A6 /* specialPeopleIntroduce.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806AD1990B904007838A6 /* specialPeopleIntroduce.xib */; };
-		2C2806B31990B913007838A6 /* SpecialPeopleDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806B11990B913007838A6 /* SpecialPeopleDetail.m */; };
-		2C2806B41990B913007838A6 /* SpecialPeopleDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806B21990B913007838A6 /* SpecialPeopleDetail.xib */; };
-		2C2806CA1990B94B007838A6 /* SpecialPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806C81990B94B007838A6 /* SpecialPeople.m */; };
-		2C2806CB1990B94B007838A6 /* SpecialPeople.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806C91990B94B007838A6 /* SpecialPeople.xib */; };
-		2C2806D01990BA17007838A6 /* complainAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2806CE1990BA17007838A6 /* complainAdd.m */; };
-		2C2806D11990BA17007838A6 /* complainAdd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2806CF1990BA17007838A6 /* complainAdd.xib */; };
-		2C282F0E1990C8E40061F987 /* surveylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F0C1990C8E40061F987 /* surveylist.m */; };
-		2C282F0F1990C8E40061F987 /* surveylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F0D1990C8E40061F987 /* surveylist.xib */; };
 		2C282F141990CABC0061F987 /* surveylistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F121990CABC0061F987 /* surveylistCell.m */; };
 		2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F131990CABC0061F987 /* surveylistCell.xib */; };
-		2C282F1B1990D3ED0061F987 /* cplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F191990D3ED0061F987 /* cplist.m */; };
-		2C282F1C1990D3ED0061F987 /* cplist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F1A1990D3ED0061F987 /* cplist.xib */; };
 		2C282F211990D5AA0061F987 /* cplistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F1F1990D5AA0061F987 /* cplistCell.m */; };
 		2C282F221990D5AA0061F987 /* cplistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F201990D5AA0061F987 /* cplistCell.xib */; };
-		2C282F271990D8F20061F987 /* cpdetali.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F251990D8F20061F987 /* cpdetali.m */; };
-		2C282F281990D8F20061F987 /* cpdetali.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F261990D8F20061F987 /* cpdetali.xib */; };
 		2C3939C1198C8B830045F1F3 /* about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393935198C8B830045F1F3 /* about_us.png */; };
 		2C3939C2198C8B830045F1F3 /* accountactivity_new_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393936198C8B830045F1F3 /* accountactivity_new_dark.png */; };
 		2C3939C3198C8B830045F1F3 /* accountactivity_new_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393937198C8B830045F1F3 /* accountactivity_new_light.png */; };
@@ -176,8 +200,6 @@
 		2C393A4A198C8B830045F1F3 /* women.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939BE198C8B830045F1F3 /* women.png */; };
 		2C393A4B198C8B830045F1F3 /* word.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939BF198C8B830045F1F3 /* word.png */; };
 		2C393A4C198C8B830045F1F3 /* word1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939C0198C8B830045F1F3 /* word1.png */; };
-		2C42F667198F6D24004F2A38 /* fontindex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F665198F6D24004F2A38 /* fontindex.m */; };
-		2C42F668198F6D24004F2A38 /* fontindex.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F666198F6D24004F2A38 /* fontindex.xib */; };
 		2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F66A198F785B004F2A38 /* MJRefresh.bundle */; };
 		2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66D198F785B004F2A38 /* MJRefreshBaseView.m */; };
 		2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66F198F785B004F2A38 /* MJRefreshConst.m */; };
@@ -186,8 +208,6 @@
 		2C42F67F198F785B004F2A38 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F675198F785B004F2A38 /* UIScrollView+Extension.m */; };
 		2C42F680198F785B004F2A38 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F677198F785B004F2A38 /* UIScrollView+MJRefresh.m */; };
 		2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F679198F785B004F2A38 /* UIView+Extension.m */; };
-		2C42F686198F7934004F2A38 /* lifemd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F684198F7934004F2A38 /* lifemd.m */; };
-		2C42F687198F7934004F2A38 /* lifemd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F685198F7934004F2A38 /* lifemd.xib */; };
 		2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */; };
 		2C42F68E198F7A1F004F2A38 /* lifemdcellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */; };
 		2C54048D19932E46003D2BBE /* personLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C54048B19932E46003D2BBE /* personLog.m */; };
@@ -240,12 +260,8 @@
 		2C5757571994D06C00858A7F /* Deliveryaddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5757551994D06C00858A7F /* Deliveryaddress.xib */; };
 		2C57575E1994D3CD00858A7F /* newDeliveryaddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C57575C1994D3CD00858A7F /* newDeliveryaddress.m */; };
 		2C57575F1994D3CD00858A7F /* newDeliveryaddress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C57575D1994D3CD00858A7F /* newDeliveryaddress.xib */; };
-		2C5A23FF1991B7E0003712D5 /* repairlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A23FD1991B7E0003712D5 /* repairlist.m */; };
-		2C5A24001991B7E0003712D5 /* repairlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A23FE1991B7E0003712D5 /* repairlist.xib */; };
 		2C5A240A1991BD98003712D5 /* repairlistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A24081991BD98003712D5 /* repairlistCell.m */; };
 		2C5A240B1991BD98003712D5 /* repairlistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A24091991BD98003712D5 /* repairlistCell.xib */; };
-		2C5A24101991BF0F003712D5 /* repairadd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A240E1991BF0F003712D5 /* repairadd.m */; };
-		2C5A24111991BF0F003712D5 /* repairadd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A240F1991BF0F003712D5 /* repairadd.xib */; };
 		2C5A241F1991D5EF003712D5 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A241E1991D5EF003712D5 /* CustomIOS7AlertView.m */; };
 		2C5A242619921489003712D5 /* personIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A242419921489003712D5 /* personIndex.m */; };
 		2C5A242719921489003712D5 /* personIndex.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242519921489003712D5 /* personIndex.xib */; };
@@ -308,50 +324,86 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1FE5E01995AB32008DBB58 /* selectaddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selectaddress.h; path = "personManager/membercenter /Deliveryaddress/selectaddress/selectaddress.h"; sourceTree = "<group>"; };
+		2C1FE5E11995AB32008DBB58 /* selectaddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = selectaddress.m; path = "personManager/membercenter /Deliveryaddress/selectaddress/selectaddress.m"; sourceTree = "<group>"; };
+		2C1FE5E21995AB32008DBB58 /* selectaddress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = selectaddress.xib; path = "personManager/membercenter /Deliveryaddress/selectaddress/selectaddress.xib"; sourceTree = "<group>"; };
+		2C1FE5E71995ACA7008DBB58 /* communitylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communitylist.h; path = personManager/community/communitylist/communitylist.h; sourceTree = "<group>"; };
+		2C1FE5E81995ACA7008DBB58 /* communitylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communitylist.m; path = personManager/community/communitylist/communitylist.m; sourceTree = "<group>"; };
+		2C1FE5E91995ACA7008DBB58 /* communitylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communitylist.xib; path = personManager/community/communitylist/communitylist.xib; sourceTree = "<group>"; };
+		2C1FE5ED1995AEB1008DBB58 /* communityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communityCell.h; path = Cell/communityCell/communityCell.h; sourceTree = "<group>"; };
+		2C1FE5EE1995AEB1008DBB58 /* communityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communityCell.m; path = Cell/communityCell/communityCell.m; sourceTree = "<group>"; };
+		2C1FE5EF1995AEB1008DBB58 /* communityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communityCell.xib; path = Cell/communityCell/communityCell.xib; sourceTree = "<group>"; };
+		2C1FE5F31995B433008DBB58 /* floorlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = floorlist.h; path = personManager/community/floorlist/floorlist.h; sourceTree = "<group>"; };
+		2C1FE5F41995B433008DBB58 /* floorlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = floorlist.m; path = personManager/community/floorlist/floorlist.m; sourceTree = "<group>"; };
+		2C1FE5F51995B433008DBB58 /* floorlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = floorlist.xib; path = personManager/community/floorlist/floorlist.xib; sourceTree = "<group>"; };
+		2C1FE5F91995BD86008DBB58 /* changecom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = changecom.h; path = personManager/community/changecom/changecom.h; sourceTree = "<group>"; };
+		2C1FE5FA1995BD86008DBB58 /* changecom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = changecom.m; path = personManager/community/changecom/changecom.m; sourceTree = "<group>"; };
+		2C1FE5FB1995BD86008DBB58 /* changecom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = changecom.xib; path = personManager/community/changecom/changecom.xib; sourceTree = "<group>"; };
+		2C1FE6001995C077008DBB58 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = personManager/Vicecard/Vicecardlist/ViewController.h; sourceTree = "<group>"; };
+		2C1FE6011995C077008DBB58 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = personManager/Vicecard/Vicecardlist/ViewController.m; sourceTree = "<group>"; };
+		2C1FE6021995C077008DBB58 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = personManager/Vicecard/Vicecardlist/ViewController.xib; sourceTree = "<group>"; };
+		2C1FE6071995C221008DBB58 /* VicecardDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VicecardDetail.h; path = personManager/Vicecard/VicecardDetail/VicecardDetail.h; sourceTree = "<group>"; };
+		2C1FE6081995C221008DBB58 /* VicecardDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VicecardDetail.m; path = personManager/Vicecard/VicecardDetail/VicecardDetail.m; sourceTree = "<group>"; };
+		2C1FE6091995C221008DBB58 /* VicecardDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VicecardDetail.xib; path = personManager/Vicecard/VicecardDetail/VicecardDetail.xib; sourceTree = "<group>"; };
+		2C1FE60D1995C568008DBB58 /* Vicecardadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vicecardadd.h; path = personManager/Vicecard/Vicecardadd/Vicecardadd.h; sourceTree = "<group>"; };
+		2C1FE60E1995C568008DBB58 /* Vicecardadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vicecardadd.m; path = personManager/Vicecard/Vicecardadd/Vicecardadd.m; sourceTree = "<group>"; };
+		2C1FE60F1995C568008DBB58 /* Vicecardadd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Vicecardadd.xib; path = personManager/Vicecard/Vicecardadd/Vicecardadd.xib; sourceTree = "<group>"; };
+		2C1FE6151995C8AC008DBB58 /* complainAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complainAdd.h; sourceTree = "<group>"; };
+		2C1FE6161995C8AC008DBB58 /* complainAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = complainAdd.m; sourceTree = "<group>"; };
+		2C1FE6171995C8AC008DBB58 /* complainAdd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = complainAdd.xib; sourceTree = "<group>"; };
+		2C1FE6191995C8AC008DBB58 /* complainDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complainDetail.h; sourceTree = "<group>"; };
+		2C1FE61A1995C8AC008DBB58 /* complainDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = complainDetail.m; sourceTree = "<group>"; };
+		2C1FE61B1995C8AC008DBB58 /* complainDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = complainDetail.xib; sourceTree = "<group>"; };
+		2C1FE61D1995C8AC008DBB58 /* complainlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complainlist.h; sourceTree = "<group>"; };
+		2C1FE61E1995C8AC008DBB58 /* complainlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = complainlist.m; sourceTree = "<group>"; };
+		2C1FE61F1995C8AC008DBB58 /* complainlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = complainlist.xib; sourceTree = "<group>"; };
+		2C1FE6221995C8AC008DBB58 /* cpdetali.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpdetali.h; sourceTree = "<group>"; };
+		2C1FE6231995C8AC008DBB58 /* cpdetali.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpdetali.m; sourceTree = "<group>"; };
+		2C1FE6241995C8AC008DBB58 /* cpdetali.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cpdetali.xib; sourceTree = "<group>"; };
+		2C1FE6261995C8AC008DBB58 /* cplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cplist.h; sourceTree = "<group>"; };
+		2C1FE6271995C8AC008DBB58 /* cplist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cplist.m; sourceTree = "<group>"; };
+		2C1FE6281995C8AC008DBB58 /* cplist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cplist.xib; sourceTree = "<group>"; };
+		2C1FE62A1995C8AC008DBB58 /* fontindex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontindex.h; sourceTree = "<group>"; };
+		2C1FE62B1995C8AC008DBB58 /* fontindex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fontindex.m; sourceTree = "<group>"; };
+		2C1FE62C1995C8AC008DBB58 /* fontindex.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fontindex.xib; sourceTree = "<group>"; };
+		2C1FE62E1995C8AC008DBB58 /* lifemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lifemd.h; sourceTree = "<group>"; };
+		2C1FE62F1995C8AC008DBB58 /* lifemd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lifemd.m; sourceTree = "<group>"; };
+		2C1FE6301995C8AC008DBB58 /* lifemd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = lifemd.xib; sourceTree = "<group>"; };
+		2C1FE6321995C8AC008DBB58 /* lifemdDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lifemdDetail.h; sourceTree = "<group>"; };
+		2C1FE6331995C8AC008DBB58 /* lifemdDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lifemdDetail.m; sourceTree = "<group>"; };
+		2C1FE6341995C8AC008DBB58 /* lifemdDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = lifemdDetail.xib; sourceTree = "<group>"; };
+		2C1FE6371995C8AC008DBB58 /* repairadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repairadd.h; sourceTree = "<group>"; };
+		2C1FE6381995C8AC008DBB58 /* repairadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = repairadd.m; sourceTree = "<group>"; };
+		2C1FE6391995C8AC008DBB58 /* repairadd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = repairadd.xib; sourceTree = "<group>"; };
+		2C1FE63B1995C8AC008DBB58 /* repairlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repairlist.h; sourceTree = "<group>"; };
+		2C1FE63C1995C8AC008DBB58 /* repairlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = repairlist.m; sourceTree = "<group>"; };
+		2C1FE63D1995C8AC008DBB58 /* repairlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = repairlist.xib; sourceTree = "<group>"; };
+		2C1FE6401995C8AC008DBB58 /* SpecialPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialPeople.h; sourceTree = "<group>"; };
+		2C1FE6411995C8AC008DBB58 /* SpecialPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPeople.m; sourceTree = "<group>"; };
+		2C1FE6421995C8AC008DBB58 /* SpecialPeople.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialPeople.xib; sourceTree = "<group>"; };
+		2C1FE6441995C8AC008DBB58 /* SpecialPeopleDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialPeopleDetail.h; sourceTree = "<group>"; };
+		2C1FE6451995C8AC008DBB58 /* SpecialPeopleDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPeopleDetail.m; sourceTree = "<group>"; };
+		2C1FE6461995C8AC008DBB58 /* SpecialPeopleDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialPeopleDetail.xib; sourceTree = "<group>"; };
+		2C1FE6481995C8AC008DBB58 /* specialPeopleIntroduce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = specialPeopleIntroduce.h; sourceTree = "<group>"; };
+		2C1FE6491995C8AC008DBB58 /* specialPeopleIntroduce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = specialPeopleIntroduce.m; sourceTree = "<group>"; };
+		2C1FE64A1995C8AC008DBB58 /* specialPeopleIntroduce.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = specialPeopleIntroduce.xib; sourceTree = "<group>"; };
+		2C1FE64D1995C8AC008DBB58 /* surveylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = surveylist.h; sourceTree = "<group>"; };
+		2C1FE64E1995C8AC008DBB58 /* surveylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = surveylist.m; sourceTree = "<group>"; };
+		2C1FE64F1995C8AC008DBB58 /* surveylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = surveylist.xib; sourceTree = "<group>"; };
 		2C280673199067B3007838A6 /* SpecialPeopleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialPeopleDetailCell.h; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.h; sourceTree = "<group>"; };
 		2C280674199067B3007838A6 /* SpecialPeopleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialPeopleDetailCell.m; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.m; sourceTree = "<group>"; };
 		2C280675199067B3007838A6 /* SpecialPeopleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpecialPeopleDetailCell.xib; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.xib; sourceTree = "<group>"; };
-		2C28067A19906E14007838A6 /* lifemdDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemdDetail.h; path = lifemdDetail/lifemdDetail.h; sourceTree = "<group>"; };
-		2C28067B19906E14007838A6 /* lifemdDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemdDetail.m; path = lifemdDetail/lifemdDetail.m; sourceTree = "<group>"; };
-		2C28067C19906E14007838A6 /* lifemdDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemdDetail.xib; path = lifemdDetail/lifemdDetail.xib; sourceTree = "<group>"; };
 		2C28068419907457007838A6 /* myLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myLabel.h; path = myLabel/myLabel.h; sourceTree = "<group>"; };
 		2C28068519907457007838A6 /* myLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myLabel.m; path = myLabel/myLabel.m; sourceTree = "<group>"; };
 		2C2806941990AD69007838A6 /* complainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = complainCell.h; path = Cell/complain/complainCell.h; sourceTree = "<group>"; };
 		2C2806951990AD69007838A6 /* complainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = complainCell.m; path = Cell/complain/complainCell.m; sourceTree = "<group>"; };
 		2C2806961990AD69007838A6 /* complainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = complainCell.xib; path = Cell/complain/complainCell.xib; sourceTree = "<group>"; };
-		2C2806A01990B868007838A6 /* complainDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = complainDetail.h; path = complain/complainDetail/complainDetail.h; sourceTree = "<group>"; };
-		2C2806A11990B868007838A6 /* complainDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = complainDetail.m; path = complain/complainDetail/complainDetail.m; sourceTree = "<group>"; };
-		2C2806A21990B868007838A6 /* complainDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = complainDetail.xib; path = complain/complainDetail/complainDetail.xib; sourceTree = "<group>"; };
-		2C2806A51990B873007838A6 /* complainlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = complainlist.h; path = complain/complainlist/complainlist.h; sourceTree = "<group>"; };
-		2C2806A61990B873007838A6 /* complainlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = complainlist.m; path = complain/complainlist/complainlist.m; sourceTree = "<group>"; };
-		2C2806A71990B873007838A6 /* complainlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = complainlist.xib; path = complain/complainlist/complainlist.xib; sourceTree = "<group>"; };
-		2C2806AB1990B904007838A6 /* specialPeopleIntroduce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = specialPeopleIntroduce.h; path = special/specialPeopleIntroduce/specialPeopleIntroduce.h; sourceTree = "<group>"; };
-		2C2806AC1990B904007838A6 /* specialPeopleIntroduce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = specialPeopleIntroduce.m; path = special/specialPeopleIntroduce/specialPeopleIntroduce.m; sourceTree = "<group>"; };
-		2C2806AD1990B904007838A6 /* specialPeopleIntroduce.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = specialPeopleIntroduce.xib; path = special/specialPeopleIntroduce/specialPeopleIntroduce.xib; sourceTree = "<group>"; };
-		2C2806B01990B913007838A6 /* SpecialPeopleDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialPeopleDetail.h; path = special/SpecialPeopleDetail/SpecialPeopleDetail.h; sourceTree = "<group>"; };
-		2C2806B11990B913007838A6 /* SpecialPeopleDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialPeopleDetail.m; path = special/SpecialPeopleDetail/SpecialPeopleDetail.m; sourceTree = "<group>"; };
-		2C2806B21990B913007838A6 /* SpecialPeopleDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpecialPeopleDetail.xib; path = special/SpecialPeopleDetail/SpecialPeopleDetail.xib; sourceTree = "<group>"; };
-		2C2806C71990B94B007838A6 /* SpecialPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialPeople.h; path = special/SpecialPeople/SpecialPeople.h; sourceTree = "<group>"; };
-		2C2806C81990B94B007838A6 /* SpecialPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialPeople.m; path = special/SpecialPeople/SpecialPeople.m; sourceTree = "<group>"; };
-		2C2806C91990B94B007838A6 /* SpecialPeople.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpecialPeople.xib; path = special/SpecialPeople/SpecialPeople.xib; sourceTree = "<group>"; };
-		2C2806CD1990BA17007838A6 /* complainAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = complainAdd.h; path = complain/complainAdd/complainAdd.h; sourceTree = "<group>"; };
-		2C2806CE1990BA17007838A6 /* complainAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = complainAdd.m; path = complain/complainAdd/complainAdd.m; sourceTree = "<group>"; };
-		2C2806CF1990BA17007838A6 /* complainAdd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = complainAdd.xib; path = complain/complainAdd/complainAdd.xib; sourceTree = "<group>"; };
-		2C282F0B1990C8E40061F987 /* surveylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = surveylist.h; path = survey/surveylist/surveylist.h; sourceTree = "<group>"; };
-		2C282F0C1990C8E40061F987 /* surveylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = surveylist.m; path = survey/surveylist/surveylist.m; sourceTree = "<group>"; };
-		2C282F0D1990C8E40061F987 /* surveylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = surveylist.xib; path = survey/surveylist/surveylist.xib; sourceTree = "<group>"; };
 		2C282F111990CABC0061F987 /* surveylistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = surveylistCell.h; path = Cell/surveylistCell/surveylistCell.h; sourceTree = "<group>"; };
 		2C282F121990CABC0061F987 /* surveylistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = surveylistCell.m; path = Cell/surveylistCell/surveylistCell.m; sourceTree = "<group>"; };
 		2C282F131990CABC0061F987 /* surveylistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = surveylistCell.xib; path = Cell/surveylistCell/surveylistCell.xib; sourceTree = "<group>"; };
-		2C282F181990D3ED0061F987 /* cplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cplist.h; path = compro/cplist/cplist.h; sourceTree = "<group>"; };
-		2C282F191990D3ED0061F987 /* cplist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cplist.m; path = compro/cplist/cplist.m; sourceTree = "<group>"; };
-		2C282F1A1990D3ED0061F987 /* cplist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cplist.xib; path = compro/cplist/cplist.xib; sourceTree = "<group>"; };
 		2C282F1E1990D5AA0061F987 /* cplistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cplistCell.h; path = Cell/cplistCell/cplistCell.h; sourceTree = "<group>"; };
 		2C282F1F1990D5AA0061F987 /* cplistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cplistCell.m; path = Cell/cplistCell/cplistCell.m; sourceTree = "<group>"; };
 		2C282F201990D5AA0061F987 /* cplistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cplistCell.xib; path = Cell/cplistCell/cplistCell.xib; sourceTree = "<group>"; };
-		2C282F241990D8F20061F987 /* cpdetali.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpdetali.h; path = compro/cpdetali/cpdetali.h; sourceTree = "<group>"; };
-		2C282F251990D8F20061F987 /* cpdetali.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cpdetali.m; path = compro/cpdetali/cpdetali.m; sourceTree = "<group>"; };
-		2C282F261990D8F20061F987 /* cpdetali.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cpdetali.xib; path = compro/cpdetali/cpdetali.xib; sourceTree = "<group>"; };
 		2C393935198C8B830045F1F3 /* about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_us.png; path = "../../../../../Downloads/drawable-hdpi/about_us.png"; sourceTree = "<group>"; };
 		2C393936198C8B830045F1F3 /* accountactivity_new_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountactivity_new_dark.png; path = "../../../../../Downloads/drawable-hdpi/accountactivity_new_dark.png"; sourceTree = "<group>"; };
 		2C393937198C8B830045F1F3 /* accountactivity_new_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountactivity_new_light.png; path = "../../../../../Downloads/drawable-hdpi/accountactivity_new_light.png"; sourceTree = "<group>"; };
@@ -492,9 +544,6 @@
 		2C3939BE198C8B830045F1F3 /* women.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = women.png; path = "../../../../../Downloads/drawable-hdpi/women.png"; sourceTree = "<group>"; };
 		2C3939BF198C8B830045F1F3 /* word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = word.png; path = "../../../../../Downloads/drawable-hdpi/word.png"; sourceTree = "<group>"; };
 		2C3939C0198C8B830045F1F3 /* word1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = word1.png; path = "../../../../../Downloads/drawable-hdpi/word1.png"; sourceTree = "<group>"; };
-		2C42F664198F6D24004F2A38 /* fontindex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fontindex.h; path = index/fontindex.h; sourceTree = "<group>"; };
-		2C42F665198F6D24004F2A38 /* fontindex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fontindex.m; path = index/fontindex.m; sourceTree = "<group>"; };
-		2C42F666198F6D24004F2A38 /* fontindex.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = fontindex.xib; path = index/fontindex.xib; sourceTree = "<group>"; };
 		2C42F66A198F785B004F2A38 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		2C42F66B198F785B004F2A38 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		2C42F66C198F785B004F2A38 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -511,9 +560,6 @@
 		2C42F677198F785B004F2A38 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		2C42F678198F785B004F2A38 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		2C42F679198F785B004F2A38 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		2C42F683198F7934004F2A38 /* lifemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemd.h; path = lifemd/lifemd.h; sourceTree = "<group>"; };
-		2C42F684198F7934004F2A38 /* lifemd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemd.m; path = lifemd/lifemd.m; sourceTree = "<group>"; };
-		2C42F685198F7934004F2A38 /* lifemd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemd.xib; path = lifemd/lifemd.xib; sourceTree = "<group>"; };
 		2C42F68A198F7A1F004F2A38 /* lifemdcellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemdcellTableViewCell.h; path = Cell/lifemdcell/lifemdcellTableViewCell.h; sourceTree = "<group>"; };
 		2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemdcellTableViewCell.m; path = Cell/lifemdcell/lifemdcellTableViewCell.m; sourceTree = "<group>"; };
 		2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemdcellTableViewCell.xib; path = Cell/lifemdcell/lifemdcellTableViewCell.xib; sourceTree = "<group>"; };
@@ -592,15 +638,9 @@
 		2C57575B1994D3CD00858A7F /* newDeliveryaddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = newDeliveryaddress.h; path = "personManager/membercenter /Deliveryaddress/newDeliveryaddress/newDeliveryaddress.h"; sourceTree = "<group>"; };
 		2C57575C1994D3CD00858A7F /* newDeliveryaddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = newDeliveryaddress.m; path = "personManager/membercenter /Deliveryaddress/newDeliveryaddress/newDeliveryaddress.m"; sourceTree = "<group>"; };
 		2C57575D1994D3CD00858A7F /* newDeliveryaddress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = newDeliveryaddress.xib; path = "personManager/membercenter /Deliveryaddress/newDeliveryaddress/newDeliveryaddress.xib"; sourceTree = "<group>"; };
-		2C5A23FC1991B7E0003712D5 /* repairlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairlist.h; path = repair/repairlist/repairlist.h; sourceTree = "<group>"; };
-		2C5A23FD1991B7E0003712D5 /* repairlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairlist.m; path = repair/repairlist/repairlist.m; sourceTree = "<group>"; };
-		2C5A23FE1991B7E0003712D5 /* repairlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairlist.xib; path = repair/repairlist/repairlist.xib; sourceTree = "<group>"; };
 		2C5A24071991BD98003712D5 /* repairlistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairlistCell.h; path = Cell/repairlistCell/repairlistCell.h; sourceTree = "<group>"; };
 		2C5A24081991BD98003712D5 /* repairlistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairlistCell.m; path = Cell/repairlistCell/repairlistCell.m; sourceTree = "<group>"; };
 		2C5A24091991BD98003712D5 /* repairlistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairlistCell.xib; path = Cell/repairlistCell/repairlistCell.xib; sourceTree = "<group>"; };
-		2C5A240D1991BF0F003712D5 /* repairadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairadd.h; path = repair/repairadd/repairadd.h; sourceTree = "<group>"; };
-		2C5A240E1991BF0F003712D5 /* repairadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairadd.m; path = repair/repairadd/repairadd.m; sourceTree = "<group>"; };
-		2C5A240F1991BF0F003712D5 /* repairadd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairadd.xib; path = repair/repairadd/repairadd.xib; sourceTree = "<group>"; };
 		2C5A241D1991D5EF003712D5 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		2C5A241E1991D5EF003712D5 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		2C5A242319921489003712D5 /* personIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personIndex.h; path = personManager/personIndex/personIndex.h; sourceTree = "<group>"; };
@@ -712,14 +752,303 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C28066719906625007838A6 /* SpecialPeopleDetail */ = {
+		2C1FE5E51995AC75008DBB58 /* community */ = {
 			isa = PBXGroup;
 			children = (
-				2C2806B01990B913007838A6 /* SpecialPeopleDetail.h */,
-				2C2806B11990B913007838A6 /* SpecialPeopleDetail.m */,
-				2C2806B21990B913007838A6 /* SpecialPeopleDetail.xib */,
+				2C1FE5F81995BD13008DBB58 /* changecom */,
+				2C1FE5F21995B3F4008DBB58 /* floorlist */,
+				2C1FE5E61995AC81008DBB58 /* communitylist */,
 			);
-			name = SpecialPeopleDetail;
+			name = community;
+			sourceTree = "<group>";
+		};
+		2C1FE5E61995AC81008DBB58 /* communitylist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE5E71995ACA7008DBB58 /* communitylist.h */,
+				2C1FE5E81995ACA7008DBB58 /* communitylist.m */,
+				2C1FE5E91995ACA7008DBB58 /* communitylist.xib */,
+			);
+			name = communitylist;
+			sourceTree = "<group>";
+		};
+		2C1FE5EC1995AE88008DBB58 /* communityCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE5ED1995AEB1008DBB58 /* communityCell.h */,
+				2C1FE5EE1995AEB1008DBB58 /* communityCell.m */,
+				2C1FE5EF1995AEB1008DBB58 /* communityCell.xib */,
+			);
+			name = communityCell;
+			sourceTree = "<group>";
+		};
+		2C1FE5F21995B3F4008DBB58 /* floorlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE5F31995B433008DBB58 /* floorlist.h */,
+				2C1FE5F41995B433008DBB58 /* floorlist.m */,
+				2C1FE5F51995B433008DBB58 /* floorlist.xib */,
+			);
+			name = floorlist;
+			sourceTree = "<group>";
+		};
+		2C1FE5F81995BD13008DBB58 /* changecom */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE5F91995BD86008DBB58 /* changecom.h */,
+				2C1FE5FA1995BD86008DBB58 /* changecom.m */,
+				2C1FE5FB1995BD86008DBB58 /* changecom.xib */,
+			);
+			name = changecom;
+			sourceTree = "<group>";
+		};
+		2C1FE5FE1995C05B008DBB58 /* Vicecard */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE60C1995C552008DBB58 /* Vicecardadd */,
+				2C1FE6051995C202008DBB58 /* VicecardDetail */,
+				2C1FE5FF1995C062008DBB58 /* Vicecardlist */,
+			);
+			name = Vicecard;
+			sourceTree = "<group>";
+		};
+		2C1FE5FF1995C062008DBB58 /* Vicecardlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6001995C077008DBB58 /* ViewController.h */,
+				2C1FE6011995C077008DBB58 /* ViewController.m */,
+				2C1FE6021995C077008DBB58 /* ViewController.xib */,
+			);
+			name = Vicecardlist;
+			sourceTree = "<group>";
+		};
+		2C1FE6051995C202008DBB58 /* VicecardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6071995C221008DBB58 /* VicecardDetail.h */,
+				2C1FE6081995C221008DBB58 /* VicecardDetail.m */,
+				2C1FE6091995C221008DBB58 /* VicecardDetail.xib */,
+			);
+			name = VicecardDetail;
+			sourceTree = "<group>";
+		};
+		2C1FE60C1995C552008DBB58 /* Vicecardadd */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE60D1995C568008DBB58 /* Vicecardadd.h */,
+				2C1FE60E1995C568008DBB58 /* Vicecardadd.m */,
+				2C1FE60F1995C568008DBB58 /* Vicecardadd.xib */,
+			);
+			name = Vicecardadd;
+			sourceTree = "<group>";
+		};
+		2C1FE6121995C839008DBB58 /* frontindex */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6131995C8AC008DBB58 /* complain */,
+				2C1FE6201995C8AC008DBB58 /* compro */,
+				2C1FE6291995C8AC008DBB58 /* index */,
+				2C1FE62D1995C8AC008DBB58 /* lifemd */,
+				2C1FE6311995C8AC008DBB58 /* lifemdDetail */,
+				2C1FE6351995C8AC008DBB58 /* repair */,
+				2C1FE63E1995C8AC008DBB58 /* special */,
+				2C1FE64B1995C8AC008DBB58 /* survey */,
+			);
+			name = frontindex;
+			sourceTree = "<group>";
+		};
+		2C1FE6131995C8AC008DBB58 /* complain */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6141995C8AC008DBB58 /* complainAdd */,
+				2C1FE6181995C8AC008DBB58 /* complainDetail */,
+				2C1FE61C1995C8AC008DBB58 /* complainlist */,
+			);
+			name = complain;
+			path = frontindex/complain;
+			sourceTree = "<group>";
+		};
+		2C1FE6141995C8AC008DBB58 /* complainAdd */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6151995C8AC008DBB58 /* complainAdd.h */,
+				2C1FE6161995C8AC008DBB58 /* complainAdd.m */,
+				2C1FE6171995C8AC008DBB58 /* complainAdd.xib */,
+			);
+			path = complainAdd;
+			sourceTree = "<group>";
+		};
+		2C1FE6181995C8AC008DBB58 /* complainDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6191995C8AC008DBB58 /* complainDetail.h */,
+				2C1FE61A1995C8AC008DBB58 /* complainDetail.m */,
+				2C1FE61B1995C8AC008DBB58 /* complainDetail.xib */,
+			);
+			path = complainDetail;
+			sourceTree = "<group>";
+		};
+		2C1FE61C1995C8AC008DBB58 /* complainlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE61D1995C8AC008DBB58 /* complainlist.h */,
+				2C1FE61E1995C8AC008DBB58 /* complainlist.m */,
+				2C1FE61F1995C8AC008DBB58 /* complainlist.xib */,
+			);
+			path = complainlist;
+			sourceTree = "<group>";
+		};
+		2C1FE6201995C8AC008DBB58 /* compro */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6211995C8AC008DBB58 /* cpdetali */,
+				2C1FE6251995C8AC008DBB58 /* cplist */,
+			);
+			name = compro;
+			path = frontindex/compro;
+			sourceTree = "<group>";
+		};
+		2C1FE6211995C8AC008DBB58 /* cpdetali */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6221995C8AC008DBB58 /* cpdetali.h */,
+				2C1FE6231995C8AC008DBB58 /* cpdetali.m */,
+				2C1FE6241995C8AC008DBB58 /* cpdetali.xib */,
+			);
+			path = cpdetali;
+			sourceTree = "<group>";
+		};
+		2C1FE6251995C8AC008DBB58 /* cplist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6261995C8AC008DBB58 /* cplist.h */,
+				2C1FE6271995C8AC008DBB58 /* cplist.m */,
+				2C1FE6281995C8AC008DBB58 /* cplist.xib */,
+			);
+			path = cplist;
+			sourceTree = "<group>";
+		};
+		2C1FE6291995C8AC008DBB58 /* index */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE62A1995C8AC008DBB58 /* fontindex.h */,
+				2C1FE62B1995C8AC008DBB58 /* fontindex.m */,
+				2C1FE62C1995C8AC008DBB58 /* fontindex.xib */,
+			);
+			name = index;
+			path = frontindex/index;
+			sourceTree = "<group>";
+		};
+		2C1FE62D1995C8AC008DBB58 /* lifemd */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE62E1995C8AC008DBB58 /* lifemd.h */,
+				2C1FE62F1995C8AC008DBB58 /* lifemd.m */,
+				2C1FE6301995C8AC008DBB58 /* lifemd.xib */,
+			);
+			name = lifemd;
+			path = frontindex/lifemd;
+			sourceTree = "<group>";
+		};
+		2C1FE6311995C8AC008DBB58 /* lifemdDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6321995C8AC008DBB58 /* lifemdDetail.h */,
+				2C1FE6331995C8AC008DBB58 /* lifemdDetail.m */,
+				2C1FE6341995C8AC008DBB58 /* lifemdDetail.xib */,
+			);
+			name = lifemdDetail;
+			path = frontindex/lifemdDetail;
+			sourceTree = "<group>";
+		};
+		2C1FE6351995C8AC008DBB58 /* repair */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6361995C8AC008DBB58 /* repairadd */,
+				2C1FE63A1995C8AC008DBB58 /* repairlist */,
+			);
+			name = repair;
+			path = frontindex/repair;
+			sourceTree = "<group>";
+		};
+		2C1FE6361995C8AC008DBB58 /* repairadd */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6371995C8AC008DBB58 /* repairadd.h */,
+				2C1FE6381995C8AC008DBB58 /* repairadd.m */,
+				2C1FE6391995C8AC008DBB58 /* repairadd.xib */,
+			);
+			path = repairadd;
+			sourceTree = "<group>";
+		};
+		2C1FE63A1995C8AC008DBB58 /* repairlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE63B1995C8AC008DBB58 /* repairlist.h */,
+				2C1FE63C1995C8AC008DBB58 /* repairlist.m */,
+				2C1FE63D1995C8AC008DBB58 /* repairlist.xib */,
+			);
+			path = repairlist;
+			sourceTree = "<group>";
+		};
+		2C1FE63E1995C8AC008DBB58 /* special */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE63F1995C8AC008DBB58 /* SpecialPeople */,
+				2C1FE6431995C8AC008DBB58 /* SpecialPeopleDetail */,
+				2C1FE6471995C8AC008DBB58 /* specialPeopleIntroduce */,
+			);
+			name = special;
+			path = frontindex/special;
+			sourceTree = "<group>";
+		};
+		2C1FE63F1995C8AC008DBB58 /* SpecialPeople */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6401995C8AC008DBB58 /* SpecialPeople.h */,
+				2C1FE6411995C8AC008DBB58 /* SpecialPeople.m */,
+				2C1FE6421995C8AC008DBB58 /* SpecialPeople.xib */,
+			);
+			path = SpecialPeople;
+			sourceTree = "<group>";
+		};
+		2C1FE6431995C8AC008DBB58 /* SpecialPeopleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6441995C8AC008DBB58 /* SpecialPeopleDetail.h */,
+				2C1FE6451995C8AC008DBB58 /* SpecialPeopleDetail.m */,
+				2C1FE6461995C8AC008DBB58 /* SpecialPeopleDetail.xib */,
+			);
+			path = SpecialPeopleDetail;
+			sourceTree = "<group>";
+		};
+		2C1FE6471995C8AC008DBB58 /* specialPeopleIntroduce */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE6481995C8AC008DBB58 /* specialPeopleIntroduce.h */,
+				2C1FE6491995C8AC008DBB58 /* specialPeopleIntroduce.m */,
+				2C1FE64A1995C8AC008DBB58 /* specialPeopleIntroduce.xib */,
+			);
+			path = specialPeopleIntroduce;
+			sourceTree = "<group>";
+		};
+		2C1FE64B1995C8AC008DBB58 /* survey */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE64C1995C8AC008DBB58 /* surveylist */,
+			);
+			name = survey;
+			path = frontindex/survey;
+			sourceTree = "<group>";
+		};
+		2C1FE64C1995C8AC008DBB58 /* surveylist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FE64D1995C8AC008DBB58 /* surveylist.h */,
+				2C1FE64E1995C8AC008DBB58 /* surveylist.m */,
+				2C1FE64F1995C8AC008DBB58 /* surveylist.xib */,
+			);
+			path = surveylist;
 			sourceTree = "<group>";
 		};
 		2C28067219906783007838A6 /* SpecialPeopleDetailCell */ = {
@@ -732,16 +1061,6 @@
 			name = SpecialPeopleDetailCell;
 			sourceTree = "<group>";
 		};
-		2C28067919906DF2007838A6 /* lifemdDetail */ = {
-			isa = PBXGroup;
-			children = (
-				2C28067A19906E14007838A6 /* lifemdDetail.h */,
-				2C28067B19906E14007838A6 /* lifemdDetail.m */,
-				2C28067C19906E14007838A6 /* lifemdDetail.xib */,
-			);
-			name = lifemdDetail;
-			sourceTree = "<group>";
-		};
 		2C28068319907437007838A6 /* myLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,26 +1068,6 @@
 				2C28068519907457007838A6 /* myLabel.m */,
 			);
 			name = myLabel;
-			sourceTree = "<group>";
-		};
-		2C280687199082C9007838A6 /* specialPeopleIntroduce */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806AB1990B904007838A6 /* specialPeopleIntroduce.h */,
-				2C2806AC1990B904007838A6 /* specialPeopleIntroduce.m */,
-				2C2806AD1990B904007838A6 /* specialPeopleIntroduce.xib */,
-			);
-			name = specialPeopleIntroduce;
-			sourceTree = "<group>";
-		};
-		2C28068D1990AA33007838A6 /* complainlist */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806A51990B873007838A6 /* complainlist.h */,
-				2C2806A61990B873007838A6 /* complainlist.m */,
-				2C2806A71990B873007838A6 /* complainlist.xib */,
-			);
-			name = complainlist;
 			sourceTree = "<group>";
 		};
 		2C2806931990AD14007838A6 /* complainCell */ = {
@@ -781,64 +1080,6 @@
 			name = complainCell;
 			sourceTree = "<group>";
 		};
-		2C2806991990B11F007838A6 /* complainDetail */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806A01990B868007838A6 /* complainDetail.h */,
-				2C2806A11990B868007838A6 /* complainDetail.m */,
-				2C2806A21990B868007838A6 /* complainDetail.xib */,
-			);
-			name = complainDetail;
-			sourceTree = "<group>";
-		};
-		2C28069F1990B80F007838A6 /* complain */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806CC1990B9D0007838A6 /* complainAdd */,
-				2C2806991990B11F007838A6 /* complainDetail */,
-				2C28068D1990AA33007838A6 /* complainlist */,
-			);
-			name = complain;
-			sourceTree = "<group>";
-		};
-		2C2806AA1990B8AB007838A6 /* special */ = {
-			isa = PBXGroup;
-			children = (
-				2C280687199082C9007838A6 /* specialPeopleIntroduce */,
-				2C28066719906625007838A6 /* SpecialPeopleDetail */,
-				2C42F653198F6C4F004F2A38 /* SpecialPeople */,
-			);
-			name = special;
-			sourceTree = "<group>";
-		};
-		2C2806CC1990B9D0007838A6 /* complainAdd */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806CD1990BA17007838A6 /* complainAdd.h */,
-				2C2806CE1990BA17007838A6 /* complainAdd.m */,
-				2C2806CF1990BA17007838A6 /* complainAdd.xib */,
-			);
-			name = complainAdd;
-			sourceTree = "<group>";
-		};
-		2C282F091990C8B90061F987 /* survey */ = {
-			isa = PBXGroup;
-			children = (
-				2C282F0A1990C8C60061F987 /* surveylist */,
-			);
-			name = survey;
-			sourceTree = "<group>";
-		};
-		2C282F0A1990C8C60061F987 /* surveylist */ = {
-			isa = PBXGroup;
-			children = (
-				2C282F0B1990C8E40061F987 /* surveylist.h */,
-				2C282F0C1990C8E40061F987 /* surveylist.m */,
-				2C282F0D1990C8E40061F987 /* surveylist.xib */,
-			);
-			name = surveylist;
-			sourceTree = "<group>";
-		};
 		2C282F101990C9F60061F987 /* surveylistCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,25 +1090,6 @@
 			name = surveylistCell;
 			sourceTree = "<group>";
 		};
-		2C282F161990D37E0061F987 /* compro */ = {
-			isa = PBXGroup;
-			children = (
-				2C282F231990D8A70061F987 /* cpdetali */,
-				2C282F171990D3CD0061F987 /* cplist */,
-			);
-			name = compro;
-			sourceTree = "<group>";
-		};
-		2C282F171990D3CD0061F987 /* cplist */ = {
-			isa = PBXGroup;
-			children = (
-				2C282F181990D3ED0061F987 /* cplist.h */,
-				2C282F191990D3ED0061F987 /* cplist.m */,
-				2C282F1A1990D3ED0061F987 /* cplist.xib */,
-			);
-			name = cplist;
-			sourceTree = "<group>";
-		};
 		2C282F1D1990D5790061F987 /* cplistCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,36 +1098,6 @@
 				2C282F201990D5AA0061F987 /* cplistCell.xib */,
 			);
 			name = cplistCell;
-			sourceTree = "<group>";
-		};
-		2C282F231990D8A70061F987 /* cpdetali */ = {
-			isa = PBXGroup;
-			children = (
-				2C282F241990D8F20061F987 /* cpdetali.h */,
-				2C282F251990D8F20061F987 /* cpdetali.m */,
-				2C282F261990D8F20061F987 /* cpdetali.xib */,
-			);
-			name = cpdetali;
-			sourceTree = "<group>";
-		};
-		2C42F639198F20AE004F2A38 /* index */ = {
-			isa = PBXGroup;
-			children = (
-				2C42F664198F6D24004F2A38 /* fontindex.h */,
-				2C42F665198F6D24004F2A38 /* fontindex.m */,
-				2C42F666198F6D24004F2A38 /* fontindex.xib */,
-			);
-			name = index;
-			sourceTree = "<group>";
-		};
-		2C42F653198F6C4F004F2A38 /* SpecialPeople */ = {
-			isa = PBXGroup;
-			children = (
-				2C2806C71990B94B007838A6 /* SpecialPeople.h */,
-				2C2806C81990B94B007838A6 /* SpecialPeople.m */,
-				2C2806C91990B94B007838A6 /* SpecialPeople.xib */,
-			);
-			name = SpecialPeople;
 			sourceTree = "<group>";
 		};
 		2C42F669198F785B004F2A38 /* MJRefresh */ = {
@@ -932,19 +1124,10 @@
 			path = ../MJRefresh;
 			sourceTree = "<group>";
 		};
-		2C42F682198F790F004F2A38 /* lifemd */ = {
-			isa = PBXGroup;
-			children = (
-				2C42F683198F7934004F2A38 /* lifemd.h */,
-				2C42F684198F7934004F2A38 /* lifemd.m */,
-				2C42F685198F7934004F2A38 /* lifemd.xib */,
-			);
-			name = lifemd;
-			sourceTree = "<group>";
-		};
 		2C42F688198F79B4004F2A38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2C1FE5EC1995AE88008DBB58 /* communityCell */,
 				2C5757441994BCDA00858A7F /* shoppingcartCell */,
 				2C5757331994B5CB00858A7F /* myappraiseCell */,
 				2C575720199467F700858A7F /* myorderCell */,
@@ -1263,27 +1446,11 @@
 		2C57575A1994D3A700858A7F /* selectaddress */ = {
 			isa = PBXGroup;
 			children = (
+				2C1FE5E01995AB32008DBB58 /* selectaddress.h */,
+				2C1FE5E11995AB32008DBB58 /* selectaddress.m */,
+				2C1FE5E21995AB32008DBB58 /* selectaddress.xib */,
 			);
 			name = selectaddress;
-			sourceTree = "<group>";
-		};
-		2C5A23F51991B74E003712D5 /* repair */ = {
-			isa = PBXGroup;
-			children = (
-				2C5A240C1991BEEE003712D5 /* repairadd */,
-				2C5A23F61991B757003712D5 /* repairlist */,
-			);
-			name = repair;
-			sourceTree = "<group>";
-		};
-		2C5A23F61991B757003712D5 /* repairlist */ = {
-			isa = PBXGroup;
-			children = (
-				2C5A23FC1991B7E0003712D5 /* repairlist.h */,
-				2C5A23FD1991B7E0003712D5 /* repairlist.m */,
-				2C5A23FE1991B7E0003712D5 /* repairlist.xib */,
-			);
-			name = repairlist;
 			sourceTree = "<group>";
 		};
 		2C5A24011991BC03003712D5 /* repairlistCell */ = {
@@ -1294,16 +1461,6 @@
 				2C5A24091991BD98003712D5 /* repairlistCell.xib */,
 			);
 			name = repairlistCell;
-			sourceTree = "<group>";
-		};
-		2C5A240C1991BEEE003712D5 /* repairadd */ = {
-			isa = PBXGroup;
-			children = (
-				2C5A240D1991BF0F003712D5 /* repairadd.h */,
-				2C5A240E1991BF0F003712D5 /* repairadd.m */,
-				2C5A240F1991BF0F003712D5 /* repairadd.xib */,
-			);
-			name = repairadd;
 			sourceTree = "<group>";
 		};
 		2C5A241C1991D5EF003712D5 /* CustomIOS7AlertView */ = {
@@ -1318,6 +1475,8 @@
 		2C5A2421199213EF003712D5 /* personManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C1FE5FE1995C05B008DBB58 /* Vicecard */,
+				2C1FE5E51995AC75008DBB58 /* community */,
 				2C57571419945E1D00858A7F /* membercenter  */,
 				2C5404C3199374F3003D2BBE /* consume */,
 				2C5A2428199221E3003712D5 /* personInfo */,
@@ -1390,16 +1549,9 @@
 		7CE63129198C7A8100730C64 /* zxics */ = {
 			isa = PBXGroup;
 			children = (
+				2C1FE6121995C839008DBB58 /* frontindex */,
 				2C5A2421199213EF003712D5 /* personManager */,
-				2C5A23F51991B74E003712D5 /* repair */,
-				2C282F161990D37E0061F987 /* compro */,
-				2C282F091990C8B90061F987 /* survey */,
-				2C2806AA1990B8AB007838A6 /* special */,
-				2C28069F1990B80F007838A6 /* complain */,
-				2C28067919906DF2007838A6 /* lifemdDetail */,
 				2C42F688198F79B4004F2A38 /* Cell */,
-				2C42F682198F790F004F2A38 /* lifemd */,
-				2C42F639198F20AE004F2A38 /* index */,
 				7CE63158198C7C2900730C64 /* extend */,
 				7CE63183198C7C2A00730C64 /* image */,
 				7CE63184198C7C2A00730C64 /* login */,
@@ -1774,38 +1926,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C393A4A198C8B830045F1F3 /* women.png in Resources */,
+				2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */,
 				2C3939FA198C8B830045F1F3 /* grey_nav3.png in Resources */,
+				2C1FE5FD1995BD86008DBB58 /* changecom.xib in Resources */,
+				2C1FE6511995C8AC008DBB58 /* complainAdd.xib in Resources */,
+				2C1FE60B1995C221008DBB58 /* VicecardDetail.xib in Resources */,
 				2C3939D2198C8B830045F1F3 /* bot_common.png in Resources */,
-				2C2806D11990BA17007838A6 /* complainAdd.xib in Resources */,
 				2C2806981990AD69007838A6 /* complainCell.xib in Resources */,
 				2C393A36198C8B830045F1F3 /* settings_account.png in Resources */,
 				2C3939EB198C8B830045F1F3 /* chatto_bg_normal.9.png in Resources */,
 				2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */,
 				2C57571919945F8100858A7F /* membercenter.xib in Resources */,
+				2C1FE6611995C8AC008DBB58 /* repairadd.xib in Resources */,
 				2C393A35198C8B830045F1F3 /* settings_about.9.png in Resources */,
 				2C5404CF199377F2003D2BBE /* consumelistCell.xib in Resources */,
 				2C393A31198C8B830045F1F3 /* sell.png in Resources */,
 				2C3939E1198C8B830045F1F3 /* button_like.png in Resources */,
-				2C28067E19906E14007838A6 /* lifemdDetail.xib in Resources */,
 				2C3939C7198C8B830045F1F3 /* appraise.png in Resources */,
 				2C3939CF198C8B830045F1F3 /* battery.png in Resources */,
-				2C282F1C1990D3ED0061F987 /* cplist.xib in Resources */,
 				2C393A41198C8B830045F1F3 /* t_mall.png in Resources */,
 				2C393A1D198C8B830045F1F3 /* nav_bg.png in Resources */,
 				2C5757431994BB6300858A7F /* shoppingcart.xib in Resources */,
 				2C393A17198C8B830045F1F3 /* marquee.png in Resources */,
-				2C42F668198F6D24004F2A38 /* fontindex.xib in Resources */,
 				2C3939C9198C8B830045F1F3 /* back_behind_menu.9.png in Resources */,
 				2C393A1A198C8B830045F1F3 /* money.png in Resources */,
-				2C5A24111991BF0F003712D5 /* repairadd.xib in Resources */,
 				2C3939E8198C8B830045F1F3 /* card.png in Resources */,
 				2C393A2E198C8B830045F1F3 /* round_gray.png in Resources */,
+				2C1FE5F71995B433008DBB58 /* floorlist.xib in Resources */,
 				2C393A4B198C8B830045F1F3 /* word.png in Resources */,
 				2C3939E4198C8B830045F1F3 /* button_photonews.png in Resources */,
 				2C393A0B198C8B830045F1F3 /* investigate.png in Resources */,
 				2C3939EF198C8B830045F1F3 /* consult.png in Resources */,
 				2C3939E5198C8B830045F1F3 /* button_title_more.png in Resources */,
 				2C3939F3198C8B830045F1F3 /* document_center.png in Resources */,
+				2C1FE65F1995C8AC008DBB58 /* lifemdDetail.xib in Resources */,
 				2C393A28198C8B830045F1F3 /* red_nav2.png in Resources */,
 				2C5A242D19922201003712D5 /* personInfo.xib in Resources */,
 				2C3939F4198C8B830045F1F3 /* download.png in Resources */,
@@ -1814,6 +1968,7 @@
 				2C3939C8198C8B830045F1F3 /* attention_button.9.png in Resources */,
 				2C393A3D198C8B830045F1F3 /* steward.png in Resources */,
 				2C57572B1994708500858A7F /* myorderDetail.xib in Resources */,
+				2C1FE6551995C8AC008DBB58 /* complainlist.xib in Resources */,
 				2C393A25198C8B830045F1F3 /* problem.png in Resources */,
 				2C3939CE198C8B830045F1F3 /* bad.png in Resources */,
 				7CE6313C198C7A8200730C64 /* Images.xcassets in Resources */,
@@ -1827,15 +1982,19 @@
 				2C3939DC198C8B830045F1F3 /* but_bule_img.9.png in Resources */,
 				2C3939F0198C8B830045F1F3 /* cricle_time.png in Resources */,
 				2C393A0E198C8B830045F1F3 /* login_bg.jpg in Resources */,
+				2C1FE6111995C568008DBB58 /* Vicecardadd.xib in Resources */,
+				2C1FE5F11995AEB1008DBB58 /* communityCell.xib in Resources */,
 				2C393A48198C8B830045F1F3 /* webview_load_default.png in Resources */,
-				2C2806A91990B873007838A6 /* complainlist.xib in Resources */,
+				2C1FE6041995C077008DBB58 /* ViewController.xib in Resources */,
 				2C5404D51993793A003D2BBE /* consumeDetail.xib in Resources */,
 				2C393A18198C8B830045F1F3 /* member_center.png in Resources */,
+				2C1FE65B1995C8AC008DBB58 /* fontindex.xib in Resources */,
 				2C5A240B1991BD98003712D5 /* repairlistCell.xib in Resources */,
 				2C3939DE198C8B830045F1F3 /* button_details_gohome.png in Resources */,
 				2C5404A419935B7B003D2BBE /* updateinfo.xib in Resources */,
 				2C3939CC198C8B830045F1F3 /* back_title_select.png in Resources */,
 				2C3939D9198C8B830045F1F3 /* btn_footprint.png in Resources */,
+				2C1FE66B1995C8AC008DBB58 /* surveylist.xib in Resources */,
 				7CE631B5198C845E00730C64 /* sure.png in Resources */,
 				2C280677199067B3007838A6 /* SpecialPeopleDetailCell.xib in Resources */,
 				2C393A12198C8B830045F1F3 /* login.png in Resources */,
@@ -1851,9 +2010,9 @@
 				2C393A0A198C8B830045F1F3 /* input.png in Resources */,
 				2C5404BC199363C1003D2BBE /* arrearageDetail.xib in Resources */,
 				2C393A3E198C8B830045F1F3 /* succour.png in Resources */,
-				2C42F687198F7934004F2A38 /* lifemd.xib in Resources */,
 				2C3939F5198C8B830045F1F3 /* dynamic_work.png in Resources */,
 				2C393A13198C8B830045F1F3 /* logo.png in Resources */,
+				2C1FE6591995C8AC008DBB58 /* cplist.xib in Resources */,
 				7CE6319E198C7C2A00730C64 /* login.xib in Resources */,
 				2C393A3F198C8B830045F1F3 /* t_bg.png in Resources */,
 				2C54048E19932E46003D2BBE /* personLog.xib in Resources */,
@@ -1861,10 +2020,8 @@
 				2C393A1C198C8B830045F1F3 /* my_log.png in Resources */,
 				2C393A46198C8B830045F1F3 /* transpond.png in Resources */,
 				2C393A42198C8B830045F1F3 /* t_man.png in Resources */,
-				2C2806CB1990B94B007838A6 /* SpecialPeople.xib in Resources */,
-				2C2806A41990B868007838A6 /* complainDetail.xib in Resources */,
+				2C1FE5E41995AB32008DBB58 /* selectaddress.xib in Resources */,
 				2C3939F6198C8B830045F1F3 /* feature_point_cur.png in Resources */,
-				2C282F281990D8F20061F987 /* cpdetali.xib in Resources */,
 				2C282F221990D5AA0061F987 /* cplistCell.xib in Resources */,
 				2C393A09198C8B830045F1F3 /* ic_search.png in Resources */,
 				2C5757491994BCEF00858A7F /* shoppingcartCell.xib in Resources */,
@@ -1873,7 +2030,6 @@
 				2C3939DA198C8B830045F1F3 /* btn_info.png in Resources */,
 				2C393A01198C8B830045F1F3 /* home2.png in Resources */,
 				2C393A2A198C8B830045F1F3 /* release_information.png in Resources */,
-				2C5A24001991B7E0003712D5 /* repairlist.xib in Resources */,
 				2C393A43198C8B830045F1F3 /* t_quit.png in Resources */,
 				2C393A05198C8B830045F1F3 /* ic_more_item_pressed.9.png in Resources */,
 				2C5404E11993817B003D2BBE /* topup.xib in Resources */,
@@ -1881,7 +2037,6 @@
 				2C57571F1994657900858A7F /* myorder.xib in Resources */,
 				2C393A02198C8B830045F1F3 /* house.png in Resources */,
 				2C3939F8198C8B830045F1F3 /* good.png in Resources */,
-				2C282F0F1990C8E40061F987 /* surveylist.xib in Resources */,
 				2C393A47198C8B830045F1F3 /* voice_rcd_btn_nor.9.png in Resources */,
 				2C393A2F198C8B830045F1F3 /* round.png in Resources */,
 				2C393A3C198C8B830045F1F3 /* signal.png in Resources */,
@@ -1891,12 +2046,10 @@
 				2C3939D8198C8B830045F1F3 /* btn_driving_record1.png in Resources */,
 				2C393A40198C8B830045F1F3 /* t_home.png in Resources */,
 				2C393A11198C8B830045F1F3 /* login_green.png in Resources */,
-				2C2806AF1990B904007838A6 /* specialPeopleIntroduce.xib in Resources */,
 				2C3939FE198C8B830045F1F3 /* hire.png in Resources */,
 				2C5404B0199360F0003D2BBE /* arrearageCell.xib in Resources */,
 				2C3939F7198C8B830045F1F3 /* feature_point.png in Resources */,
 				2C3939C4198C8B830045F1F3 /* activity.png in Resources */,
-				2C2806B41990B913007838A6 /* SpecialPeopleDetail.xib in Resources */,
 				2C393A22198C8B830045F1F3 /* people.png in Resources */,
 				2C3939F9198C8B830045F1F3 /* grey_nav2.png in Resources */,
 				7CE6312E198C7A8200730C64 /* InfoPlist.strings in Resources */,
@@ -1907,11 +2060,13 @@
 				2C393A30198C8B830045F1F3 /* search.9.png in Resources */,
 				2C393A15198C8B830045F1F3 /* magnifier_bt.png in Resources */,
 				2C3939C6198C8B830045F1F3 /* add.png in Resources */,
+				2C1FE6631995C8AC008DBB58 /* repairlist.xib in Resources */,
 				2C393A39198C8B830045F1F3 /* settings_network.png in Resources */,
 				2C393A2C198C8B830045F1F3 /* repair.png in Resources */,
 				2C3939E7198C8B830045F1F3 /* button.9.png in Resources */,
 				2C393A10198C8B830045F1F3 /* login_gray.png in Resources */,
 				7CE6319B198C7C2A00730C64 /* README.md in Resources */,
+				2C1FE6691995C8AC008DBB58 /* specialPeopleIntroduce.xib in Resources */,
 				2C3939E2198C8B830045F1F3 /* button_long.png in Resources */,
 				2C3939F2198C8B830045F1F3 /* dis_about_weixin.png in Resources */,
 				2C393A37198C8B830045F1F3 /* settings_change.png in Resources */,
@@ -1938,20 +2093,24 @@
 				2C5757321994B17500858A7F /* myappraise.xib in Resources */,
 				2C393A1B198C8B830045F1F3 /* more.png in Resources */,
 				2C393A44198C8B830045F1F3 /* tab_profile_disabled.png in Resources */,
+				2C1FE6571995C8AC008DBB58 /* cpdetali.xib in Resources */,
 				2C393A0C198C8B830045F1F3 /* layout.png in Resources */,
 				2C393A29198C8B830045F1F3 /* red_nav3.png in Resources */,
 				2C393A1F198C8B830045F1F3 /* neighbour.png in Resources */,
 				2C393A3B198C8B830045F1F3 /* settings_privacy.png in Resources */,
 				2C57573D1994B63900858A7F /* myappraiseCell.xib in Resources */,
+				2C1FE6651995C8AC008DBB58 /* SpecialPeople.xib in Resources */,
 				2C5A242719921489003712D5 /* personIndex.xib in Resources */,
 				2C393A08198C8B830045F1F3 /* ic_search_inverse.png in Resources */,
 				2C5757511994C9A800858A7F /* placeorder.xib in Resources */,
 				2C393A45198C8B830045F1F3 /* thought.png in Resources */,
+				2C1FE6531995C8AC008DBB58 /* complainDetail.xib in Resources */,
 				2C5404B619936385003D2BBE /* arrearagecheck.xib in Resources */,
 				2C3939CB198C8B830045F1F3 /* back_textview_selected.9.png in Resources */,
 				2C393A20198C8B830045F1F3 /* no_back.png in Resources */,
 				2C3939CD198C8B830045F1F3 /* back_title.png in Resources */,
 				2C3939DF198C8B830045F1F3 /* button_disabuse.png in Resources */,
+				2C1FE65D1995C8AC008DBB58 /* lifemd.xib in Resources */,
 				2C393A49198C8B830045F1F3 /* wifi.png in Resources */,
 				2C3939ED198C8B830045F1F3 /* clock.png in Resources */,
 				2C3939DD198C8B830045F1F3 /* but_gray.9.png in Resources */,
@@ -1961,6 +2120,7 @@
 				7CE63137198C7A8200730C64 /* Main.storyboard in Resources */,
 				2C393A0F198C8B830045F1F3 /* login_edit_normal.9.png in Resources */,
 				2C3939D1198C8B830045F1F3 /* bg_retweet_frame.9.png in Resources */,
+				2C1FE6671995C8AC008DBB58 /* SpecialPeopleDetail.xib in Resources */,
 				2C393A32198C8B830045F1F3 /* seller.png in Resources */,
 				7CE63199198C7C2A00730C64 /* CHANGELOG.md in Resources */,
 				2C3939D7198C8B830045F1F3 /* btn_consumption.png in Resources */,
@@ -1987,67 +2147,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1FE6031995C077008DBB58 /* ViewController.m in Sources */,
 				7CE63190198C7C2A00730C64 /* ASINSStringAdditions.m in Sources */,
 				7CE6318F198C7C2A00730C64 /* ASINetworkQueue.m in Sources */,
 				7CE6319A198C7C2A00730C64 /* JSONKit.m in Sources */,
 				2C54048D19932E46003D2BBE /* personLog.m in Sources */,
+				2C1FE5F61995B433008DBB58 /* floorlist.m in Sources */,
+				2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */,
 				7CE6318C198C7C2A00730C64 /* ASIFormDataRequest.m in Sources */,
 				2C5404BB199363C1003D2BBE /* arrearageDetail.m in Sources */,
 				2C5404C819937539003D2BBE /* consumelist.m in Sources */,
-				2C2806D01990BA17007838A6 /* complainAdd.m in Sources */,
-				2C42F686198F7934004F2A38 /* lifemd.m in Sources */,
 				2C5404C119936DE7003D2BBE /* Paymentfunction.m in Sources */,
-				2C5A23FF1991B7E0003712D5 /* repairlist.m in Sources */,
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
 				2C42F680198F785B004F2A38 /* UIScrollView+MJRefresh.m in Sources */,
 				7CE6319C198C7C2A00730C64 /* sqlService.m in Sources */,
 				7CE63192198C7C2A00730C64 /* Reachability.m in Sources */,
+				2C1FE6101995C568008DBB58 /* Vicecardadd.m in Sources */,
 				7CE63193198C7C2A00730C64 /* Commons.m in Sources */,
-				2C282F1B1990D3ED0061F987 /* cplist.m in Sources */,
 				7CE6319D198C7C2A00730C64 /* login.m in Sources */,
+				2C1FE6501995C8AC008DBB58 /* complainAdd.m in Sources */,
 				2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */,
 				2C280676199067B3007838A6 /* SpecialPeopleDetailCell.m in Sources */,
+				2C1FE65E1995C8AC008DBB58 /* lifemdDetail.m in Sources */,
 				2C282F211990D5AA0061F987 /* cplistCell.m in Sources */,
 				2C28068619907457007838A6 /* myLabel.m in Sources */,
+				2C1FE6561995C8AC008DBB58 /* cpdetali.m in Sources */,
 				2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */,
-				2C5A24101991BF0F003712D5 /* repairadd.m in Sources */,
+				2C1FE6681995C8AC008DBB58 /* specialPeopleIntroduce.m in Sources */,
 				7CE63191198C7C2A00730C64 /* NSHTTPCookieAdditions.m in Sources */,
 				2C5757481994BCEF00858A7F /* shoppingcartCell.m in Sources */,
 				2C5404AF199360F0003D2BBE /* arrearageCell.m in Sources */,
 				2C57571819945F8100858A7F /* membercenter.m in Sources */,
 				2C5757421994BB6300858A7F /* shoppingcart.m in Sources */,
 				2C5404E01993817B003D2BBE /* topup.m in Sources */,
+				2C1FE66A1995C8AC008DBB58 /* surveylist.m in Sources */,
 				2C5757311994B17500858A7F /* myappraise.m in Sources */,
-				2C28067D19906E14007838A6 /* lifemdDetail.m in Sources */,
+				2C1FE6641995C8AC008DBB58 /* SpecialPeople.m in Sources */,
 				2C5404B519936385003D2BBE /* arrearagecheck.m in Sources */,
 				7CE6318B198C7C2A00730C64 /* ASIAuthenticationDialog.m in Sources */,
-				2C2806A31990B868007838A6 /* complainDetail.m in Sources */,
+				2C1FE6521995C8AC008DBB58 /* complainDetail.m in Sources */,
 				2C5404931993506A003D2BBE /* personlogCellTableViewCell.m in Sources */,
 				2C5757501994C9A800858A7F /* placeorder.m in Sources */,
 				2C57571E1994657900858A7F /* myorder.m in Sources */,
 				2C5A240A1991BD98003712D5 /* repairlistCell.m in Sources */,
-				2C2806CA1990B94B007838A6 /* SpecialPeople.m in Sources */,
+				2C1FE6601995C8AC008DBB58 /* repairadd.m in Sources */,
 				7CE63134198C7A8200730C64 /* AppDelegate.m in Sources */,
+				2C1FE65C1995C8AC008DBB58 /* lifemd.m in Sources */,
 				2C42F67F198F785B004F2A38 /* UIScrollView+Extension.m in Sources */,
-				2C282F271990D8F20061F987 /* cpdetali.m in Sources */,
 				7CE63195198C7C2A00730C64 /* Tool.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,
+				2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */,
 				2C57572A1994708500858A7F /* myorderDetail.m in Sources */,
-				2C2806A81990B873007838A6 /* complainlist.m in Sources */,
+				2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */,
 				2C57575E1994D3CD00858A7F /* newDeliveryaddress.m in Sources */,
-				2C2806AE1990B904007838A6 /* specialPeopleIntroduce.m in Sources */,
-				2C2806B31990B913007838A6 /* SpecialPeopleDetail.m in Sources */,
-				2C282F0E1990C8E40061F987 /* surveylist.m in Sources */,
 				2C2806971990AD69007838A6 /* complainCell.m in Sources */,
+				2C1FE6581995C8AC008DBB58 /* cplist.m in Sources */,
+				2C1FE5E31995AB32008DBB58 /* selectaddress.m in Sources */,
 				2C5757241994681000858A7F /* myorderCell.m in Sources */,
+				2C1FE6621995C8AC008DBB58 /* repairlist.m in Sources */,
 				2C5A242619921489003712D5 /* personIndex.m in Sources */,
 				7CE63198198C7C2A00730C64 /* ImageCacher.m in Sources */,
 				7CE6319F198C7C2A00730C64 /* LoginEntity.m in Sources */,
+				2C1FE6661995C8AC008DBB58 /* SpecialPeopleDetail.m in Sources */,
 				7CE63194198C7C2A00730C64 /* DataService.m in Sources */,
+				2C1FE6541995C8AC008DBB58 /* complainlist.m in Sources */,
 				7CE63197198C7C2A00730C64 /* FileHelpers.m in Sources */,
 				7CE63130198C7A8200730C64 /* main.m in Sources */,
 				7CE63196198C7C2A00730C64 /* WebService.m in Sources */,
-				2C42F667198F6D24004F2A38 /* fontindex.m in Sources */,
 				2C5404CE199377F2003D2BBE /* consumelistCell.m in Sources */,
 				2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */,
 				2C5404D41993793A003D2BBE /* consumeDetail.m in Sources */,
@@ -2055,8 +2221,10 @@
 				2C57573C1994B63900858A7F /* myappraiseCell.m in Sources */,
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
 				2C5A242C19922201003712D5 /* personInfo.m in Sources */,
+				2C1FE5FC1995BD86008DBB58 /* changecom.m in Sources */,
 				2C5404A319935B7B003D2BBE /* updateinfo.m in Sources */,
 				2C57571219945B4B00858A7F /* topupmoney.m in Sources */,
+				2C1FE65A1995C8AC008DBB58 /* fontindex.m in Sources */,
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,
 				2C5A241F1991D5EF003712D5 /* CustomIOS7AlertView.m in Sources */,

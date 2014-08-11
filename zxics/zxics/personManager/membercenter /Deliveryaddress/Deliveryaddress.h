@@ -10,4 +10,5 @@
 
 @interface Deliveryaddress : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @end

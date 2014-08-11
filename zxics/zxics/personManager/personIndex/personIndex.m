@@ -96,6 +96,30 @@
     [self.navigationController pushViewController:_membercenter animated:NO];
 }
 
+//加入社区页面跳转
+-(IBAction)communitylist:(id)sender
+{
+    communitylist * _communitylist=[[communitylist alloc] init];
+    
+    [self.navigationController pushViewController:_communitylist animated:NO];
+}
+
+//切换社区页面跳转
+-(IBAction)changecom:(id)sender
+{
+    changecom * _changecom=[[changecom alloc] init];
+    
+    [self.navigationController pushViewController:_changecom animated:NO];
+}
+
+//切换社区页面跳转
+-(IBAction)ViewController:(id)sender
+{
+    ViewController * _ViewController=[[ViewController alloc] init];
+    
+    [self.navigationController pushViewController:_ViewController animated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

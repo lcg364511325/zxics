@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Deliveryaddress">
             <connections>
+                <outlet property="UINavigationBar" destination="pF0-YI-jqt" id="OLb-Ao-fTW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,11 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="管理我的收货地址" id="gNL-21-Tkv">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="CrP-ZX-owg"/>
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="CrP-ZX-owg">
+                                <connections>
+                                    <action selector="goback:" destination="-1" id="4nI-Kp-aml"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="新增" id="kxZ-2i-osp"/>
                         </navigationItem>
                     </items>

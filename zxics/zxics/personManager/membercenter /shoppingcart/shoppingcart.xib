@@ -24,7 +24,11 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="购物车" id="iRG-nq-0A5">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="QPD-Ex-vyM"/>
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="QPD-Ex-vyM">
+                                <connections>
+                                    <action selector="goback:" destination="-1" id="Kbq-5S-deE"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="下单" id="L92-9a-AGM"/>
                         </navigationItem>
                     </items>

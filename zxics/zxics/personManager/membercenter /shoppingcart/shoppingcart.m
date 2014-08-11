@@ -30,6 +30,11 @@
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
 }
 
+-(IBAction)goback:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

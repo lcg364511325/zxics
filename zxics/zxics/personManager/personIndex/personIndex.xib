@@ -180,6 +180,9 @@
                     <state key="normal" title="Button" image="btn_add_community.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="communitylist:" destination="-1" eventType="touchDown" id="TfT-RB-fU3"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bs-t2-Qdz">
                     <rect key="frame" x="135" y="312" width="50" height="50"/>
@@ -187,6 +190,9 @@
                     <state key="normal" title="Button" image="house.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changecom:" destination="-1" eventType="touchDown" id="U6t-hR-aCR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Sw-nLW">
                     <rect key="frame" x="239" y="312" width="50" height="50"/>
@@ -194,6 +200,9 @@
                     <state key="normal" title="Button" image="card.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="ViewController:" destination="-1" eventType="touchDown" id="E2J-ry-nq7"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="加入社区" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-zF-5Z6">
                     <rect key="frame" x="34" y="363" width="40" height="10"/>

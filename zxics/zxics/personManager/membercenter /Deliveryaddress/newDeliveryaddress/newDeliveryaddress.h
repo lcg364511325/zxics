@@ -10,4 +10,5 @@
 
 @interface newDeliveryaddress : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @end

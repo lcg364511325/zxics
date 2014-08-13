@@ -9,6 +9,7 @@
 #import "lifemd.h"
 #import "DataService.h"
 #import "AppDelegate.h"
+#import "Commons.h"
 
 @interface lifemd ()
 
@@ -34,6 +35,21 @@
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
     
     //加载数据
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [lifetable addHeaderWithCallback:^{
+        [self loaddata];
+        [lifetable reloadData];
+        [lifetable headerEndRefreshing];}];
+    [lifetable addFooterWithCallback:^{
+    [lifetable footerEndRefreshing];
+    }];
+}
+
+//加载数据
+-(void)loaddata
+{
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * lfmd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl) {
@@ -42,15 +58,6 @@
         lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:nil forPage:1 forPageSize:10];
     }
     lfmdlist=[lfmd objectForKey:@"datas"];
-    
-    
-    //上拉刷新下拉加载提示
-    [lifetable addHeaderWithCallback:^{
-        [lifetable reloadData];
-        [lifetable headerEndRefreshing];}];
-    [lifetable addFooterWithCallback:^{
-    [lifetable footerEndRefreshing];
-    }];
 }
 
 -(IBAction)goback:(id)sender
@@ -83,16 +90,11 @@
     cell.orgLabel.text=[pc objectForKey:@"name"];
     cell.telLabel.text=[pc objectForKey:@"phones"];
     cell.peopleLabel.text=[pc objectForKey:@"userName"];
-    NSString *time =[NSString stringWithFormat:@"%@",[pc objectForKey:@"createTime"]];
-    NSString *aaa=[time substringToIndex:10];
-    NSDateFormatter *formatter =[[NSDateFormatter alloc]init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    [formatter setTimeZone:timeZone];
-    NSDate *date=[NSDate dateWithTimeIntervalSince1970:[aaa intValue]];
-    cell.dateLabel.text=[formatter stringFromDate:date];
+    
+    //时间戳转时间
+    Commons *_Commons=[[Commons alloc]init];
+    cell.dateLabel.text=[_Commons stringtoDate:[pc objectForKey:@"createTime"]];
+    
     return cell;
 }
 

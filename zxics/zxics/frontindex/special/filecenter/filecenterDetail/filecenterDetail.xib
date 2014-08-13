@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="complainlist">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="filecenterDetail">
             <connections>
-                <outlet property="UINavigationBar" destination="BeW-g6-scR" id="MXE-hr-D6O"/>
-                <outlet property="complaintTView" destination="FXV-eg-yjO" id="leK-ua-MIn"/>
+                <outlet property="UINavigationBar" destination="2vG-QF-aZl" id="B58-W8-eqG"/>
+                <outlet property="filecenterWView" destination="M5G-tP-s26" id="PBR-ds-akg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeW-g6-scR">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vG-QF-aZl">
                     <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,29 +24,20 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="我的投诉" id="LMg-Bi-X7q">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="Ch4-0W-ZzR">
+                        <navigationItem title="信息详情" id="26Y-FO-9s4">
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="vqp-qs-luE">
                                 <connections>
-                                    <action selector="goback:" destination="-1" id="YHB-80-amQ"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="投诉" id="wgQ-IE-NZm">
-                                <connections>
-                                    <action selector="complainadd:" destination="-1" id="1QW-4h-EuR"/>
+                                    <action selector="goback:" destination="-1" id="nsw-Vf-Ou7"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FXV-eg-yjO">
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-tP-s26">
                     <rect key="frame" x="0.0" y="66" width="320" height="502"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="PKj-qQ-txw"/>
-                        <outlet property="delegate" destination="-1" id="eU5-LL-a0Y"/>
-                    </connections>
-                </tableView>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

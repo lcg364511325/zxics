@@ -12,6 +12,10 @@
 #import "complainDetail.h"
 
 @interface complainlist : UIViewController
+{
+    NSArray *list;
+}
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *complaintTView;
 
 @end

@@ -50,6 +50,7 @@
                     </state>
                     <connections>
                         <action selector="buttonclick:" destination="-1" eventType="touchDown" id="Oub-zZ-xl7"/>
+                        <action selector="filecenter:" destination="-1" eventType="touchDown" id="THc-yb-Jaz"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11o-Yx-BgN">

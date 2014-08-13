@@ -22,4 +22,6 @@
 
 -(NSString *)getGoldtypevalue:(NSString *)name;
 
+-(NSString *)stringtoDate:(NSString *)str;
+
 @end

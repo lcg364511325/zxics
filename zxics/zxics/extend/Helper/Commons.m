@@ -108,4 +108,23 @@
     return name;
 }
 
+//时间戳转时间
+-(NSString *)stringtoDate:(NSString *)str
+{
+    if (str!=[NSNull null]) {
+        NSString *time =[NSString stringWithFormat:@"%@",str];
+        NSString *aaa=[time substringToIndex:10];
+        NSDateFormatter *formatter =[[NSDateFormatter alloc]init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        [formatter setTimeStyle:NSDateFormatterShortStyle];
+        [formatter setDateFormat:@"YYYY-MM-dd"];
+        NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+        [formatter setTimeZone:timeZone];
+        NSDate *date=[NSDate dateWithTimeIntervalSince1970:[aaa intValue]];
+        return [formatter stringFromDate:date];
+    }else{
+        return nil;
+    }
+}
+
 @end

@@ -87,9 +87,17 @@
 //投诉管理页面跳转
 -(IBAction)complainlist:(id)sender
 {
-    complainlist * _complainlist=[[complainlist alloc] init];
-    
-    [self.navigationController pushViewController:_complainlist animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        complainlist * _complainlist=[[complainlist alloc] init];
+        
+        [self.navigationController pushViewController:_complainlist animated:NO];
+    }else
+    {
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //社区活动，物业通知页面跳转

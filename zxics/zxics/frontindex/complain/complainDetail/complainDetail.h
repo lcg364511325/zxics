@@ -10,6 +10,8 @@
 
 @interface complainDetail : UIViewController
 
+@property(retain , nonatomic) NSDictionary * complaininfo;//投诉信息明细
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UILabel *complainaboutLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

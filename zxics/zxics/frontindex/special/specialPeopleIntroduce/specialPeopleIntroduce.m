@@ -7,6 +7,7 @@
 //
 
 #import "specialPeopleIntroduce.h"
+#import "Commons.h"
 
 @interface specialPeopleIntroduce ()
 
@@ -61,17 +62,9 @@
     userLabel.text=[NSString stringWithFormat:@"发布人：%@",[introduce objectForKey:@"title"]];
     
     //时间戳转换为时间
-    NSString *time =[NSString stringWithFormat:@"%@",[introduce objectForKey:@"createDate"]];
-    NSString *aaa=[time substringToIndex:10];
-    NSDateFormatter *formatter =[[NSDateFormatter alloc]init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    [formatter setTimeZone:timeZone];
-    NSDate *date=[NSDate dateWithTimeIntervalSince1970:[aaa intValue]];
+    Commons *_Commons=[[Commons alloc]init];
     dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, contentLabel.frame.origin.y+60+actualsize.height, dateLabel.frame.size.width, dateLabel.frame.size.height);
-    dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",[formatter stringFromDate:date]];
+    dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDate:[introduce objectForKey:@"createDate"]]];
 }
 
 - (void)didReceiveMemoryWarning

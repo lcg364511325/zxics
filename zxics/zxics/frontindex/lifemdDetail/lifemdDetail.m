@@ -7,6 +7,7 @@
 //
 
 #import "lifemdDetail.h"
+#import "Commons.h"
 
 @interface lifemdDetail ()
 
@@ -60,16 +61,12 @@
     introduceLabel.text=[pc objectForKey:@"commet"];
     DetailsLabel.text=[pc objectForKey:@"introduce"];
     lifeLabel.text=[Project_communityorgs objectForKey:@"typeName"];
-    NSString *time =[NSString stringWithFormat:@"%@",[pc objectForKey:@"createTime"]];
-    NSString *aaa=[time substringToIndex:10];
-    NSDateFormatter *formatter =[[NSDateFormatter alloc]init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    [formatter setTimeZone:timeZone];
-    NSDate *date=[NSDate dateWithTimeIntervalSince1970:[aaa intValue]];
-    dateLabel.text=[formatter stringFromDate:date];
+    
+    
+    Commons *_Commons=[[Commons alloc]init];
+    dateLabel.text=[_Commons stringtoDate:[pc objectForKey:@"createTime"]];
+    
+    
     urlLabel.text=nil;
     MyLabel *webSite = [[MyLabel alloc] initWithFrame:CGRectMake(urlLabel.frame.origin.x, urlLabel.frame.origin.y, urlLabel.frame.size.width, urlLabel.frame.size.height)];
     [webSite setText:[pc objectForKey:@"openurl"]];

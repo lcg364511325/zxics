@@ -311,6 +311,10 @@
 		2C5A242719921489003712D5 /* personIndex.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242519921489003712D5 /* personIndex.xib */; };
 		2C5A242C19922201003712D5 /* personInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A242A19922201003712D5 /* personInfo.m */; };
 		2C5A242D19922201003712D5 /* personInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242B19922201003712D5 /* personInfo.xib */; };
+		2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */; };
+		2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */; };
+		2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */; };
+		2CFEAA59199AF7BA00FCB5C1 /* filecenterDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEAA57199AF7BA00FCB5C1 /* filecenterDetail.xib */; };
 		7CE63124198C7A8100730C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63123198C7A8100730C64 /* Foundation.framework */; };
 		7CE63126198C7A8100730C64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63125198C7A8100730C64 /* CoreGraphics.framework */; };
 		7CE63128198C7A8100730C64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE63127198C7A8100730C64 /* UIKit.framework */; };
@@ -759,6 +763,12 @@
 		2C5A242919922201003712D5 /* personInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personInfo.h; path = personManager/personInfo/personInfo.h; sourceTree = "<group>"; };
 		2C5A242A19922201003712D5 /* personInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personInfo.m; path = personManager/personInfo/personInfo.m; sourceTree = "<group>"; };
 		2C5A242B19922201003712D5 /* personInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personInfo.xib; path = personManager/personInfo/personInfo.xib; sourceTree = "<group>"; };
+		2CFEAA50199AF5CC00FCB5C1 /* filecenterlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterlist.h; path = filecenter/filecenterlist/filecenterlist.h; sourceTree = "<group>"; };
+		2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterlist.m; path = filecenter/filecenterlist/filecenterlist.m; sourceTree = "<group>"; };
+		2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterlist.xib; path = filecenter/filecenterlist/filecenterlist.xib; sourceTree = "<group>"; };
+		2CFEAA55199AF7BA00FCB5C1 /* filecenterDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterDetail.h; path = filecenter/filecenterDetail/filecenterDetail.h; sourceTree = "<group>"; };
+		2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterDetail.m; path = filecenter/filecenterDetail/filecenterDetail.m; sourceTree = "<group>"; };
+		2CFEAA57199AF7BA00FCB5C1 /* filecenterDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterDetail.xib; path = filecenter/filecenterDetail/filecenterDetail.xib; sourceTree = "<group>"; };
 		7CE63120198C7A8100730C64 /* zxics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zxics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE63123198C7A8100730C64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CE63125198C7A8100730C64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1110,6 +1120,7 @@
 		2C1FE63E1995C8AC008DBB58 /* special */ = {
 			isa = PBXGroup;
 			children = (
+				2CFEAA4F199AF52D00FCB5C1 /* filecenter */,
 				2C1FE63F1995C8AC008DBB58 /* SpecialPeople */,
 				2C1FE6431995C8AC008DBB58 /* SpecialPeopleDetail */,
 				2C1FE6471995C8AC008DBB58 /* specialPeopleIntroduce */,
@@ -1905,6 +1916,35 @@
 			name = personInfo;
 			sourceTree = "<group>";
 		};
+		2CFEAA4F199AF52D00FCB5C1 /* filecenter */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEAA5B199AF7D500FCB5C1 /* filecenterDetail */,
+				2CFEAA5A199AF7CC00FCB5C1 /* filecenterlist */,
+			);
+			name = filecenter;
+			sourceTree = "<group>";
+		};
+		2CFEAA5A199AF7CC00FCB5C1 /* filecenterlist */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEAA50199AF5CC00FCB5C1 /* filecenterlist.h */,
+				2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */,
+				2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */,
+			);
+			name = filecenterlist;
+			sourceTree = "<group>";
+		};
+		2CFEAA5B199AF7D500FCB5C1 /* filecenterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEAA55199AF7BA00FCB5C1 /* filecenterDetail.h */,
+				2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */,
+				2CFEAA57199AF7BA00FCB5C1 /* filecenterDetail.xib */,
+			);
+			name = filecenterDetail;
+			sourceTree = "<group>";
+		};
 		7CE63117198C7A8100730C64 = {
 			isa = PBXGroup;
 			children = (
@@ -2450,6 +2490,7 @@
 				2C57571F1994657900858A7F /* myorder.xib in Resources */,
 				2C393A02198C8B830045F1F3 /* house.png in Resources */,
 				2C3939F8198C8B830045F1F3 /* good.png in Resources */,
+				2CFEAA59199AF7BA00FCB5C1 /* filecenterDetail.xib in Resources */,
 				2C281147199898B30072D08C /* prowantedlist.xib in Resources */,
 				2C393A47198C8B830045F1F3 /* voice_rcd_btn_nor.9.png in Resources */,
 				2C393A2F198C8B830045F1F3 /* round.png in Resources */,
@@ -2466,6 +2507,7 @@
 				2C5404B0199360F0003D2BBE /* arrearageCell.xib in Resources */,
 				2C3939F7198C8B830045F1F3 /* feature_point.png in Resources */,
 				2C3939C4198C8B830045F1F3 /* activity.png in Resources */,
+				2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */,
 				2C393A22198C8B830045F1F3 /* people.png in Resources */,
 				2C3939F9198C8B830045F1F3 /* grey_nav2.png in Resources */,
 				7CE6312E198C7A8200730C64 /* InfoPlist.strings in Resources */,
@@ -2578,6 +2620,7 @@
 				2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */,
 				7CE6318C198C7C2A00730C64 /* ASIFormDataRequest.m in Sources */,
 				2C5404BB199363C1003D2BBE /* arrearageDetail.m in Sources */,
+				2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */,
 				2C5404C819937539003D2BBE /* consumelist.m in Sources */,
 				2C5404C119936DE7003D2BBE /* Paymentfunction.m in Sources */,
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
@@ -2662,6 +2705,7 @@
 				2C28110719985B400072D08C /* consultDetail.m in Sources */,
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
 				2C5A242C19922201003712D5 /* personInfo.m in Sources */,
+				2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */,
 				2C1FE5FC1995BD86008DBB58 /* changecom.m in Sources */,
 				2C5404A319935B7B003D2BBE /* updateinfo.m in Sources */,
 				2C57571219945B4B00858A7F /* topupmoney.m in Sources */,

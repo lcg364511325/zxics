@@ -14,6 +14,7 @@
 @interface SpecialPeopleDetail : UIViewController
 {
     NSArray * list;
+    NSString *caid;
 
 }
 

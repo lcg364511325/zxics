@@ -7,6 +7,7 @@
 //
 
 #import "SpecialPeople.h"
+#import "filecenterlist.h"
 
 @interface SpecialPeople ()
 
@@ -36,6 +37,7 @@
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
+//除文件中心外的页面跳转
 -(IBAction)buttonclick:(id)sender
 {
     UIButton* btn = (UIButton*)sender;
@@ -45,6 +47,12 @@
     [self.navigationController pushViewController:spd animated:NO];
 }
 
+//文件中心页面跳转
+-(IBAction)filecenter:(id)sender
+{
+    filecenterlist *_filecenterlist=[[filecenterlist alloc]init];
+    [self.navigationController pushViewController:_filecenterlist animated:NO];
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="login">
             <connections>
+                <outlet property="UINavigationBar" destination="W7D-hj-1oO" id="gET-go-GiC"/>
                 <outlet property="account" destination="50C-IR-ifK" id="SCj-XU-xgu"/>
                 <outlet property="logoshengyu" destination="GFm-dN-LRw" id="uK0-F0-Yqa"/>
                 <outlet property="password" destination="w8W-HP-5fB" id="7Ah-dg-ZWE"/>
@@ -51,7 +52,7 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-iA-yeL">
                             <rect key="frame" x="60" y="315" width="200" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.21053858019999999" green="0.4466391609" blue="0.97612404340000003" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="登录">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

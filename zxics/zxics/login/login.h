@@ -13,6 +13,7 @@
 #import "fontindex.h"
 
 @interface login : UIViewController<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 
 
 @property (weak, nonatomic) IBOutlet UITextField *account;

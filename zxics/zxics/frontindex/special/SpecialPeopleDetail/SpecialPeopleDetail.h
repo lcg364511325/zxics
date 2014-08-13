@@ -12,9 +12,14 @@
 #import "SpecialPeopleIntroduce.h"
 
 @interface SpecialPeopleDetail : UIViewController
+{
+    NSArray * list;
+
+}
 
 @property(retain , nonatomic) NSString * spdbtntag;//按钮tag，判断是那个按钮被点击了
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
+@property (weak, nonatomic) IBOutlet UITableView *specialtableview;
 
 @end

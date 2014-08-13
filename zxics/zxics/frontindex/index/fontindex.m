@@ -18,6 +18,7 @@
 
 @synthesize functionscroll;
 @synthesize functionpage;
+@synthesize loginbutton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +47,15 @@
     functionpage.numberOfPages=2;//设置页数为2
     functionpage.currentPage=0;//初始页码为 0
     functionpage.userInteractionEnabled=NO;//pagecontroller不响应点击操作
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        loginbutton.titleLabel.text=@"退出";
+    }else{
+        loginbutton.titleLabel.text=@"登录";
+    }
+    
+    
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -100,6 +110,7 @@
     [self.navigationController pushViewController:_personIndex animated:NO];
 }
 
+//物业报修
 -(IBAction)repairlist:(id)sender
 {
     repairlist * _repairlist=[[repairlist alloc] init];
@@ -184,9 +195,19 @@
 //登录页面跳转
 -(IBAction)login:(id)sender
 {
-    login * _login=[[login alloc] init];
-    
-    [self.navigationController pushViewController:_login animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        myDelegate.entityl=nil;
+        NSString *rowString =@"退出成功";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+        [self reloadInputViews];
+    }else
+    {
+        login * _login=[[login alloc] init];
+        
+        [self.navigationController pushViewController:_login animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning

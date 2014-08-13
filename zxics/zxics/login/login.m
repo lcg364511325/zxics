@@ -7,6 +7,8 @@
 //
 
 #import "login.h"
+#import "DataService.h"
+#import "LoginEntity.h"
 
 @interface login ()
 
@@ -37,6 +39,8 @@ NSInteger i=0;
     //shengyu    222222   13428706220  111111
     [self.navigationController setNavigationBarHidden:YES];
     
+    [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
     if ([[NSUserDefaults standardUserDefaults]objectForKey:@"_account"]) {
         
         _account.text=(NSString *)[[NSUserDefaults standardUserDefaults]objectForKey:@"_account"];
@@ -48,7 +52,7 @@ NSInteger i=0;
         //_password.text=@"111111";
     }
     
-    [_submitlogin setTitle:@"" forState:UIControlStateNormal];
+    [_submitlogin setTitle:@"登录" forState:UIControlStateNormal];
     
     //设置此输入框可以隐藏键盘
     _account.delegate=self;
@@ -68,7 +72,9 @@ NSInteger i=0;
         
         if(resultButton.tag==1)return;
         
-        tipLable.text=@"正努力登录中...";
+        NSString *rowString =@"正在登录。。。。";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alter show];
         [resultButton setTag:1];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -77,12 +83,13 @@ NSInteger i=0;
             NSString * account = _account.text;
             NSString * password = _password.text;
             
-//            LoginApi * service = [[LoginApi alloc] init];
-            LoginEntity * result = nil;//[service login:account password:password verlity:code];
+             NSMutableDictionary * login = [NSMutableDictionary dictionaryWithCapacity:5];
+            AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+            login=[DataService PostDataService:[NSString stringWithFormat:@"%@api/login",myDelegate.url] postDatas:[NSString stringWithFormat:@"account=%@&pwd=%@",account,password]];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 更新界面（处理结果）
-                if(result){
+                if(login.count>2){
                     
                     //判断是否要保存密码
                     if(i==1){
@@ -92,42 +99,33 @@ NSInteger i=0;
                         [[NSUserDefaults standardUserDefaults]setObject:nil forKey:@"_account"];
                         [[NSUserDefaults standardUserDefaults]setObject:nil forKey:@"_password"];
                     }
+                    LoginEntity *loginuser=[[LoginEntity alloc]init];
+                    loginuser.pay_points=[login objectForKey:@"pay_points"];
+                    loginuser.account=[login objectForKey:@"account"];
+                    loginuser.userid=[login objectForKey:@"userid"];
+                    loginuser.name=[login objectForKey:@"name"];
+                    loginuser.headimg=[login objectForKey:@"headimg"];
+                    loginuser.communityName=[login objectForKey:@"communityName"];
+                    loginuser.userMoney=[login objectForKey:@"userMoney"];
+                    loginuser.communityid=[login objectForKey:@"communityid"];
+                    myDelegate.entityl=loginuser;
                     
-//                    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
                     
-//                    myDelegate.entityl=result;
-//                    
-//                    customer * n = [[customer alloc] init];
-//                    n.uId = result.uId;
-//                    n.userType = result.userType;
-//                    n.userName = result.userName;
-//                    n.userPass = result.userPass;
-//                    n.userDueDate = result.userDueDate;
-//                    n.userTrueName = result.userTrueName;
-//                    n.sfUrl = result.sfUrl;
-//                    n.lxrName = result.lxrName;
-//                    n.Sex = result.Sex;
-//                    n.bmName = result.bmName;
-//                    n.Email = result.Email;
-//                    n.Phone = result.Phone;
-//                    n.Lxphone = result.Lxphone;
-//                    n.Sf = result.Sf;
-//                    n.Cs = result.Cs;
-//                    n.Address = result.Address;
 
                     //登录成功，进入系统首页
                     NSLog(@"登录成功，进入系统首页");
-                    //Index *sysmenu=[[Index alloc] init];
-                    //FVImageSequenceDemoViewController *sysmenu=[[FVImageSequenceDemoViewController alloc] init];
-                    //[self.navigationController pushViewController:sysmenu animated:NO];
+                    [alter dismissWithClickedButtonIndex:0 animated:YES];
+                    NSString *rowString =@"登录成功";
+                    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    [alter show];
                     
                     
                 }else{
                     //测试中，进入系统首页
-                    
-                    NSString *info=@"登录失败！";
+                    [alter dismissWithClickedButtonIndex:0 animated:YES];
+                    NSString *info=@"用户名或密码不正确";
                     // NSLog(@"登录失败------:%@",info);
-                    [[[UIAlertView alloc] initWithTitle:@"信息提示" message:info delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil] show];
+                    [[[UIAlertView alloc] initWithTitle:@"登录失败" message:info delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil] show];
                 }
                 
                 //[resultButton setTitle:@"登录" forState:UIControlStateNormal];
@@ -144,6 +142,14 @@ NSInteger i=0;
         
     }
     
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        [self goback:nil];
+    }
 }
 
 //记住密码

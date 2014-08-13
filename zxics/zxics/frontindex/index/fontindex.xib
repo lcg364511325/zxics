@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="functionpage" destination="686-dl-ItJ" id="lpV-tO-mb7"/>
                 <outlet property="functionscroll" destination="VnB-xf-efD" id="WK7-Ry-hn2"/>
+                <outlet property="loginbutton" destination="Ei6-YJ-H9S" id="G3c-tN-dLl"/>
                 <outlet property="secondview" destination="ZAe-PP-yXW" id="1AY-1B-g00"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

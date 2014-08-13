@@ -33,13 +33,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="联系人:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDY-qs-mbz">
-                        <rect key="frame" x="241" y="22" width="42" height="10"/>
+                        <rect key="frame" x="199" y="22" width="42" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuT-Hc-cSE">
-                        <rect key="frame" x="241" y="40" width="42" height="10"/>
+                        <rect key="frame" x="199" y="40" width="42" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="highlightedColor"/>
@@ -63,13 +63,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpD-Nf-H5W">
-                        <rect key="frame" x="280" y="23.5" width="38" height="10"/>
+                        <rect key="frame" x="238" y="23" width="77" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qj-zj-Qjz">
-                        <rect key="frame" x="270" y="40" width="48" height="10"/>
+                        <rect key="frame" x="228" y="40" width="87" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="highlightedColor"/>
@@ -77,11 +77,11 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="businessLable" destination="3L3-zX-QmS" id="rzD-bB-Gic"/>
+                <outlet property="businessLable" destination="8P4-3A-0yi" id="jbJ-3j-bRz"/>
                 <outlet property="dateLabel" destination="9qj-zj-Qjz" id="3ct-zN-bq0"/>
-                <outlet property="orgLabel" destination="y45-7h-1ZJ" id="B0t-NO-CN6"/>
+                <outlet property="orgLabel" destination="bRe-Qf-ddd" id="7Ca-H5-GkE"/>
                 <outlet property="peopleLabel" destination="DpD-Nf-H5W" id="eQS-Pl-GSY"/>
-                <outlet property="telLabel" destination="GMn-Yk-YV8" id="VdY-iU-Ufn"/>
+                <outlet property="telLabel" destination="2RA-d3-zYL" id="CTo-aq-RhT"/>
             </connections>
         </tableViewCell>
     </objects>

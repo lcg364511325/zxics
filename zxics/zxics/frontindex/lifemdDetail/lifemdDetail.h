@@ -11,6 +11,9 @@
 
 @interface lifemdDetail : UIViewController
 
+@property(retain , nonatomic) NSDictionary * Project_communityorgs;//生活管家信息明细
+
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UILabel *orgLabel;

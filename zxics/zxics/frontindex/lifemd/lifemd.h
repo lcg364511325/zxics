@@ -12,6 +12,9 @@
 #import "lifemdDetail.h"
 
 @interface lifemd : UIViewController
+{
+    NSArray * lfmdlist;
+}
 @property (weak, nonatomic) IBOutlet UITableView *lifetable;
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 

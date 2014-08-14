@@ -34,7 +34,8 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    fontindex *_fontindex=[[fontindex alloc]init];
+    [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
 //除文件中心外的页面跳转

@@ -24,4 +24,6 @@
 
 -(NSString *)stringtoDate:(NSString *)str;
 
+-(NSString *)stringtoDateforsecond:(NSString *)str;
+
 @end

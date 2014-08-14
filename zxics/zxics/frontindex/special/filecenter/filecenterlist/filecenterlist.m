@@ -56,11 +56,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
-    if (myDelegate.entityl) {
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=69&memberId=%@&communityid=%@&type=1",myDelegate.entityl.userid,myDelegate.entityl.communityid]];
-    }else{
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:@"categoryId=69&type=1"];
-    }
+    spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:@"categoryId=69&type=1"];
     list=[spd objectForKey:@"datas"];}
 
 -(IBAction)goback:(id)sender

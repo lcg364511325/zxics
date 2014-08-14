@@ -74,7 +74,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
-    if (myDelegate.entityl) {
+    if (myDelegate.entityl && [caid isEqualToString:@"73"]) {
         spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid]];
     }else{
         spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid]];

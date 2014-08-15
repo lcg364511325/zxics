@@ -20,6 +20,7 @@
 @synthesize userLabel;
 @synthesize dateLabel;
 @synthesize introduce;
+@synthesize spiscrollview;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,20 +52,25 @@
     
     //文章内容自动换行
     contentLabel.numberOfLines=0;
-    CGSize size =CGSizeMake(300,500);
+    CGSize size =CGSizeMake(contentLabel.frame.size.width,500);
     UIFont * tfont = [UIFont systemFontOfSize:10];
     NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
-    CGSize  actualsize =[[introduce objectForKey:@"content"] boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
-    contentLabel.frame = CGRectMake(contentLabel.frame.origin.x, contentLabel.frame.origin.y, contentLabel.frame.size.width, actualsize.height+20);
+    CGSize  actualsize =[[introduce objectForKey:@"content"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
+    contentLabel.frame = CGRectMake(contentLabel.frame.origin.x, contentLabel.frame.origin.y, contentLabel.frame.size.width, actualsize.height+24);
     contentLabel.text=[introduce objectForKey:@"content"];
     
-    userLabel.frame=CGRectMake(userLabel.frame.origin.x, contentLabel.frame.origin.y+40+actualsize.height, userLabel.frame.size.width, userLabel.frame.size.height);
+    userLabel.frame=CGRectMake(userLabel.frame.origin.x, contentLabel.frame.origin.y+contentLabel.frame.size.height, userLabel.frame.size.width, userLabel.frame.size.height);
     userLabel.text=[NSString stringWithFormat:@"发布人：%@",[introduce objectForKey:@"title"]];
     
     //时间戳转换为时间
     Commons *_Commons=[[Commons alloc]init];
-    dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, contentLabel.frame.origin.y+60+actualsize.height, dateLabel.frame.size.width, dateLabel.frame.size.height);
+    dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, userLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height);
     dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDate:[introduce objectForKey:@"createDate"]]];
+    
+    spiscrollview.contentSize=CGSizeMake(320, contentLabel.frame.size.height+spiscrollview.frame.size.height-250);
+    spiscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
+    spiscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
+    spiscrollview.scrollEnabled=YES;
 }
 
 - (void)didReceiveMemoryWarning

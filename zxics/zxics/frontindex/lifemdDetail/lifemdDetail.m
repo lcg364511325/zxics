@@ -28,6 +28,7 @@
 @synthesize lifeLabel;
 @synthesize dateLabel;
 @synthesize Project_communityorgs;
+@synthesize lfmdscrollview;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,19 +59,42 @@
     telLabel.text=[pc objectForKey:@"phones"];
     businessLabel.text=[pc objectForKey:@"target"];
     contectpeopleLabel.text=[pc objectForKey:@"userName"];
-    introduceLabel.text=[pc objectForKey:@"commet"];
-    DetailsLabel.text=[pc objectForKey:@"introduce"];
-    lifeLabel.text=[Project_communityorgs objectForKey:@"typeName"];
+    
+    introduceLabel.numberOfLines=0;
+    CGSize size =CGSizeMake(introduceLabel.frame.size.width,0);
+    UIFont * tfont = introduceLabel.font;
+    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
+    
+    CGSize  actualsize =[[pc objectForKey:@"commet"] boundingRectWithSize:size options:
+                         NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+    introduceLabel.text=[NSString stringWithFormat:@"介绍：%@",[pc objectForKey:@"commet"]];
+    introduceLabel.frame=CGRectMake(introduceLabel.frame.origin.x, introduceLabel.frame.origin.y, introduceLabel.frame.size.width, actualsize.height+24);
+    
+    DetailsLabel.numberOfLines=0;
+    actualsize =[[pc objectForKey:@"introduce"] boundingRectWithSize:size options:
+                 NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+    DetailsLabel.text=[NSString stringWithFormat:@"详细：%@",[pc objectForKey:@"introduce"]];
+    DetailsLabel.frame=CGRectMake(DetailsLabel.frame.origin.x, introduceLabel.frame.origin.y+introduceLabel.frame.size.height, DetailsLabel.frame.size.width, actualsize.height+24);
+    
+    
+    lifeLabel.text=[NSString stringWithFormat:@"类型：%@",[Project_communityorgs objectForKey:@"typeName"]];
+    lifeLabel.frame=CGRectMake(lifeLabel.frame.origin.x, DetailsLabel.frame.origin.y+DetailsLabel.frame.size.height, lifeLabel.frame.size.width, lifeLabel.frame.size.height);
     
     
     Commons *_Commons=[[Commons alloc]init];
-    dateLabel.text=[_Commons stringtoDate:[pc objectForKey:@"createTime"]];
+    dateLabel.text=[NSString stringWithFormat:@"时间：%@",[_Commons stringtoDateforsecond:[pc objectForKey:@"createTime"]]];
+    dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, lifeLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height);
     
     
     urlLabel.text=nil;
     MyLabel *webSite = [[MyLabel alloc] initWithFrame:CGRectMake(urlLabel.frame.origin.x, urlLabel.frame.origin.y, urlLabel.frame.size.width, urlLabel.frame.size.height)];
     [webSite setText:[pc objectForKey:@"openurl"]];
-    [self.view addSubview:webSite];
+    [lfmdscrollview addSubview:webSite];
+    
+    lfmdscrollview.contentSize=CGSizeMake(320, DetailsLabel.frame.size.height+introduceLabel.frame.size.height+lfmdscrollview.frame.size.height);
+    lfmdscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
+    lfmdscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
+    lfmdscrollview.scrollEnabled=YES;
 }
 
 -(IBAction)goback:(id)sender

@@ -10,8 +10,9 @@
 
 @interface specialPeopleIntroduce : UIViewController
 
-@property(retain , nonatomic) NSDictionary * introduce;//生活管家信息明细
+@property(retain , nonatomic) NSDictionary * introduce;//信息详情
 
+@property (weak, nonatomic) IBOutlet UIScrollView *spiscrollview;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;

@@ -10,6 +10,10 @@
 #import "surveylistCell.h"
 
 @interface surveylist : UIViewController
+{
+    NSArray *list;
+}
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *surveyTView;
 
 @end

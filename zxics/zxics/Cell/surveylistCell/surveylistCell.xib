@@ -40,6 +40,11 @@
                     </button>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="joinButton" destination="eW6-ie-htT" id="3wD-Mx-I2o"/>
+                <outlet property="resultButton" destination="iGR-Wf-HSo" id="wtJ-AI-Ta7"/>
+                <outlet property="titleLabel" destination="d3j-yZ-stj" id="rzC-pp-1PR"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

@@ -8,6 +8,7 @@
 
 #import "complainDetail.h"
 #import "Commons.h"
+#import "assess.h"
 
 @interface complainDetail ()
 
@@ -126,12 +127,14 @@
         assessbutton.frame=CGRectMake(120, dealstateLabel.frame.origin.y+30, 50, 21);
         //是否已回复
         if (rid!=nil && ![rid isEqualToString:@"<null>"]) {
-            replycontentLabel.text=[NSString stringWithFormat:@"回复内容：%@",[complaininfo objectForKey:@"reply_contents"]];
-            replycontentLabel.numberOfLines=0;
-            actualsize =[[complaininfo objectForKey:@"reply_contents"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
-            replycontentLabel.frame=CGRectMake(replycontentLabel.frame.origin.x, dealstateLabel.frame.origin.y+30, replycontentLabel.frame.size.width, actualsize.height+24);
             
-            replydataLabel.frame=CGRectMake(replydataLabel.frame.origin.x, replycontentLabel.frame.origin.y+actualsize.height+24, replydataLabel.frame.size.width, replydataLabel.frame.size.height);
+            UIWebView *replycontentview=[[UIWebView alloc]init];
+            [replycontentview loadHTMLString:[NSString stringWithFormat:@"回复内容：%@",[complaininfo objectForKey:@"reply_contents"]] baseURL:nil];
+            actualsize =[[complaininfo objectForKey:@"reply_contents"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
+            replycontentview.frame=CGRectMake(replycontentLabel.frame.origin.x, dealstateLabel.frame.origin.y+30, replycontentLabel.frame.size.width, actualsize.height+24);
+            [comscrollview addSubview:replycontentview];
+            
+            replydataLabel.frame=CGRectMake(replydataLabel.frame.origin.x, replycontentview.frame.origin.y+actualsize.height+24, replydataLabel.frame.size.width, replydataLabel.frame.size.height);
             replydataLabel.text=[NSString stringWithFormat:@"回复时间：%@",[_Commons stringtoDateforsecond:[complaininfo objectForKey:@"reply_createtime"]]];
             
             //是否已评价
@@ -163,7 +166,7 @@
                 [assessbutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                 assessbutton.titleLabel.font=[UIFont systemFontOfSize:12.0f];
                 [assessbutton setBackgroundImage:[UIImage imageNamed:@"login"] forState:UIControlStateNormal];
-                [assessbutton addTarget:self action:nil forControlEvents:UIControlEventTouchDown];
+                [assessbutton addTarget:self action:@selector(assess) forControlEvents:UIControlEventTouchDown];
                 assessbutton.frame=CGRectMake(120, replydataLabel.frame.origin.y+30, 50, 21);
             }
             
@@ -183,6 +186,12 @@
 -(IBAction)goback:(id)sender
 {
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)assess
+{
+    assess *_assess=[[assess alloc]init];
+    [self.navigationController pushViewController:_assess animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

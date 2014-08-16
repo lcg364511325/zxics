@@ -4,10 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="surveylist">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="surveyDetail">
             <connections>
-                <outlet property="UINavigationBar" destination="mLh-JX-Pb1" id="oRT-7d-XD6"/>
-                <outlet property="surveyTView" destination="XuM-1J-lRa" id="I6S-80-hQv"/>
+                <outlet property="UINavigationBar" destination="VgN-q6-Sx7" id="H2A-zW-yob"/>
+                <outlet property="UINavigationItem" destination="rcZ-nu-1cA" id="3N4-Ef-miQ"/>
+                <outlet property="surveyWView" destination="jJ0-LM-xR0" id="kFO-98-gAW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-JX-Pb1">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgN-q6-Sx7">
                     <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,24 +25,20 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="在线调查" id="umR-LS-GNZ">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="BnV-Ev-JMT">
+                        <navigationItem title="在线调查" id="rcZ-nu-1cA">
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="jT0-RQ-zr4">
                                 <connections>
-                                    <action selector="goback:" destination="-1" id="Pik-1X-Ttz"/>
+                                    <action selector="goback:" destination="-1" id="Yb6-hn-yPa"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XuM-1J-lRa">
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJ0-LM-xR0">
                     <rect key="frame" x="0.0" y="66" width="320" height="502"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="njW-2f-64i"/>
-                        <outlet property="delegate" destination="-1" id="a2a-0v-Rw5"/>
-                    </connections>
-                </tableView>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

@@ -244,6 +244,15 @@
 		2C393A4A198C8B830045F1F3 /* women.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939BE198C8B830045F1F3 /* women.png */; };
 		2C393A4B198C8B830045F1F3 /* word.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939BF198C8B830045F1F3 /* word.png */; };
 		2C393A4C198C8B830045F1F3 /* word1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3939C0198C8B830045F1F3 /* word1.png */; };
+		2C3C059F199DB15200369A63 /* assess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C059D199DB15200369A63 /* assess.m */; };
+		2C3C05A0199DB15200369A63 /* assess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C059E199DB15200369A63 /* assess.xib */; };
+		2C3C05E7199DE6EC00369A63 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05E4199DE6EC00369A63 /* HPGrowingTextView.m */; };
+		2C3C05E8199DE6EC00369A63 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05E6199DE6EC00369A63 /* HPTextViewInternal.m */; };
+		2C3C05EA199DEBF700369A63 /* input-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C05E9199DEBF700369A63 /* input-1.png */; };
+		2C3C05F0199DF54000369A63 /* RadioBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05ED199DF54000369A63 /* RadioBox.m */; };
+		2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05EF199DF54000369A63 /* RadioGroup.m */; };
+		2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05F4199EFBAB00369A63 /* surveyDetail.m */; };
+		2C3C05F7199EFBAB00369A63 /* surveyDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */; };
 		2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F66A198F785B004F2A38 /* MJRefresh.bundle */; };
 		2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66D198F785B004F2A38 /* MJRefreshBaseView.m */; };
 		2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66F198F785B004F2A38 /* MJRefreshConst.m */; };
@@ -658,6 +667,21 @@
 		2C3939BE198C8B830045F1F3 /* women.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = women.png; path = "../../../../../Downloads/drawable-hdpi/women.png"; sourceTree = "<group>"; };
 		2C3939BF198C8B830045F1F3 /* word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = word.png; path = "../../../../../Downloads/drawable-hdpi/word.png"; sourceTree = "<group>"; };
 		2C3939C0198C8B830045F1F3 /* word1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = word1.png; path = "../../../../../Downloads/drawable-hdpi/word1.png"; sourceTree = "<group>"; };
+		2C3C059C199DB15200369A63 /* assess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assess.h; path = assess/assess.h; sourceTree = "<group>"; };
+		2C3C059D199DB15200369A63 /* assess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = assess.m; path = assess/assess.m; sourceTree = "<group>"; };
+		2C3C059E199DB15200369A63 /* assess.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = assess.xib; path = assess/assess.xib; sourceTree = "<group>"; };
+		2C3C05E3199DE6EC00369A63 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
+		2C3C05E4199DE6EC00369A63 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
+		2C3C05E5199DE6EC00369A63 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
+		2C3C05E6199DE6EC00369A63 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
+		2C3C05E9199DEBF700369A63 /* input-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-1.png"; sourceTree = "<group>"; };
+		2C3C05EC199DF54000369A63 /* RadioBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioBox.h; sourceTree = "<group>"; };
+		2C3C05ED199DF54000369A63 /* RadioBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioBox.m; sourceTree = "<group>"; };
+		2C3C05EE199DF54000369A63 /* RadioGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioGroup.h; sourceTree = "<group>"; };
+		2C3C05EF199DF54000369A63 /* RadioGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioGroup.m; sourceTree = "<group>"; };
+		2C3C05F3199EFBAB00369A63 /* surveyDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = surveyDetail.h; path = surveyDetail/surveyDetail.h; sourceTree = "<group>"; };
+		2C3C05F4199EFBAB00369A63 /* surveyDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = surveyDetail.m; path = surveyDetail/surveyDetail.m; sourceTree = "<group>"; };
+		2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = surveyDetail.xib; path = surveyDetail/surveyDetail.xib; sourceTree = "<group>"; };
 		2C42F66A198F785B004F2A38 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		2C42F66B198F785B004F2A38 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		2C42F66C198F785B004F2A38 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -986,6 +1010,7 @@
 		2C1FE6131995C8AC008DBB58 /* complain */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C059B199DB13A00369A63 /* assess */,
 				2C1FE6141995C8AC008DBB58 /* complainAdd */,
 				2C1FE6181995C8AC008DBB58 /* complainDetail */,
 				2C1FE61C1995C8AC008DBB58 /* complainlist */,
@@ -1162,6 +1187,7 @@
 		2C1FE64B1995C8AC008DBB58 /* survey */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C05F2199EFB6A00369A63 /* surveyDetail */,
 				2C1FE64C1995C8AC008DBB58 /* surveylist */,
 			);
 			name = survey;
@@ -1499,6 +1525,48 @@
 				2C282F201990D5AA0061F987 /* cplistCell.xib */,
 			);
 			name = cplistCell;
+			sourceTree = "<group>";
+		};
+		2C3C059B199DB13A00369A63 /* assess */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C059C199DB15200369A63 /* assess.h */,
+				2C3C059D199DB15200369A63 /* assess.m */,
+				2C3C059E199DB15200369A63 /* assess.xib */,
+			);
+			name = assess;
+			sourceTree = "<group>";
+		};
+		2C3C05E2199DE6EC00369A63 /* HPGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C05E3199DE6EC00369A63 /* HPGrowingTextView.h */,
+				2C3C05E4199DE6EC00369A63 /* HPGrowingTextView.m */,
+				2C3C05E5199DE6EC00369A63 /* HPTextViewInternal.h */,
+				2C3C05E6199DE6EC00369A63 /* HPTextViewInternal.m */,
+			);
+			path = HPGrowingTextView;
+			sourceTree = "<group>";
+		};
+		2C3C05EB199DF54000369A63 /* RadioControl */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C05EC199DF54000369A63 /* RadioBox.h */,
+				2C3C05ED199DF54000369A63 /* RadioBox.m */,
+				2C3C05EE199DF54000369A63 /* RadioGroup.h */,
+				2C3C05EF199DF54000369A63 /* RadioGroup.m */,
+			);
+			path = RadioControl;
+			sourceTree = "<group>";
+		};
+		2C3C05F2199EFB6A00369A63 /* surveyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C05F3199EFBAB00369A63 /* surveyDetail.h */,
+				2C3C05F4199EFBAB00369A63 /* surveyDetail.m */,
+				2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */,
+			);
+			name = surveyDetail;
 			sourceTree = "<group>";
 		};
 		2C42F669198F785B004F2A38 /* MJRefresh */ = {
@@ -2037,6 +2105,8 @@
 		7CE63158198C7C2900730C64 /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C05EB199DF54000369A63 /* RadioControl */,
+				2C3C05E2199DE6EC00369A63 /* HPGrowingTextView */,
 				2C5A241C1991D5EF003712D5 /* CustomIOS7AlertView */,
 				2C28068319907437007838A6 /* myLabel */,
 				2C42F669198F785B004F2A38 /* MJRefresh */,
@@ -2124,6 +2194,7 @@
 		7CE63183198C7C2A00730C64 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C05E9199DEBF700369A63 /* input-1.png */,
 				2C393935198C8B830045F1F3 /* about_us.png */,
 				2C393936198C8B830045F1F3 /* accountactivity_new_dark.png */,
 				2C393937198C8B830045F1F3 /* accountactivity_new_light.png */,
@@ -2421,6 +2492,7 @@
 				2C3939DB198C8B830045F1F3 /* btn_payment.png in Resources */,
 				2C3939D5198C8B830045F1F3 /* btn_arrearage.png in Resources */,
 				2C393A06198C8B830045F1F3 /* ic_pulltorefresh_arrow_up.png in Resources */,
+				2C3C05EA199DEBF700369A63 /* input-1.png in Resources */,
 				2C2811211998686E0072D08C /* MerchantsDetail.xib in Resources */,
 				2C3939DC198C8B830045F1F3 /* but_bule_img.9.png in Resources */,
 				2C2810F5199851F60072D08C /* downloadCell.xib in Resources */,
@@ -2461,6 +2533,7 @@
 				2C3939F5198C8B830045F1F3 /* dynamic_work.png in Resources */,
 				2C393A13198C8B830045F1F3 /* logo.png in Resources */,
 				2C1FE6591995C8AC008DBB58 /* cplist.xib in Resources */,
+				2C3C05F7199EFBAB00369A63 /* surveyDetail.xib in Resources */,
 				7CE6319E198C7C2A00730C64 /* login.xib in Resources */,
 				2C393A3F198C8B830045F1F3 /* t_bg.png in Resources */,
 				2C54048E19932E46003D2BBE /* personLog.xib in Resources */,
@@ -2541,6 +2614,7 @@
 				2C393A23198C8B830045F1F3 /* personal.9.png in Resources */,
 				2C393A16198C8B830045F1F3 /* map.png in Resources */,
 				2C57575F1994D3CD00858A7F /* newDeliveryaddress.xib in Resources */,
+				2C3C05A0199DB15200369A63 /* assess.xib in Resources */,
 				2C3939E6198C8B830045F1F3 /* button_user_help.png in Resources */,
 				2C393A27198C8B830045F1F3 /* red_nav.png in Resources */,
 				2C393A3A198C8B830045F1F3 /* settings_out.png in Resources */,
@@ -2626,6 +2700,7 @@
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
 				2C42F680198F785B004F2A38 /* UIScrollView+MJRefresh.m in Sources */,
 				2C2811701998AE370072D08C /* goodslistCell.m in Sources */,
+				2C3C05E8199DE6EC00369A63 /* HPTextViewInternal.m in Sources */,
 				7CE6319C198C7C2A00730C64 /* sqlService.m in Sources */,
 				7CE63192198C7C2A00730C64 /* Reachability.m in Sources */,
 				2C28111A199867490072D08C /* merchantsCell.m in Sources */,
@@ -2663,8 +2738,10 @@
 				2C5A240A1991BD98003712D5 /* repairlistCell.m in Sources */,
 				2C1FE6601995C8AC008DBB58 /* repairadd.m in Sources */,
 				7CE63134198C7A8200730C64 /* AppDelegate.m in Sources */,
+				2C3C059F199DB15200369A63 /* assess.m in Sources */,
 				2C1FE65C1995C8AC008DBB58 /* lifemd.m in Sources */,
 				2C42F67F198F785B004F2A38 /* UIScrollView+Extension.m in Sources */,
+				2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */,
 				7CE63195198C7C2A00730C64 /* Tool.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,
 				2C2810FB1998547C0072D08C /* consultlist.m in Sources */,
@@ -2686,11 +2763,13 @@
 				2C2810F4199851F60072D08C /* downloadCell.m in Sources */,
 				2C1FE6661995C8AC008DBB58 /* SpecialPeopleDetail.m in Sources */,
 				2C28110D199860820072D08C /* consultadd.m in Sources */,
+				2C3C05F0199DF54000369A63 /* RadioBox.m in Sources */,
 				2C28115219989A500072D08C /* prowantedDetail.m in Sources */,
 				7CE63194198C7C2A00730C64 /* DataService.m in Sources */,
 				2C281114199866CE0072D08C /* Merchantslist.m in Sources */,
 				2C2811781998BAAB0072D08C /* goodsDetail.m in Sources */,
 				2C1FE6541995C8AC008DBB58 /* complainlist.m in Sources */,
+				2C3C05E7199DE6EC00369A63 /* HPGrowingTextView.m in Sources */,
 				2C2810EE199850EF0072D08C /* download.m in Sources */,
 				2C281146199898B30072D08C /* prowantedlist.m in Sources */,
 				7CE63197198C7C2A00730C64 /* FileHelpers.m in Sources */,
@@ -2704,6 +2783,7 @@
 				2C2811201998686E0072D08C /* MerchantsDetail.m in Sources */,
 				2C28110719985B400072D08C /* consultDetail.m in Sources */,
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
+				2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */,
 				2C5A242C19922201003712D5 /* personInfo.m in Sources */,
 				2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */,
 				2C1FE5FC1995BD86008DBB58 /* changecom.m in Sources */,

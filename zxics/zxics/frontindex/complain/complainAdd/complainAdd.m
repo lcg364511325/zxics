@@ -7,6 +7,9 @@
 //
 
 #import "complainAdd.h"
+#import "DataService.h"
+#import "AppDelegate.h"
+#import "complainlist.h"
 
 @interface complainAdd ()
 
@@ -42,8 +45,59 @@
     complaintoTview.hidden=YES;
     complaintoText.userInteractionEnabled=NO;
     complaintoText.text=@"网站服务";
+    
+    [self settextviewShow:titleText];
+    [self settextviewShow:introduceText];
+    [self settextviewShow:detailsText];
 }
 
+//为textview加上border
+-(void)settextviewShow:(UITextView *)textview
+{
+    textview.layer.borderWidth=0.5;
+    textview.layer.borderColor=[UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0f].CGColor;
+    textview.layer.cornerRadius=5;
+}
+
+-(IBAction)submitcomplain:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+    NSString *subtype=nil;
+    
+    if ([complaintoText.text isEqualToString:@"网站服务"]) {
+        subtype=@"0";
+    }else if ([complaintoText.text isEqualToString:@"商铺服务"])
+    {
+        subtype=@"1";
+    }else if ([complaintoText.text isEqualToString:@"物业服务"])
+    {
+        subtype=@"2";
+    }
+    
+    
+    if (myDelegate.entityl) {
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/complaintAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&type=complaint&subtype=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,introduceText.text,detailsText.text,subtype]];
+        
+        status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
+}
+
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if ([status isEqualToString:@"1"]) {
+        
+        complainlist *_complainlist=[[complainlist alloc]init];
+        [self.navigationController pushViewController:_complainlist animated:NO];
+    }
+}
+
+//显示投诉对象下拉框
 -(IBAction)selectwho:(id)sender
 {
     complaintoTview.hidden=NO;

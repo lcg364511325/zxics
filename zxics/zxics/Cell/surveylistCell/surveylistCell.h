@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface surveylistCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *joinButton;
+@property (weak, nonatomic) IBOutlet UIButton *resultButton;
 
 @end

@@ -11,9 +11,15 @@
 #import "cpdetali.h"
 
 @interface cplist : UIViewController
+{
+    NSString *cid;
+    NSMutableArray *list;
+    NSInteger page;
+}
 
 @property(retain , nonatomic) NSString * btntag;//社区物业
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
+@property (weak, nonatomic) IBOutlet UITableView *cpTView;
 
 @end

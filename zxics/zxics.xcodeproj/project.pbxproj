@@ -104,6 +104,8 @@
 		2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F131990CABC0061F987 /* surveylistCell.xib */; };
 		2C282F211990D5AA0061F987 /* cplistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C282F1F1990D5AA0061F987 /* cplistCell.m */; };
 		2C282F221990D5AA0061F987 /* cplistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C282F201990D5AA0061F987 /* cplistCell.xib */; };
+		2C2A299219A1E98B000B9F88 /* repairDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A299019A1E98B000B9F88 /* repairDetail.m */; };
+		2C2A299319A1E98B000B9F88 /* repairDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A299119A1E98B000B9F88 /* repairDetail.xib */; };
 		2C3939C1198C8B830045F1F3 /* about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393935198C8B830045F1F3 /* about_us.png */; };
 		2C3939C2198C8B830045F1F3 /* accountactivity_new_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393936198C8B830045F1F3 /* accountactivity_new_dark.png */; };
 		2C3939C3198C8B830045F1F3 /* accountactivity_new_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C393937198C8B830045F1F3 /* accountactivity_new_light.png */; };
@@ -527,6 +529,9 @@
 		2C282F1E1990D5AA0061F987 /* cplistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cplistCell.h; path = Cell/cplistCell/cplistCell.h; sourceTree = "<group>"; };
 		2C282F1F1990D5AA0061F987 /* cplistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cplistCell.m; path = Cell/cplistCell/cplistCell.m; sourceTree = "<group>"; };
 		2C282F201990D5AA0061F987 /* cplistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cplistCell.xib; path = Cell/cplistCell/cplistCell.xib; sourceTree = "<group>"; };
+		2C2A298F19A1E98B000B9F88 /* repairDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairDetail.h; path = repairDetail/repairDetail.h; sourceTree = "<group>"; };
+		2C2A299019A1E98B000B9F88 /* repairDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairDetail.m; path = repairDetail/repairDetail.m; sourceTree = "<group>"; };
+		2C2A299119A1E98B000B9F88 /* repairDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairDetail.xib; path = repairDetail/repairDetail.xib; sourceTree = "<group>"; };
 		2C393935198C8B830045F1F3 /* about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_us.png; path = "../../../../../Downloads/drawable-hdpi/about_us.png"; sourceTree = "<group>"; };
 		2C393936198C8B830045F1F3 /* accountactivity_new_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountactivity_new_dark.png; path = "../../../../../Downloads/drawable-hdpi/accountactivity_new_dark.png"; sourceTree = "<group>"; };
 		2C393937198C8B830045F1F3 /* accountactivity_new_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountactivity_new_light.png; path = "../../../../../Downloads/drawable-hdpi/accountactivity_new_light.png"; sourceTree = "<group>"; };
@@ -1115,6 +1120,7 @@
 		2C1FE6351995C8AC008DBB58 /* repair */ = {
 			isa = PBXGroup;
 			children = (
+				2C2A298E19A1E93C000B9F88 /* repairDetail */,
 				2C1FE6361995C8AC008DBB58 /* repairadd */,
 				2C1FE63A1995C8AC008DBB58 /* repairlist */,
 			);
@@ -1525,6 +1531,16 @@
 				2C282F201990D5AA0061F987 /* cplistCell.xib */,
 			);
 			name = cplistCell;
+			sourceTree = "<group>";
+		};
+		2C2A298E19A1E93C000B9F88 /* repairDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C2A298F19A1E98B000B9F88 /* repairDetail.h */,
+				2C2A299019A1E98B000B9F88 /* repairDetail.m */,
+				2C2A299119A1E98B000B9F88 /* repairDetail.xib */,
+			);
+			name = repairDetail;
 			sourceTree = "<group>";
 		};
 		2C3C059B199DB13A00369A63 /* assess */ = {
@@ -2475,6 +2491,7 @@
 				2C1FE65F1995C8AC008DBB58 /* lifemdDetail.xib in Resources */,
 				2C393A28198C8B830045F1F3 /* red_nav2.png in Resources */,
 				2C5A242D19922201003712D5 /* personInfo.xib in Resources */,
+				2C2A299319A1E98B000B9F88 /* repairDetail.xib in Resources */,
 				2C3939F4198C8B830045F1F3 /* download.png in Resources */,
 				2C3939EA198C8B830045F1F3 /* chatfrom_bg_normal.9.png in Resources */,
 				2C5404C919937539003D2BBE /* consumelist.xib in Resources */,
@@ -2785,6 +2802,7 @@
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
 				2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */,
 				2C5A242C19922201003712D5 /* personInfo.m in Sources */,
+				2C2A299219A1E98B000B9F88 /* repairDetail.m in Sources */,
 				2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */,
 				2C1FE5FC1995BD86008DBB58 /* changecom.m in Sources */,
 				2C5404A319935B7B003D2BBE /* updateinfo.m in Sources */,

@@ -11,9 +11,13 @@
 
 @interface surveylist : UIViewController
 {
-    NSArray *list;
+    NSMutableArray *list;
+    NSInteger page;
 }
+@property(retain , nonatomic) NSString * btntag;//在线业主
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *surveyTView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
 
 @end

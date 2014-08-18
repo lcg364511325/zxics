@@ -7,6 +7,9 @@
 //
 
 #import "cplist.h"
+#import "DataService.h"
+#import "AppDelegate.h"
+#import "Commons.h"
 
 @interface cplist ()
 
@@ -15,6 +18,7 @@
 @implementation cplist
 
 @synthesize btntag;
+@synthesize cpTView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,24 +34,57 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
+    
     NSInteger selecttype=[btntag integerValue];
     if (selecttype==0) {
         self.UINavigationItem.title=@"社区活动";
+        cid=@"79";
     }else if (selecttype==1)
     {
         self.UINavigationItem.title=@"物业通知";
+        cid=@"80";
     }
+    
+    //加载数据
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [cpTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [cpTView reloadData];
+        [cpTView headerEndRefreshing];}];
+    [cpTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [cpTView reloadData];
+        [cpTView footerEndRefreshing];
+    }];
+}
+
+//加载数据
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * cp = [NSMutableDictionary dictionaryWithCapacity:5];
+    cp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findProblem",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&communityid=%@",cid,myDelegate.entityl.communityid]];
+    NSArray *array=[cp objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
 }
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    fontindex *_fontindex=[[fontindex alloc]init];
+    [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -61,6 +98,12 @@
         NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"cplistCell" owner:self options:nil];
         cell=[nib objectAtIndex:0];
     }
+    NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
+    
+    Commons *_commons=[[Commons alloc]init];
+    cell.dataLabel.text=[_commons stringtoDate:[cpdetail objectForKey:@"createDate"]];
+    cell.titleLabel.text=[cpdetail objectForKey:@"title"];
+    
     
     return cell;
 }
@@ -69,6 +112,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     cpdetali *_cpdetali=[[cpdetali alloc]init];
+    NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
+    _cpdetali.cid=cid;
+    _cpdetali.cpd=cpdetail;
     [self.navigationController pushViewController:_cpdetali animated:NO];
     
 }

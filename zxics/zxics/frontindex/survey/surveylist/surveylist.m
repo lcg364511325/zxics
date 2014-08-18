@@ -18,6 +18,7 @@
 @implementation surveylist
 
 @synthesize surveyTView;
+@synthesize btntag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,16 +34,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
+    
     
     //加载数据
     [self loaddata];
     
     //上拉刷新下拉加载提示
     [surveyTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
         [self loaddata];
         [surveyTView reloadData];
         [surveyTView headerEndRefreshing];}];
     [surveyTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [surveyTView reloadData];
         [surveyTView footerEndRefreshing];
     }];
 }
@@ -57,8 +66,17 @@
         communityid=myDelegate.entityl.communityid;
     }
     
-    surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&type=0",communityid]];
-    list=[surveylist objectForKey:@"datas"];
+    if ([btntag isEqualToString:@"0"]) {
+        self.UINavigationItem.title=@"在线调查";
+        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&type=0",communityid] forPage:page forPageSize:10];
+    }else if([btntag isEqualToString:@"1"])
+    {
+        self.UINavigationItem.title=@"业主评价";
+        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&type=1",communityid] forPage:page forPageSize:10];
+    }
+    
+    NSArray *array=[surveylist objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
 }
 
 -(IBAction)goback:(id)sender
@@ -104,6 +122,7 @@
 {
     surveyDetail *_surveyDetail=[[surveyDetail alloc]init];
     _surveyDetail.style=@"0";
+    _surveyDetail.type=btntag;
     _surveyDetail.sid=[NSString stringWithFormat:@"%d",button.tag];
     [self.navigationController pushViewController:_surveyDetail animated:NO];
 }
@@ -113,6 +132,7 @@
 {
     surveyDetail *_surveyDetail=[[surveyDetail alloc]init];
     _surveyDetail.style=@"1";
+    _surveyDetail.type=btntag;
     _surveyDetail.sid=[NSString stringWithFormat:@"%d",button.tag];
     [self.navigationController pushViewController:_surveyDetail animated:NO];
 }

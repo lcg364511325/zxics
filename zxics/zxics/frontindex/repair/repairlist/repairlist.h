@@ -11,6 +11,12 @@
 #import "repairadd.h"
 
 @interface repairlist : UIViewController
+{
+    NSString *source;
+    NSMutableArray *list;
+    NSInteger page;
+}
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *repairTView;
 
 @end

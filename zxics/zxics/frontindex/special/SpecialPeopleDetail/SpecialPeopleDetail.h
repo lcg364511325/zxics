@@ -13,8 +13,9 @@
 
 @interface SpecialPeopleDetail : UIViewController
 {
-    NSArray * list;
+    NSMutableArray * list;
     NSString *caid;
+    NSInteger page;
 
 }
 

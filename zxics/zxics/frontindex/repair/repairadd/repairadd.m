@@ -7,6 +7,8 @@
 //
 
 #import "repairadd.h"
+#import "AppDelegate.h"
+#import "DataService.h"
 
 @interface repairadd ()
 
@@ -37,6 +39,30 @@ NSInteger iii=0;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    piclist=[[NSMutableArray alloc]initWithCapacity:5];
+    
+    //初始化值
+    typeText.text=@"紧急报修";
+    titleText.text=@"物业报修";
+    
+    NSDate *  senddate=[NSDate date];
+    NSDate *nextDate = [NSDate dateWithTimeInterval:24*60*60 sinceDate:senddate];
+    NSDateFormatter *formatter =[[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    dateText.text=[formatter stringFromDate:nextDate];
+    
+    
+    //加载报修类型
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * type = [NSMutableDictionary dictionaryWithCapacity:1];
+    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",myDelegate.url] postDatas:@"type=repairsParame"];
+    list=[type objectForKey:@"datas"];
+}
+
+-(IBAction)saverepairdata:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    [DataService PostDataService:[NSString stringWithFormat:@"%@api/propertyMaintainAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&addDate=%@&contents=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,dateText.text,detailsText.text]];
 }
 
 -(IBAction)goback:(id)sender
@@ -99,7 +125,7 @@ NSInteger iii=0;
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;//[self.list count];
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -112,16 +138,18 @@ NSInteger iii=0;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
     }
-    //NSUInteger row = [indexPath row];
-    //cell.textLabel.text = [self.list objectAtIndex:row];
+    NSUInteger row = [indexPath row];
+    NSDictionary *retype=[list objectAtIndex:row];
+    cell.textLabel.text = [retype objectForKey:@"name"];
     return cell;
 }
 
 //tableview点击操作
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSString *rowString = [self.list objectAtIndex:[indexPath row]];
-    //complaintoText.text=rowString;
+    NSDictionary *retype=[list objectAtIndex:[indexPath row]];
+    NSString *rowString = [retype objectForKey:@"name"];
+    typeText.text=rowString;
     repairtypeTView.hidden=YES;
     
 }
@@ -190,7 +218,7 @@ NSInteger iii=0;
     [self saveImage:image withName:@"currentImage1.png"];
     
     fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"currentImage1.png"];
-    
+    [piclist addObject:fullPath];
     UIImage *savedImage = [[UIImage alloc] initWithContentsOfFile:fullPath];
     //isFullScreen = NO;
     UIImageView *imageview =[[UIImageView alloc]init];

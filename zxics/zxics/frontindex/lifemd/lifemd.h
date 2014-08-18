@@ -13,7 +13,8 @@
 
 @interface lifemd : UIViewController
 {
-    NSArray * lfmdlist;
+    NSInteger page;
+    NSMutableArray * lfmdlist;
 }
 @property (weak, nonatomic) IBOutlet UITableView *lifetable;
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

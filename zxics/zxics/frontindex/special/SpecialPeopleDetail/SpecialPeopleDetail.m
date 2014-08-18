@@ -33,8 +33,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
-    NSInteger selecttype=[spdbtntag integerValue];
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
     
+    
+    NSInteger selecttype=[spdbtntag integerValue];
     if (selecttype==0) {
         self.UINavigationItem.title=@"发布信息";
         caid=@"73";
@@ -61,10 +64,15 @@
     
     //上拉刷新下拉加载提示
     [specialtableview addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
         [self loaddata];
         [specialtableview reloadData];
         [specialtableview headerEndRefreshing];}];
     [specialtableview addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [specialtableview reloadData];
         [specialtableview footerEndRefreshing];
     }];
 }
@@ -75,11 +83,13 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl && [caid isEqualToString:@"73"]) {
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid]];
+        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid] forPage:page forPageSize:10];
     }else{
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid]];
+        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid] forPage:page forPageSize:10];
     }
-    list=[spd objectForKey:@"datas"];}
+    NSArray *array=[spd objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
+}
 
 -(IBAction)goback:(id)sender
 {

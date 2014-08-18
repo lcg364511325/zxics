@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="surveylist">
             <connections>
                 <outlet property="UINavigationBar" destination="mLh-JX-Pb1" id="oRT-7d-XD6"/>
+                <outlet property="UINavigationItem" destination="umR-LS-GNZ" id="7QQ-GM-cPY"/>
                 <outlet property="surveyTView" destination="XuM-1J-lRa" id="I6S-80-hQv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

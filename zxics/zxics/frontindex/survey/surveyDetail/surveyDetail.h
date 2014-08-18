@@ -11,7 +11,7 @@
 @interface surveyDetail : UIViewController
 
 @property(retain , nonatomic) NSString * sid;//在线调查id
-
+@property(retain , nonatomic) NSString * type;//在线调查id
 @property(retain , nonatomic) NSString * style;//参与还是查看
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

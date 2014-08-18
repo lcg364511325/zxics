@@ -186,12 +186,15 @@
                                 <action selector="cplist:" destination="-1" eventType="touchDown" id="XaK-kt-KGX"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PEi-rt-0xA">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PEi-rt-0xA">
                             <rect key="frame" x="177" y="158" width="50" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="业主评价" image="appraise.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="surveylist:" destination="-1" eventType="touchDown" id="HxD-ST-hq8"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ts0-fM-uNO">
                             <rect key="frame" x="250" y="158" width="50" height="50"/>

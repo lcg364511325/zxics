@@ -33,16 +33,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
     
     //加载数据
     [self loaddata];
     
     //上拉刷新下拉加载提示
     [complaintTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
         [self loaddata];
         [complaintTView reloadData];
         [complaintTView headerEndRefreshing];}];
     [complaintTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [complaintTView reloadData];
         [complaintTView footerEndRefreshing];
     }];
 }
@@ -53,7 +60,8 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * complaint = [NSMutableDictionary dictionaryWithCapacity:5];
     complaint=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&type=complaint",myDelegate.entityl.userid]];
-    list=[complaint objectForKey:@"datas"];
+    NSArray *array=[complaint objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
     
 }
 

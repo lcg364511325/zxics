@@ -13,7 +13,8 @@
 
 @interface complainlist : UIViewController
 {
-    NSArray *list;
+    NSMutableArray *list;
+    NSInteger page;
 }
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *complaintTView;

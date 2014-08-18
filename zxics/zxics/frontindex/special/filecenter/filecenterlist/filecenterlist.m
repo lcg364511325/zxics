@@ -34,16 +34,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
     
     //加载数据
     [self loaddata];
     
     //上拉刷新下拉加载提示
     [filecenterTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
         [self loaddata];
         [filecenterTView reloadData];
         [filecenterTView headerEndRefreshing];}];
     [filecenterTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [filecenterTView reloadData];
         [filecenterTView footerEndRefreshing];
     }];
     
@@ -56,8 +63,11 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
-    spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:@"categoryId=69&type=1"];
-    list=[spd objectForKey:@"datas"];}
+    spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:@"categoryId=69&type=1" forPage:page forPageSize:10];
+    NSArray *array=[spd objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
+
+}
 
 -(IBAction)goback:(id)sender
 {

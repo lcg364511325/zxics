@@ -113,7 +113,7 @@
                     </connections>
                 </button>
                 <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-dN-RF4">
-                    <rect key="frame" x="71" y="145" width="229" height="284"/>
+                    <rect key="frame" x="71" y="145" width="229" height="107"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>

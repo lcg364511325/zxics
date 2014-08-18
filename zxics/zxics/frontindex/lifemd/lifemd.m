@@ -33,19 +33,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    lfmdlist=[[NSMutableArray alloc]initWithCapacity:1];
     
     //加载数据
     [self loaddata];
     
     //上拉刷新下拉加载提示
     [lifetable addHeaderWithCallback:^{
+        [lfmdlist removeAllObjects];
+        page=1;
         [self loaddata];
         [lifetable reloadData];
         [lifetable headerEndRefreshing];}];
     [lifetable addFooterWithCallback:^{
-    [lifetable footerEndRefreshing];
-    }];
-}
+        page=page+1;
+        [self loaddata];
+        [lifetable reloadData];
+        [lifetable footerEndRefreshing];
+    }];}
 
 //加载数据
 -(void)loaddata
@@ -53,11 +58,12 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * lfmd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl) {
-        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&",myDelegate.entityl.communityid] forPage:1 forPageSize:10];
+        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&",myDelegate.entityl.communityid] forPage:page forPageSize:10];
     }else{
-        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:nil forPage:1 forPageSize:10];
+        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:nil forPage:page forPageSize:10];
     }
-    lfmdlist=[lfmd objectForKey:@"datas"];
+    NSArray *array=[lfmd objectForKey:@"datas"];
+    [lfmdlist addObjectsFromArray:array];
 }
 
 -(IBAction)goback:(id)sender

@@ -46,6 +46,11 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="6AY-lQ-uQm" id="a1t-KX-kYY"/>
+                <outlet property="rateLabel" destination="eSb-HM-SOE" id="RAD-Zy-dzY"/>
+                <outlet property="titleLabel" destination="gFw-hj-hhO" id="v8z-ho-FfO"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

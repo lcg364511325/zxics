@@ -14,6 +14,8 @@
 {
     UIDatePicker *datePickerView;
     UIPopoverController *popoverController;
+    NSArray *list;
+    NSMutableArray *piclist;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

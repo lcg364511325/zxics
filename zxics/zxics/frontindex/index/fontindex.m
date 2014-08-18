@@ -103,11 +103,19 @@
 //社区活动，物业通知页面跳转
 -(IBAction)cplist:(id)sender
 {
-    UIButton *btn=(UIButton *)sender;
-    NSInteger btntag=btn.tag;
-    cplist * _cplist=[[cplist alloc] init];
-    _cplist.btntag=[NSString stringWithFormat:@"%d",btntag];
-    [self.navigationController pushViewController:_cplist animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl.communityid) {
+        UIButton *btn=(UIButton *)sender;
+        NSInteger btntag=btn.tag;
+        cplist * _cplist=[[cplist alloc] init];
+        _cplist.btntag=[NSString stringWithFormat:@"%d",btntag];
+        [self.navigationController pushViewController:_cplist animated:NO];
+    }else
+    {
+        NSString *rowString =@"请先加入社区！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //个人管理首页
@@ -121,16 +129,26 @@
 //物业报修
 -(IBAction)repairlist:(id)sender
 {
-    repairlist * _repairlist=[[repairlist alloc] init];
-    
-    [self.navigationController pushViewController:_repairlist animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl.communityid) {
+        repairlist * _repairlist=[[repairlist alloc] init];
+        
+        [self.navigationController pushViewController:_repairlist animated:NO];
+    }else
+    {
+        NSString *rowString =@"请先加入社区！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //在线调查页面跳转
 -(IBAction)surveylist:(id)sender
 {
     surveylist * _surveylist=[[surveylist alloc] init];
-    
+    UIButton *btn=(UIButton *)sender;
+    NSInteger btntag=btn.tag;
+    _surveylist.btntag=[NSString stringWithFormat:@"%d",btntag];
     [self.navigationController pushViewController:_surveylist animated:NO];
 }
 

@@ -10,6 +10,7 @@
 
 @implementation AppDelegate
 @synthesize url;
+@synthesize alter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -70,6 +71,138 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//上传图片到服务器
+-(BOOL*)submitOrder:(NSString *)gid  uploadpath:(NSMutableArray *)uploadpath{
+    
+    @try {
+        
+        alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"提交信息中。。" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+        
+        
+        NSString * URL = [NSString stringWithFormat:@"%@api/mobileUploadPhoto",url];
+        
+        
+        ASIFormDataRequest *uploadImageRequest= [ ASIFormDataRequest requestWithURL : [NSURL URLWithString:[URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ]];
+        
+        [uploadImageRequest setStringEncoding:NSUTF8StringEncoding];
+        [uploadImageRequest setRequestMethod:@"POST"];
+        [uploadImageRequest setPostValue:gid forKey:@"goodsid"];
+        [uploadImageRequest setPostFormat:ASIMultipartFormDataPostFormat];
+        
+        int i=0;
+        for (NSString *eImage in uploadpath)
+        {
+            i++;
+            NSData *imageData = [NSData dataWithContentsOfFile:eImage];
+            //NSData *imageData=UIImageJPEGRepresentation(eImage,100);
+            //NSString *photoName=[NSString stringWithFormat:@"file%d.jpg",i];
+            NSString * photoName=[eImage lastPathComponent];//从路径中获得完整的文件名（带后缀）
+            photoName=[NSString stringWithFormat:@"%d%@",i,photoName];
+            //NSString *photoDescribe=@" ";
+            //NSLog(@"photoName=%@",photoName);
+            //NSLog(@"photoDescribe=%@",photoDescribe);
+            NSLog(@"图片名字+++++%@",photoName);
+            NSLog(@"图片大小+++++%d",[imageData length]/1024);
+            //照片content
+            //[uploadImageRequest setPostValue:photoDescribe forKey:@"photoContent"];
+            //[uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:@"photoContent"];
+            //[requset addData:imageData withFileName:[NSString stringWithFormat:@"%@_%d.png",self.TF_tel.text,ranNum] andContentType:@"image/png" forKey:[NSString stringWithFormat:@"uploadImage%d",index]];
+            
+            [uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:[NSString stringWithFormat:@"uploadImage%d",i]];
+        }
+        
+        [uploadImageRequest setDelegate : self ];
+        [uploadImageRequest setDidFinishSelector : @selector (responseComplete:)];
+        [uploadImageRequest setDidFailSelector : @selector (responseFailed:)];
+        [uploadImageRequest startAsynchronous];
+        
+        
+    }@catch (NSException *exception) {
+        [alter dismissWithClickedButtonIndex:0 animated:YES];
+    }
+    @finally {
+        
+    }
+    return nil;
+    
+}
+
+//数据提交上传完成
+-(void)responseComplete:(ASIHTTPRequest*)request
+{
+    @try {
+        [alter dismissWithClickedButtonIndex:0 animated:YES];
+        
+        //Use when fetching text data
+        NSString *responseString = [request responseString];
+        
+        //Use when fetching binary data
+        NSData *jsonData = [request responseData];
+        
+        NSError *error = nil;
+        if ([jsonData length] > 0 && error == nil){
+            error = nil;
+            
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+            
+            if (jsonObject != nil && error == nil){
+                if ([jsonObject isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary *d = (NSDictionary *)jsonObject;
+                    NSString * status=[NSString stringWithFormat:@"%@",[d objectForKey:@"status"]];
+                    if ([status isEqualToString:@"0"]) {
+                        //提交失败
+                        [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+                        
+                        return;
+                    }else if([status isEqualToString:@"1"]){
+                        [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+                        
+                        return;
+                    }
+                    
+                }else if ([jsonObject isKindOfClass:[NSArray class]]){
+                    
+                }
+                else {
+                    NSLog(@"无法解析的数据结构.");
+                }
+                
+                
+            }
+            else if (error != nil){
+                NSLog(@"%@",error);
+            }
+        }
+        else if ([jsonData length] == 0 &&error == nil){
+            NSLog(@"空的数据集.");
+        }
+        else if (error != nil){
+            NSLog(@"发生致命错误：%@", error);
+        }
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+    
+}
+
+//提交上传数据失败
+-(void)responseFailed:(ASIHTTPRequest *)request
+{
+    [alter dismissWithClickedButtonIndex:0 animated:YES];
+    //NSError *error = [request error];
+    
+    [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+    
 }
 
 @end

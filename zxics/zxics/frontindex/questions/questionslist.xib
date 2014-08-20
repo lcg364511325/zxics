@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="questionslist">
             <connections>
                 <outlet property="UINavigationBar" destination="DVF-cc-QSM" id="Ucr-Vf-H79"/>
+                <outlet property="quesTView" destination="evN-Bt-FVR" id="add-6l-O8U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

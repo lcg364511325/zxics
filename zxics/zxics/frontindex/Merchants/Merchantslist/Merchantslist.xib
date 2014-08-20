@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Merchantslist">
             <connections>
                 <outlet property="UINavigationBar" destination="mwN-lT-vE9" id="LQf-1m-rnP"/>
+                <outlet property="merTview" destination="Kx1-AD-rCw" id="MMH-JJ-RzT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

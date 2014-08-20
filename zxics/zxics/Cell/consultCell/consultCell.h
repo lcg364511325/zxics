@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface consultCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
 @end

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="consultlist">
             <connections>
                 <outlet property="UINavigationBar" destination="rMU-gZ-wsA" id="TJz-SF-4vV"/>
+                <outlet property="consultTView" destination="AA5-h8-STi" id="QPX-iQ-FRJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

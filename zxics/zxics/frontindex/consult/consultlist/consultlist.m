@@ -10,12 +10,18 @@
 #import "consultCell.h"
 #import "consultDetail.h"
 #import "consultadd.h"
+#import "MJRefresh.h"
+#import "AppDelegate.h"
+#import "DataService.h"
+#import "Commons.h"
 
 @interface consultlist ()
 
 @end
 
 @implementation consultlist
+
+@synthesize consultTView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +37,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    list=[[NSMutableArray alloc]initWithCapacity:5];
+    
+    //加载数据
+    page=1;
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [consultTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [consultTView reloadData];
+        [consultTView headerEndRefreshing];}];
+    [consultTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [consultTView reloadData];
+        [consultTView footerEndRefreshing];
+    }];
+}
+
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * consult = [NSMutableDictionary dictionaryWithCapacity:5];
+    consult=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&type=consult",myDelegate.entityl.userid] forPage:page forPageSize:10];
+    NSArray *conlist=[consult objectForKey:@"datas"];
+    [list addObjectsFromArray:conlist];
 }
 
 -(IBAction)goback:(id)sender
@@ -48,7 +83,7 @@
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -62,14 +97,20 @@
         NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"consultCell" owner:self options:nil];
         cell=[nib objectAtIndex:0];
     }
+    NSDictionary *consultdetail = [list objectAtIndex:[indexPath row]];
+    cell.questionLabel.text=[consultdetail objectForKey:@"title"];
     
+    Commons *_Commons=[[Commons alloc]init];
+    cell.answerLabel.text=[_Commons stringtoDate:[consultdetail objectForKey:@"createtime"]];
     return cell;
 }
 
 //tableview点击操作
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *consultdetail = [list objectAtIndex:[indexPath row]];
     consultDetail *_consultDetail=[[consultDetail alloc]init];
+    _consultDetail.consultinfo=consultdetail;
     [self.navigationController pushViewController:_consultDetail animated:NO];
 }
 

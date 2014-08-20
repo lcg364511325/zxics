@@ -9,6 +9,7 @@
 #import "repairadd.h"
 #import "AppDelegate.h"
 #import "DataService.h"
+#import "repairlist.h"
 
 @interface repairadd ()
 
@@ -44,6 +45,7 @@ NSInteger iii=0;
     //初始化值
     typeText.text=@"紧急报修";
     titleText.text=@"物业报修";
+    typevalue=@"urgencyRepairs";
     
     NSDate *  senddate=[NSDate date];
     NSDate *nextDate = [NSDate dateWithTimeInterval:24*60*60 sinceDate:senddate];
@@ -61,8 +63,24 @@ NSInteger iii=0;
 
 -(IBAction)saverepairdata:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    [DataService PostDataService:[NSString stringWithFormat:@"%@api/propertyMaintainAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&addDate=%@&contents=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,dateText.text,detailsText.text]];
+    NSString *notnull=detailsText.text;
+    if (notnull!=nil && ![notnull isEqualToString:@""]) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * repairstate = [NSMutableDictionary dictionaryWithCapacity:1];
+        repairstate=[DataService PostDataService:[NSString stringWithFormat:@"%@api/propertyMaintainAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&addDate=%@&contents=%@&type=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,dateText.text,detailsText.text,typevalue]];
+        NSString *goodsid=[NSString stringWithFormat:@"%@",[repairstate objectForKey:@"goodsid"]];
+        
+        if (goodsid!=nil && ![goodsid isEqualToString:@"<null>"] && ![goodsid isEqualToString:@""]) {
+            if ([piclist count]!=0) {
+                [myDelegate submitOrder:goodsid uploadpath:piclist];
+            }
+        }
+        
+        repairlist *_repairlist=[[repairlist alloc]init];
+        [self.navigationController pushViewController:_repairlist animated:NO];
+    }else{
+        [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"内容不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+    }
 }
 
 -(IBAction)goback:(id)sender
@@ -149,6 +167,7 @@ NSInteger iii=0;
 {
     NSDictionary *retype=[list objectAtIndex:[indexPath row]];
     NSString *rowString = [retype objectForKey:@"name"];
+    typevalue=[retype objectForKey:@"value"];
     typeText.text=rowString;
     repairtypeTView.hidden=YES;
     
@@ -215,9 +234,9 @@ NSInteger iii=0;
     NSString *fullPath =nil;
     //记录文件
     
-    [self saveImage:image withName:@"currentImage1.png"];
+    [self saveImage:image withName:[NSString stringWithFormat:@"currentImage%d.png",iii]];
     
-    fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"currentImage1.png"];
+    fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[NSString stringWithFormat:@"currentImage%d.png",iii]];
     [piclist addObject:fullPath];
     UIImage *savedImage = [[UIImage alloc] initWithContentsOfFile:fullPath];
     //isFullScreen = NO;

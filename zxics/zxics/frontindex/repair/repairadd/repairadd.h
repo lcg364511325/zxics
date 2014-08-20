@@ -16,6 +16,7 @@
     UIPopoverController *popoverController;
     NSArray *list;
     NSMutableArray *piclist;
+    NSString *typevalue;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

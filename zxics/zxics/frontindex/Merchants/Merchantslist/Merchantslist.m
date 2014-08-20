@@ -9,12 +9,18 @@
 #import "Merchantslist.h"
 #import "merchantsCell.h"
 #import "MerchantsDetail.h"
+#import "MJRefresh.h"
+#import "DataService.h"
+#import "AppDelegate.h"
+#import "Commons.h"
 
 @interface Merchantslist ()
 
 @end
 
 @implementation Merchantslist
+
+@synthesize merTview;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +36,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
+    
+    //加载数据
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [merTview addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [merTview reloadData];
+        [merTview headerEndRefreshing];}];
+    [merTview addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [merTview reloadData];
+        [merTview footerEndRefreshing];
+    }];
+}
+
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * cp = [NSMutableDictionary dictionaryWithCapacity:5];
+    cp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findProblem",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=93&communityid=%@",myDelegate.entityl.communityid] forPage:page forPageSize:10];
+    NSArray *array=[cp objectForKey:@"datas"];
+    [list addObjectsFromArray:array];
 }
 
 -(IBAction)goback:(id)sender
@@ -40,7 +75,7 @@
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -54,6 +89,11 @@
         NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"merchantsCell" owner:self options:nil];
         cell=[nib objectAtIndex:0];
     }
+    NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
+    
+    Commons *_commons=[[Commons alloc]init];
+    cell.dateLabel.text=[_commons stringtoDate:[cpdetail objectForKey:@"createDate"]];
+    cell.titleLabel.text=[cpdetail objectForKey:@"title"];
     
     return cell;
 }
@@ -62,6 +102,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MerchantsDetail *_MerchantsDetail=[[MerchantsDetail alloc]init];
+    NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
+    _MerchantsDetail.cpd=cpdetail;
     [self.navigationController pushViewController:_MerchantsDetail animated:NO];
 }
 

@@ -34,7 +34,11 @@
                                     <action selector="goback:" destination="-1" id="UxJ-gY-Ach"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="提交" id="hHG-qs-fLY"/>
+                            <barButtonItem key="rightBarButtonItem" title="提交" id="hHG-qs-fLY">
+                                <connections>
+                                    <action selector="saverepairdata:" destination="-1" id="XAO-ir-wp6"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

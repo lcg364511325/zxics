@@ -163,9 +163,16 @@
 //用户咨询页面跳转
 -(IBAction)consultlist:(id)sender
 {
-    consultlist * _consultlist=[[consultlist alloc] init];
-    
-    [self.navigationController pushViewController:_consultlist animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        consultlist * _consultlist=[[consultlist alloc] init];
+        
+        [self.navigationController pushViewController:_consultlist animated:NO];
+    }else{
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //招商信息页面跳转

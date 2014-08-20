@@ -10,6 +10,12 @@
 #import "downloadCell.h"
 
 @interface download : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+    NSString *cid;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *downloadTView;
 @end

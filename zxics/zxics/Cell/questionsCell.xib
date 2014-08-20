@@ -27,6 +27,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="dPw-t5-Frx" id="3Di-bd-1Gp"/>
+                <outlet property="titleLabel" destination="hDg-79-6H1" id="DC7-jX-tPP"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface downloadCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *applogo;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 
 @end

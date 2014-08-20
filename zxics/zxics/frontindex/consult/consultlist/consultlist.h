@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface consultlist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *consultTView;
 
 @end

@@ -47,6 +47,12 @@
                     </button>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="applogo" destination="Qd2-4J-arb" id="IUH-rb-xcA"/>
+                <outlet property="downloadButton" destination="Qym-wh-571" id="XXu-9a-rxE"/>
+                <outlet property="sizeLabel" destination="0xC-Np-2Fz" id="bnQ-WI-95L"/>
+                <outlet property="titleLabel" destination="JYb-7p-MZm" id="6CV-qd-elG"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

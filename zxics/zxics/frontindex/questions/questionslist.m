@@ -11,6 +11,7 @@
 #import "DataService.h"
 #import "AppDelegate.h"
 #import "Commons.h"
+#import "questionsDetail.h"
 
 @interface questionslist ()
 
@@ -90,8 +91,6 @@
     
     NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
     
-    Commons *_commons=[[Commons alloc]init];
-    cell.dateLabel.text=[_commons stringtoDate:[cpdetail objectForKey:@"createDate"]];
     cell.titleLabel.text=[cpdetail objectForKey:@"title"];
     
     return cell;
@@ -100,7 +99,10 @@
 //tableview点击操作
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    questionsDetail *_questionsDetail=[[questionsDetail alloc]init];
+    NSDictionary *cpdetail = [list objectAtIndex:[indexPath row]];
+    _questionsDetail.qtd=cpdetail;
+    [self.navigationController pushViewController:_questionsDetail animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

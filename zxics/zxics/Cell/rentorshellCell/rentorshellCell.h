@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface rentorshellCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addrLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end

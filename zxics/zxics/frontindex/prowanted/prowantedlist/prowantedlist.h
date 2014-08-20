@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface prowantedlist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *pwTView;
 
 @end

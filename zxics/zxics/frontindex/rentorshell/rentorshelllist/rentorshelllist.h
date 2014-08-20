@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface rentorshelllist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
+@property (weak, nonatomic) IBOutlet UITableView *rsTView;
 
 @property(retain , nonatomic) NSString * btntag;//出租出售
 @end

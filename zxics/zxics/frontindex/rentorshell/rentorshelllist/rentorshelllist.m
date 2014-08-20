@@ -9,6 +9,9 @@
 #import "rentorshelllist.h"
 #import "rentorshellCell.h"
 #import "rentorshellDetail.h"
+#import "DataService.h"
+#import "AppDelegate.h"
+#import "ImageCacher.h"
 
 @interface rentorshelllist ()
 
@@ -17,6 +20,7 @@
 @implementation rentorshelllist
 
 @synthesize btntag;
+@synthesize rsTView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,13 +36,44 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:5];
+    
+    
     NSInteger selecttype=[btntag integerValue];
     if (selecttype==0) {
-        self.UINavigationItem.title=@"物业出租";
+        self.UINavigationItem.title=@"物业出售";
     }else if (selecttype==1)
     {
-        self.UINavigationItem.title=@"物业出售";
+        self.UINavigationItem.title=@"物业出租";
     }
+    
+    //加载数据
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [rsTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [rsTView reloadData];
+        [rsTView headerEndRefreshing];}];
+    [rsTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [rsTView reloadData];
+        [rsTView footerEndRefreshing];
+    }];
+}
+
+//加载数据
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * rs = [NSMutableDictionary dictionaryWithCapacity:5];
+    rs=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileTenementsSell",myDelegate.url] postDatas:[NSString stringWithFormat:@"subtype=%@",btntag] forPage:page forPageSize:10];
+    NSArray *rslist=[rs objectForKey:@"datas"];
+    [list addObjectsFromArray:rslist];
 }
 
 -(IBAction)goback:(id)sender
@@ -49,7 +84,7 @@
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -63,6 +98,38 @@
         NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"rentorshellCell" owner:self options:nil];
         cell=[nib objectAtIndex:0];
     }
+    NSDictionary *rsdetail = [list objectAtIndex:[indexPath row]];
+    
+    cell.titleLabel.text=[rsdetail objectForKey:@"title"];
+    
+    NSString *addr=[rsdetail objectForKey:@"homeaddress"];
+    if (addr!=[NSNull null]) {
+        cell.addrLabel.text=[NSString stringWithFormat:@"地址：%@",[rsdetail objectForKey:@"homeaddress"]];
+    }
+    
+    NSString *doorsi=[rsdetail objectForKey:@"doorsi"];
+    NSString *doorti=[rsdetail objectForKey:@"doorti"];
+    NSString *doorwa=[rsdetail objectForKey:@"doorwa"];
+    if (doorwa!=[NSNull null] && doorti!=[NSNull null] && doorsi!=[NSNull null]) {
+        cell.detailLabel.text=[NSString stringWithFormat:@"%@室%@厅%@卫",doorsi,doorti,doorwa];
+    }
+    
+    if ([btntag isEqualToString:@"0"]) {
+        cell.moneyLabel.text=[NSString stringWithFormat:@"%@万元",[rsdetail objectForKey:@"rent"]];
+    }else
+    {
+        cell.moneyLabel.text=[NSString stringWithFormat:@"%@元/月",[rsdetail objectForKey:@"rent"]];
+    }
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSString *url=[NSString stringWithFormat:@"%@%@",myDelegate.url,[rsdetail objectForKey:@"headurl"]];
+    NSURL *imgUrl=[NSURL URLWithString:url];
+    if (hasCachedImage(imgUrl)) {
+        [cell.logo setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+    }else{
+        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",cell.logo,@"imageView",nil];
+        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+    }
     
     return cell;
 }
@@ -71,6 +138,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     rentorshellDetail *_rentorshellDetail=[[rentorshellDetail alloc]init];
+    NSDictionary *rsdetail = [list objectAtIndex:[indexPath row]];
+    _rentorshellDetail.rsd=rsdetail;
+    _rentorshellDetail.btntag=btntag;
     [self.navigationController pushViewController:_rentorshellDetail animated:NO];
 }
 

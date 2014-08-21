@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface personlogCellTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *personLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end

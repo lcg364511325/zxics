@@ -7,6 +7,9 @@
 //
 
 #import "personLog.h"
+#import "AppDelegate.h"
+#import "DataService.h"
+#import "Commons.h"
 
 @interface personLog ()
 
@@ -15,6 +18,7 @@
 @implementation personLog
 
 @synthesize UINavigationBar;
+@synthesize personlogTView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,13 +39,43 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    page=1;
+    list=[[NSMutableArray alloc]initWithCapacity:1];
+    
+    //加载数据
+    [self loaddata];
+    
+    //上拉刷新下拉加载提示
+    [personlogTView addHeaderWithCallback:^{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [personlogTView reloadData];
+        [personlogTView headerEndRefreshing];}];
+    [personlogTView addFooterWithCallback:^{
+        page=page+1;
+        [self loaddata];
+        [personlogTView reloadData];
+        [personlogTView footerEndRefreshing];
+    }];
+}
+
+//加载数据
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * perlog = [NSMutableDictionary dictionaryWithCapacity:5];
+    perlog=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findLog",myDelegate.url] postDatas:[NSString stringWithFormat:@"account=%@",myDelegate.entityl.account] forPage:page forPageSize:10];
+    NSArray *perloglist=[perlog objectForKey:@"datas"];
+    [list addObjectsFromArray:perloglist];
 }
 
 
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [list count];
     //只有一组，数组数即为行数。
 }
 
@@ -56,6 +90,29 @@
         cell=[nib objectAtIndex:0];
     }
     
+     NSDictionary *perlogdetail = [list objectAtIndex:[indexPath row]];
+    cell.detailLabel.text=[perlogdetail objectForKey:@"datail"];
+    NSString *type=[NSString stringWithFormat:@"%@",[perlogdetail objectForKey:@"type"]];
+    if ([type isEqualToString:@"1"]) {
+        cell.typeLabel.text=@"前台";
+    }else{
+        cell.typeLabel.text=@"后台";
+    }
+    
+    NSString *usertype=[NSString stringWithFormat:@"%@",[perlogdetail objectForKey:@"usertype"]];
+    if ([usertype isEqualToString:@"0"]) {
+        cell.personLabel.text=@"管理员";
+    }else{
+        cell.personLabel.text=@"客户";
+    }
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    cell.accountLabel.text=myDelegate.entityl.account;
+    
+    Commons *_Commons=[[Commons alloc]init];
+    NSString *timestr=[NSString stringWithFormat:@"%@",[perlogdetail objectForKey:@"create_time"]];
+    cell.dateLabel.text=[_Commons stringtoDate:timestr];
+    
     return cell;
 }
 
@@ -63,6 +120,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     personLogDetail *_personLogDetail=[[personLogDetail alloc]init];
+    NSDictionary *perlogdetail = [list objectAtIndex:[indexPath row]];
+    _personLogDetail.psd=perlogdetail;
     [self.navigationController pushViewController:_personLogDetail animated:NO];
     
 }

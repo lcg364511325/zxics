@@ -7,6 +7,8 @@
 //
 
 #import "personLogDetail.h"
+#import "AppDelegate.h"
+#import "Commons.h"
 
 @interface personLogDetail ()
 
@@ -15,6 +17,14 @@
 @implementation personLogDetail
 
 @synthesize UINavigationBar;
+@synthesize psd;
+@synthesize detailLabel;
+@synthesize typeLabel;
+@synthesize personLabel;
+@synthesize typeDetailLabel;
+@synthesize accountLabel;
+@synthesize ipLabel;
+@synthesize datelabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +40,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    [self loaddata];
+}
+
+-(void)loaddata
+{
+    detailLabel.text=[psd objectForKey:@"datail"];
+    
+    NSString *type=[NSString stringWithFormat:@"%@",[psd objectForKey:@"type"]];
+    if ([type isEqualToString:@"1"]) {
+        typeLabel.text=@"前台";
+    }else{
+        typeLabel.text=@"后台";
+    }
+    
+    NSString *usertype=[NSString stringWithFormat:@"%@",[psd objectForKey:@"usertype"]];
+    if ([usertype isEqualToString:@"0"]) {
+        personLabel.text=@"管理员";
+    }else{
+        personLabel.text=@"客户";
+    }
+    
+    NSString *actiontype=[NSString stringWithFormat:@"%@",[psd objectForKey:@"actiontype"]];
+    if ([actiontype isEqualToString:@"0"]) {
+        typeDetailLabel.text=@"新增";
+    }else if ([actiontype isEqualToString:@"1"])
+    {
+        typeDetailLabel.text=@"修改";
+    }else if ([actiontype isEqualToString:@"2"])
+    {
+        typeDetailLabel.text=@"删除";
+    }else if ([actiontype isEqualToString:@"4"])
+    {
+        typeDetailLabel.text=@"登录 ";
+    }
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    accountLabel.text=myDelegate.entityl.account;
+    
+    ipLabel.text=[psd objectForKey:@"ip"];
+    
+    Commons *_Commons=[[Commons alloc]init];
+    NSString *timestr=[NSString stringWithFormat:@"%@",[psd objectForKey:@"create_time"]];
+    datelabel.text=[_Commons stringtoDate:timestr];
+    
 }
 
 -(IBAction)goback:(id)sender

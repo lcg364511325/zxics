@@ -121,9 +121,16 @@
 //个人管理首页
 -(IBAction)personindex:(id)sender
 {
-    personIndex * _personIndex=[[personIndex alloc] init];
-    
-    [self.navigationController pushViewController:_personIndex animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        personIndex * _personIndex=[[personIndex alloc] init];
+        
+        [self.navigationController pushViewController:_personIndex animated:NO];
+    }else{
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //物业报修

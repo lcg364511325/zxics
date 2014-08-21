@@ -24,7 +24,7 @@
 @property (strong, nonatomic) UIAlertView *alter;//弹出提示框
 
 //上传图片到服务器
--(BOOL*)submitOrder:(NSString *)gid  uploadpath:(NSMutableArray *)uploadpath;
+-(BOOL*)submitOrder:(NSString *)gid  uploadpath:(NSMutableArray *)uploadpath URL:(NSString *)URL  postid:(NSString *)postid;
 
 
 @end

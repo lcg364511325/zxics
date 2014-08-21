@@ -9,6 +9,7 @@
 #import "login.h"
 #import "DataService.h"
 #import "LoginEntity.h"
+#import "regeditmember.h"
 
 @interface login ()
 
@@ -152,19 +153,14 @@ NSInteger i=0;
     }
 }
 
-//记住密码
--(IBAction)rememberpassword:(id)sender
+//注册
+-(IBAction)regeditmember:(id)sender
 {
-    UIButton *btn=(UIButton *)sender;
-    if (i==0) {
-        [btn setBackgroundImage:[UIImage imageNamed:@"sure"] forState:UIControlStateNormal];
-        i++;
-    }else if (i==1)
-    {
-        [btn setBackgroundImage:[UIImage imageNamed:@"0001_bg"] forState:UIControlStateNormal];
-        i--;
-    }
+    regeditmember *_regeditmember=[[regeditmember alloc]init];
+    [self.navigationController pushViewController:_regeditmember animated:NO];
 }
+
+
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {

@@ -10,8 +10,12 @@
 #import "personInfo.h"
 
 @interface updateinfo : UIViewController
+{
+    NSString * valuename;
+}
 
 @property(retain , nonatomic) NSString * btntag;//修改类型
+@property(retain , nonatomic) NSString * value;//修改类型
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;

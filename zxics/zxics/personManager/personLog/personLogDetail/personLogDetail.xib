@@ -7,6 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="personLogDetail">
             <connections>
                 <outlet property="UINavigationBar" destination="bIg-TE-F5w" id="K0k-nx-usc"/>
+                <outlet property="accountLabel" destination="FUp-5t-va7" id="7Cj-YX-Hly"/>
+                <outlet property="datelabel" destination="ngL-6Z-KJ1" id="5Jw-PG-ohl"/>
+                <outlet property="detailLabel" destination="Tyu-Xk-Pt3" id="NQ7-dF-r0L"/>
+                <outlet property="ipLabel" destination="FZy-fP-z6N" id="CAk-d5-x0q"/>
+                <outlet property="personLabel" destination="Rqc-I3-WhO" id="isd-qO-pUx"/>
+                <outlet property="typeDetailLabel" destination="S5V-xC-AJ7" id="kk7-LJ-YIq"/>
+                <outlet property="typeLabel" destination="g5R-5S-rRW" id="ce2-3y-Kgk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

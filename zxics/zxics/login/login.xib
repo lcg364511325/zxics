@@ -68,7 +68,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="rememberpassword:" destination="-1" eventType="touchDown" id="bhd-Jd-hJY"/>
+                                <action selector="regeditmember:" destination="-1" eventType="touchDown" id="oBE-ci-hkc"/>
                             </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="699-AG-fv7">
@@ -81,13 +81,15 @@
                         <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7D-hj-1oO">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.21053858019999999" green="0.4466391609" blue="0.97612404340000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
                             <items>
                                 <navigationItem title="智慧社区登录" id="MUH-26-e5N">
-                                    <barButtonItem key="leftBarButtonItem" title="返回" id="JL6-L6-hZm">
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="8gQ-7h-kwQ">
                                         <connections>
-                                            <action selector="goback:" destination="-1" id="a05-dX-EDr"/>
+                                            <action selector="goback:" destination="-1" id="QBf-an-bhL"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -103,6 +105,7 @@
     </objects>
     <resources>
         <image name="0001_bg.png" width="15" height="17"/>
+        <image name="button_details_gohome.png" width="45" height="45"/>
         <image name="login_bg.jpg" width="684" height="851"/>
         <image name="marquee.png" width="684" height="255"/>
     </resources>

@@ -249,6 +249,12 @@
 		2C3AED7219A57C7D00D981C3 /* women.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AECE319A57C7D00D981C3 /* women.png */; };
 		2C3AED7319A57C7D00D981C3 /* word.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AECE419A57C7D00D981C3 /* word.png */; };
 		2C3AED7419A57C7D00D981C3 /* word1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AECE519A57C7D00D981C3 /* word1.png */; };
+		2C3AED7A19A58C4300D981C3 /* regeditmember.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AED7819A58C4300D981C3 /* regeditmember.m */; };
+		2C3AED7B19A58C4300D981C3 /* regeditmember.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AED7919A58C4300D981C3 /* regeditmember.xib */; };
+		2C3AED8219A5F67800D981C3 /* personfootprintlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AED8019A5F67800D981C3 /* personfootprintlist.m */; };
+		2C3AED8319A5F67800D981C3 /* personfootprintlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AED8119A5F67800D981C3 /* personfootprintlist.xib */; };
+		2C3AED8719A5F69800D981C3 /* personfootprintDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AED8519A5F69800D981C3 /* personfootprintDetail.m */; };
+		2C3AED8819A5F69800D981C3 /* personfootprintDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AED8619A5F69800D981C3 /* personfootprintDetail.xib */; };
 		2C3C059F199DB15200369A63 /* assess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C059D199DB15200369A63 /* assess.m */; };
 		2C3C05A0199DB15200369A63 /* assess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C059E199DB15200369A63 /* assess.xib */; };
 		2C3C05E7199DE6EC00369A63 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05E4199DE6EC00369A63 /* HPGrowingTextView.m */; };
@@ -677,6 +683,15 @@
 		2C3AECE319A57C7D00D981C3 /* women.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = women.png; sourceTree = "<group>"; };
 		2C3AECE419A57C7D00D981C3 /* word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = word.png; sourceTree = "<group>"; };
 		2C3AECE519A57C7D00D981C3 /* word1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = word1.png; sourceTree = "<group>"; };
+		2C3AED7719A58C4300D981C3 /* regeditmember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = regeditmember.h; path = regedit/regeditmember.h; sourceTree = "<group>"; };
+		2C3AED7819A58C4300D981C3 /* regeditmember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = regeditmember.m; path = regedit/regeditmember.m; sourceTree = "<group>"; };
+		2C3AED7919A58C4300D981C3 /* regeditmember.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = regeditmember.xib; path = regedit/regeditmember.xib; sourceTree = "<group>"; };
+		2C3AED7F19A5F67800D981C3 /* personfootprintlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personfootprintlist.h; path = personManager/personfootprint/personfootprintlist/personfootprintlist.h; sourceTree = "<group>"; };
+		2C3AED8019A5F67800D981C3 /* personfootprintlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personfootprintlist.m; path = personManager/personfootprint/personfootprintlist/personfootprintlist.m; sourceTree = "<group>"; };
+		2C3AED8119A5F67800D981C3 /* personfootprintlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personfootprintlist.xib; path = personManager/personfootprint/personfootprintlist/personfootprintlist.xib; sourceTree = "<group>"; };
+		2C3AED8419A5F69800D981C3 /* personfootprintDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personfootprintDetail.h; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.h; sourceTree = "<group>"; };
+		2C3AED8519A5F69800D981C3 /* personfootprintDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personfootprintDetail.m; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.m; sourceTree = "<group>"; };
+		2C3AED8619A5F69800D981C3 /* personfootprintDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personfootprintDetail.xib; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.xib; sourceTree = "<group>"; };
 		2C3C059C199DB15200369A63 /* assess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assess.h; path = assess/assess.h; sourceTree = "<group>"; };
 		2C3C059D199DB15200369A63 /* assess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = assess.m; path = assess/assess.m; sourceTree = "<group>"; };
 		2C3C059E199DB15200369A63 /* assess.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = assess.xib; path = assess/assess.xib; sourceTree = "<group>"; };
@@ -1549,6 +1564,45 @@
 			name = repairDetail;
 			sourceTree = "<group>";
 		};
+		2C3AED7619A58BC400D981C3 /* regedit */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AED7719A58C4300D981C3 /* regeditmember.h */,
+				2C3AED7819A58C4300D981C3 /* regeditmember.m */,
+				2C3AED7919A58C4300D981C3 /* regeditmember.xib */,
+			);
+			name = regedit;
+			sourceTree = "<group>";
+		};
+		2C3AED7C19A5F5A100D981C3 /* personfootprint */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AED7E19A5F5E900D981C3 /* personfootprintDetail */,
+				2C3AED7D19A5F5BC00D981C3 /* personfootprintlist */,
+			);
+			name = personfootprint;
+			sourceTree = "<group>";
+		};
+		2C3AED7D19A5F5BC00D981C3 /* personfootprintlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AED7F19A5F67800D981C3 /* personfootprintlist.h */,
+				2C3AED8019A5F67800D981C3 /* personfootprintlist.m */,
+				2C3AED8119A5F67800D981C3 /* personfootprintlist.xib */,
+			);
+			name = personfootprintlist;
+			sourceTree = "<group>";
+		};
+		2C3AED7E19A5F5E900D981C3 /* personfootprintDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AED8419A5F69800D981C3 /* personfootprintDetail.h */,
+				2C3AED8519A5F69800D981C3 /* personfootprintDetail.m */,
+				2C3AED8619A5F69800D981C3 /* personfootprintDetail.xib */,
+			);
+			name = personfootprintDetail;
+			sourceTree = "<group>";
+		};
 		2C3C059B199DB13A00369A63 /* assess */ = {
 			isa = PBXGroup;
 			children = (
@@ -1983,6 +2037,7 @@
 		2C5A2421199213EF003712D5 /* personManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AED7C19A5F5A100D981C3 /* personfootprint */,
 				2C1FE5FE1995C05B008DBB58 /* Vicecard */,
 				2C1FE5E51995AC75008DBB58 /* community */,
 				2C57571419945E1D00858A7F /* membercenter  */,
@@ -2087,6 +2142,7 @@
 		7CE63129198C7A8100730C64 /* zxics */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AED7619A58BC400D981C3 /* regedit */,
 				2C2811611998A91F0072D08C /* mall */,
 				2C28115419989F320072D08C /* serviceDirectory */,
 				2C1FE6121995C839008DBB58 /* frontindex */,
@@ -2493,6 +2549,7 @@
 				2C3AED4319A57C7D00D981C3 /* my_log.png in Resources */,
 				2C1FE65F1995C8AC008DBB58 /* lifemdDetail.xib in Resources */,
 				2C3AED0E19A57C7D00D981C3 /* card.png in Resources */,
+				2C3AED8819A5F69800D981C3 /* personfootprintDetail.xib in Resources */,
 				2C3AED6019A57C7D00D981C3 /* settings_network.png in Resources */,
 				2C5A242D19922201003712D5 /* personInfo.xib in Resources */,
 				2C2A299319A1E98B000B9F88 /* repairDetail.xib in Resources */,
@@ -2568,6 +2625,7 @@
 				2C54048E19932E46003D2BBE /* personLog.xib in Resources */,
 				2C3AED5819A57C7D00D981C3 /* sell.png in Resources */,
 				2C3AED3C19A57C7D00D981C3 /* magnifier_bt.png in Resources */,
+				2C3AED7B19A58C4300D981C3 /* regeditmember.xib in Resources */,
 				2C3AED0D19A57C7D00D981C3 /* button.9.png in Resources */,
 				2C3AED2919A57C7D00D981C3 /* ic_launcher.png in Resources */,
 				2C3AED0119A57C7D00D981C3 /* btn_payment.png in Resources */,
@@ -2685,6 +2743,7 @@
 				2C3AECED19A57C7D00D981C3 /* appraise.png in Resources */,
 				2C3AED3319A57C7D00D981C3 /* layout.png in Resources */,
 				2C3AED0319A57C7D00D981C3 /* but_gray.9.png in Resources */,
+				2C3AED8319A5F67800D981C3 /* personfootprintlist.xib in Resources */,
 				2C1FE65D1995C8AC008DBB58 /* lifemd.xib in Resources */,
 				2C3AED5F19A57C7D00D981C3 /* settings_feedback.png in Resources */,
 				2C5757251994681000858A7F /* myorderCell.xib in Resources */,
@@ -2743,6 +2802,7 @@
 				7CE6319D198C7C2A00730C64 /* login.m in Sources */,
 				2C1FE6501995C8AC008DBB58 /* complainAdd.m in Sources */,
 				2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */,
+				2C3AED7A19A58C4300D981C3 /* regeditmember.m in Sources */,
 				2C280676199067B3007838A6 /* SpecialPeopleDetailCell.m in Sources */,
 				2C1FE65E1995C8AC008DBB58 /* lifemdDetail.m in Sources */,
 				2C282F211990D5AA0061F987 /* cplistCell.m in Sources */,
@@ -2770,6 +2830,7 @@
 				2C5404931993506A003D2BBE /* personlogCellTableViewCell.m in Sources */,
 				2C5757501994C9A800858A7F /* placeorder.m in Sources */,
 				2C57571E1994657900858A7F /* myorder.m in Sources */,
+				2C3AED8719A5F69800D981C3 /* personfootprintDetail.m in Sources */,
 				2C5A240A1991BD98003712D5 /* repairlistCell.m in Sources */,
 				2C1FE6601995C8AC008DBB58 /* repairadd.m in Sources */,
 				7CE63134198C7A8200730C64 /* AppDelegate.m in Sources */,
@@ -2828,6 +2889,7 @@
 				2C281101199855DF0072D08C /* consultCell.m in Sources */,
 				2C1FE65A1995C8AC008DBB58 /* fontindex.m in Sources */,
 				2C281139199872530072D08C /* rentorshellCell.m in Sources */,
+				2C3AED8219A5F67800D981C3 /* personfootprintlist.m in Sources */,
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,
 				2C5A241F1991D5EF003712D5 /* CustomIOS7AlertView.m in Sources */,

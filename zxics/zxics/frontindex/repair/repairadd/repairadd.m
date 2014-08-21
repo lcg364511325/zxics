@@ -72,7 +72,7 @@ NSInteger iii=0;
         
         if (goodsid!=nil && ![goodsid isEqualToString:@"<null>"] && ![goodsid isEqualToString:@""]) {
             if ([piclist count]!=0) {
-                [myDelegate submitOrder:goodsid uploadpath:piclist];
+                [myDelegate submitOrder:goodsid uploadpath:piclist URL:@"api/mobileUploadPhoto" postid:@"goodsid"];
             }
         }
         

@@ -11,6 +11,11 @@
 #import "personLogDetail.h"
 
 @interface personLog : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *personlogTView;
 @end

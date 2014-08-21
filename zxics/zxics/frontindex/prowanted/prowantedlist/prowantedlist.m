@@ -101,6 +101,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     prowantedDetail *_prowantedDetail=[[prowantedDetail alloc]init];
+    NSDictionary *pwdetail = [list objectAtIndex:[indexPath row]];
+    _prowantedDetail.pwd=pwdetail;
     [self.navigationController pushViewController:_prowantedDetail animated:NO];
 }
 

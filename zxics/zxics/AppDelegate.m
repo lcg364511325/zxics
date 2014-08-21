@@ -19,6 +19,7 @@
     
     //初始化url
     url=@"http://192.168.1.140:8080/zx_ics/";
+    //url=@"http://www.jiahao123.com/";
     
     //初始化
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -74,7 +75,7 @@
 }
 
 //上传图片到服务器
--(BOOL*)submitOrder:(NSString *)gid  uploadpath:(NSMutableArray *)uploadpath{
+-(BOOL*)submitOrder:(NSString *)gid  uploadpath:(NSMutableArray *)uploadpath URL:(NSString *)URL  postid:(NSString *)postid{
     
     @try {
         
@@ -82,14 +83,14 @@
         [alter show];
         
         
-        NSString * URL = [NSString stringWithFormat:@"%@api/mobileUploadPhoto",url];
+        URL = [NSString stringWithFormat:@"%@%@",url,URL];
         
         
         ASIFormDataRequest *uploadImageRequest= [ ASIFormDataRequest requestWithURL : [NSURL URLWithString:[URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ]];
         
         [uploadImageRequest setStringEncoding:NSUTF8StringEncoding];
         [uploadImageRequest setRequestMethod:@"POST"];
-        [uploadImageRequest setPostValue:gid forKey:@"goodsid"];
+        [uploadImageRequest setPostValue:gid forKey:postid];
         [uploadImageRequest setPostFormat:ASIMultipartFormDataPostFormat];
         
         int i=0;

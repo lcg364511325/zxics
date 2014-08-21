@@ -31,7 +31,11 @@
                                     <action selector="goback:" destination="-1" id="zLz-SE-369"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="完成" id="oXG-gI-mS0"/>
+                            <barButtonItem key="rightBarButtonItem" title="完成" id="oXG-gI-mS0">
+                                <connections>
+                                    <action selector="changepensoninfo:" destination="-1" id="DAd-4M-Ctz"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

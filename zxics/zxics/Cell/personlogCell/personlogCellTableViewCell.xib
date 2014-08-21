@@ -76,6 +76,13 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="accountLabel" destination="KKS-cJ-1K5" id="aHX-m5-Gsw"/>
+                <outlet property="dateLabel" destination="iab-3K-k19" id="Ob0-Rw-ktn"/>
+                <outlet property="detailLabel" destination="vMI-d6-Fvo" id="CKK-bb-nfv"/>
+                <outlet property="personLabel" destination="Wl8-KT-nRD" id="EAi-OD-2j1"/>
+                <outlet property="typeLabel" destination="7Ox-iW-lMl" id="03H-Pz-2PQ"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

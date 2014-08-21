@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="changecom">
             <connections>
                 <outlet property="UINavigationBar" destination="wIJ-3t-uP8" id="wTw-Ym-Ayx"/>
+                <outlet property="changecomTView" destination="fvH-6W-HAI" id="GCq-cq-kaE"/>
+                <outlet property="comLabel" destination="XW9-iX-y8a" id="q5j-uy-NmB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

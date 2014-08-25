@@ -1,14 +1,14 @@
 //
-//  shoppingcartCell.m
+//  personfootprintCell.m
 //  zxics
 //
-//  Created by johnson on 14-8-8.
+//  Created by johnson on 14-8-22.
 //  Copyright (c) 2014年 moko. All rights reserved.
 //
 
-#import "shoppingcartCell.h"
+#import "personfootprintCell.h"
 
-@implementation shoppingcartCell
+@implementation personfootprintCell
 
 - (void)awakeFromNib
 {

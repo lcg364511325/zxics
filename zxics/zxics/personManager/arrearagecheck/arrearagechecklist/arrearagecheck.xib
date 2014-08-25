@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="UINavigationBar" destination="ayn-bz-qMQ" id="2dg-SH-lIj"/>
                 <outlet property="UINavigationItem" destination="vsL-8K-uah" id="uPq-oh-6bh"/>
+                <outlet property="aacTView" destination="1l8-T2-aOk" id="nR8-FF-0FQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

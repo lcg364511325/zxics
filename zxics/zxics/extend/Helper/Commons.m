@@ -109,7 +109,7 @@
 }
 
 //时间戳转时间(到天)
--(NSString *)stringtoDate:(NSString *)str
+-(NSString *)stringtoDate:(id)str
 {
     if (str!=[NSNull null]) {
         NSString *time =[NSString stringWithFormat:@"%@",str];
@@ -127,7 +127,7 @@
     }
 }
 
--(NSString *)stringtoDateforsecond:(NSString *)str
+-(NSString *)stringtoDateforsecond:(id)str
 {
     if (str!=[NSNull null]) {
         NSString *time =[NSString stringWithFormat:@"%@",str];

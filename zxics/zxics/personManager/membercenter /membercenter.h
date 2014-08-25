@@ -14,4 +14,6 @@
 @interface membercenter : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UIImageView *logoimage;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @end

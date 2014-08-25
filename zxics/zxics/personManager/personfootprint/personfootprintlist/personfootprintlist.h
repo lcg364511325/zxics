@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface personfootprintlist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+    NSString *tname;
+    NSArray *typelist;
+}
+@property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *pfpTView;
 
 @end

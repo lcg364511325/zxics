@@ -29,14 +29,14 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的总评价：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edo-FD-f6G">
-                        <rect key="frame" x="78" y="45" width="72" height="20"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的总体评价：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edo-FD-f6G">
+                        <rect key="frame" x="78" y="45" width="85" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ar1-VL-gLB">
-                        <rect key="frame" x="152" y="45" width="42" height="21"/>
+                        <rect key="frame" x="168" y="45" width="42" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.98038903060000004" green="0.05463073442" blue="0.097201847829999993" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,6 +44,12 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="appLabel" destination="ar1-VL-gLB" id="tPs-67-4Vd"/>
+                <outlet property="detailLabel" destination="GFP-dM-aa1" id="Kgc-xF-PGW"/>
+                <outlet property="logoimage" destination="RLP-fA-ugE" id="0lc-AQ-lGi"/>
+                <outlet property="titleLabel" destination="4fn-sJ-u5v" id="YJs-sa-JkF"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

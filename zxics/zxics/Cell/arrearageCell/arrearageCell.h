@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface arrearageCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *noLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startTLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endTLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 
 @end

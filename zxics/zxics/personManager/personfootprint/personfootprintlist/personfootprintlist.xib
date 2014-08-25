@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="personfootprintlist">
             <connections>
+                <outlet property="UINavigationBar" destination="Gax-8z-8Yk" id="Nt5-ZC-veg"/>
+                <outlet property="pfpTView" destination="OUm-0v-pcG" id="4UY-sy-gVX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,10 +25,23 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="个人足迹" id="q1I-1v-xsZ">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="fET-gz-D79"/>
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="fET-gz-D79">
+                                <connections>
+                                    <action selector="goback:" destination="-1" id="yHv-iX-AIH"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OUm-0v-pcG">
+                    <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kz3-Ys-7OD"/>
+                        <outlet property="delegate" destination="-1" id="Aej-j8-gjJ"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

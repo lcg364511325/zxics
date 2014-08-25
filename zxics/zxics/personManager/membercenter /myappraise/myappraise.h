@@ -10,6 +10,12 @@
 #import "myappraiseCell.h"
 
 @interface myappraise : UIViewController
+{
+    NSMutableArray * list;
+    NSInteger page;
+    NSString *searchurl;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *assessTView;
 @end

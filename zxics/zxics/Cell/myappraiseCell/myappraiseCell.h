@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface myappraiseCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *appLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *logoimage;
 
 @end

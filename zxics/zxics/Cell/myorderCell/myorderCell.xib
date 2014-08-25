@@ -63,6 +63,12 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="countLabel" destination="5n8-dU-gnW" id="3wn-qB-SEx"/>
+                <outlet property="moneyLabel" destination="ySW-Zj-aG5" id="qTo-xJ-YMO"/>
+                <outlet property="ordernoLabel" destination="1Qa-kL-Avt" id="1xc-TJ-5Hu"/>
+                <outlet property="stateLabel" destination="1mA-rg-5gd" id="B25-bA-uv4"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

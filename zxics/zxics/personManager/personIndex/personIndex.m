@@ -8,6 +8,7 @@
 
 #import "personIndex.h"
 #import "goodslist.h"
+#import "personfootprintlist.h"
 
 @interface personIndex ()
 
@@ -67,6 +68,14 @@
     personLog * _personLog=[[personLog alloc] init];
     
     [self.navigationController pushViewController:_personLog animated:NO];
+}
+
+//个人足迹
+-(IBAction)personfootprintlist:(id)sender
+{
+    personfootprintlist * _personfootprintlist=[[personfootprintlist alloc] init];
+    
+    [self.navigationController pushViewController:_personfootprintlist animated:NO];
 }
 
 //社区商城页面跳转

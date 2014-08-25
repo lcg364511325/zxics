@@ -11,6 +11,13 @@
 #import "myorderDetail.h"
 
 @interface myorder : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+    NSString *oStatus;
+    NSString *pStatus;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *myorderTView;
 @end

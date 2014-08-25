@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="membercenter">
             <connections>
                 <outlet property="UINavigationBar" destination="lMk-pZ-IVc" id="zRC-w1-brQ"/>
+                <outlet property="logoimage" destination="qZu-d2-GjW" id="FV5-xm-LlX"/>
+                <outlet property="usernameLabel" destination="TZY-gg-pCV" id="rA3-sO-hqS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

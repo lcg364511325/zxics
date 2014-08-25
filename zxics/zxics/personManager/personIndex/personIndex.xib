@@ -59,6 +59,9 @@
                     <state key="normal" title="Button" image="btn_footprint.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="personfootprintlist:" destination="-1" eventType="touchDown" id="poX-ad-w2e"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03w-wY-KPk">
                     <rect key="frame" x="34" y="146" width="40" height="10"/>

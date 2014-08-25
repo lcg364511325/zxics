@@ -7,12 +7,17 @@
 //
 
 #import "membercenter.h"
+#import "ImageCacher.h"
+#import "AppDelegate.h"
 
 @interface membercenter ()
 
 @end
 
 @implementation membercenter
+
+@synthesize logoimage;
+@synthesize usernameLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +33,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    //头像
+    NSURL *imgUrl=[NSURL URLWithString:myDelegate.entityl.headimg];
+    if (hasCachedImage(imgUrl)) {
+        [logoimage setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+    }else{
+        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",logoimage,@"imageView",nil];
+        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+    }
+    
+    //用户名
+    usernameLabel.text=myDelegate.entityl.account;
 }
 
 -(IBAction)goback:(id)sender

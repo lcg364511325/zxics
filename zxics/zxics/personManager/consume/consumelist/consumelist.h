@@ -11,8 +11,15 @@
 #import "consumeDetail.h"
 
 @interface consumelist : UIViewController
-
+{
+    NSMutableArray *list;
+    NSInteger page;
+    NSArray *typelist;
+    NSString *searchtype;
+    NSString *tname;
+}
 @property(retain , nonatomic) NSString * btntag;//消费停车
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
+@property (weak, nonatomic) IBOutlet UITableView *consumeTView;
 @end

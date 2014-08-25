@@ -87,6 +87,14 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="endTLabel" destination="A00-hA-Aeo" id="UmL-zs-bfT"/>
+                <outlet property="moneyLabel" destination="whY-bk-UqV" id="Jap-eY-lOf"/>
+                <outlet property="noLabel" destination="r8r-BG-DkD" id="mdH-6G-wBc"/>
+                <outlet property="startTLabel" destination="Ly3-ak-Oad" id="dwW-UK-19Z"/>
+                <outlet property="stateLabel" destination="CHu-jo-4g5" id="RY0-JG-p7w"/>
+                <outlet property="typeLabel" destination="nmJ-Nw-9YF" id="7Go-VE-M4l"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface communityCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addrLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isidentifyLabel;
 
 @end

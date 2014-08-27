@@ -9,6 +9,7 @@
 #import "membercenter.h"
 #import "ImageCacher.h"
 #import "AppDelegate.h"
+#import "Deliveryaddress.h"
 
 @interface membercenter ()
 
@@ -72,6 +73,13 @@
 {
     shoppingcart *_shoppingcart=[[shoppingcart alloc]init];
     [self.navigationController pushViewController:_shoppingcart animated:NO];
+}
+
+//管理我的收货地址页面跳转
+-(IBAction)Deliveryaddress:(id)sender
+{
+    Deliveryaddress *_Deliveryaddress=[[Deliveryaddress alloc]init];
+    [self.navigationController pushViewController:_Deliveryaddress animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

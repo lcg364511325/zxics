@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Deliveryaddress : UIViewController
+@interface Deliveryaddress : UIViewController<UIAlertViewDelegate>
+{
+    NSArray *arlist;
+    NSString *rid;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *daTView;
 @end

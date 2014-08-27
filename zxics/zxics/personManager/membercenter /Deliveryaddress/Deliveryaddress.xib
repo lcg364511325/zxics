@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Deliveryaddress">
             <connections>
                 <outlet property="UINavigationBar" destination="pF0-YI-jqt" id="OLb-Ao-fTW"/>
+                <outlet property="daTView" destination="r58-rz-i3e" id="8Kr-Hm-Lgh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,11 +30,15 @@
                                     <action selector="goback:" destination="-1" id="4nI-Kp-aml"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="新增" id="kxZ-2i-osp"/>
+                            <barButtonItem key="rightBarButtonItem" title="新增" id="kxZ-2i-osp">
+                                <connections>
+                                    <action selector="adddeliveryaddress:" destination="-1" id="tkK-Nw-LYa"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r58-rz-i3e">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r58-rz-i3e">
                     <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

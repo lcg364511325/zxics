@@ -117,6 +117,8 @@
 
 - (void)handleSwitchEvent:(id)sender
 {
+    
+    self.selectText=((RadioBox*)sender).text;
     for (UIView *control in self.subviews) {
         if ([control isKindOfClass:[RadioBox class]]) {
             if (!((RadioBox*)control).isClick) {
@@ -135,6 +137,11 @@
             }
         }
     }
+}
+
+-(NSString *)returnselected
+{
+    return self.selectText;
 }
 
 @end

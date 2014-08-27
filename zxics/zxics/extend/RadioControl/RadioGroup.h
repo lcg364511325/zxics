@@ -8,6 +8,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RadioGroup : UIControl
+{
+    NSString *selectedtext;
+}
 
 @property (nonatomic, strong) NSString *selectText;
 @property (nonatomic) NSInteger selectValue;
@@ -22,4 +25,7 @@
 
 
 - (id)initWithFrame:(CGRect)frame WithControl:(NSArray*)controls;
+
+-(NSString *)returnselected;
+
 @end

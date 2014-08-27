@@ -92,6 +92,9 @@
                     <state key="normal" title="管理我的收货地址" backgroundImage="login_bg.jpg">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="Deliveryaddress:" destination="-1" eventType="touchDown" id="J4V-o1-6ib"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

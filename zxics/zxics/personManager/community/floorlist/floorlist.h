@@ -10,6 +10,14 @@
 #import "communityCell.h"
 
 @interface floorlist : UIViewController<UIAlertViewDelegate>
+{
+    NSMutableArray *list;
+    NSInteger page;
+    NSString *fid;
+}
+
+@property(retain , nonatomic) NSString * cid;//社区id
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *floorTView;
 @end

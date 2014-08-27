@@ -10,6 +10,7 @@
 #import "MJRefresh.h"
 #import "AppDelegate.h"
 #import "DataService.h"
+#import "membercenter.h"
 
 @interface myorder ()
 
@@ -67,7 +68,8 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    membercenter *_membercenter=[[membercenter alloc]init];
+    [self.navigationController pushViewController:_membercenter animated:NO];
 }
 
 //初始化tableview数据

@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="UINavigationBar" destination="M2P-f8-yvK" id="uFm-Fz-YEG"/>
                 <outlet property="UINavigationItem" destination="pdG-Uz-djC" id="SUi-zg-M5K"/>
+                <outlet property="comTView" destination="D3h-Jq-sJY" id="bRx-Ef-hp6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

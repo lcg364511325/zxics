@@ -11,7 +11,12 @@
 #import "floorlist.h"
 
 @interface communitylist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
+@property (weak, nonatomic) IBOutlet UITableView *comTView;
 @end

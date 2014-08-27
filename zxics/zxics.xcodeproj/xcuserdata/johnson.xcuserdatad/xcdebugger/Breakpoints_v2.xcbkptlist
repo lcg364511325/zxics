@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zxics/personManager/membercenter /shoppingcart/placeorder/placeorder.m"
-            timestampString = "430653214.774422"
+            filePath = "zxics/extend/Helper/DataService.m"
+            timestampString = "430817794.322598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-loadgoodsdata"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "+PostDataService:postDatas:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -253,6 +253,7 @@
     if ([ridlist count]>0) {
         placeorder *_placeorder=[[placeorder alloc]init];
         _placeorder.ridlist=ridlist;
+        _placeorder.shopid=orgid;
         [self.navigationController pushViewController:_placeorder animated:NO];
     }else{
         NSString *rowString =@"请选择下单的商品";

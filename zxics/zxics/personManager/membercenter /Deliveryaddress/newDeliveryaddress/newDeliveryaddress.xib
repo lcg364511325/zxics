@@ -7,7 +7,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newDeliveryaddress">
             <connections>
                 <outlet property="UINavigationBar" destination="QuA-H2-jia" id="cbh-Gt-ud8"/>
+                <outlet property="addrdetailText" destination="y0t-0v-n9S" id="6Ma-0i-Wv6"/>
+                <outlet property="addrselectButton" destination="Qug-xH-49M" id="asO-xu-reY"/>
+                <outlet property="areaText" destination="wBz-NU-1B9" id="UOI-mE-ICx"/>
+                <outlet property="nameText" destination="gpd-aL-PcO" id="kOR-I0-hMS"/>
+                <outlet property="ndTView" destination="iBw-O1-TF1" id="bIa-FO-Nkb"/>
+                <outlet property="phoneText" destination="iZ8-VB-0gb" id="68k-aB-oNW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zipcodeText" destination="Z1l-hx-VnF" id="ISo-wn-LJk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,7 +36,11 @@
                                     <action selector="goback:" destination="-1" id="slw-tg-zPN"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="确定" id="I3T-lh-5g4"/>
+                            <barButtonItem key="rightBarButtonItem" title="确定" id="I3T-lh-5g4">
+                                <connections>
+                                    <action selector="submitaddr:" destination="-1" id="FrU-qj-0LT"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
@@ -93,6 +104,25 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qug-xH-49M">
+                    <rect key="frame" x="70" y="70" width="230" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="searcharea:" destination="-1" eventType="touchDown" id="WcU-ii-VJK"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iBw-O1-TF1">
+                    <rect key="frame" x="70" y="100" width="230" height="284"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kkg-Po-d96"/>
+                        <outlet property="delegate" destination="-1" id="Yk0-Fa-wvJ"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "DataService.h"
 #import "Commons.h"
+#import "myorder.h"
 
 @interface myorderDetail ()
 
@@ -194,7 +195,8 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    myorder *_myorder=[[myorder alloc]init];
+    [self.navigationController pushViewController:_myorder animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

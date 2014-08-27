@@ -7,6 +7,10 @@
 //
 
 #import "Deliveryaddress.h"
+#import "DeliveryaddressCell.h"
+#import "AppDelegate.h"
+#import "DataService.h"
+#import "newDeliveryaddress.h"
 
 @interface Deliveryaddress ()
 
@@ -23,11 +27,21 @@
     return self;
 }
 
+-(void)loaddata
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * ar = [NSMutableDictionary dictionaryWithCapacity:5];
+    ar=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindUserGoodsAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+    arlist=[ar objectForKey:@"datas"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    [self loaddata];
 }
 
 -(IBAction)goback:(id)sender
@@ -35,31 +49,61 @@
     [self.navigationController popViewControllerAnimated:NO];
 }
 
+//收货地址添加
+-(IBAction)adddeliveryaddress:(id)sender
+{
+    newDeliveryaddress *_newDeliveryaddress=[[newDeliveryaddress alloc]init];
+    [self.navigationController pushViewController:_newDeliveryaddress animated:NO];
+    
+}
+
 //初始化tableview数据
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;//[self.list count];
+    return [arlist count];
     //只有一组，数组数即为行数。
 }
 
 // tableview数据显示
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
+    static NSString *TableSampleIdentifier = @"DeliveryaddressCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
+    DeliveryaddressCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
+        NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"DeliveryaddressCell" owner:self options:nil];
+        cell=[nib objectAtIndex:0];
     }
-    //NSUInteger row = [indexPath row];
-    //cell.textLabel.text = [self.list objectAtIndex:row];
+    NSDictionary *dadetail = [arlist objectAtIndex:[indexPath row]];
+    
+    cell.addrLabel.text=[NSString stringWithFormat:@"%@ %@ (%@收) %@ %@",[dadetail objectForKey:@"districtName"],[dadetail objectForKey:@"address"],[dadetail objectForKey:@"consignee"],[dadetail objectForKey:@"mobile"],[dadetail objectForKey:@"zipcode"]];
+    
     return cell;
 }
 
 //tableview点击操作
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSDictionary *dadetail = [arlist objectAtIndex:[indexPath row]];
+    rid=[NSString stringWithFormat:@"%@",[dadetail objectForKey:@"address_id"]];
+    NSString *rowString =@"是否删除本条收货地址？";
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alter.delegate=self;
+    [alter show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDelectReceivingAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"aId=%@",rid]];
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+        [self loaddata];
+        [_daTView reloadData];
+    }
 }
 
 

@@ -68,11 +68,11 @@
     
     if ([btntag isEqualToString:@"0"]) {
         self.UINavigationItem.title=@"在线调查";
-        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&type=0",communityid] forPage:page forPageSize:10];
+        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",domainser] postDatas:[NSString stringWithFormat:@"communityid=%@&type=0",communityid] forPage:page forPageSize:10];
     }else if([btntag isEqualToString:@"1"])
     {
         self.UINavigationItem.title=@"业主评价";
-        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&type=1",communityid] forPage:page forPageSize:10];
+        surveylist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findSurveyList",domainser] postDatas:[NSString stringWithFormat:@"communityid=%@&type=1",communityid] forPage:page forPageSize:10];
     }
     
     NSArray *array=[surveylist objectForKey:@"datas"];

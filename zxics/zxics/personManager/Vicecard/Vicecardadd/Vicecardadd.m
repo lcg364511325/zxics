@@ -7,12 +7,17 @@
 //
 
 #import "Vicecardadd.h"
+#import "AppDelegate.h"
+#import "DataService.h"
 
 @interface Vicecardadd ()
 
 @end
 
 @implementation Vicecardadd
+
+@synthesize cardnoText;
+@synthesize personnoText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +33,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+}
+
+-(IBAction)addvicecard:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/addOtherKa",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&codeid=%@",myDelegate.entityl.userid,cardnoText.text,personnoText.text]];
+    NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    alter.delegate=self;
+    [alter show];
 }
 
 -(IBAction)goback:(id)sender

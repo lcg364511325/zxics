@@ -66,7 +66,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * perlog = [NSMutableDictionary dictionaryWithCapacity:5];
-    perlog=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findLog",myDelegate.url] postDatas:[NSString stringWithFormat:@"account=%@",myDelegate.entityl.account] forPage:page forPageSize:10];
+    perlog=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findLog",domainser] postDatas:[NSString stringWithFormat:@"account=%@",myDelegate.entityl.account] forPage:page forPageSize:10];
     NSArray *perloglist=[perlog objectForKey:@"datas"];
     [list addObjectsFromArray:perloglist];
 }

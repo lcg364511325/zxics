@@ -8,7 +8,6 @@
 
 #import "communitylist.h"
 #import "MJRefresh.h"
-#import "AppDelegate.h"
 #import "DataService.h"
 
 @interface communitylist ()
@@ -57,9 +56,8 @@
 
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * com = [NSMutableDictionary dictionaryWithCapacity:5];
-    com=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCommunityList",myDelegate.url] postDatas:nil forPage:page forPageSize:10];
+    com=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCommunityList",domainser] postDatas:nil forPage:page forPageSize:10];
     NSArray *comlist=[com objectForKey:@"datas"];
     [list addObjectsFromArray:comlist];
     

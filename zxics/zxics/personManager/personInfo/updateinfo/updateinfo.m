@@ -88,7 +88,7 @@
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
     NSString * updatavalue=updatetext.text;
     if (updatavalue!=nil && ![updatavalue isEqualToString:@""]) {
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&%@=%@",myDelegate.entityl.userid,myDelegate.entityl.account,valuename,updatetext.text]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&%@=%@",myDelegate.entityl.userid,myDelegate.entityl.account,valuename,updatetext.text]];
     }
     NSString *rowString =[state objectForKey:@"info"];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

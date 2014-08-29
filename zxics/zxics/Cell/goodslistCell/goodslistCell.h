@@ -10,4 +10,7 @@
 
 @interface goodslistCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *productImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @end

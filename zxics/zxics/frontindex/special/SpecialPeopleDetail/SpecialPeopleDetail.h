@@ -19,6 +19,7 @@
 
 }
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addinfo;
 @property(retain , nonatomic) NSString * spdbtntag;//按钮tag，判断是那个按钮被点击了
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;

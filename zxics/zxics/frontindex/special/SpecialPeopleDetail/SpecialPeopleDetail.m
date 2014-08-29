@@ -9,6 +9,7 @@
 #import "SpecialPeopleDetail.h"
 #import "DataService.h"
 #import "Commons.h"
+#import "addinfo.h"
 
 @interface SpecialPeopleDetail ()
 
@@ -41,6 +42,7 @@
     if (selecttype==0) {
         self.UINavigationItem.title=@"发布信息";
         caid=@"73";
+        _addinfo.title=@"发布";
     }else if (selecttype==2)
     {
         self.UINavigationItem.title=@"知识库";
@@ -83,9 +85,9 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl && [caid isEqualToString:@"73"]) {
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid] forPage:page forPageSize:10];
+        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid] forPage:page forPageSize:10];
     }else{
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid] forPage:page forPageSize:10];
+        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid] forPage:page forPageSize:10];
     }
     NSArray *array=[spd objectForKey:@"datas"];
     [list addObjectsFromArray:array];
@@ -131,6 +133,13 @@
     specialPeopleIntroduce *_specialPeopleIntroduce=[[specialPeopleIntroduce alloc]init];
     _specialPeopleIntroduce.introduce=detail;
     [self.navigationController pushViewController:_specialPeopleIntroduce animated:NO];
+}
+
+//发布信息页面跳转
+-(IBAction)addinfo:(id)sender
+{
+    addinfo *_addinfos=[[addinfo alloc]init];
+    [self.navigationController pushViewController:_addinfos animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

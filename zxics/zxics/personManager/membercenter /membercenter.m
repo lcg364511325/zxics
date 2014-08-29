@@ -10,6 +10,7 @@
 #import "ImageCacher.h"
 #import "AppDelegate.h"
 #import "Deliveryaddress.h"
+#import "personIndex.h"
 
 @interface membercenter ()
 
@@ -49,9 +50,11 @@
     usernameLabel.text=myDelegate.entityl.account;
 }
 
+
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    personIndex *_personIndex=[[personIndex alloc]init];
+    [self.navigationController pushViewController:_personIndex animated:NO];
 }
 
 //我的评价页面跳转

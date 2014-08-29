@@ -56,7 +56,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * infolist = [NSMutableDictionary dictionaryWithCapacity:5];
-    infolist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findPersoanlInfo",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+    infolist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findPersoanlInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
     NSDictionary *info=[infolist objectForKey:@"datas"];
     
     //身份证号码
@@ -342,7 +342,7 @@
         AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
         
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&birthday=%@",myDelegate.entityl.userid,myDelegate.entityl.account,date]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&birthday=%@",myDelegate.entityl.userid,myDelegate.entityl.account,date]];
         
         
         NSString *rowString =[state objectForKey:@"info"];
@@ -388,7 +388,7 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
     
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&sex=%d",myDelegate.entityl.userid,myDelegate.entityl.account,buttonIndex-1]];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&sex=%d",myDelegate.entityl.userid,myDelegate.entityl.account,buttonIndex-1]];
     
     
     NSString *rowString =[state objectForKey:@"info"];

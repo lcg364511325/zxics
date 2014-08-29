@@ -18,5 +18,11 @@
 }
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *repairTView;
+@property (weak, nonatomic) IBOutlet UIButton *allButton;
+@property (weak, nonatomic) IBOutlet UIButton *state1button;
+@property (weak, nonatomic) IBOutlet UIButton *state2Button;
+@property (weak, nonatomic) IBOutlet UIButton *state3Button;
+@property (weak, nonatomic) IBOutlet UIButton *state4Button;
+@property (weak, nonatomic) IBOutlet UIButton *state5Button;
 
 @end

@@ -9,7 +9,6 @@
 #import "regeditmember.h"
 #import "fontindex.h"
 #import "DataService.h"
-#import "AppDelegate.h"
 
 @interface regeditmember ()
 
@@ -42,14 +41,13 @@
 //提交注册
 -(IBAction)regedit:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
     NSString *account=accountText.text;
     NSString *password=passwordText.text;
     NSString *check=checkpswText.text;
     if (account!=nil && ![account isEqualToString:@""]) {
         if ([password isEqualToString:check]) {
-            state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/regist",myDelegate.url] postDatas:[NSString stringWithFormat:@"account=%@&pwd=%@&name=%@",accountText.text,password,nameText.text]];
+            state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/regist",domainser] postDatas:[NSString stringWithFormat:@"account=%@&pwd=%@&name=%@",accountText.text,password,nameText.text]];
             
             NSString *rowString =[state objectForKey:@"info"];
             UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

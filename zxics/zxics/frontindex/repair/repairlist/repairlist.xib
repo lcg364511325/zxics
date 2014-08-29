@@ -7,7 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="repairlist">
             <connections>
                 <outlet property="UINavigationBar" destination="9zT-Xn-2gj" id="iWi-rJ-czV"/>
+                <outlet property="allButton" destination="4wB-gj-5Tn" id="L06-xz-edA"/>
                 <outlet property="repairTView" destination="CtA-6V-jgd" id="pAF-gm-7Kc"/>
+                <outlet property="state1button" destination="FMC-cy-C8e" id="DO2-dR-emq"/>
+                <outlet property="state2Button" destination="nUS-gW-O3b" id="yt8-gZ-cRh"/>
+                <outlet property="state3Button" destination="1ek-Zr-cZe" id="tT7-SV-7o6"/>
+                <outlet property="state4Button" destination="S1h-AN-KYZ" id="oay-uH-pcQ"/>
+                <outlet property="state5Button" destination="BdK-rr-U6n" id="8Xn-ew-cDH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,7 +50,7 @@
                     <color key="backgroundColor" red="0.58943850577975432" green="0.93536750637755106" blue="0.53468844683697325" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wB-gj-5Tn">
-                    <rect key="frame" x="6" y="71" width="46" height="30"/>
+                    <rect key="frame" x="2.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="全部">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,7 +61,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMC-cy-C8e">
-                    <rect key="frame" x="57" y="71" width="46" height="30"/>
+                    <rect key="frame" x="53.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="未受理">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +72,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-gW-O3b">
-                    <rect key="frame" x="109" y="71" width="46" height="30"/>
+                    <rect key="frame" x="105.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="已受理">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +83,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-Zr-cZe">
-                    <rect key="frame" x="163" y="71" width="46" height="30"/>
+                    <rect key="frame" x="159.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="派员中">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +94,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1h-AN-KYZ">
-                    <rect key="frame" x="217" y="71" width="46" height="30"/>
+                    <rect key="frame" x="213.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="已处理">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,7 +105,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdK-rr-U6n">
-                    <rect key="frame" x="271" y="71" width="46" height="30"/>
+                    <rect key="frame" x="267.5" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="已评价">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

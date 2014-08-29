@@ -9,7 +9,6 @@
 #import "prowantedlist.h"
 #import "prowanted.h"
 #import "prowantedDetail.h"
-#import "AppDelegate.h"
 #import "DataService.h"
 #import "Commons.h"
 
@@ -59,9 +58,8 @@
 
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
-    pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileNeedRentAndBuy",myDelegate.url] postDatas:nil forPage:page forPageSize:10];
+    pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileNeedRentAndBuy",domainser] postDatas:nil forPage:page forPageSize:10];
     NSArray *pwlist=[pw objectForKey:@"datas"];
     [list addObjectsFromArray:pwlist];
 }

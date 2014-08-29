@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zxics/extend/Helper/DataService.m"
-            timestampString = "430817794.322598"
+            filePath = "zxics/mall/goodsDetail/goodsDetail.m"
+            timestampString = "430903287.66183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "+PostDataService:postDatas:"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-loaddata"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

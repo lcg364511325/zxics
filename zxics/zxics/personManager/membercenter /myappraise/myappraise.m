@@ -60,7 +60,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * assess = [NSMutableDictionary dictionaryWithCapacity:5];
-    assess=[DataService PostDataService:[NSString stringWithFormat:@"%@api/%@",myDelegate.url,searchurl] postDatas:[NSString stringWithFormat:@"account=%@",myDelegate.entityl.account] forPage:page forPageSize:10];
+    assess=[DataService PostDataService:[NSString stringWithFormat:@"%@api/%@",domainser,searchurl] postDatas:[NSString stringWithFormat:@"account=%@",myDelegate.entityl.account] forPage:page forPageSize:10];
     NSArray *applist=[assess objectForKey:@"datas"];
     [list addObjectsFromArray:applist];
 }

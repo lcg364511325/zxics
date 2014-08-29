@@ -70,13 +70,13 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * acc = [NSMutableDictionary dictionaryWithCapacity:5];
-    acc=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findPayment",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&palystate=%@&sqid=%@",myDelegate.entityl.userid,paystate,myDelegate.entityl.communityid] forPage:page forPageSize:10];
+    acc=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findPayment",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&palystate=%@&sqid=%@",myDelegate.entityl.userid,paystate,myDelegate.entityl.communityid] forPage:page forPageSize:10];
     NSArray *accarray=[acc objectForKey:@"datas"];
     [list addObjectsFromArray:accarray];
     
     //查询收费类型
     NSMutableDictionary * type = [NSMutableDictionary dictionaryWithCapacity:1];
-    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",myDelegate.url] postDatas:@"type=payParame"];
+    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",domainser] postDatas:@"type=payParame"];
     typelist=[type objectForKey:@"datas"];
 }
 

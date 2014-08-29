@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-@synthesize url;
 @synthesize alter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -18,7 +17,7 @@
     [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     
     //初始化url
-    url=@"http://192.168.1.140:8080/zx_ics/";
+    //url=@"http://192.168.1.140:8080/zx_ics/";
     //url=@"http://www.jiahao123.com/";
     
     //初始化
@@ -83,7 +82,7 @@
         [alter show];
         
         
-        URL = [NSString stringWithFormat:@"%@%@",url,URL];
+        URL = [NSString stringWithFormat:@"%@%@",domainser,URL];
         
         
         ASIFormDataRequest *uploadImageRequest= [ ASIFormDataRequest requestWithURL : [NSURL URLWithString:[URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ]];

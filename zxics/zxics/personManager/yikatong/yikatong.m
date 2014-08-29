@@ -7,7 +7,6 @@
 //
 
 #import "yikatong.h"
-#import "AppDelegate.h"
 #import "DataService.h"
 #import "membercenter.h"
 
@@ -53,9 +52,8 @@
 //确定支付
 -(IBAction)pay:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/MoblieCardWsreduce",myDelegate.url] postDatas:[NSString stringWithFormat:@"amtc=%@&cardId=%@&account=%@&pwd=%@&oId=%@",price,cardidText.text,accountLabel.text,pwdLabel.text,orderid]];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/MoblieCardWsreduce",domainser] postDatas:[NSString stringWithFormat:@"amtc=%@&cardId=%@&account=%@&pwd=%@&oId=%@",price,cardidText.text,accountLabel.text,pwdLabel.text,orderid]];
     NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alter show];

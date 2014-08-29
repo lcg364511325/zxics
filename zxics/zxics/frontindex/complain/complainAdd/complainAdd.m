@@ -77,7 +77,7 @@
     
     
     if (myDelegate.entityl) {
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/complaintAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&type=complaint&subtype=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,introduceText.text,detailsText.text,subtype]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/complaintAddApi",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&type=complaint&subtype=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,introduceText.text,detailsText.text,subtype]];
         
         status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
         

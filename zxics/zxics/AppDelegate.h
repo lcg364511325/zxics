@@ -19,8 +19,6 @@
 
 @property(retain , nonatomic) LoginEntity * entityl;//保存登录的用户信息
 
-@property(retain , nonatomic) NSString * url;//保存请求地址公共部分
-
 @property (strong, nonatomic) UIAlertView *alter;//弹出提示框
 
 //上传图片到服务器

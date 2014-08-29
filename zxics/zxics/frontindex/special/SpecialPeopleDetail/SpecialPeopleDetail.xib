@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="UINavigationBar" destination="eml-GR-pJm" id="q0D-7R-pX1"/>
                 <outlet property="UINavigationItem" destination="XDy-5s-jrS" id="R0a-fQ-2T1"/>
+                <outlet property="addinfo" destination="Jpl-oK-cFT" id="0uC-Xm-hmU"/>
                 <outlet property="specialtableview" destination="aVO-jb-p0m" id="gU4-N8-vRd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,6 +30,11 @@
                             <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="CIb-xL-Ost">
                                 <connections>
                                     <action selector="goback:" destination="-1" id="wub-JA-ALC"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" id="Jpl-oK-cFT">
+                                <connections>
+                                    <action selector="addinfo:" destination="-1" id="8t5-eQ-Vga"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>

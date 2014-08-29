@@ -10,7 +10,6 @@
 #import "rentorshellCell.h"
 #import "rentorshellDetail.h"
 #import "DataService.h"
-#import "AppDelegate.h"
 #import "ImageCacher.h"
 
 @interface rentorshelllist ()
@@ -69,9 +68,8 @@
 //加载数据
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * rs = [NSMutableDictionary dictionaryWithCapacity:5];
-    rs=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileTenementsSell",myDelegate.url] postDatas:[NSString stringWithFormat:@"subtype=%@",btntag] forPage:page forPageSize:10];
+    rs=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileTenementsSell",domainser] postDatas:[NSString stringWithFormat:@"subtype=%@",btntag] forPage:page forPageSize:10];
     NSArray *rslist=[rs objectForKey:@"datas"];
     [list addObjectsFromArray:rslist];
 }
@@ -102,14 +100,14 @@
     
     cell.titleLabel.text=[rsdetail objectForKey:@"title"];
     
-    NSString *addr=[rsdetail objectForKey:@"homeaddress"];
+    id addr=[rsdetail objectForKey:@"homeaddress"];
     if (addr!=[NSNull null]) {
         cell.addrLabel.text=[NSString stringWithFormat:@"地址：%@",[rsdetail objectForKey:@"homeaddress"]];
     }
     
-    NSString *doorsi=[rsdetail objectForKey:@"doorsi"];
-    NSString *doorti=[rsdetail objectForKey:@"doorti"];
-    NSString *doorwa=[rsdetail objectForKey:@"doorwa"];
+    id doorsi=[rsdetail objectForKey:@"doorsi"];
+    id doorti=[rsdetail objectForKey:@"doorti"];
+    id doorwa=[rsdetail objectForKey:@"doorwa"];
     if (doorwa!=[NSNull null] && doorti!=[NSNull null] && doorsi!=[NSNull null]) {
         cell.detailLabel.text=[NSString stringWithFormat:@"%@室%@厅%@卫",doorsi,doorti,doorwa];
     }
@@ -121,8 +119,7 @@
         cell.moneyLabel.text=[NSString stringWithFormat:@"%@元/月",[rsdetail objectForKey:@"rent"]];
     }
     
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *url=[NSString stringWithFormat:@"%@%@",myDelegate.url,[rsdetail objectForKey:@"headurl"]];
+    NSString *url=[NSString stringWithFormat:@"%@%@",domainser,[rsdetail objectForKey:@"headurl"]];
     NSURL *imgUrl=[NSURL URLWithString:url];
     if (hasCachedImage(imgUrl)) {
         [cell.logo setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];

@@ -12,6 +12,13 @@
 #import "vicecardadd.h"
 
 @interface ViewController : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITableView *vicecTView;
+@property (weak, nonatomic) IBOutlet UILabel *cardnoLabel;
 
 @end

@@ -70,13 +70,13 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * pfp = [NSMutableDictionary dictionaryWithCapacity:5];
-    pfp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findFootprint",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&type=%@",myDelegate.entityl.userid,searchtype] forPage:page forPageSize:10];
+    pfp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findFootprint",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&type=%@",myDelegate.entityl.userid,searchtype] forPage:page forPageSize:10];
     NSArray *pfplist=[pfp objectForKey:@"datas"];
     [list addObjectsFromArray:pfplist];
     
     //查询足迹类型
     NSMutableDictionary * type = [NSMutableDictionary dictionaryWithCapacity:1];
-    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",myDelegate.url] postDatas:@"type=trackType"];
+    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",domainser] postDatas:@"type=trackType"];
     typelist=[type objectForKey:@"datas"];
 }
 

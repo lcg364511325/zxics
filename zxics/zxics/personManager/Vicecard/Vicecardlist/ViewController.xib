@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="UINavigationBar" destination="Ree-Uz-tjT" id="KDM-Bc-5pC"/>
+                <outlet property="cardnoLabel" destination="Dn8-Zp-YYz" id="eIQ-fx-yUX"/>
+                <outlet property="vicecTView" destination="uVg-yI-pXJ" id="OQ2-Ox-QTM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

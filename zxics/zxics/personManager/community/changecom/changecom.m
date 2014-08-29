@@ -63,7 +63,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * comlist = [NSMutableDictionary dictionaryWithCapacity:5];
-    comlist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findCommunityList",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid] forPage:page forPageSize:10];
+    comlist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findCommunityList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid] forPage:page forPageSize:10];
     NSArray *com=[comlist objectForKey:@"datas"];
     [list addObjectsFromArray:com];
     

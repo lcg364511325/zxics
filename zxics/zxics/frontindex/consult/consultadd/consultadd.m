@@ -49,9 +49,8 @@
     [self settextviewShow:detailLabel];
     
     //加载报修类型
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * infotype = [NSMutableDictionary dictionaryWithCapacity:1];
-    infotype=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",myDelegate.url] postDatas:@"type=consult"];
+    infotype=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",domainser] postDatas:@"type=consult"];
     list=[infotype objectForKey:@"datas"];
 }
 
@@ -99,7 +98,7 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
     
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/addConsult",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&subtype=%@&type=consult&receiveid=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleLabel.text,introduceLabel.text,detailLabel.text,typevalue,target]];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/addConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&subtype=%@&type=consult&receiveid=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleLabel.text,introduceLabel.text,detailLabel.text,typevalue,target]];
     
     status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
     

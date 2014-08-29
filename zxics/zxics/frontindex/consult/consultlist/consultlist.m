@@ -63,7 +63,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * consult = [NSMutableDictionary dictionaryWithCapacity:5];
-    consult=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&type=consult",myDelegate.entityl.userid] forPage:page forPageSize:10];
+    consult=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&type=consult",myDelegate.entityl.userid] forPage:page forPageSize:10];
     NSArray *conlist=[consult objectForKey:@"datas"];
     [list addObjectsFromArray:conlist];
 }

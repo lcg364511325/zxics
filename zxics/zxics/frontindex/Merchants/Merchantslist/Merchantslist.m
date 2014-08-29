@@ -62,7 +62,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * cp = [NSMutableDictionary dictionaryWithCapacity:5];
-    cp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findProblem",myDelegate.url] postDatas:[NSString stringWithFormat:@"categoryId=93&communityid=%@",myDelegate.entityl.communityid] forPage:page forPageSize:10];
+    cp=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findProblem",domainser] postDatas:[NSString stringWithFormat:@"categoryId=93&communityid=%@",myDelegate.entityl.communityid] forPage:page forPageSize:10];
     NSArray *array=[cp objectForKey:@"datas"];
     [list addObjectsFromArray:array];
 }

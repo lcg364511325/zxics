@@ -76,7 +76,7 @@
     //回答
     answerLabel.frame=CGRectMake(answerLabel.frame.origin.x, createdateLabel.frame.origin.y+30, answerLabel.frame.size.width, answerLabel.frame.size.height);
     
-    NSString *appaccount=[consultinfo objectForKey:@"appaccount"];
+    id appaccount=[consultinfo objectForKey:@"appaccount"];
     if (appaccount!=[NSNull null]) {
         //回复内容
         replyDetailLabel.text=[NSString stringWithFormat:@"内容：%@",[consultinfo objectForKey:@"reply_contents"]];

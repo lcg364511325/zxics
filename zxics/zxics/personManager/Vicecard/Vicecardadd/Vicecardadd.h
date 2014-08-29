@@ -11,4 +11,6 @@
 @interface Vicecardadd : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITextField *cardnoText;
+@property (weak, nonatomic) IBOutlet UITextField *personnoText;
 @end

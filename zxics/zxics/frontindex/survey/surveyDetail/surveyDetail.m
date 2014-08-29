@@ -7,7 +7,6 @@
 //
 
 #import "surveyDetail.h"
-#import "AppDelegate.h"
 
 @interface surveyDetail ()
 
@@ -43,16 +42,15 @@
     }
     
     //设置web view
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSURLRequest *request;
     
     
     //判断参与还是查看结果
     if ([style isEqualToString:@"1"]) {
-        request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@mobilePage/mobileSureyResult.jsp?id=%@",myDelegate.url,sid]]];
+        request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@mobilePage/mobileSureyResult.jsp?id=%@",domainser,sid]]];
     }else if ([style isEqualToString:@"0"])
     {
-        request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@mobilePage/mobileSurveyQuestion.jsp?id=%@",myDelegate.url,sid]]];
+        request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@mobilePage/mobileSurveyQuestion.jsp?id=%@",domainser,sid]]];
     }
     
     [surveyWView setScalesPageToFit:YES];

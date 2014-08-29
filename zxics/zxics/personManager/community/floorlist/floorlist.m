@@ -8,7 +8,6 @@
 
 #import "floorlist.h"
 #import "MJRefresh.h"
-#import "AppDelegate.h"
 #import "DataService.h"
 
 @interface floorlist ()
@@ -58,9 +57,8 @@
 
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * floor = [NSMutableDictionary dictionaryWithCapacity:5];
-    floor=[DataService PostDataService:[NSString stringWithFormat:@"%@api/communityRoomList",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@",cid] forPage:page forPageSize:10];
+    floor=[DataService PostDataService:[NSString stringWithFormat:@"%@api/communityRoomList",domainser] postDatas:[NSString stringWithFormat:@"communityid=%@",cid] forPage:page forPageSize:10];
     NSArray *floorlist=[floor objectForKey:@"datas"];
     [list addObjectsFromArray:floorlist];
 }
@@ -127,7 +125,7 @@
     if (buttonIndex==1) {
         AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/communityAdd",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&communityid=%@&LPid=%@",myDelegate.entityl.userid,myDelegate.entityl.account,cid,fid]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/communityAdd",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&communityid=%@&LPid=%@",myDelegate.entityl.userid,myDelegate.entityl.account,cid,fid]];
         NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         alter.delegate=self;

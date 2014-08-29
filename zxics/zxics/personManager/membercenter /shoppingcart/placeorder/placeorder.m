@@ -42,6 +42,7 @@
 @synthesize yiButton;
 @synthesize zhiButton;
 @synthesize huoButton;
+@synthesize nowcount;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,7 +80,7 @@
     //配送方式查询
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * sw = [NSMutableDictionary dictionaryWithCapacity:5];
-    sw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindGoodsSendType",myDelegate.url] postDatas:[NSString stringWithFormat:@"orgid=%@",shopid]];
+    sw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindGoodsSendType",domainser] postDatas:[NSString stringWithFormat:@"orgid=%@",shopid]];
     NSArray *swlist=[sw objectForKey:@"datas"];
     [sendwaylist addObjectsFromArray:swlist];
     NSDictionary *swobject=[swlist objectAtIndex:0];
@@ -89,7 +90,7 @@
     
     //配送地址查询
     NSMutableDictionary * ar = [NSMutableDictionary dictionaryWithCapacity:5];
-    ar=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindUserGoodsAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+    ar=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindUserGoodsAddress",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
     NSArray *arlist=[ar objectForKey:@"datas"];
     [addrlist addObjectsFromArray:arlist];
     NSDictionary *arobject=[arlist objectAtIndex:0];
@@ -112,7 +113,7 @@
             gid=rid;
         }
     }
-    gl=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderCarGoods",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&gid=%@",myDelegate.entityl.userid,gid]];
+    gl=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderCarGoods",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&gid=%@",myDelegate.entityl.userid,gid]];
     NSArray *glist=[gl objectForKey:@"datas"];
     
     NSInteger count=[glist count];
@@ -140,13 +141,23 @@
         shopnameLabel.font=[UIFont systemFontOfSize:12];
         shopn=[NSString stringWithFormat:@"%@",[gdetail objectForKey:@"orgName"]];
         
-        UILabel *countLabel=[[UILabel alloc]initWithFrame:CGRectMake(99, 65+100*i, 104, 21)];
-        countLabel.text=[NSString stringWithFormat:@"数量：%@",[sc objectForKey:@"goodsNumber"]];
-        countLabel.font=[UIFont systemFontOfSize:12];
+         UILabel *countLabel=[[UILabel alloc]initWithFrame:CGRectMake(99, 65+100*i, 104, 21)];
+        if (nowcount) {
+            countLabel.text=[NSString stringWithFormat:@"数量：%@",nowcount];
+        }else{
+            countLabel.text=[NSString stringWithFormat:@"数量：%@",[sc objectForKey:@"goodsNumber"]];
+            countLabel.font=[UIFont systemFontOfSize:12];
+        }
         
         UILabel *priceLabel=[[UILabel alloc]initWithFrame:CGRectMake(211, 65+100*i, 102, 21)];
-        NSInteger pricec=[[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsPrice"]]integerValue]*
-        [[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsNumber"]]integerValue];
+        NSInteger pricec=0;
+        if (nowcount) {
+            pricec=[[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsPrice"]]integerValue]*
+            [[NSString stringWithFormat:@"%@",nowcount]integerValue];
+        }else{
+            pricec=[[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsPrice"]]integerValue]*
+            [[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsNumber"]]integerValue];
+        }
         priceLabel.text=[NSString stringWithFormat:@"总价(元)：%d",pricec];
         priceLabel.font=[UIFont systemFontOfSize:12];
         priceLabel.textColor=[UIColor colorWithRed:244/255.0 green:160/255.0 blue:40/255.0 alpha:1];
@@ -333,7 +344,11 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrder",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&pay=%d&gids=%@&addr=%@&lMsn=%@&ships=%@_%@",myDelegate.entityl.userid,paywayvalue,gid,addrid,textView.text,sendwayid,shopid]];
+    if (nowcount) {
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrderBuyNow",domainser] postDatas:[NSString stringWithFormat:@"pay=%d&addr=%@&lmsn=%@&mId=%@&gId=%@&gNum=%@&ship=%@",paywayvalue,addrid,textView.text,myDelegate.entityl.userid,gid,nowcount,sendwayid]];
+    }else{
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrder",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&pay=%d&gids=%@&addr=%@&lMsn=%@&ships=%@_%@",myDelegate.entityl.userid,paywayvalue,gid,addrid,textView.text,sendwayid,shopid]];
+    }
     NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
     if ([status isEqualToString:@"1"]) {
         successorder *_successorder=[[successorder alloc]init];

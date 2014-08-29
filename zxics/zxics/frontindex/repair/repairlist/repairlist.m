@@ -19,6 +19,12 @@
 @implementation repairlist
 
 @synthesize repairTView;
+@synthesize allButton;
+@synthesize state1button;
+@synthesize state2Button;
+@synthesize state3Button;
+@synthesize state4Button;
+@synthesize state5Button;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,7 +68,7 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * repair = [NSMutableDictionary dictionaryWithCapacity:5];
     
-    repair=[DataService PostDataService:[NSString stringWithFormat:@"%@/api/propertyMaintainApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&source=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,source] forPage:page forPageSize:10];
+    repair=[DataService PostDataService:[NSString stringWithFormat:@"%@/api/propertyMaintainApi",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&source=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,source] forPage:page forPageSize:10];
     NSArray *array=[repair objectForKey:@"datas"];
     [list addObjectsFromArray:array];
 }
@@ -71,13 +77,13 @@
 //改变不同状态修改数据
 -(IBAction)changestate:(id)sender
 {
+//    allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
     source=[NSString stringWithFormat:@"%d",btntag];
     if (btntag==5) {
         source=@"";
     }
-    
     [list removeAllObjects];
     page=1;
     [self loaddata];

@@ -7,12 +7,21 @@
 //
 
 #import "VicecardDetail.h"
+#import "Commons.h"
 
 @interface VicecardDetail ()
 
 @end
 
 @implementation VicecardDetail
+@synthesize vcdetail;
+@synthesize nameLabel;
+@synthesize accountLabel;
+@synthesize cardnoLabel;
+@synthesize personnoLabel;
+@synthesize mobileLabel;
+@synthesize addtimeLabel;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +38,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
+    
+    [self loaddata];
+}
+
+-(void)loaddata
+{
+    nameLabel.text=[NSString stringWithFormat:@"名称：%@",[vcdetail objectForKey:@"name"]];
+    accountLabel.text=[NSString stringWithFormat:@"账号：%@",[vcdetail objectForKey:@"account"]];
+    cardnoLabel.text=[NSString stringWithFormat:@"卡号：%@",[vcdetail objectForKey:@"cardcode"]];
+    personnoLabel.text=[NSString stringWithFormat:@"身份证号：%@",[vcdetail objectForKey:@"codeid"]];
+    mobileLabel.text=[NSString stringWithFormat:@"手机号码：%@",[vcdetail objectForKey:@"mobile"]];
+    
+    Commons *_Commons=[[Commons alloc]init];
+    NSString *timestr=[NSString stringWithFormat:@"%@",[vcdetail objectForKey:@"time"]];
+    addtimeLabel.text=[NSString stringWithFormat:@"关联时间：%@",[_Commons stringtoDateforsecond:timestr]];
 }
 
 -(IBAction)goback:(id)sender

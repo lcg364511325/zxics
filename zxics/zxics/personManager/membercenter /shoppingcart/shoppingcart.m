@@ -7,7 +7,6 @@
 //
 
 #import "shoppingcart.h"
-#import "AppDelegate.h"
 #import "DataService.h"
 #import "MJRefresh.h"
 #import "ImageCacher.h"
@@ -63,7 +62,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * sc = [NSMutableDictionary dictionaryWithCapacity:5];
-    sc=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileShoppingCar",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid] forPage:page forPageSize:10];
+    sc=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileShoppingCar",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid] forPage:page forPageSize:10];
     NSArray *sclist=[sc objectForKey:@"datas"];
     [list addObjectsFromArray:sclist];
 }
@@ -130,9 +129,8 @@
 //删除购物车里面的商品
 -(void)deletegoodsforsc:(UIButton *)btn;
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDeleteOrderGoods",myDelegate.url] postDatas:[NSString stringWithFormat:@"recId=%d",btn.tag]];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDeleteOrderGoods",domainser] postDatas:[NSString stringWithFormat:@"recId=%d",btn.tag]];
     NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
     NSString *status =[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
@@ -179,9 +177,8 @@
         [alertView close];
     }else if (buttonIndex==0)
     {
-        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileChangeGoodsSum",myDelegate.url] postDatas:[NSString stringWithFormat:@"recId=%d&sum=%@",rid,goodscount.text]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileChangeGoodsSum",domainser] postDatas:[NSString stringWithFormat:@"recId=%d&sum=%@",rid,goodscount.text]];
         NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
         NSString *status =[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

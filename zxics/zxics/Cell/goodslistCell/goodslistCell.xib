@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="P5V-9e-TRh">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="P5V-9e-TRh" customClass="goodslistCell">
             <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -34,6 +34,11 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <connections>
+                <outlet property="nameLabel" destination="5XS-hB-1oG" id="462-Mu-HcZ"/>
+                <outlet property="priceLabel" destination="1Ts-uo-IXN" id="Y3x-J5-1Ph"/>
+                <outlet property="productImage" destination="aq6-wt-yon" id="gDR-gk-Qoz"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

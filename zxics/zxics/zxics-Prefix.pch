@@ -16,7 +16,8 @@
 
 /*接口地址*/
 //域名
-#define domainser  @"http://app.seyuu.com"
+#define domainser  @"http://192.168.1.140:8080/zx_ics/"
+
 //请求地址时写死的key值
 #define apikey  @"kk3*Hzk@EC1GW~^n*wp8g(nLvmCk#WVk9M+h^p.b*$0vx)vr]KOT]zH[rIqm"
 //@"cceeaaffgg_(zcxfesqrtvkKdse132_)app.seyuu.comiphone_ipad_Android_2013_sssse#2!#@9.."

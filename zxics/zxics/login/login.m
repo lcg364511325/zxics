@@ -86,7 +86,7 @@ NSInteger i=0;
             
              NSMutableDictionary * login = [NSMutableDictionary dictionaryWithCapacity:5];
             AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-            login=[DataService PostDataService:[NSString stringWithFormat:@"%@api/login",myDelegate.url] postDatas:[NSString stringWithFormat:@"account=%@&pwd=%@",account,password]];
+            login=[DataService PostDataService:[NSString stringWithFormat:@"%@api/login",domainser] postDatas:[NSString stringWithFormat:@"account=%@&pwd=%@",account,password]];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 更新界面（处理结果）

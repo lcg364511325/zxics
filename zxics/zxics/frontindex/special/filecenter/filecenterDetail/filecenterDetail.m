@@ -7,7 +7,6 @@
 //
 
 #import "filecenterDetail.h"
-#import "AppDelegate.h"
 
 @interface filecenterDetail ()
 
@@ -34,8 +33,7 @@
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
     
     //设置web view
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@f/service/filesDetail-%@.shtml",myDelegate.url,fid]]];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@f/service/filesDetail-%@.shtml",domainser,fid]]];
     [filecenterWView setScalesPageToFit:YES];
     [filecenterWView loadRequest:request];
     

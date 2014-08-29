@@ -28,6 +28,7 @@
 }
 @property (strong, nonatomic) IBOutlet UIView *scview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property(retain ,nonatomic) NSString *nowcount;//商家id
 @property(retain ,nonatomic) NSString *shopid;//商家id
 @property(retain ,nonatomic) NSMutableArray *ridlist;//商品id集合
 @property (weak, nonatomic) IBOutlet UIScrollView *poSView;

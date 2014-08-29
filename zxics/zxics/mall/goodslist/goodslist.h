@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface goodslist : UIViewController
+{
+    NSMutableArray *list;
+    NSInteger page;
+}
 @property (weak, nonatomic) IBOutlet UICollectionView *goodscollectionview;
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 

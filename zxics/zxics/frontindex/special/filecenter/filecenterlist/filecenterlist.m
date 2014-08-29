@@ -8,7 +8,6 @@
 
 #import "filecenterlist.h"
 #import "DataService.h"
-#import "AppDelegate.h"
 #import "filecenterDetail.h"
 #import "Commons.h"
 
@@ -61,9 +60,8 @@
 //加载数据
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
-    spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",myDelegate.url] postDatas:@"categoryId=69&type=1" forPage:page forPageSize:10];
+    spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:@"categoryId=69&type=1" forPage:page forPageSize:10];
     NSArray *array=[spd objectForKey:@"datas"];
     [list addObjectsFromArray:array];
 

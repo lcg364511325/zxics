@@ -70,7 +70,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * myd = [NSMutableDictionary dictionaryWithCapacity:5];
-    myd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderNews",myDelegate.url] postDatas:[NSString stringWithFormat:@"oid=%@",orderid]];
+    myd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderNews",domainser] postDatas:[NSString stringWithFormat:@"oid=%@",orderid]];
     NSArray *mydinfolist=[myd objectForKey:@"datas"];
     NSDictionary *mydinfo=[mydinfolist objectAtIndex:0];
     //下单人的姓名
@@ -135,7 +135,7 @@
     orderdetailLabel.frame=CGRectMake(orderdetailLabel.frame.origin.x, detailLabel.frame.origin.y+actualsize.height+20, orderdetailLabel.frame.size.width, orderdetailLabel.frame.size.height);
     
     NSMutableDictionary * gd = [NSMutableDictionary dictionaryWithCapacity:5];
-    gd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderGoodsDetails",myDelegate.url] postDatas:[NSString stringWithFormat:@"oid=%@",orderid]];
+    gd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderGoodsDetails",domainser] postDatas:[NSString stringWithFormat:@"oid=%@",orderid]];
     NSArray *goodsdetaillist=[gd objectForKey:@"datas"];
     NSDictionary *goodsdetail=[goodsdetaillist objectAtIndex:0];
     

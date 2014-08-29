@@ -59,9 +59,9 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * lfmd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl) {
-        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&",myDelegate.entityl.communityid] forPage:page forPageSize:10];
+        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",domainser] postDatas:[NSString stringWithFormat:@"communityid=%@&",myDelegate.entityl.communityid] forPage:page forPageSize:10];
     }else{
-        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",myDelegate.url] postDatas:nil forPage:page forPageSize:10];
+        lfmd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/lifeStewardApi",domainser] postDatas:nil forPage:page forPageSize:10];
     }
     NSArray *array=[lfmd objectForKey:@"datas"];
     [lfmdlist addObjectsFromArray:array];

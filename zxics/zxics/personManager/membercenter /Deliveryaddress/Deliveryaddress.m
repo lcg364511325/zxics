@@ -31,7 +31,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * ar = [NSMutableDictionary dictionaryWithCapacity:5];
-    ar=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindUserGoodsAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+    ar=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileFindUserGoodsAddress",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
     arlist=[ar objectForKey:@"datas"];
 }
 
@@ -95,9 +95,8 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==1) {
-        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDelectReceivingAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"aId=%@",rid]];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDelectReceivingAddress",domainser] postDatas:[NSString stringWithFormat:@"aId=%@",rid]];
         NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];

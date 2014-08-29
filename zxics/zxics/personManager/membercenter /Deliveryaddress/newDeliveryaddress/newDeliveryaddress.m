@@ -52,9 +52,8 @@
 //查询地区数据
 -(NSArray *)loaddata:(NSString *)cid type:(NSString *)type
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * area = [NSMutableDictionary dictionaryWithCapacity:5];
-    area=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederFindAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"id=%@&type=%@",cid,type]];
+    area=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederFindAddress",domainser] postDatas:[NSString stringWithFormat:@"id=%@&type=%@",cid,type]];
     NSArray *arealist=[area objectForKey:@"datas"];
     return arealist;
 }
@@ -161,7 +160,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederAddReceivingAddress",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&country=%@&province=%@&city=%@&district=%@&address=%@&zipcode=%@&consignee=%@&mobile=%@",myDelegate.entityl.userid,coutryid,provinceid,cityid,districtid,addrdetailText.text,zipcodeText.text,nameText.text,phoneText.text]];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederAddReceivingAddress",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&country=%@&province=%@&city=%@&district=%@&address=%@&zipcode=%@&consignee=%@&mobile=%@",myDelegate.entityl.userid,coutryid,provinceid,cityid,districtid,addrdetailText.text,zipcodeText.text,nameText.text,phoneText.text]];
     NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     alter.delegate=self;

@@ -61,7 +61,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * down = [NSMutableDictionary dictionaryWithCapacity:5];
-    down=[DataService PostDataService:[NSString stringWithFormat:@"%@api/softwareDown",myDelegate.url] postDatas:[NSString stringWithFormat:@"communityid=%@&categoryId=%@",myDelegate.entityl.communityid,cid] forPage:page forPageSize:10];
+    down=[DataService PostDataService:[NSString stringWithFormat:@"%@api/softwareDown",domainser] postDatas:[NSString stringWithFormat:@"communityid=%@&categoryId=%@",myDelegate.entityl.communityid,cid] forPage:page forPageSize:10];
     NSArray *downlist=[down objectForKey:@"datas"];
     [list addObjectsFromArray:downlist];
 }
@@ -109,8 +109,7 @@
     cell.downloadButton.tag=[indexPath row];
     [cell.downloadButton addTarget:self action:@selector(downloadapp:) forControlEvents:UIControlEventTouchDown];
     
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *url=[NSString stringWithFormat:@"%@%@",myDelegate.url,[Projectdownload objectForKey:@"headurl"]];
+    NSString *url=[NSString stringWithFormat:@"%@%@",domainser,[Projectdownload objectForKey:@"headurl"]];
     NSURL *imgUrl=[NSURL URLWithString:url];
     if (hasCachedImage(imgUrl)) {
         [cell.applogo setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
@@ -131,9 +130,8 @@
 
 -(void)downloadapp:(UIButton *)button
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSDictionary *Projectdownload = [list objectAtIndex:button.tag];
-    NSString *url=[NSString stringWithFormat:@"%@f/downLoadFile.shtml?fileName=%@",myDelegate.url,[Projectdownload objectForKey:@"filepath"]];
+    NSString *url=[NSString stringWithFormat:@"%@f/downLoadFile.shtml?fileName=%@",domainser,[Projectdownload objectForKey:@"filepath"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 

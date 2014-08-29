@@ -55,9 +55,8 @@ NSInteger iii=0;
     
     
     //加载报修类型
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * type = [NSMutableDictionary dictionaryWithCapacity:1];
-    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",myDelegate.url] postDatas:@"type=repairsParame"];
+    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",domainser] postDatas:@"type=repairsParame"];
     list=[type objectForKey:@"datas"];
 }
 
@@ -67,7 +66,7 @@ NSInteger iii=0;
     if (notnull!=nil && ![notnull isEqualToString:@""]) {
         AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         NSMutableDictionary * repairstate = [NSMutableDictionary dictionaryWithCapacity:1];
-        repairstate=[DataService PostDataService:[NSString stringWithFormat:@"%@api/propertyMaintainAddApi",myDelegate.url] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&addDate=%@&contents=%@&type=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,dateText.text,detailsText.text,typevalue]];
+        repairstate=[DataService PostDataService:[NSString stringWithFormat:@"%@api/propertyMaintainAddApi",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&addDate=%@&contents=%@&type=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,dateText.text,detailsText.text,typevalue]];
         NSString *goodsid=[NSString stringWithFormat:@"%@",[repairstate objectForKey:@"goodsid"]];
         
         if (goodsid!=nil && ![goodsid isEqualToString:@"<null>"] && ![goodsid isEqualToString:@""]) {

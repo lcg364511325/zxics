@@ -19,6 +19,7 @@
 @implementation download
 
 @synthesize downloadTView;
+@synthesize commonButtom;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,9 @@
     cid=@"57";
     page=1;
     list=[[NSMutableArray alloc]initWithCapacity:5];
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
+    [btnlist addObject:commonButtom];
+    [commonButtom setBackgroundColor:[UIColor lightGrayColor]];
     
     //加载数据
     [self loaddata];
@@ -71,6 +75,17 @@
 {
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }
+    btn.backgroundColor=[UIColor lightGrayColor];
     cid=[NSString stringWithFormat:@"%d",btntag];
     [list removeAllObjects];
     page=1;

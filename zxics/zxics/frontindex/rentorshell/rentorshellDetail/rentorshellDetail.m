@@ -72,6 +72,8 @@
     id doorzc=[rsd objectForKey:@"doorzc"];
     if (doorch!=[NSNull null] && doorzc!=[NSNull null]) {
         floorLabel.text=[NSString stringWithFormat:@"楼层：%@/%@",doorch,doorzc];
+    }else{
+        floorLabel.text=@"楼层：";
     }
     
     //房型
@@ -95,48 +97,64 @@
         {
             typeLabel.text=@"房型：其他";
         }
+    }else{
+        typeLabel.text=@"房型：";
     }
     
     //小区
     id communityid=[rsd objectForKey:@"communityid"];
     if (communityid!=[NSNull null]) {
         comLabel.text=[NSString stringWithFormat:@"小区：%@",[rsd objectForKey:@"communityid"]];
+    }else{
+        comLabel.text=@"小区：";
     }
     
     //地址
     id homeaddress=[rsd objectForKey:@"homeaddress"];
     if (homeaddress!=[NSNull null]) {
         addrLabel.text=[NSString stringWithFormat:@"地址：%@",[rsd objectForKey:@"homeaddress"]];
+    }else{
+        addrLabel.text=@"地址：";
     }
     
     //联系人
     id contactname=[rsd objectForKey:@"contactname"];
     if (contactname!=[NSNull null]) {
         personLabel.text=[NSString stringWithFormat:@"联系人：%@",[rsd objectForKey:@"contactname"]];
+    }else{
+        personLabel.text=@"联系人：";
     }
     
     //电话号码
     id contactphone=[rsd objectForKey:@"contactphone"];
     if (contactphone!=[NSNull null]) {
         telLabel.text=[NSString stringWithFormat:@"联系电话：%@",[rsd objectForKey:@"contactphone"]];
+    }else{
+        telLabel.text=@"联系电话：";
     }
     
     //配置
     id homeset=[rsd objectForKey:@"homeset"];
     if (homeset!=[NSNull null]) {
         detailLabel.text=[NSString stringWithFormat:@"配置：%@",[rsd objectForKey:@"homeset"]];
+    }else{
+        detailLabel.text=@"配置：";
     }
     
     //面积
     id area=[rsd objectForKey:@"area"];
     if (area!=[NSNull null]) {
-        areaLabel.text=[NSString stringWithFormat:@"面积：%@",[rsd objectForKey:@"area"]];
+        areaLabel.text=[NSString stringWithFormat:@"面积：%@㎡",[rsd objectForKey:@"area"]];
+    }else{
+        areaLabel.text=@"面积：";
     }
     
     //朝向
     id hometarget=[rsd objectForKey:@"hometarget"];
     if (hometarget!=[NSNull null]) {
         targetLabel.text=[NSString stringWithFormat:@"朝向：%@",[rsd objectForKey:@"hometarget"]];
+    }else{
+        targetLabel.text=@"朝向：";
     }
     
     //装修
@@ -157,6 +175,8 @@
         {
             fixtureLabel.text=@"装修：其他";
         }
+    }else{
+        fixtureLabel.text=@"装修：";
     }
 }
 

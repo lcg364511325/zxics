@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="goodsDetail">
             <connections>
                 <outlet property="UINavigationBar" destination="BaA-Ez-Jch" id="SIB-cd-QhJ"/>
-                <outlet property="UINavigationItem" destination="Lph-5D-ORA" id="ZMJ-9S-BYw"/>
+                <outlet property="UINavigationItem" destination="Lph-5D-ORA" id="2bk-A2-aAG"/>
                 <outlet property="assessButton" destination="v9M-40-Qe5" id="iZM-Lw-hpg"/>
                 <outlet property="assessTView" destination="44W-Oc-DpV" id="XmJ-zK-X3l"/>
                 <outlet property="countnoLabel" destination="oVQ-DV-lcF" id="0bc-Yt-cfJ"/>

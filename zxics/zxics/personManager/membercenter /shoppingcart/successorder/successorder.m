@@ -60,6 +60,7 @@
 {
     myorderDetail *_myorderDetail=[[myorderDetail alloc]init];
     _myorderDetail.orderid=[NSString stringWithFormat:@"%@",[so objectForKey:@"oId"]];
+    _myorderDetail.orderstate=@"0";
     [self.navigationController pushViewController:_myorderDetail animated:NO];
 }
 

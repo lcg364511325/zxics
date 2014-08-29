@@ -14,8 +14,10 @@
     NSMutableArray * list;
     NSInteger page;
     NSString *searchurl;
+    NSMutableArray *btnlist;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *assessTView;
+@property (weak, nonatomic) IBOutlet UIButton *completeButton;
 @end

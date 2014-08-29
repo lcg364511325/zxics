@@ -14,8 +14,10 @@
     NSMutableArray *list;
     NSInteger page;
     NSString *cid;
+    NSMutableArray *btnlist;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *downloadTView;
+@property (weak, nonatomic) IBOutlet UIButton *commonButtom;
 @end

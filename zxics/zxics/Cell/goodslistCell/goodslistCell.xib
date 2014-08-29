@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us.png" translatesAutoresizingMaskIntoConstraints="NO" id="aq6-wt-yon">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aq6-wt-yon">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
@@ -41,7 +41,4 @@
             </connections>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="about_us.png" width="72" height="72"/>
-    </resources>
 </document>

@@ -200,13 +200,16 @@
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
     NSInteger no=[goodscount.text integerValue];
-    if (btntag==0)
-    {
-        goodscount.text=[NSString stringWithFormat:@"%d",no-1];
-        
-    }else if (btntag==1)
-    {
-        goodscount.text=[NSString stringWithFormat:@"%d",no+1];
+    if (no<2 && btntag==0) {
+    }else{
+        if (btntag==0)
+        {
+            goodscount.text=[NSString stringWithFormat:@"%d",no-1];
+            
+        }else if (btntag==1)
+        {
+            goodscount.text=[NSString stringWithFormat:@"%d",no+1];
+        }
     }
 }
 

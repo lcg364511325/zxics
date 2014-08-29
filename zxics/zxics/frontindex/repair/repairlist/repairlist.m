@@ -20,11 +20,6 @@
 
 @synthesize repairTView;
 @synthesize allButton;
-@synthesize state1button;
-@synthesize state2Button;
-@synthesize state3Button;
-@synthesize state4Button;
-@synthesize state5Button;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +37,9 @@
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
     source=@"";//初始化状态为全部
     list=[[NSMutableArray alloc]initWithCapacity:5];
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
+    [btnlist addObject:allButton];
+    allButton.backgroundColor=[UIColor lightGrayColor];
     
     //加载数据
     page=1;
@@ -77,9 +75,19 @@
 //改变不同状态修改数据
 -(IBAction)changestate:(id)sender
 {
-//    allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor= allButton.backgroundColor
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }
+    btn.backgroundColor=[UIColor lightGrayColor];
     source=[NSString stringWithFormat:@"%d",btntag];
     if (btntag==5) {
         source=@"";

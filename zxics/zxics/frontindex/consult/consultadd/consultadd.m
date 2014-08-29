@@ -95,16 +95,22 @@
 //提交数据
 -(IBAction)submitdata:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/addConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&subtype=%@&type=consult&receiveid=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleLabel.text,introduceLabel.text,detailLabel.text,typevalue,target]];
-    
-    status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
-    
-    NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
-    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alter show];
+    if (![titleLabel.text isEqualToString:@""] && ![introduceLabel.text isEqualToString:@""] && ![detailLabel.text isEqualToString:@""] && typevalue!=nil) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/addConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&subtype=%@&type=consult&receiveid=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleLabel.text,introduceLabel.text,detailLabel.text,typevalue,target]];
+        
+        status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }else{
+        NSString *rowString =@"输入的内容不能为空";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

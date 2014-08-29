@@ -81,7 +81,7 @@
 -(IBAction)surveylist:(id)sender
 {
     surveylist * _surveylist=[[surveylist alloc] init];
-    
+    _surveylist.btntag=@"0";
     [self.navigationController pushViewController:_surveylist animated:NO];
 }
 

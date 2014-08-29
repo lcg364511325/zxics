@@ -19,6 +19,7 @@
 @implementation myappraise
 
 @synthesize assessTView;
+@synthesize completeButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,9 @@
     searchurl=@"mobileGoodsEvaluate";
     page=1;
     list=[[NSMutableArray alloc]initWithCapacity:5];
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
+    [btnlist addObject:completeButton];
+    completeButton.backgroundColor=[UIColor lightGrayColor];
     
     [self loaddata];
     
@@ -115,6 +119,17 @@
 {
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }
+    btn.backgroundColor=[UIColor lightGrayColor];
     if (btntag==0) {
         searchurl=@"mobileGoodsEvaluate";
     }else if (btntag==1)

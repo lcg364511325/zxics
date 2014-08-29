@@ -9,11 +9,6 @@
                 <outlet property="UINavigationBar" destination="9zT-Xn-2gj" id="iWi-rJ-czV"/>
                 <outlet property="allButton" destination="4wB-gj-5Tn" id="L06-xz-edA"/>
                 <outlet property="repairTView" destination="CtA-6V-jgd" id="pAF-gm-7Kc"/>
-                <outlet property="state1button" destination="FMC-cy-C8e" id="DO2-dR-emq"/>
-                <outlet property="state2Button" destination="nUS-gW-O3b" id="yt8-gZ-cRh"/>
-                <outlet property="state3Button" destination="1ek-Zr-cZe" id="tT7-SV-7o6"/>
-                <outlet property="state4Button" destination="S1h-AN-KYZ" id="oay-uH-pcQ"/>
-                <outlet property="state5Button" destination="BdK-rr-U6n" id="8Xn-ew-cDH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,10 +42,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1WG-Mu-94Q">
                     <rect key="frame" x="0.0" y="66" width="320" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.58943850577975432" green="0.93536750637755106" blue="0.53468844683697325" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wB-gj-5Tn">
-                    <rect key="frame" x="2.5" y="66" width="53" height="40"/>
+                    <rect key="frame" x="0.0" y="66" width="53" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="全部">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

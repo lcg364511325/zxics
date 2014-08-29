@@ -135,7 +135,7 @@
     }
     
     //头像
-    NSString *url=[NSString stringWithFormat:@"%@",[info objectForKey:@"headimg"]];
+    NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
     NSURL *imgUrl=[NSURL URLWithString:url];
     if (hasCachedImage(imgUrl)) {
         [userimage setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
@@ -245,9 +245,9 @@
     userimage.tag = 100;
     
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    myDelegate.mydelegate=self;
     [myDelegate submitOrder:myDelegate.entityl.userid uploadpath:piclist URL:@"api/updateMyInfo" postid:@"userid"];
     [piclist removeAllObjects];
-    [self loaddata];
     
     
 }

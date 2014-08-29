@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "personInfo.h"
 
 @implementation AppDelegate
 @synthesize alter;
+@synthesize entityl;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -153,6 +155,8 @@
                 {
                     NSDictionary *d = (NSDictionary *)jsonObject;
                     NSString * status=[NSString stringWithFormat:@"%@",[d objectForKey:@"status"]];
+                    NSString * info=[NSString stringWithFormat:@"%@",[d objectForKey:@"info"]];
+                    NSString * url=[NSString stringWithFormat:@"%@",[d objectForKey:@"url"]];
                     if ([status isEqualToString:@"0"]) {
                         //提交失败
                         [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
@@ -160,6 +164,10 @@
                         return;
                     }else if([status isEqualToString:@"1"]){
                         [[[UIAlertView alloc] initWithTitle:@"信息提示" message:@"提交成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+                        if ([info isEqualToString:@"更新头像成功"]) {
+                            entityl.headimg=url;
+                            [_mydelegate performSelector:@selector(loaddata)];
+                        }
                         
                         return;
                     }

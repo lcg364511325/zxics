@@ -11,6 +11,7 @@
 #import "DataService.h"
 #import "ImageCacher.h"
 #import "successorder.h"
+#import "DeliveryaddressCell.h"
 
 @interface placeorder ()
 
@@ -296,20 +297,36 @@
 // tableview数据显示
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
-    }
-    NSDictionary *detail = [list objectAtIndex:[indexPath row]];
     if (btntag==0) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@  %@",[detail objectForKey:@"shipping_name"],[detail objectForKey:@"insure"]];;
-    }else{
-        cell.textLabel.text=[NSString stringWithFormat:@"%@ %@ (%@收) %@ %@",[detail objectForKey:@"districtName"],[detail objectForKey:@"address"],[detail objectForKey:@"consignee"],[detail objectForKey:@"mobile"],[detail objectForKey:@"zipcode"]];
+        static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
+        }
+        NSDictionary *detail = [list objectAtIndex:[indexPath row]];
+        if (btntag==0) {
+            cell.textLabel.text = [NSString stringWithFormat:@"%@  %@",[detail objectForKey:@"shipping_name"],[detail objectForKey:@"insure"]];;
+        }else{
+            cell.textLabel.text=[NSString stringWithFormat:@"%@ %@ (%@收) %@ %@",[detail objectForKey:@"districtName"],[detail objectForKey:@"address"],[detail objectForKey:@"consignee"],[detail objectForKey:@"mobile"],[detail objectForKey:@"zipcode"]];
+        }
+        
+        return cell;
+    }else
+    {
+        static NSString *TableSampleIdentifier = @"DeliveryaddressCell";
+        
+        DeliveryaddressCell *cell = [tableView dequeueReusableCellWithIdentifier:TableSampleIdentifier];
+        if (cell == nil) {
+            NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"DeliveryaddressCell" owner:self options:nil];
+            cell=[nib objectAtIndex:0];
+        }
+        NSDictionary *dadetail = [list objectAtIndex:[indexPath row]];
+        
+        cell.addrLabel.text=[NSString stringWithFormat:@"%@ %@ (%@收) %@ %@",[dadetail objectForKey:@"districtName"],[dadetail objectForKey:@"address"],[dadetail objectForKey:@"consignee"],[dadetail objectForKey:@"mobile"],[dadetail objectForKey:@"zipcode"]];
+        
+        return cell;
     }
-    
-    return cell;
 }
 
 //tableview点击操作

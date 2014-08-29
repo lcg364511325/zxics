@@ -59,19 +59,26 @@
     [self.view addSubview:textView];
 }
 
+//发布信息
 -(IBAction)submitinfo:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    NSString *userid=@"";
-    if (myDelegate.entityl) {
-        userid=myDelegate.entityl.userid;
+    if (![titleText.text isEqualToString:@""] && ![textView.text isEqualToString:@""]) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        NSString *userid=@"";
+        if (myDelegate.entityl) {
+            userid=myDelegate.entityl.userid;
+        }
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/AddReleaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=73&title=%@&content=%@&userid=%@",titleText.text,textView.text,userid]];
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+        [self goback:nil];
+    }else{
+        NSString *rowString =@"标题或内容不能为空";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
     }
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/AddReleaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=73&title=%@&content=%@&userid=%@",titleText.text,textView.text,userid]];
-    NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
-    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alter show];
-    [self goback:nil];
 }
 
 -(IBAction)goback:(id)sender

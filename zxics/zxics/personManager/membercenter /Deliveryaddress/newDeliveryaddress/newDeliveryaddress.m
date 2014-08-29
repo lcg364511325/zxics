@@ -158,13 +158,19 @@
 //保存收货地址
 -(IBAction)submitaddr:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederAddReceivingAddress",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&country=%@&province=%@&city=%@&district=%@&address=%@&zipcode=%@&consignee=%@&mobile=%@",myDelegate.entityl.userid,coutryid,provinceid,cityid,districtid,addrdetailText.text,zipcodeText.text,nameText.text,phoneText.text]];
-    NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
-    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    alter.delegate=self;
-    [alter show];
+    if (coutryid!=nil && ![addrdetailText.text isEqualToString:@""] && ![zipcodeText.text isEqualToString:@""] && ![nameText.text isEqualToString:@""] && ![phoneText.text isEqualToString:@""]) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrederAddReceivingAddress",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&country=%@&province=%@&city=%@&district=%@&address=%@&zipcode=%@&consignee=%@&mobile=%@",myDelegate.entityl.userid,coutryid,provinceid,cityid,districtid,addrdetailText.text,zipcodeText.text,nameText.text,phoneText.text]];
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alter.delegate=self;
+        [alter show];
+    }else{
+        NSString *rowString =@"内容不能为空";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
     
 }
 

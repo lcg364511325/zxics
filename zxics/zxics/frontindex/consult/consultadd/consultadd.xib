@@ -98,7 +98,7 @@
                         <action selector="targetselect:" destination="-1" eventType="touchDown" id="qpJ-j5-a5D"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLa-PJ-Hyg">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择类型" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLa-PJ-Hyg">
                     <rect key="frame" x="86" y="101" width="214" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

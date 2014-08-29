@@ -79,6 +79,7 @@
 -(void)loaddata
 {
     //商品详情
+    self.UINavigationItem.title=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"name"]];
     detailButton.backgroundColor=[UIColor lightGrayColor];
     nameLabel.text=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"name"]];
     shopprcLabel.text=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"shopPrice"]];
@@ -147,6 +148,8 @@
     [secondView removeFromSuperview];
     [thirdView removeFromSuperview];
     
+    detailButton.backgroundColor=introductButton.backgroundColor=[UIColor darkGrayColor];
+    assessButton.backgroundColor=[UIColor lightGrayColor];
     thirdView.frame=CGRectMake(thirdView.frame.origin.x, 226, thirdView.frame.size.width, thirdView.frame.size.height);
     [self.view addSubview:thirdView];
 }
@@ -193,13 +196,17 @@
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
     NSInteger no=[countnoLabel.text integerValue];
-    if (btntag==0)
-    {
-        countnoLabel.text=[NSString stringWithFormat:@"%d",no-1];
+    if (no<2 && btntag==0) {
         
-    }else if (btntag==1)
-    {
-        countnoLabel.text=[NSString stringWithFormat:@"%d",no+1];
+    }else{
+        if (btntag==0)
+        {
+            countnoLabel.text=[NSString stringWithFormat:@"%d",no-1];
+            
+        }else if (btntag==1)
+        {
+            countnoLabel.text=[NSString stringWithFormat:@"%d",no+1];
+        }
     }
 }
 

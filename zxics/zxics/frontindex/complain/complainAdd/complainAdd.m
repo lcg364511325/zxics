@@ -61,28 +61,35 @@
 
 -(IBAction)submitcomplain:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    NSString *subtype=nil;
-    
-    if ([complaintoText.text isEqualToString:@"网站服务"]) {
-        subtype=@"0";
-    }else if ([complaintoText.text isEqualToString:@"商铺服务"])
+    if (![titleText.text isEqualToString:@""] && ![introduceText.text isEqualToString:@""] && ![detailsText.text isEqualToString:@""])
     {
-        subtype=@"1";
-    }else if ([complaintoText.text isEqualToString:@"物业服务"])
-    {
-        subtype=@"2";
-    }
-    
-    
-    if (myDelegate.entityl) {
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/complaintAddApi",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&type=complaint&subtype=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,introduceText.text,detailsText.text,subtype]];
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        NSString *subtype=nil;
         
-        status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        if ([complaintoText.text isEqualToString:@"网站服务"]) {
+            subtype=@"0";
+        }else if ([complaintoText.text isEqualToString:@"商铺服务"])
+        {
+            subtype=@"1";
+        }else if ([complaintoText.text isEqualToString:@"物业服务"])
+        {
+            subtype=@"2";
+        }
         
-        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
-        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        if (myDelegate.entityl) {
+            state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/complaintAddApi",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&communityid=%@&title=%@&descc=%@&contents=%@&type=complaint&subtype=%@",myDelegate.entityl.userid,myDelegate.entityl.communityid,titleText.text,introduceText.text,detailsText.text,subtype]];
+            
+            status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+            
+            NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+            UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alter show];
+        }
+    }else{
+        NSString *rowString =@"输入的内容不能为空";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];
     }
 }

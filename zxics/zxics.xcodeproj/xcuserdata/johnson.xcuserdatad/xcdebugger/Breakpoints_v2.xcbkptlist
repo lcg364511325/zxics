@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zxics/mall/goodsDetail/goodsDetail.m"
-            timestampString = "430903287.66183"
+            timestampString = "430987750.327406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-loaddata"
             landmarkType = "5">
          </BreakpointContent>

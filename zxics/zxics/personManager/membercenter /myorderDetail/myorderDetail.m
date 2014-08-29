@@ -38,15 +38,9 @@
 @synthesize shipperconLabel;
 @synthesize detailLabel;
 @synthesize orderdetailLabel;
-@synthesize goodsnameLabel;
-@synthesize goodsnoLabel;
-@synthesize goodscountLabel;
-@synthesize shoppriLabel;
-@synthesize marketpriLabel;
-@synthesize isreadLabel;
-@synthesize issendLabel;
 @synthesize paybutton;
 @synthesize deleteButton;
+@synthesize orderstate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -137,60 +131,106 @@
     NSMutableDictionary * gd = [NSMutableDictionary dictionaryWithCapacity:5];
     gd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileOrderGoodsDetails",domainser] postDatas:[NSString stringWithFormat:@"oid=%@",orderid]];
     NSArray *goodsdetaillist=[gd objectForKey:@"datas"];
-    NSDictionary *goodsdetail=[goodsdetaillist objectAtIndex:0];
     
-    //商品名称
-    goodsnameLabel.text=[NSString stringWithFormat:@"商品名称：%@",[goodsdetail objectForKey:@"goods_name"]];
-    goodsnameLabel.frame=CGRectMake(goodsnameLabel.frame.origin.x, orderdetailLabel.frame.origin.y+40, goodsnameLabel.frame.size.width, goodsnameLabel.frame.size.height);
-    
-    //商品编号
-    goodsnoLabel.text=[NSString stringWithFormat:@"商品号：%@",[goodsdetail objectForKey:@"goods_sn"]];
-    goodsnoLabel.frame=CGRectMake(goodsnoLabel.frame.origin.x, goodsnameLabel.frame.origin.y+30, goodsnoLabel.frame.size.width, goodsnoLabel.frame.size.height);
-    
-    //购买数量
-    goodscountLabel.text=[NSString stringWithFormat:@"数量：%@",[goodsdetail objectForKey:@"goods_number"]];
-    goodscountLabel.frame=CGRectMake(goodscountLabel.frame.origin.x, goodsnoLabel.frame.origin.y+30, goodscountLabel.frame.size.width, goodscountLabel.frame.size.height);
-    
-    //店家售价
-    shoppriLabel.text=[NSString stringWithFormat:@"实际售价(元)：%@",[goodsdetail objectForKey:@"goods_price"]];
-    shoppriLabel.frame=CGRectMake(shoppriLabel.frame.origin.x, goodscountLabel.frame.origin.y+30, shoppriLabel.frame.size.width, shoppriLabel.frame.size.height);
-    
-    //市场价
-    marketpriLabel.text=[NSString stringWithFormat:@"市场售价(元)：%@",[goodsdetail objectForKey:@"market_price"]];
-    marketpriLabel.frame=CGRectMake(marketpriLabel.frame.origin.x, shoppriLabel.frame.origin.y+30, marketpriLabel.frame.size.width, marketpriLabel.frame.size.height);
-    
-    //是否实物
-    NSString *isread=[NSString stringWithFormat:@"%@",[goodsdetail objectForKey:@"is_real"]];
-    if ([isread isEqualToString:@"0"]) {
+    int i=0;
+    CGRect framesize;
+    for (NSDictionary *goodsdetail in goodsdetaillist) {
+        //商品名称
+        UILabel *goodsnameLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, orderdetailLabel.frame.origin.y+40+230*i, 298, 21)];
+        goodsnameLabel.text=[NSString stringWithFormat:@"商品名称：%@",[goodsdetail objectForKey:@"goods_name"]];
         
-        isreadLabel.text=@"是否实物：否";
-    }else if ([isread isEqualToString:@"1"])
-    {
-        isreadLabel.text=@"是否实物：是";
-    }
-    isreadLabel.frame=CGRectMake(isreadLabel.frame.origin.x, marketpriLabel.frame.origin.y+30, isreadLabel.frame.size.width, isreadLabel.frame.size.height);
-    
-    //发货状态
-    NSString *issend=[NSString stringWithFormat:@"%@",[goodsdetail objectForKey:@"send_number"]];
-    if ([issend isEqualToString:@"0"]) {
+        //商品编号
+        UILabel *goodsnoLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, goodsnameLabel.frame.origin.y+30, 298, 21)];
+        goodsnoLabel.text=[NSString stringWithFormat:@"商品号：%@",[goodsdetail objectForKey:@"goods_sn"]];
         
-        issendLabel.text=@"是否已发货：否";
-    }else if ([isread isEqualToString:@"1"])
-    {
-        issendLabel.text=@"是否已发货：是";
+        //购买数量
+        UILabel *goodscountLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, goodsnoLabel.frame.origin.y+30, 298, 21)];
+        goodscountLabel.text=[NSString stringWithFormat:@"数量：%@",[goodsdetail objectForKey:@"goods_number"]];
+        
+        //店家售价
+        UILabel *shoppriLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, goodscountLabel.frame.origin.y+30, 298, 21)];
+        shoppriLabel.text=[NSString stringWithFormat:@"实际售价(元)：%@",[goodsdetail objectForKey:@"goods_price"]];
+        
+        //市场价
+        UILabel *marketpriLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, shoppriLabel.frame.origin.y+30, 298, 21)];
+        marketpriLabel.text=[NSString stringWithFormat:@"市场售价(元)：%@",[goodsdetail objectForKey:@"market_price"]];
+        
+        //是否实物
+        UILabel *isreadLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, marketpriLabel.frame.origin.y+30, 298, 21)];
+        NSString *isread=[NSString stringWithFormat:@"%@",[goodsdetail objectForKey:@"is_real"]];
+        if ([isread isEqualToString:@"0"]) {
+            
+            isreadLabel.text=@"是否实物：否";
+        }else if ([isread isEqualToString:@"1"])
+        {
+            isreadLabel.text=@"是否实物：是";
+        }
+        
+        //发货状态
+        UILabel *issendLabel=[[UILabel alloc]initWithFrame:CGRectMake(detailLabel.frame.origin.x, isreadLabel.frame.origin.y+30, 298, 21)];
+        NSString *issend=[NSString stringWithFormat:@"%@",[goodsdetail objectForKey:@"send_number"]];
+        if ([issend isEqualToString:@"0"]) {
+            
+            issendLabel.text=@"是否已发货：否";
+        }else if ([isread isEqualToString:@"1"])
+        {
+            issendLabel.text=@"是否已发货：是";
+        }
+        [secondview addSubview:goodsnameLabel];
+        [secondview addSubview:goodsnoLabel];
+        [secondview addSubview:goodscountLabel];
+        [secondview addSubview:shoppriLabel];
+        [secondview addSubview:marketpriLabel];
+        [secondview addSubview:isreadLabel];
+        [secondview addSubview:issendLabel];
+        framesize=issendLabel.frame;
+        i++;
     }
-    issendLabel.frame=CGRectMake(issendLabel.frame.origin.x, isreadLabel.frame.origin.y+30, issendLabel.frame.size.width, issendLabel.frame.size.height);
+    
     
     //按钮位置
-    paybutton.frame=CGRectMake(paybutton.frame.origin.x, issendLabel.frame.origin.y+40, paybutton.frame.size.width, paybutton.frame.size.height);
-    deleteButton.frame=CGRectMake(deleteButton.frame.origin.x, issendLabel.frame.origin.y+40, deleteButton.frame.size.width, deleteButton.frame.size.height);
+    if ([orderstate isEqualToString:@"0"]) {
+        deleteButton.hidden=NO;
+        
+        paybutton.frame=CGRectMake(paybutton.frame.origin.x, framesize.origin.y+40, paybutton.frame.size.width, paybutton.frame.size.height);
+        deleteButton.frame=CGRectMake(deleteButton.frame.origin.x, framesize.origin.y+40, deleteButton.frame.size.width, deleteButton.frame.size.height);
+    }else{
+        paybutton.frame=CGRectMake(paybutton.frame.origin.x-60, framesize.origin.y+40, paybutton.frame.size.width, paybutton.frame.size.height);
+    }
     
     //设置scrollview属性
+    secondview.frame=CGRectMake(0, 0, 320, detailLabel.frame.size.height+secondview.frame.size.height+200*i);
     [orderscrollview addSubview:secondview];
-    orderscrollview.contentSize=CGSizeMake(320, detailLabel.frame.size.height+secondview.frame.size.height+20);
+    orderscrollview.contentSize=CGSizeMake(320, detailLabel.frame.size.height+secondview.frame.size.height+200*i);
     orderscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     orderscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     orderscrollview.scrollEnabled=YES;//
+}
+
+
+//删除订单
+-(IBAction)deleteorder:(id)sender
+{
+    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDelectMyOrder",domainser] postDatas:[NSString stringWithFormat:@"oId=%@",orderid]];
+    NSString *rowString =@"确定删除此订单？";
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alter.delegate=self;
+    [alter show];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileDelectMyOrder",domainser] postDatas:[NSString stringWithFormat:@"oId=%@",orderid]];
+        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alter.delegate=self;
+        [alter show];
+        [self goback:nil];
+    }
 }
 
 -(IBAction)goback:(id)sender
@@ -198,6 +238,8 @@
     myorder *_myorder=[[myorder alloc]init];
     [self.navigationController pushViewController:_myorder animated:NO];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

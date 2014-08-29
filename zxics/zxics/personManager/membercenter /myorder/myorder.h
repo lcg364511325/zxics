@@ -16,8 +16,10 @@
     NSInteger page;
     NSString *oStatus;
     NSString *pStatus;
+    NSMutableArray *btnlist;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *myorderTView;
+@property (weak, nonatomic) IBOutlet UIButton *allButton;
 @end

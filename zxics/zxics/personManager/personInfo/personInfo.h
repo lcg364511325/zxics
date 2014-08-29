@@ -10,7 +10,7 @@
 #import "personIndex.h"
 #import "updateinfo.h"
 
-@interface personInfo : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,CustomIOS7AlertViewDelegate>
+@interface personInfo : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,CustomIOS7AlertViewDelegate,UIApplicationDelegate>
 {
     UIPopoverController *popoverController;
     NSMutableArray *piclist;
@@ -31,4 +31,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *comLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addrLabel;
 
+-(void)loaddata;
 @end

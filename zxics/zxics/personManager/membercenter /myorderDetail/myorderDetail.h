@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIView *secondview;
 
 @property(retain ,nonatomic) NSString *orderid;
+@property(retain ,nonatomic) NSString *orderstate;
 @property (weak, nonatomic) IBOutlet UILabel *customernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *consigneeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderCtimeLabel;
@@ -32,13 +33,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *shipperconLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderdetailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *goodsnameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *goodsnoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *goodscountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *shoppriLabel;
-@property (weak, nonatomic) IBOutlet UILabel *marketpriLabel;
-@property (weak, nonatomic) IBOutlet UILabel *isreadLabel;
-@property (weak, nonatomic) IBOutlet UILabel *issendLabel;
 @property (weak, nonatomic) IBOutlet UIButton *paybutton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @end

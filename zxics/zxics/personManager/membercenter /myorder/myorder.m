@@ -19,6 +19,7 @@
 @implementation myorder
 
 @synthesize myorderTView;
+@synthesize allButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,9 @@
     pStatus=@"";
     page=1;
     list=[[NSMutableArray alloc]initWithCapacity:5];
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
+    [btnlist addObject:allButton];
+    allButton.backgroundColor=[UIColor lightGrayColor];
     
     [self loaddata];
     
@@ -120,6 +124,7 @@
     myorderDetail *_myorderDetail=[[myorderDetail alloc]init];
     NSDictionary *myodetail = [list objectAtIndex:[indexPath row]];
     _myorderDetail.orderid=[NSString stringWithFormat:@"%@",[myodetail objectForKey:@"orderId"]];
+    _myorderDetail.orderstate=[NSString stringWithFormat:@"%@",[myodetail objectForKey:@"orderStatus"]];
     [self.navigationController pushViewController:_myorderDetail animated:NO];
     
 }
@@ -128,6 +133,17 @@
 {
     UIButton *btn=(UIButton *)sender;
     NSInteger btntag=btn.tag;
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }
+    btn.backgroundColor=[UIColor lightGrayColor];
     oStatus=@"";
     pStatus=@"";
     if (btntag==0) {

@@ -64,7 +64,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * myo = [NSMutableDictionary dictionaryWithCapacity:5];
-    myo=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileMyGoodsList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&oStatus=%@&pState=%@",myDelegate.entityl.userid,oStatus,pStatus] forPage:page forPageSize:10];
+    myo=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileMyGoodsList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&oStatus=%@&pStatus=%@",myDelegate.entityl.userid,oStatus,pStatus] forPage:page forPageSize:10];
     NSArray *myolist=[myo objectForKey:@"datas"];
     [list addObjectsFromArray:myolist];
     
@@ -147,6 +147,7 @@
     oStatus=@"";
     pStatus=@"";
     if (btntag==0) {
+        oStatus=@"01";
         pStatus=@"0";
     }else if (btntag==1)
     {

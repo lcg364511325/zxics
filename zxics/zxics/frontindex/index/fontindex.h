@@ -23,6 +23,11 @@
 #import "serviceIndex.h"
 
 @interface fontindex : UIViewController<UIScrollViewDelegate>
+{
+    NSString *appurl;
+    NSString *isupdate;
+    NSString *isExit;
+}
 
 
 @property (weak, nonatomic) IBOutlet UIScrollView *functionscroll;

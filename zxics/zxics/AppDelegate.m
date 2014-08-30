@@ -41,6 +41,9 @@
     fontindex * lo = [[fontindex alloc] init];
     //Index *lo = [[Index alloc] initWithNibName:@"Index" bundle:nil] ;
     
+    //设置初始化值，判断是否第一次进入首页
+    [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"firstin"];
+    
     UINavigationController * loginNav = [[UINavigationController alloc] initWithRootViewController:lo];
     self.window.rootViewController = loginNav;
     

@@ -128,10 +128,18 @@
         //是否已回复
         if (rid!=nil && ![rid isEqualToString:@"<null>"]) {
             
+            CGSize size1 =CGSizeMake(245,0);
             UIWebView *replycontentview=[[UIWebView alloc]init];
-            [replycontentview loadHTMLString:[NSString stringWithFormat:@"回复内容：%@",[complaininfo objectForKey:@"reply_contents"]] baseURL:nil];
-            actualsize =[[complaininfo objectForKey:@"reply_contents"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
-            replycontentview.frame=CGRectMake(replycontentLabel.frame.origin.x, dealstateLabel.frame.origin.y+30, replycontentLabel.frame.size.width, actualsize.height+24);
+            [replycontentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
+                                              "<head> \n"
+                                              "<style type=\"text/css\"> \n"
+                                              "body {font-size: %f; color: %@;}\n"
+                                              "</style> \n"
+                                              "</head> \n"
+                                              "<body>回复内容：%@</body> \n"
+                                              "</html>",10.0,@"black",[complaininfo objectForKey:@"reply_contents"]] baseURL:nil];
+            actualsize =[[complaininfo objectForKey:@"reply_contents"] boundingRectWithSize:size1 options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
+            replycontentview.frame=CGRectMake(detailsLabel.frame.origin.x-10, dealstateLabel.frame.origin.y+30, detailsLabel.frame.size.width, actualsize.height+24);
             [comscrollview addSubview:replycontentview];
             
             replydataLabel.frame=CGRectMake(replydataLabel.frame.origin.x, replycontentview.frame.origin.y+actualsize.height+24, replydataLabel.frame.size.width, replydataLabel.frame.size.height);
@@ -175,8 +183,17 @@
     }
     [comscrollview addSubview:assessbutton];
     
-    
-    comscrollview.contentSize=CGSizeMake(320, detailsLabel.frame.size.height+introduceLabel.frame.size.height+comscrollview.frame.size.height+assessdetailLabel.frame.size.height+replycontentLabel.frame.size.height-250);
+    if (rid!=nil && ![rid isEqualToString:@"<null>"])
+    {
+        if (![assess isEqualToString:@"0"] && ![assess isEqualToString:@"<null>"] )
+        {
+            comscrollview.contentSize=CGSizeMake(320, assessdetailLabel.frame.origin.y-complainaboutLabel.frame.origin.y+assessdetailLabel.frame.size.height);
+        }else{
+            comscrollview.contentSize=CGSizeMake(320, replydataLabel.frame.origin.y-complainaboutLabel.frame.origin.y+replydataLabel.frame.size.height);
+        }
+    }else{
+        comscrollview.contentSize=CGSizeMake(320, dealstateLabel.frame.origin.y-complainaboutLabel.frame.origin.y+dealstateLabel.frame.size.height);
+    }
     comscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     comscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     comscrollview.scrollEnabled=YES;

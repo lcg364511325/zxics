@@ -59,7 +59,7 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * complaint = [NSMutableDictionary dictionaryWithCapacity:5];
-    complaint=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&type=complaint",myDelegate.entityl.userid]];
+    complaint=[DataService PostDataService:[NSString stringWithFormat:@"%@api/userConsult",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&type=complaint",myDelegate.entityl.userid] forPage:page forPageSize:10];
     NSArray *array=[complaint objectForKey:@"datas"];
     [list addObjectsFromArray:array];
     

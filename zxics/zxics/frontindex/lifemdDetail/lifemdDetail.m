@@ -91,7 +91,7 @@
     [webSite setText:[pc objectForKey:@"openurl"]];
     [lfmdscrollview addSubview:webSite];
     
-    lfmdscrollview.contentSize=CGSizeMake(320, DetailsLabel.frame.size.height+introduceLabel.frame.size.height+lfmdscrollview.frame.size.height);
+    lfmdscrollview.contentSize=CGSizeMake(320, dateLabel.frame.origin.y-logoImage.frame.origin.y+dateLabel.frame.size.height+10);
     lfmdscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     lfmdscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     lfmdscrollview.scrollEnabled=YES;

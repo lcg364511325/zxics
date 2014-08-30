@@ -67,7 +67,7 @@
     dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, userLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height);
     dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDate:[introduce objectForKey:@"createDate"]]];
     
-    spiscrollview.contentSize=CGSizeMake(320, contentLabel.frame.size.height+spiscrollview.frame.size.height-250);
+    spiscrollview.contentSize=CGSizeMake(320, dateLabel.frame.origin.y-titleLabel.frame.origin.y+dateLabel.frame.size.height+20);
     spiscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     spiscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     spiscrollview.scrollEnabled=YES;

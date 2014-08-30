@@ -55,9 +55,16 @@
 -(void)loadData
 {
     titleLable.text=[cpd objectForKey:@"title"];
-    
     UIWebView *contentview=[[UIWebView alloc]init];
-    [contentview loadHTMLString:[NSString stringWithFormat:@"回复内容：%@",[cpd objectForKey:@"content"]] baseURL:nil];
+    [contentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
+                                 "<head> \n"
+                                 "<style type=\"text/css\"> \n"
+                                 "body {font-family: \"%@\"; font-size: %f; color: %@;}\n"
+                                 "</style> \n"
+                                 "</head> \n"
+                                 "<body>回复内容：%@</body> \n"
+                                 "</html>", @"宋体", 10.0,@"black",[cpd objectForKey:@"content"]] baseURL:nil];
+    //[contentview loadHTMLString:[NSString stringWithFormat:@"回复内容：%@",[cpd objectForKey:@"content"]] baseURL:nil];
     CGSize size =CGSizeMake(contentLable.frame.size.width,0);
     UIFont * tfont = contentLable.font;
     NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
@@ -81,7 +88,7 @@
     dataLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDateforsecond:[cpd objectForKey:@"createDate"]]];
     dataLabel.frame=CGRectMake(dataLabel.frame.origin.x, orgLabel.frame.origin.y+30, dataLabel.frame.size.width, dataLabel.frame.size.height);
     
-    cpScrollview.contentSize=CGSizeMake(320, contentview.frame.size.height+cpScrollview.frame.size.height+othercontentLabel.frame.size.height-250);
+    cpScrollview.contentSize=CGSizeMake(320, dataLabel.frame.origin.y-titleLable.frame.origin.y+dataLabel.frame.size.height+20);
     cpScrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     cpScrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     cpScrollview.scrollEnabled=YES;

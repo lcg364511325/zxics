@@ -109,7 +109,7 @@
     CGSize  actualsize =[[pc objectForKey:@"comments"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
     detailLabel.frame=CGRectMake(detailLabel.frame.origin.x, detailLabel.frame.origin.y, detailLabel.frame.size.width, actualsize.height+24);
     
-    accSView.contentSize=CGSizeMake(320, detailLabel.frame.size.height+accSView.frame.size.height-250);
+    accSView.contentSize=CGSizeMake(320, detailLabel.frame.size.height+detailLabel.frame.origin.y-chargenoLabel.frame.origin.y+10);
     accSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     accSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     accSView.scrollEnabled=YES;

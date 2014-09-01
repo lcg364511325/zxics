@@ -92,7 +92,7 @@
                  NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
     footDetailLabel.frame=CGRectMake(footDetailLabel.frame.origin.x, detailLabel.frame.origin.y+detailLabel.frame.size.height, footDetailLabel.frame.size.width, actualsize.height+24);
     
-    pfpSView.contentSize=CGSizeMake(320, footDetailLabel.frame.size.height+detailLabel.frame.size.height+pfpSView.frame.size.height-250);
+    pfpSView.contentSize=CGSizeMake(320, footDetailLabel.frame.size.height+footDetailLabel.frame.origin.y-cartnoLabel.frame.origin.y+10);
     pfpSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     pfpSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     pfpSView.scrollEnabled=YES;

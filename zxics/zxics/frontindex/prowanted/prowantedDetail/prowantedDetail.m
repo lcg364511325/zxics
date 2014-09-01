@@ -76,7 +76,7 @@
     dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",timestr];
     dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, wantedLabel.frame.origin.y+wantedLabel.frame.size.height, dateLabel.frame.size.width, dateLabel.frame.size.height);
     
-    pwSView.contentSize=CGSizeMake(320, wantedLabel.frame.size.height+addrLabel.frame.size.height+pwSView.frame.size.height-250);
+    pwSView.contentSize=CGSizeMake(320, dateLabel.frame.size.height+dateLabel.frame.origin.y-titleLabel.frame.origin.y+10);
     pwSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     pwSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     pwSView.scrollEnabled=YES;

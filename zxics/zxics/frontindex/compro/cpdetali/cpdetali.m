@@ -56,6 +56,7 @@
 {
     titleLable.text=[cpd objectForKey:@"title"];
     UIWebView *contentview=[[UIWebView alloc]init];
+    contentview.scrollView.bounces=NO;
     [contentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
                                  "<head> \n"
                                  "<style type=\"text/css\"> \n"

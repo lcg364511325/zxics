@@ -12,6 +12,7 @@
 #import "Commons.h"
 #import "ImageCacher.h"
 #import "changecom.h"
+#import "updatepassword.h"
 
 @interface personInfo ()
 
@@ -402,11 +403,19 @@
     }
 }
 
+//更换社区
 -(IBAction)changecom:(id)sender
 {
     changecom *_changecom=[[changecom alloc]init];
     _changecom.ispersoninfo=@"1";
     [self.navigationController pushViewController:_changecom animated:NO];
+}
+
+//修改密码
+-(IBAction)updatepassword:(id)sender
+{
+    updatepassword *_updatepassword=[[updatepassword alloc]init];
+    [self.navigationController pushViewController:_updatepassword animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

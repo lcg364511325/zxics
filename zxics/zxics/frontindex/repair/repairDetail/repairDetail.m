@@ -8,6 +8,7 @@
 
 #import "repairDetail.h"
 #import "Commons.h"
+#import "DataService.h"
 
 @interface repairDetail ()
 
@@ -45,6 +46,20 @@
 {
     titleLabel.text=[re objectForKey:@"title"];
     
+    //查询报修类型
+    NSMutableDictionary * type = [NSMutableDictionary dictionaryWithCapacity:1];
+    type=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findParameter",domainser] postDatas:@"type=repairsParame"];
+    NSArray *typelist=[type objectForKey:@"datas"];
+    
+    NSString *repairtype=[NSString stringWithFormat:@"%@",[re objectForKey:@"type"]];
+    for (NSDictionary *object in typelist) {
+        NSString *objectvalue=[NSString stringWithFormat:@"%@",[object objectForKey:@"value"]];
+        if ([objectvalue isEqualToString:repairtype]) {
+            typeLabel.text=[NSString stringWithFormat:@"报修类型：%@",[object objectForKey:@"name"]];
+        }
+    }
+    
+    
     Commons *_Commons=[[Commons alloc]init];
     dateLabel.text=[NSString stringWithFormat:@"期望维修时间：%@",[_Commons stringtoDate:[re objectForKey:@"addDate"]]];
     
@@ -80,7 +95,7 @@
     stateLabel.text=[NSString stringWithFormat:@"保修状态：%@",status];
     stateLabel.frame=CGRectMake(stateLabel.frame.origin.x, contentLabel.frame.origin.y+contentLabel.frame.size.height, stateLabel.frame.size.width, stateLabel.frame.size.height);
     
-    reSView.contentSize=CGSizeMake(320, contentLabel.frame.size.height+reSView.frame.size.height-250);
+    reSView.contentSize=CGSizeMake(320, stateLabel.frame.origin.y-titleLabel.frame.origin.y+stateLabel.frame.size.height+10);
     reSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     reSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     reSView.scrollEnabled=YES;

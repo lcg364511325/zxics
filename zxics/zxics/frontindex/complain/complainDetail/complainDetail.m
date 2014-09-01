@@ -130,6 +130,7 @@
             
             CGSize size1 =CGSizeMake(245,0);
             UIWebView *replycontentview=[[UIWebView alloc]init];
+            replycontentview.scrollView.bounces=NO;
             [replycontentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
                                               "<head> \n"
                                               "<style type=\"text/css\"> \n"

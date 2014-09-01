@@ -101,13 +101,22 @@
     //详情描述
     xiangqing.frame=CGRectMake(xiangqing.frame.origin.x, maoshuLabel.frame.origin.y+maoshuLabel.frame.size.height, xiangqing.frame.size.width, xiangqing.frame.size.height);
     
-    xiangqingLabel.numberOfLines=0;
+    UIWebView *contentview=[[UIWebView alloc]init];
+    contentview.scrollView.bounces=NO;
+    [contentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
+                                 "<head> \n"
+                                 "<style type=\"text/css\"> \n"
+                                 "body {font-family: \"%@\"; font-size: %f; color: %@;}\n"
+                                 "</style> \n"
+                                 "</head> \n"
+                                 "<body>%@</body> \n"
+                                 "</html>", @"宋体", 12.0,@"black",[gdsdetail objectForKey:@"goodsDesc"]] baseURL:nil];
     actualsize =[[gdsdetail objectForKey:@"goodsDesc"] boundingRectWithSize:size options:
                  NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
-    xiangqingLabel.text=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"goodsDesc"]];
-    xiangqingLabel.frame=CGRectMake(xiangqingLabel.frame.origin.x, xiangqing.frame.origin.y, xiangqingLabel.frame.size.width, actualsize.height+24);
+    contentview.frame=CGRectMake(xiangqingLabel.frame.origin.x, xiangqing.frame.origin.y+30, xiangqingLabel.frame.size.width, actualsize.height+24);
+    [introSView addSubview:contentview];
     
-    introSView.contentSize=CGSizeMake(320, maoshuLabel.frame.size.height+xiangqingLabel.frame.size.height+introSView.frame.size.height);
+    introSView.contentSize=CGSizeMake(320, contentview.frame.size.height+contentview.frame.origin.y-maoshuLabel.frame.origin.y+50);
     introSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     introSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     introSView.scrollEnabled=YES;

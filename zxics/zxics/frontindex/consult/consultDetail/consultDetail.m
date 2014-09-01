@@ -79,14 +79,23 @@
     id appaccount=[consultinfo objectForKey:@"appaccount"];
     if (appaccount!=[NSNull null]) {
         //回复内容
-        replyDetailLabel.text=[NSString stringWithFormat:@"内容：%@",[consultinfo objectForKey:@"reply_contents"]];
-        replyDetailLabel.numberOfLines=0;
+        UIWebView *replyDetailview=[[UIWebView alloc]init];
+        replyDetailview.scrollView.bounces=NO;
+        [replyDetailview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
+                                     "<head> \n"
+                                     "<style type=\"text/css\"> \n"
+                                     "body {font-family: \"%@\"; font-size: %f; color: %@;}\n"
+                                     "</style> \n"
+                                     "</head> \n"
+                                     "<body>内容：%@</body> \n"
+                                     "</html>", @"宋体", 12.0,@"black",[consultinfo objectForKey:@"reply_contents"]] baseURL:nil];
         actualsize =[[consultinfo objectForKey:@"reply_contents"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
-        replyDetailLabel.frame=CGRectMake(replyDetailLabel.frame.origin.x, answerLabel.frame.origin.y+30, replyDetailLabel.frame.size.width, actualsize.height+24);
+        replyDetailview.frame=CGRectMake(replyDetailLabel.frame.origin.x, answerLabel.frame.origin.y+30, replyDetailLabel.frame.size.width, actualsize.height+24);
+        [conSView addSubview:replyDetailview];
         
         //回复人
         replyuserLabel.text=[NSString stringWithFormat:@"回复人：%@",[consultinfo objectForKey:@"appaccount"]];
-        replyuserLabel.frame=CGRectMake(replyuserLabel.frame.origin.x, replyDetailLabel.frame.origin.y+replyDetailLabel.frame.size.height, replyuserLabel.frame.size.width, replyuserLabel.frame.size.height);
+        replyuserLabel.frame=CGRectMake(replyuserLabel.frame.origin.x, replyDetailview.frame.origin.y+replyDetailLabel.frame.size.height, replyuserLabel.frame.size.width, replyuserLabel.frame.size.height);
         
         //满意度
         NSString *assess=[NSString stringWithFormat:@"%@",[consultinfo objectForKey:@"assess"]];
@@ -117,8 +126,12 @@
         replyDateLabel.text=[NSString stringWithFormat:@"时间：%@",[_Commons stringtoDateforsecond:[consultinfo objectForKey:@"apptime"]]];
         replyDateLabel.frame=CGRectMake(replyDateLabel.frame.origin.x, replydetailLabel.frame.origin.y+replydetailLabel.frame.size.height, replyDateLabel.frame.size.width, replyDateLabel.frame.size.height);
     }
-    
-    conSView.contentSize=CGSizeMake(320, replydetailLabel.frame.size.height+conSView.frame.size.height+replyDetailLabel.frame.size.height+introduceLabel.frame.size.height+detailLabel.frame.size.height-250);
+    if (appaccount!=[NSNull null])
+    {
+        conSView.contentSize=CGSizeMake(320, replyDateLabel.frame.origin.y-titleLabel.frame.origin.y+replyDateLabel.frame.size.height+10);
+    }else{
+        conSView.contentSize=CGSizeMake(320, answerLabel.frame.origin.y-titleLabel.frame.origin.y+answerLabel.frame.size.height+10);
+    }
     conSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     conSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     conSView.scrollEnabled=YES;

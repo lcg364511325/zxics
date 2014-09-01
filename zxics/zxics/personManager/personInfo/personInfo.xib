@@ -195,6 +195,9 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="updatepassword:" destination="-1" eventType="touchDown" id="u34-yA-Xf6"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doT-u9-686">
                     <rect key="frame" x="15" y="121" width="290" height="1"/>

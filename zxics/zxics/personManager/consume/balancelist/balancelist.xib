@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="balancelist">
             <connections>
                 <outlet property="UINavigationBar" destination="fEU-XV-RcP" id="sYT-sv-U4M"/>
+                <outlet property="baTView" destination="qkt-j7-VOS" id="VJL-od-TXN"/>
+                <outlet property="numberLabel" destination="jLL-c3-ybo" id="E8W-Xx-b9S"/>
                 <outlet property="view" destination="br0-xb-SHa" id="lwH-TU-V88"/>
             </connections>
         </placeholder>
@@ -58,7 +60,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-c3-ybo">
-                    <rect key="frame" x="66" y="81" width="42" height="21"/>
+                    <rect key="frame" x="66" y="81" width="234" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.99358258929999999" green="0.60939516849999997" blue="0.068606802780000004" alpha="1" colorSpace="calibratedRGB"/>

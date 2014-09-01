@@ -342,6 +342,8 @@
 		2C5A242719921489003712D5 /* personIndex.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242519921489003712D5 /* personIndex.xib */; };
 		2C5A242C19922201003712D5 /* personInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A242A19922201003712D5 /* personInfo.m */; };
 		2C5A242D19922201003712D5 /* personInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242B19922201003712D5 /* personInfo.xib */; };
+		2C67794C19B418C6003A8D33 /* updatepassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C67794A19B418C6003A8D33 /* updatepassword.m */; };
+		2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C67794B19B418C6003A8D33 /* updatepassword.xib */; };
 		2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */; };
 		2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */; };
 		2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */; };
@@ -748,10 +750,10 @@
 		2C5404AD199360F0003D2BBE /* arrearageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = arrearageCell.m; path = Cell/arrearageCell/arrearageCell.m; sourceTree = "<group>"; };
 		2C5404AE199360F0003D2BBE /* arrearageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = arrearageCell.xib; path = Cell/arrearageCell/arrearageCell.xib; sourceTree = "<group>"; };
 		2C5404B219936385003D2BBE /* arrearagecheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arrearagecheck.h; path = personManager/arrearagecheck/arrearagechecklist/arrearagecheck.h; sourceTree = "<group>"; };
-		2C5404B319936385003D2BBE /* arrearagecheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = arrearagecheck.m; path = personManager/arrearagecheck/arrearagechecklist/arrearagecheck.m; sourceTree = "<group>"; };
+		2C5404B319936385003D2BBE /* arrearagecheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = arrearagecheck.m; path = personManager/arrearagecheck/arrearagechecklist/arrearagecheck.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C5404B419936385003D2BBE /* arrearagecheck.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = arrearagecheck.xib; path = personManager/arrearagecheck/arrearagechecklist/arrearagecheck.xib; sourceTree = "<group>"; };
 		2C5404B8199363C1003D2BBE /* arrearageDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arrearageDetail.h; path = personManager/arrearagecheck/arrearageDetail/arrearageDetail.h; sourceTree = "<group>"; };
-		2C5404B9199363C1003D2BBE /* arrearageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = arrearageDetail.m; path = personManager/arrearagecheck/arrearageDetail/arrearageDetail.m; sourceTree = "<group>"; };
+		2C5404B9199363C1003D2BBE /* arrearageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = arrearageDetail.m; path = personManager/arrearagecheck/arrearageDetail/arrearageDetail.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C5404BA199363C1003D2BBE /* arrearageDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = arrearageDetail.xib; path = personManager/arrearagecheck/arrearageDetail/arrearageDetail.xib; sourceTree = "<group>"; };
 		2C5404BE19936DE7003D2BBE /* Paymentfunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paymentfunction.h; path = personManager/arrearagecheck/Paymentfunction/Paymentfunction.h; sourceTree = "<group>"; };
 		2C5404BF19936DE7003D2BBE /* Paymentfunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paymentfunction.m; path = personManager/arrearagecheck/Paymentfunction/Paymentfunction.m; sourceTree = "<group>"; };
@@ -839,6 +841,9 @@
 		2C5A242919922201003712D5 /* personInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personInfo.h; path = personManager/personInfo/personInfo.h; sourceTree = "<group>"; };
 		2C5A242A19922201003712D5 /* personInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personInfo.m; path = personManager/personInfo/personInfo.m; sourceTree = "<group>"; };
 		2C5A242B19922201003712D5 /* personInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personInfo.xib; path = personManager/personInfo/personInfo.xib; sourceTree = "<group>"; };
+		2C67794919B418C6003A8D33 /* updatepassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = updatepassword.h; path = personManager/personInfo/updatepassword/updatepassword.h; sourceTree = "<group>"; };
+		2C67794A19B418C6003A8D33 /* updatepassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = updatepassword.m; path = personManager/personInfo/updatepassword/updatepassword.m; sourceTree = "<group>"; };
+		2C67794B19B418C6003A8D33 /* updatepassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = updatepassword.xib; path = personManager/personInfo/updatepassword/updatepassword.xib; sourceTree = "<group>"; };
 		2CFEAA50199AF5CC00FCB5C1 /* filecenterlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterlist.h; path = filecenter/filecenterlist/filecenterlist.h; sourceTree = "<group>"; };
 		2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterlist.m; path = filecenter/filecenterlist/filecenterlist.m; sourceTree = "<group>"; };
 		2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterlist.xib; path = filecenter/filecenterlist/filecenterlist.xib; sourceTree = "<group>"; };
@@ -854,7 +859,7 @@
 		7CE6312F198C7A8200730C64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CE63131198C7A8200730C64 /* zxics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zxics-Prefix.pch"; sourceTree = "<group>"; };
 		7CE63132198C7A8200730C64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7CE63133198C7A8200730C64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7CE63133198C7A8200730C64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7CE63136198C7A8200730C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CE6313B198C7A8200730C64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7CE63141198C7A8300730C64 /* zxicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zxicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -862,10 +867,10 @@
 		7CE6314A198C7A8300730C64 /* zxicsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zxicsTests-Info.plist"; sourceTree = "<group>"; };
 		7CE6314C198C7A8300730C64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7CE6314E198C7A8300730C64 /* zxicsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zxicsTests.m; sourceTree = "<group>"; };
-		7CE6315A198C7C2900730C64 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		7CE6315B198C7C2900730C64 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		7CE6315A198C7C2900730C64 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7CE6315B198C7C2900730C64 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7CE6315C198C7C2900730C64 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
-		7CE6315D198C7C2900730C64 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		7CE6315D198C7C2900730C64 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ASIFormDataRequest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7CE6315E198C7C2900730C64 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
 		7CE6315F198C7C2900730C64 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
 		7CE63160198C7C2900730C64 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
@@ -2153,12 +2158,23 @@
 		2C5A2428199221E3003712D5 /* personInfo */ = {
 			isa = PBXGroup;
 			children = (
+				2C67794819B418A7003A8D33 /* updatepassword */,
 				2C54048119931D39003D2BBE /* updateinfo */,
 				2C5A242919922201003712D5 /* personInfo.h */,
 				2C5A242A19922201003712D5 /* personInfo.m */,
 				2C5A242B19922201003712D5 /* personInfo.xib */,
 			);
 			name = personInfo;
+			sourceTree = "<group>";
+		};
+		2C67794819B418A7003A8D33 /* updatepassword */ = {
+			isa = PBXGroup;
+			children = (
+				2C67794919B418C6003A8D33 /* updatepassword.h */,
+				2C67794A19B418C6003A8D33 /* updatepassword.m */,
+				2C67794B19B418C6003A8D33 /* updatepassword.xib */,
+			);
+			name = updatepassword;
 			sourceTree = "<group>";
 		};
 		2CFEAA4F199AF52D00FCB5C1 /* filecenter */ = {
@@ -2766,6 +2782,7 @@
 				2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */,
 				2C281134199871560072D08C /* rentorshelllist.xib in Resources */,
 				2C3AED6419A57C7D00D981C3 /* steward.png in Resources */,
+				2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */,
 				2C3AED2D19A57C7D00D981C3 /* ic_pulltorefresh_arrow.png in Resources */,
 				2C3AED5C19A57C7D00D981C3 /* settings_about.9.png in Resources */,
 				2C3AED0619A57C7D00D981C3 /* button_guess.png in Resources */,
@@ -2895,6 +2912,7 @@
 				7CE63193198C7C2A00730C64 /* Commons.m in Sources */,
 				7CE6319D198C7C2A00730C64 /* login.m in Sources */,
 				2C1FE6501995C8AC008DBB58 /* complainAdd.m in Sources */,
+				2C67794C19B418C6003A8D33 /* updatepassword.m in Sources */,
 				2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */,
 				2C3AED7A19A58C4300D981C3 /* regeditmember.m in Sources */,
 				2C280676199067B3007838A6 /* SpecialPeopleDetailCell.m in Sources */,

@@ -72,7 +72,7 @@
     dateLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDateforsecond:[cpd objectForKey:@"createDate"]]];
     dateLabel.frame=CGRectMake(dateLabel.frame.origin.x, userLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height);
     
-    merSView.contentSize=CGSizeMake(320, detailLabel.frame.size.height+merSView.frame.size.height-250);
+    merSView.contentSize=CGSizeMake(320, dateLabel.frame.origin.y-titleLabel.frame.origin.y+dateLabel.frame.size.height+10);
     merSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     merSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     merSView.scrollEnabled=YES;

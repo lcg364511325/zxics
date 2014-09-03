@@ -132,7 +132,7 @@
 //支付宝支付
 -(void)zhifubao
 {
-    NSString *appScheme = @"AlipaySdkDemo";
+    NSString *appScheme = @"zxics";
     NSString* orderInfo = [self getOrderInfo];
     NSString* signedStr = [self doRsa:orderInfo];
     

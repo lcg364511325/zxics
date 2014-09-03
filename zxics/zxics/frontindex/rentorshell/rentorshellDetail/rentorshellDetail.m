@@ -137,6 +137,15 @@
     id homeset=[rsd objectForKey:@"homeset"];
     if (homeset!=[NSNull null]) {
         detailLabel.text=[NSString stringWithFormat:@"配置：%@",[rsd objectForKey:@"homeset"]];
+        detailLabel.numberOfLines=0;
+        CGSize size =CGSizeMake(detailLabel.frame.size.width,0);
+        UIFont * tfont = detailLabel.font;
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
+        
+        CGSize  actualsize =[[rsd objectForKey:@"homeset"] boundingRectWithSize:size options:
+                             NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        
+        detailLabel.frame=CGRectMake(detailLabel.frame.origin.x, detailLabel.frame.origin.y, detailLabel.frame.size.width, actualsize.height+24);
     }else{
         detailLabel.text=@"配置：";
     }

@@ -127,6 +127,8 @@ NSInteger iii=0;
 	datePickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	datePickerView.frame = CGRectMake(10, 10, 300, 216);//216
 	datePickerView.datePickerMode = UIDatePickerModeDate;
+    NSDate* minDate = [NSDate date];
+    datePickerView.minimumDate=minDate;
 	
 	[demoView addSubview:datePickerView];
     

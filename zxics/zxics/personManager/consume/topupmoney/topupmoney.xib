@@ -7,6 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="topupmoney">
             <connections>
                 <outlet property="UINavigationBar" destination="Kzd-wT-0CL" id="f9V-G9-QOX"/>
+                <outlet property="ordernoLabel" destination="nb7-Nb-Y5l" id="DRn-pd-aQR"/>
+                <outlet property="topupmoneyLabel" destination="AUp-op-grC" id="Htm-7Y-VZI"/>
+                <outlet property="topupnoLabel" destination="Ggp-hD-yLg" id="Ilt-hA-9CH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,13 +61,13 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb7-Nb-Y5l">
-                    <rect key="frame" x="67" y="79" width="42" height="21"/>
+                    <rect key="frame" x="67" y="79" width="239" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggp-hD-yLg">
-                    <rect key="frame" x="81" y="108" width="42" height="21"/>
+                    <rect key="frame" x="81" y="108" width="225" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="highlightedColor"/>

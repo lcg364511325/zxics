@@ -8,6 +8,7 @@
 
 #import "lifemdDetail.h"
 #import "Commons.h"
+#import "ImageCacher.h"
 
 @interface lifemdDetail ()
 
@@ -59,6 +60,17 @@
     telLabel.text=[pc objectForKey:@"phones"];
     businessLabel.text=[pc objectForKey:@"target"];
     contectpeopleLabel.text=[pc objectForKey:@"userName"];
+    
+    
+    NSString *url=[NSString stringWithFormat:@"%@%@",domainser,[pc objectForKey:@"headUrl"]];
+    NSURL *imgUrl=[NSURL URLWithString:url];
+    if (hasCachedImage(imgUrl)) {
+        [logoImage setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+    }else{
+        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",logoImage,@"imageView",nil];
+        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+    }
+    
     
     introduceLabel.numberOfLines=0;
     CGSize size =CGSizeMake(introduceLabel.frame.size.width,0);

@@ -111,12 +111,17 @@
     cell.detailLabel.text=[NSString stringWithFormat:@"%@",[pfpdetail objectForKey:@"terminaldec"]];
     cell.terminalLabel.text=[NSString stringWithFormat:@"%@",[pfpdetail objectForKey:@"terminalname"]];
     
-    NSString *subtype=[NSString stringWithFormat:@"%@",[pfpdetail objectForKey:@"subtype"]];
-    if ([subtype isEqualToString:@"支出"]) {
-        cell.moneyLabel.text=[NSString stringWithFormat:@"-%@元",[pfpdetail objectForKey:@"money"]];
-    }else if ([subtype isEqualToString:@"支入"])
+    id subtype=[pfpdetail objectForKey:@"subtype"];
+    if (subtype!=[NSNull null]) {
+        if ([subtype isEqualToString:@"支出"]) {
+            cell.moneyLabel.text=[NSString stringWithFormat:@"-%@元",[pfpdetail objectForKey:@"money"]];
+        }else if ([subtype isEqualToString:@"支入"])
+        {
+            cell.moneyLabel.text=[NSString stringWithFormat:@"+%@元",[pfpdetail objectForKey:@"money"]];
+        }
+    }else
     {
-        cell.moneyLabel.text=[NSString stringWithFormat:@"+%@元",[pfpdetail objectForKey:@"money"]];
+        cell.moneyLabel.text=@"0.0元";
     }
     
     NSString *typevalue=[NSString stringWithFormat:@"%@",[pfpdetail objectForKey:@"type"]];

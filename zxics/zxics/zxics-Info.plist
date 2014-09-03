@@ -27,7 +27,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>appScheme</string>
+				<string>zxics</string>
 			</array>
 		</dict>
 	</array>

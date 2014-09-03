@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface myorderDetail : UIViewController<UIScrollViewDelegate>
+{
+    NSString *payid;
+    NSString *allprice;
+    SEL _result;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *orderscrollview;

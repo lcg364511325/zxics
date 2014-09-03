@@ -11,4 +11,7 @@
 @interface topupmoney : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
+@property (weak, nonatomic) IBOutlet UITextField *topupmoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ordernoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *topupnoLabel;
 @end

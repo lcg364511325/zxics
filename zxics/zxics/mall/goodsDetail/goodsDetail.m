@@ -251,13 +251,20 @@
 //立即购买
 -(IBAction)buynow:(id)sender
 {
-    placeorder *_placeorder=[[placeorder alloc]init];
-    NSMutableArray *ridlist = [[NSMutableArray alloc]initWithCapacity:1];
-    [ridlist addObject:[gdsdetail objectForKey:@"id"]];
-    _placeorder.ridlist=ridlist;
-    _placeorder.shopid=[gdsdetail objectForKey:@"orgId"];
-    _placeorder.nowcount=countnoLabel.text;
-    [self.navigationController pushViewController:_placeorder animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        placeorder *_placeorder=[[placeorder alloc]init];
+        NSMutableArray *ridlist = [[NSMutableArray alloc]initWithCapacity:1];
+        [ridlist addObject:[gdsdetail objectForKey:@"id"]];
+        _placeorder.ridlist=ridlist;
+        _placeorder.shopid=[gdsdetail objectForKey:@"orgId"];
+        _placeorder.nowcount=countnoLabel.text;
+        [self.navigationController pushViewController:_placeorder animated:NO];
+    }else{
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 @end

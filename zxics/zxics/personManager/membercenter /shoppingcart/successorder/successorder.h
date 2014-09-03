@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface successorder : UIViewController
+{
+    SEL _result;
+}
 
 @property(retain , nonatomic) NSDictionary * so;//订单生成返回信息
 @property(retain , nonatomic) NSString * price;//订单价格

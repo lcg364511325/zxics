@@ -87,7 +87,7 @@
     NSDictionary *swobject=[swlist objectAtIndex:0];
     swd=[NSString stringWithFormat:@"%@  %@",[swobject objectForKey:@"shipping_name"],[swobject objectForKey:@"insure"]];
     sendwayid=[NSString stringWithFormat:@"%@",[swobject objectForKey:@"shipping_id"]];
-    pricecount=pricecount+[[NSString stringWithFormat:@"%@",[swobject objectForKey:@"insure"]]integerValue];
+    pricecount=pricecount+[[NSString stringWithFormat:@"%@",[swobject objectForKey:@"insure"]]floatValue];
     
     //配送地址查询
     NSMutableDictionary * ar = [NSMutableDictionary dictionaryWithCapacity:5];
@@ -151,7 +151,7 @@
         }
         
         UILabel *priceLabel=[[UILabel alloc]initWithFrame:CGRectMake(211, 65+100*i, 102, 21)];
-        NSInteger pricec=0;
+        float pricec=0.00f;
         if (nowcount) {
             pricec=[[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsPrice"]]integerValue]*
             [[NSString stringWithFormat:@"%@",nowcount]integerValue];
@@ -159,7 +159,7 @@
             pricec=[[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsPrice"]]integerValue]*
             [[NSString stringWithFormat:@"%@",[sc objectForKey:@"goodsNumber"]]integerValue];
         }
-        priceLabel.text=[NSString stringWithFormat:@"总价(元)：%d",pricec];
+        priceLabel.text=[NSString stringWithFormat:@"总价(元)：%.2f",pricec];
         priceLabel.font=[UIFont systemFontOfSize:12];
         priceLabel.textColor=[UIColor colorWithRed:244/255.0 green:160/255.0 blue:40/255.0 alpha:1];
         framesize=priceLabel.frame;
@@ -177,7 +177,7 @@
     pricecountLabel.frame=CGRectMake(pricecountLabel.frame.origin.x, pricecountImage.frame.origin.y, pricecountLabel.frame.size.width, pricecountLabel.frame.size.height);
     
     price.frame=CGRectMake(price.frame.origin.x, pricecountImage.frame.origin.y, price.frame.size.width, price.frame.size.height);
-    price.text=[NSString stringWithFormat:@"%d元",pricecount];
+    price.text=[NSString stringWithFormat:@"%.2f元",pricecount];
     
     
     //配送方式模块
@@ -370,7 +370,7 @@
     if ([status isEqualToString:@"1"]) {
         successorder *_successorder=[[successorder alloc]init];
         _successorder.so=state;
-        _successorder.price=[NSString stringWithFormat:@"%d",pricecount];
+        _successorder.price=[NSString stringWithFormat:@"%.2fs",pricecount];
         _successorder.sendway=[NSString stringWithFormat:@"%d",paywayvalue];;
         [self.navigationController pushViewController:_successorder animated:NO];
     }else

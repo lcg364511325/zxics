@@ -24,7 +24,7 @@
     HPGrowingTextView *textView;
     NSString *addrid;
     NSString *sendwayid;
-    NSInteger pricecount;
+    float pricecount;
 }
 @property (strong, nonatomic) IBOutlet UIView *scview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;

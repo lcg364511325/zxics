@@ -271,6 +271,19 @@
 		2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F679198F785B004F2A38 /* UIView+Extension.m */; };
 		2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */; };
 		2C42F68E198F7A1F004F2A38 /* lifemdcellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */; };
+		2C4AD4D719B5B6E400C28F06 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */; };
+		2C4AD4D819B5B6E400C28F06 /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */; };
+		2C4AD4DB19B5B6E400C28F06 /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4C119B5B6E400C28F06 /* AlixPayOrder.m */; };
+		2C4AD4DC19B5B6E400C28F06 /* AlixPayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4C319B5B6E400C28F06 /* AlixPayResult.m */; };
+		2C4AD4DD19B5B6E400C28F06 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4C719B5B6E400C28F06 /* NSObject+SBJSON.m */; };
+		2C4AD4DE19B5B6E400C28F06 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4C919B5B6E400C28F06 /* NSString+SBJSON.m */; };
+		2C4AD4DF19B5B6E400C28F06 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4CB19B5B6E400C28F06 /* SBJSON.m */; };
+		2C4AD4E019B5B6E400C28F06 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4CD19B5B6E400C28F06 /* SBJsonBase.m */; };
+		2C4AD4E119B5B6E400C28F06 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4CF19B5B6E400C28F06 /* SBJsonParser.m */; };
+		2C4AD4E219B5B6E400C28F06 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4D119B5B6E400C28F06 /* SBJsonWriter.m */; };
+		2C4AD4E819B5B77800C28F06 /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4AD4E519B5B77800C28F06 /* AlixPaylib_arc.a */; };
+		2C4AD4E919B5B77800C28F06 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4AD4E619B5B77800C28F06 /* libcrypto.a */; };
+		2C4AD4EA19B5B77800C28F06 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4AD4E719B5B77800C28F06 /* libssl.a */; };
 		2C54048D19932E46003D2BBE /* personLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C54048B19932E46003D2BBE /* personLog.m */; };
 		2C54048E19932E46003D2BBE /* personLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C54048C19932E46003D2BBE /* personLog.xib */; };
 		2C5404931993506A003D2BBE /* personlogCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5404911993506A003D2BBE /* personlogCellTableViewCell.m */; };
@@ -734,6 +747,32 @@
 		2C42F68A198F7A1F004F2A38 /* lifemdcellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemdcellTableViewCell.h; path = Cell/lifemdcell/lifemdcellTableViewCell.h; sourceTree = "<group>"; };
 		2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemdcellTableViewCell.m; path = Cell/lifemdcell/lifemdcellTableViewCell.m; sourceTree = "<group>"; };
 		2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemdcellTableViewCell.xib; path = Cell/lifemdcell/lifemdcellTableViewCell.xib; sourceTree = "<group>"; };
+		2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
+		2C4AD4BC19B5B6E400C28F06 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
+		2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
+		2C4AD4C019B5B6E400C28F06 /* AlixPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayOrder.h; sourceTree = "<group>"; };
+		2C4AD4C119B5B6E400C28F06 /* AlixPayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayOrder.m; sourceTree = "<group>"; };
+		2C4AD4C219B5B6E400C28F06 /* AlixPayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayResult.h; sourceTree = "<group>"; };
+		2C4AD4C319B5B6E400C28F06 /* AlixPayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayResult.m; sourceTree = "<group>"; };
+		2C4AD4C519B5B6E400C28F06 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		2C4AD4C619B5B6E400C28F06 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		2C4AD4C719B5B6E400C28F06 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		2C4AD4C819B5B6E400C28F06 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		2C4AD4C919B5B6E400C28F06 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		2C4AD4CA19B5B6E400C28F06 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		2C4AD4CB19B5B6E400C28F06 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		2C4AD4CC19B5B6E400C28F06 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		2C4AD4CD19B5B6E400C28F06 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		2C4AD4CE19B5B6E400C28F06 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		2C4AD4CF19B5B6E400C28F06 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		2C4AD4D019B5B6E400C28F06 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		2C4AD4D119B5B6E400C28F06 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		2C4AD4D519B5B6E400C28F06 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
+		2C4AD4D619B5B6E400C28F06 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
+		2C4AD4E519B5B77800C28F06 /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AlixPaylib_arc.a; path = zxics/extend/alipay/AlixPaylib_arc.a; sourceTree = "<group>"; };
+		2C4AD4E619B5B77800C28F06 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = zxics/extend/alipay/libcrypto.a; sourceTree = "<group>"; };
+		2C4AD4E719B5B77800C28F06 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = zxics/extend/alipay/libssl.a; sourceTree = "<group>"; };
+		2C4AD4EB19B5B7CA00C28F06 /* PartnerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerConfig.h; sourceTree = "<group>"; };
 		2C54048A19932E46003D2BBE /* personLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personLog.h; path = personManager/personLog/personLog.h; sourceTree = "<group>"; };
 		2C54048B19932E46003D2BBE /* personLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personLog.m; path = personManager/personLog/personLog.m; sourceTree = "<group>"; };
 		2C54048C19932E46003D2BBE /* personLog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personLog.xib; path = personManager/personLog/personLog.xib; sourceTree = "<group>"; };
@@ -929,7 +968,11 @@
 				7CE631AC198C7E6000730C64 /* MessageUI.framework in Frameworks */,
 				7CE631AA198C7E5700730C64 /* AVFoundation.framework in Frameworks */,
 				7CE631A8198C7E4B00730C64 /* CFNetwork.framework in Frameworks */,
+				2C4AD4EA19B5B77800C28F06 /* libssl.a in Frameworks */,
+				2C4AD4E819B5B77800C28F06 /* AlixPaylib_arc.a in Frameworks */,
+				2C4AD4E919B5B77800C28F06 /* libcrypto.a in Frameworks */,
 				7CE631A6198C7E4000730C64 /* MobileCoreServices.framework in Frameworks */,
+				2C4AD4D719B5B6E400C28F06 /* AlipayRsaLib.a in Frameworks */,
 				7CE631A4198C7E2F00730C64 /* QuartzCore.framework in Frameworks */,
 				7CE631A2198C7E2300730C64 /* SystemConfiguration.framework in Frameworks */,
 				7CE63126198C7A8100730C64 /* CoreGraphics.framework in Frameworks */,
@@ -1741,6 +1784,51 @@
 			name = lifemdcell;
 			sourceTree = "<group>";
 		};
+		2C4AD4BA19B5B6E400C28F06 /* alipay */ = {
+			isa = PBXGroup;
+			children = (
+				2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */,
+				2C4AD4BC19B5B6E400C28F06 /* AlixLibService.h */,
+				2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */,
+				2C4AD4C019B5B6E400C28F06 /* AlixPayOrder.h */,
+				2C4AD4C119B5B6E400C28F06 /* AlixPayOrder.m */,
+				2C4AD4C219B5B6E400C28F06 /* AlixPayResult.h */,
+				2C4AD4C319B5B6E400C28F06 /* AlixPayResult.m */,
+				2C4AD4C419B5B6E400C28F06 /* json */,
+				2C4AD4D419B5B6E400C28F06 /* RSA */,
+			);
+			path = alipay;
+			sourceTree = "<group>";
+		};
+		2C4AD4C419B5B6E400C28F06 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				2C4AD4C519B5B6E400C28F06 /* JSON.h */,
+				2C4AD4C619B5B6E400C28F06 /* NSObject+SBJSON.h */,
+				2C4AD4C719B5B6E400C28F06 /* NSObject+SBJSON.m */,
+				2C4AD4C819B5B6E400C28F06 /* NSString+SBJSON.h */,
+				2C4AD4C919B5B6E400C28F06 /* NSString+SBJSON.m */,
+				2C4AD4CA19B5B6E400C28F06 /* SBJSON.h */,
+				2C4AD4CB19B5B6E400C28F06 /* SBJSON.m */,
+				2C4AD4CC19B5B6E400C28F06 /* SBJsonBase.h */,
+				2C4AD4CD19B5B6E400C28F06 /* SBJsonBase.m */,
+				2C4AD4CE19B5B6E400C28F06 /* SBJsonParser.h */,
+				2C4AD4CF19B5B6E400C28F06 /* SBJsonParser.m */,
+				2C4AD4D019B5B6E400C28F06 /* SBJsonWriter.h */,
+				2C4AD4D119B5B6E400C28F06 /* SBJsonWriter.m */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		2C4AD4D419B5B6E400C28F06 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				2C4AD4D519B5B6E400C28F06 /* DataSigner.h */,
+				2C4AD4D619B5B6E400C28F06 /* DataVerifier.h */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
 		2C54048119931D39003D2BBE /* updateinfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2228,6 +2316,9 @@
 		7CE63122198C7A8100730C64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C4AD4E519B5B77800C28F06 /* AlixPaylib_arc.a */,
+				2C4AD4E619B5B77800C28F06 /* libcrypto.a */,
+				2C4AD4E719B5B77800C28F06 /* libssl.a */,
 				7CE631AF198C7E8800730C64 /* libsqlite3.0.dylib */,
 				7CE631AD198C7E7800730C64 /* libz.1.2.5.dylib */,
 				7CE631AB198C7E6000730C64 /* MessageUI.framework */,
@@ -2259,6 +2350,7 @@
 				7CE63188198C7C2A00730C64 /* Model */,
 				7CE63132198C7A8200730C64 /* AppDelegate.h */,
 				7CE63133198C7A8200730C64 /* AppDelegate.m */,
+				2C4AD4EB19B5B7CA00C28F06 /* PartnerConfig.h */,
 				7CE63135198C7A8200730C64 /* Main.storyboard */,
 				7CE6313B198C7A8200730C64 /* Images.xcassets */,
 				7CE6312A198C7A8200730C64 /* Supporting Files */,
@@ -2298,6 +2390,7 @@
 		7CE63158198C7C2900730C64 /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				2C4AD4BA19B5B6E400C28F06 /* alipay */,
 				2C3C05EB199DF54000369A63 /* RadioControl */,
 				2C3C05E2199DE6EC00369A63 /* HPGrowingTextView */,
 				2C5A241C1991D5EF003712D5 /* CustomIOS7AlertView */,
@@ -2778,6 +2871,7 @@
 				2C3AED5419A57C7D00D981C3 /* reply.png in Resources */,
 				2C3AED2319A57C7D00D981C3 /* helplogo2.png in Resources */,
 				2C54049F199352CA003D2BBE /* personLogDetail.xib in Resources */,
+				2C4AD4D819B5B6E400C28F06 /* Alixpay.bundle in Resources */,
 				2C3AED5B19A57C7D00D981C3 /* setting2.png in Resources */,
 				2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */,
 				2C281134199871560072D08C /* rentorshelllist.xib in Resources */,
@@ -2896,9 +2990,11 @@
 				2C54048D19932E46003D2BBE /* personLog.m in Sources */,
 				2C1FE5F61995B433008DBB58 /* floorlist.m in Sources */,
 				2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */,
+				2C4AD4E119B5B6E400C28F06 /* SBJsonParser.m in Sources */,
 				7CE6318C198C7C2A00730C64 /* ASIFormDataRequest.m in Sources */,
 				2C5404BB199363C1003D2BBE /* arrearageDetail.m in Sources */,
 				2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */,
+				2C4AD4DE19B5B6E400C28F06 /* NSString+SBJSON.m in Sources */,
 				2C5404C819937539003D2BBE /* consumelist.m in Sources */,
 				2C5404C119936DE7003D2BBE /* Paymentfunction.m in Sources */,
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
@@ -2923,12 +3019,14 @@
 				2C281133199871560072D08C /* rentorshelllist.m in Sources */,
 				2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */,
 				2C1FE6681995C8AC008DBB58 /* specialPeopleIntroduce.m in Sources */,
+				2C4AD4DD19B5B6E400C28F06 /* NSObject+SBJSON.m in Sources */,
 				7CE63191198C7C2A00730C64 /* NSHTTPCookieAdditions.m in Sources */,
 				2C5757481994BCEF00858A7F /* shoppingcartCell.m in Sources */,
 				2C5404AF199360F0003D2BBE /* arrearageCell.m in Sources */,
 				2C57571819945F8100858A7F /* membercenter.m in Sources */,
 				2C5757421994BB6300858A7F /* shoppingcart.m in Sources */,
 				2C28114C199899290072D08C /* prowanted.m in Sources */,
+				2C4AD4E219B5B6E400C28F06 /* SBJsonWriter.m in Sources */,
 				2C5404E01993817B003D2BBE /* topup.m in Sources */,
 				2C28115F1998A78B0072D08C /* aboutus.m in Sources */,
 				2C28115919989F840072D08C /* serviceIndex.m in Sources */,
@@ -2985,14 +3083,17 @@
 				7CE63130198C7A8200730C64 /* main.m in Sources */,
 				7CE63196198C7C2A00730C64 /* WebService.m in Sources */,
 				2C5404CE199377F2003D2BBE /* consumelistCell.m in Sources */,
+				2C4AD4DC19B5B6E400C28F06 /* AlixPayResult.m in Sources */,
 				2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */,
 				2C5404D41993793A003D2BBE /* consumeDetail.m in Sources */,
+				2C4AD4DB19B5B6E400C28F06 /* AlixPayOrder.m in Sources */,
 				2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */,
 				2C57573C1994B63900858A7F /* myappraiseCell.m in Sources */,
 				2C2811201998686E0072D08C /* MerchantsDetail.m in Sources */,
 				2C28110719985B400072D08C /* consultDetail.m in Sources */,
 				2C2E267D19A6CEC300083026 /* personfootprintCell.m in Sources */,
 				2C42F67D198F785B004F2A38 /* MJRefreshFooterView.m in Sources */,
+				2C4AD4E019B5B6E400C28F06 /* SBJsonBase.m in Sources */,
 				2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */,
 				2C5A242C19922201003712D5 /* personInfo.m in Sources */,
 				2C2A299219A1E98B000B9F88 /* repairDetail.m in Sources */,
@@ -3005,6 +3106,7 @@
 				2C281139199872530072D08C /* rentorshellCell.m in Sources */,
 				2C3AED8219A5F67800D981C3 /* personfootprintlist.m in Sources */,
 				2C54EC3319AD8864004D580C /* DeliveryaddressCell.m in Sources */,
+				2C4AD4DF19B5B6E400C28F06 /* SBJSON.m in Sources */,
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,
 				2C59A32A19AF229B0064CD04 /* addinfo.m in Sources */,
@@ -3141,6 +3243,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zxics/zxics-Prefix.pch";
 				INFOPLIST_FILE = "zxics/zxics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zxics/extend/alixPay",
+					"$(PROJECT_DIR)/zxics/extend/alipay",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3154,6 +3261,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zxics/zxics-Prefix.pch";
 				INFOPLIST_FILE = "zxics/zxics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zxics/extend/alixPay",
+					"$(PROJECT_DIR)/zxics/extend/alipay",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -199,9 +199,9 @@
     }
     
     //设置scrollview属性
-    secondview.frame=CGRectMake(0, 0, 320, detailLabel.frame.size.height+secondview.frame.size.height+200*i);
+    secondview.frame=CGRectMake(0, 0, 320, paybutton.frame.size.height+paybutton.frame.origin.y-customernameLabel.frame.origin.y+10);
     [orderscrollview addSubview:secondview];
-    orderscrollview.contentSize=CGSizeMake(320, detailLabel.frame.size.height+secondview.frame.size.height+200*i);
+    orderscrollview.contentSize=CGSizeMake(320, secondview.frame.size.height);
     orderscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     orderscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     orderscrollview.scrollEnabled=YES;//
@@ -231,6 +231,11 @@
         [alter show];
         [self goback:nil];
     }
+}
+
+-(IBAction)payfororder:(id)sender
+{
+    
 }
 
 -(IBAction)goback:(id)sender

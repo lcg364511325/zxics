@@ -13,6 +13,7 @@
 #import "DataService.h"
 #import "Commons.h"
 #import "placeorder.h"
+#import "ImageCacher.h"
 
 @interface goodsDetail ()
 
@@ -60,6 +61,9 @@
     //加载数据
     [self loaddata];
     
+    //加载图片集
+    [self goodsimglistshow];
+    
     //上拉刷新下拉加载提示
     [assessTView addHeaderWithCallback:^{
         [list removeAllObjects];
@@ -73,6 +77,126 @@
         [assessTView reloadData];
         [assessTView footerEndRefreshing];
     }];
+}
+
+//商品图片集
+-(void)goodsimglistshow
+{
+    NSMutableDictionary * goodsimgdic = [NSMutableDictionary dictionaryWithCapacity:5];
+    goodsimgdic=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getgoodsimglist",domainser] postDatas:[NSString stringWithFormat:@"gid=%@&name=sys_project_goods",[gdsdetail objectForKey:@"id"]]];
+    imglist=[goodsimgdic objectForKey:@"datas"];
+    NSInteger count=[imglist count];
+    for (int i=0; i<count; i++) {
+        //创建图片
+        UIImageView *img=[[UIImageView alloc]initWithFrame:CGRectMake(i*122, 0, 122, 120)];
+        
+        //实例化
+        NSString *url=[NSString stringWithFormat:@"%@",[[imglist objectAtIndex:i] objectForKey:@"goodsImg"]];
+        NSURL *imgUrl=[NSURL URLWithString:url];
+        if (hasCachedImage(imgUrl)) {
+            [img setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+        }else{
+            NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",img,@"imageView",nil];
+            [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+        }
+        
+        img.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPhotoBrowser)];
+        [img addGestureRecognizer:singleTap];
+        
+        [goodsimageSView addSubview:img];
+    }
+    
+    goodsimageSView.contentSize=CGSizeMake(122*count, 122);
+    goodsimageSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
+    goodsimageSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
+    goodsimageSView.scrollEnabled=YES;
+}
+
+//展示图片集
+-(void)showPhotoBrowser
+{
+    NSMutableArray *photos = [[NSMutableArray alloc] init];
+    //NSMutableArray *thumbs = [[NSMutableArray alloc] init];
+    //MWPhoto *photot;
+    
+    NSArray  * array= imglist;
+    int count = [array count];
+    //遍历这个数组
+    for (int i = 0; i < count; i++) {
+        //NSLog(@"普通的遍历：i = %d 时的数组对象为: %@",i,[array objectAtIndex: i]);
+        NSString * patht=[NSString stringWithFormat:@"%@",[[array objectAtIndex:i] objectForKey:@"goodsImg"]];
+        NSURL *imgUrl=[NSURL URLWithString:patht];
+        if (hasCachedImage(imgUrl)) {
+            [photos addObject:[MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]]];
+        }else
+        {
+            [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:patht]]];
+        }
+        
+        //[thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:patht]]];
+    }
+    
+    self.photos = photos;
+    //self.thumbs = thumbs;
+    
+    //    _selections = [NSMutableArray new];
+    //    for (int i = 0; i < photos.count; i++) {
+    //        [_selections addObject:[NSNumber numberWithBool:NO]];
+    //    }
+    
+    // Create browser
+	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    browser.displayActionButton = NO;
+    browser.displayNavArrows = YES;
+    browser.displaySelectionButtons = NO;
+    browser.alwaysShowControls = NO;
+    browser.zoomPhotosToFill = YES;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+    browser.wantsFullScreenLayout = YES;
+#endif
+    browser.enableGrid = NO;
+    browser.startOnGrid = NO;
+    browser.enableSwipeToDismiss = YES;
+    [browser setCurrentPhotoIndex:0];
+    [browser setWantsFullScreenLayout:NO];
+    
+    // Push
+    //[self presentViewController:browser animated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController pushViewController:browser animated:NO];
+    //[self presentPopupViewController:browser animated:YES completion:^(void) {
+    //    NSLog(@"popup view presented");
+    //}];
+    
+}
+
+#pragma mark - MWPhotoBrowserDelegate
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return _photos.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < _photos.count)
+        return [_photos objectAtIndex:index];
+    return nil;
+}
+
+//- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+//    if (index < _thumbs.count)
+//        return [_thumbs objectAtIndex:index];
+//    return nil;
+//}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+    //NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+}
+
+- (void)photoBrowserDidFinishModalPresentation:(MWPhotoBrowser *)photoBrowser {
+    // If we subscribe to this method we must dismiss the view controller ourselves
+    //NSLog(@"Did finish modal presentation");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //商品详情
@@ -129,6 +253,7 @@
     [list addObjectsFromArray:asslist];
 }
 
+//商品详情
 -(IBAction)detail:(id)sender
 {
     introductButton.backgroundColor=assessButton.backgroundColor=[UIColor darkGrayColor];

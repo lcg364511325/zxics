@@ -104,6 +104,13 @@
     NSInteger type=[[NSString stringWithFormat:@"%@",[addetail objectForKey:@"type"]]integerValue];
     NSString *name=[addetail objectForKey:@"name"];
     
+    if (oldtype==type) {
+        areadetail=oldareadetail;
+    }else
+    {
+        oldtype=type;
+    }
+    
     if (type==5) {
         coutryid=cid;
     }else if (type==6)
@@ -142,6 +149,7 @@
             ndTView.hidden=YES;
         }
     }
+    
 }
 
 //点击tableview以外的地方触发事件

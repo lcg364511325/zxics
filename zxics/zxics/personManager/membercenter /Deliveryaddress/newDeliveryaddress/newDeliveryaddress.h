@@ -16,6 +16,8 @@
     NSString *provinceid;
     NSString *cityid;
     NSString *districtid;
+    NSInteger oldtype;
+    NSString *oldareadetail;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *ndTView;

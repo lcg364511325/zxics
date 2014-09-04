@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface topupmoney : UIViewController
+{
+    SEL _result;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITextField *topupmoneyLabel;

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWPhotoBrowser.h"
 
-@interface goodsDetail : UIViewController
+@interface goodsDetail : UIViewController<MWPhotoBrowserDelegate>
 {
     NSMutableArray *list;
     NSInteger page;
+    NSArray *imglist;
 }
 
 @property(retain , nonatomic) NSDictionary * gdsdetail;//商品详情
@@ -36,5 +38,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *xiangqing;
 @property (weak, nonatomic) IBOutlet UILabel *xiangqingLabel;
 @property (weak, nonatomic) IBOutlet UITableView *assessTView;
+
+@property (nonatomic, strong) NSMutableArray *photos;
 
 @end

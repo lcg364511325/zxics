@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWPhotoBrowser.h"
 
-@interface rentorshellDetail : UIViewController
+@interface rentorshellDetail : UIViewController<MWPhotoBrowserDelegate>
+{
+    NSArray *imglist;
+}
 
 @property(retain , nonatomic) NSDictionary * rsd;//招商信息明细
 @property(retain , nonatomic) NSString * btntag;//出租出售
@@ -29,5 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *targetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fixtureLabel;
+
+@property (nonatomic, strong) NSMutableArray *photos;
 
 @end

@@ -314,6 +314,8 @@
 		2C493C7819B815AE001C4DD5 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C493C4A19B815AE001C4DD5 /* UIImageView+WebCache.m */; };
 		2C493C7919B815AE001C4DD5 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C493C4C19B815AE001C4DD5 /* MWPhotoBrowser.bundle */; };
 		2C493C7E19B83A72001C4DD5 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C493C7D19B83A72001C4DD5 /* close.png */; };
+		2C493C8419B85FDF001C4DD5 /* myhome.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C493C8219B85FDF001C4DD5 /* myhome.m */; };
+		2C493C8519B85FDF001C4DD5 /* myhome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C493C8319B85FDF001C4DD5 /* myhome.xib */; };
 		2C4AD4D719B5B6E400C28F06 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */; };
 		2C4AD4D819B5B6E400C28F06 /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */; };
 		2C4AD4DB19B5B6E400C28F06 /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AD4C119B5B6E400C28F06 /* AlixPayOrder.m */; };
@@ -886,6 +888,9 @@
 		2C493C4C19B815AE001C4DD5 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
 		2C493C4D19B815AE001C4DD5 /* MWPhotoBrowser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MWPhotoBrowser.xcodeproj; sourceTree = "<group>"; };
 		2C493C7D19B83A72001C4DD5 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		2C493C8119B85FDF001C4DD5 /* myhome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myhome.h; path = personManager/myhome/myhome.h; sourceTree = "<group>"; };
+		2C493C8219B85FDF001C4DD5 /* myhome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myhome.m; path = personManager/myhome/myhome.m; sourceTree = "<group>"; };
+		2C493C8319B85FDF001C4DD5 /* myhome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myhome.xib; path = personManager/myhome/myhome.xib; sourceTree = "<group>"; };
 		2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
 		2C4AD4BC19B5B6E400C28F06 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
 		2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
@@ -2082,6 +2087,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2C493C8019B85F87001C4DD5 /* myhome */ = {
+			isa = PBXGroup;
+			children = (
+				2C493C8119B85FDF001C4DD5 /* myhome.h */,
+				2C493C8219B85FDF001C4DD5 /* myhome.m */,
+				2C493C8319B85FDF001C4DD5 /* myhome.xib */,
+			);
+			name = myhome;
+			sourceTree = "<group>";
+		};
 		2C4AD4BA19B5B6E400C28F06 /* alipay */ = {
 			isa = PBXGroup;
 			children = (
@@ -2517,6 +2532,7 @@
 		2C5A2421199213EF003712D5 /* personManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C493C8019B85F87001C4DD5 /* myhome */,
 				2C54EC2819AD765C004D580C /* payfor */,
 				2C3AED7C19A5F5A100D981C3 /* personfootprint */,
 				2C1FE5FE1995C05B008DBB58 /* Vicecard */,
@@ -3188,6 +3204,7 @@
 				2C2E267E19A6CEC300083026 /* personfootprintCell.xib in Resources */,
 				2C3AED3719A57C7D00D981C3 /* login_gray.png in Resources */,
 				2C3AED5419A57C7D00D981C3 /* reply.png in Resources */,
+				2C493C8519B85FDF001C4DD5 /* myhome.xib in Resources */,
 				2C3AED2319A57C7D00D981C3 /* helplogo2.png in Resources */,
 				2C54049F199352CA003D2BBE /* personLogDetail.xib in Resources */,
 				2C4AD4D819B5B6E400C28F06 /* Alixpay.bundle in Resources */,
@@ -3458,6 +3475,7 @@
 				2C57571219945B4B00858A7F /* topupmoney.m in Sources */,
 				2C281101199855DF0072D08C /* consultCell.m in Sources */,
 				2C1FE65A1995C8AC008DBB58 /* fontindex.m in Sources */,
+				2C493C8419B85FDF001C4DD5 /* myhome.m in Sources */,
 				2C493C6B19B815AE001C4DD5 /* NSData+GIF.m in Sources */,
 				2C281139199872530072D08C /* rentorshellCell.m in Sources */,
 				2C493C6119B815AE001C4DD5 /* PSTCollectionViewItemKey.m in Sources */,

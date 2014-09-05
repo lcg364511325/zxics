@@ -107,7 +107,7 @@
         [goodsimageSView addSubview:img];
     }
     
-    goodsimageSView.contentSize=CGSizeMake(122*count, 122);
+    goodsimageSView.contentSize=CGSizeMake(122*count, 0);
     goodsimageSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     goodsimageSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     goodsimageSView.scrollEnabled=YES;

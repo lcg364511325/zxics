@@ -9,6 +9,7 @@
 #import "personIndex.h"
 #import "goodslist.h"
 #import "personfootprintlist.h"
+#import "myhome.h"
 
 @interface personIndex ()
 
@@ -112,6 +113,14 @@
     balancelist * _balancelist=[[balancelist alloc] init];
     
     [self.navigationController pushViewController:_balancelist animated:NO];
+}
+
+//我的家
+-(IBAction)myhome:(id)sender
+{
+    myhome * _myhome=[[myhome alloc] init];
+    
+    [self.navigationController pushViewController:_myhome animated:NO];
 }
 
 //会员中心页面跳转

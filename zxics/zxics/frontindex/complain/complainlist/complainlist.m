@@ -10,6 +10,7 @@
 #import "DataService.h"
 #import "AppDelegate.h"
 #import "Commons.h"
+#import "fontindex.h"
 
 @interface complainlist ()
 
@@ -67,7 +68,8 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    fontindex *_fontindex=[[fontindex alloc]init];
+    [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
 //初始化tableview数据

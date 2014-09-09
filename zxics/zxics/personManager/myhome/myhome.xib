@@ -25,7 +25,11 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="我的家" id="hKr-4Z-bxI">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="txU-Oa-ols"/>
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="txU-Oa-ols">
+                                <connections>
+                                    <action selector="goback:" destination="-1" id="Dkh-jm-KpY"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

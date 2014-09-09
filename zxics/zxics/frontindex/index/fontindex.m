@@ -11,7 +11,6 @@
 #import "goodslist.h"
 #import "DataService.h"
 #import "succourlist.h"
-#import "VisaIntroduce.h"
 
 @interface fontindex ()
 
@@ -38,6 +37,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
     
+    
     //设置scrollview属性
     _secondview.frame=CGRectMake(functionscroll.frame.size.width,               functionscroll.contentOffset.y, 320, 284);
     [functionscroll addSubview:_secondview];
@@ -58,19 +58,11 @@
         loginbutton.titleLabel.text=@"登录";
     }
     
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstapp"]){
-        
-        NSLog(@"第一次启动");
-        VisaIntroduce *sysmenu=[[VisaIntroduce alloc] init];
-        [self.navigationController pushViewController:sysmenu animated:NO];
-        
-    }else{
-        NSLog(@"已经不是第一次启动了");
-        NSString * firstin=[[NSUserDefaults standardUserDefaults] objectForKey:@"firstin"];
-        if([firstin isEqualToString:@"0"])
-        {
-            [self findVersion];
-        }
+    NSLog(@"已经不是第一次启动了");
+    NSString * firstin=[[NSUserDefaults standardUserDefaults] objectForKey:@"firstin"];
+    if([firstin isEqualToString:@"0"])
+    {
+        [self findVersion];
     }
 }
 

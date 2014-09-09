@@ -49,7 +49,7 @@
     //[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     //系统新安装未初始化
-    fontindex * lo = [[fontindex alloc] init];
+    showAD * lo = [[showAD alloc] init];
     //Index *lo = [[Index alloc] initWithNibName:@"Index" bundle:nil] ;
     
     //设置初始化值，判断是否第一次进入首页

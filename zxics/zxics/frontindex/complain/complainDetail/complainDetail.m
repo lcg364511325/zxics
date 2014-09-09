@@ -209,6 +209,7 @@
 -(void)assess
 {
     assess *_assess=[[assess alloc]init];
+    _assess.mid=[NSString stringWithFormat:@"%@",[complaininfo objectForKey:@"id"]];
     [self.navigationController pushViewController:_assess animated:NO];
 }
 

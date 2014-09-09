@@ -261,6 +261,14 @@
 		2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05EF199DF54000369A63 /* RadioGroup.m */; };
 		2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05F4199EFBAB00369A63 /* surveyDetail.m */; };
 		2C3C05F7199EFBAB00369A63 /* surveyDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */; };
+		2C41688419BE9B49001A28A9 /* showAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41688219BE9B49001A28A9 /* showAD.m */; };
+		2C41688519BE9B49001A28A9 /* showAD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688319BE9B49001A28A9 /* showAD.xib */; };
+		2C41688C19BEABB2001A28A9 /* guidanceend.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688619BEABB2001A28A9 /* guidanceend.png */; };
+		2C41688D19BEABB2001A28A9 /* guidancemiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688719BEABB2001A28A9 /* guidancemiddle.png */; };
+		2C41688E19BEABB2001A28A9 /* guidancemr.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688819BEABB2001A28A9 /* guidancemr.png */; };
+		2C41688F19BEABB2001A28A9 /* guidancestart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688919BEABB2001A28A9 /* guidancestart.png */; };
+		2C41689019BEABB2001A28A9 /* igenerate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688A19BEABB2001A28A9 /* igenerate.png */; };
+		2C41689119BEABB2001A28A9 /* ihome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688B19BEABB2001A28A9 /* ihome.png */; };
 		2C41DE9419B9467E00623483 /* myelectric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9219B9467E00623483 /* myelectric.m */; };
 		2C41DE9519B9467E00623483 /* myelectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DE9319B9467E00623483 /* myelectric.xib */; };
 		2C41DE9F19B9495D00623483 /* myelectricCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9D19B9495D00623483 /* myelectricCell.m */; };
@@ -799,6 +807,15 @@
 		2C3C05F3199EFBAB00369A63 /* surveyDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = surveyDetail.h; path = surveyDetail/surveyDetail.h; sourceTree = "<group>"; };
 		2C3C05F4199EFBAB00369A63 /* surveyDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = surveyDetail.m; path = surveyDetail/surveyDetail.m; sourceTree = "<group>"; };
 		2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = surveyDetail.xib; path = surveyDetail/surveyDetail.xib; sourceTree = "<group>"; };
+		2C41688119BE9B49001A28A9 /* showAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = showAD.h; path = AD/showAD.h; sourceTree = "<group>"; };
+		2C41688219BE9B49001A28A9 /* showAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = showAD.m; path = AD/showAD.m; sourceTree = "<group>"; };
+		2C41688319BE9B49001A28A9 /* showAD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = showAD.xib; path = AD/showAD.xib; sourceTree = "<group>"; };
+		2C41688619BEABB2001A28A9 /* guidanceend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidanceend.png; sourceTree = "<group>"; };
+		2C41688719BEABB2001A28A9 /* guidancemiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidancemiddle.png; sourceTree = "<group>"; };
+		2C41688819BEABB2001A28A9 /* guidancemr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidancemr.png; sourceTree = "<group>"; };
+		2C41688919BEABB2001A28A9 /* guidancestart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidancestart.png; sourceTree = "<group>"; };
+		2C41688A19BEABB2001A28A9 /* igenerate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = igenerate.png; sourceTree = "<group>"; };
+		2C41688B19BEABB2001A28A9 /* ihome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ihome.png; sourceTree = "<group>"; };
 		2C41DE9119B9467E00623483 /* myelectric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myelectric.h; path = personManager/myelectric/myelectric.h; sourceTree = "<group>"; };
 		2C41DE9219B9467E00623483 /* myelectric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myelectric.m; path = personManager/myelectric/myelectric.m; sourceTree = "<group>"; };
 		2C41DE9319B9467E00623483 /* myelectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myelectric.xib; path = personManager/myelectric/myelectric.xib; sourceTree = "<group>"; };
@@ -1914,6 +1931,16 @@
 			name = surveyDetail;
 			sourceTree = "<group>";
 		};
+		2C41687F19BE9ADA001A28A9 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				2C41688119BE9B49001A28A9 /* showAD.h */,
+				2C41688219BE9B49001A28A9 /* showAD.m */,
+				2C41688319BE9B49001A28A9 /* showAD.xib */,
+			);
+			name = AD;
+			sourceTree = "<group>";
+		};
 		2C41DE8F19B9462500623483 /* myelectric */ = {
 			isa = PBXGroup;
 			children = (
@@ -2817,6 +2844,7 @@
 		7CE63129198C7A8100730C64 /* zxics */ = {
 			isa = PBXGroup;
 			children = (
+				2C41687F19BE9ADA001A28A9 /* AD */,
 				2C3AED7619A58BC400D981C3 /* regedit */,
 				2C2811611998A91F0072D08C /* mall */,
 				2C28115419989F320072D08C /* serviceDirectory */,
@@ -2962,6 +2990,12 @@
 		7CE63183198C7C2A00730C64 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2C41688619BEABB2001A28A9 /* guidanceend.png */,
+				2C41688719BEABB2001A28A9 /* guidancemiddle.png */,
+				2C41688819BEABB2001A28A9 /* guidancemr.png */,
+				2C41688919BEABB2001A28A9 /* guidancestart.png */,
+				2C41688A19BEABB2001A28A9 /* igenerate.png */,
+				2C41688B19BEABB2001A28A9 /* ihome.png */,
 				2C493C7D19B83A72001C4DD5 /* close.png */,
 				2C3AEC5719A57C7C00D981C3 /* 0001_bg.png */,
 				2C3AEC5819A57C7C00D981C3 /* about_us.png */,
@@ -3232,6 +3266,7 @@
 				2C3AECFA19A57C7D00D981C3 /* btn_add_community.png in Resources */,
 				2C3AED6C19A57C7D00D981C3 /* tab_profile_disabled.png in Resources */,
 				2CE4571619B9AABC001AEA90 /* succourlist.xib in Resources */,
+				2C41688E19BEABB2001A28A9 /* guidancemr.png in Resources */,
 				2C281140199895650072D08C /* rentorshellDetail.xib in Resources */,
 				2C3AED6619A57C7D00D981C3 /* sure.png in Resources */,
 				2C3AECEA19A57C7D00D981C3 /* activity.png in Resources */,
@@ -3304,6 +3339,7 @@
 				2C3AED1C19A57C7D00D981C3 /* feature_point_cur.png in Resources */,
 				2C3AED6319A57C7D00D981C3 /* signal.png in Resources */,
 				2C3AED2B19A57C7D00D981C3 /* ic_more_item_pressed.9.png in Resources */,
+				2C41688519BE9B49001A28A9 /* showAD.xib in Resources */,
 				2C3AED0F19A57C7D00D981C3 /* chat_footer_bg.png in Resources */,
 				2C28114D199899290072D08C /* prowanted.xib in Resources */,
 				2C5404941993506A003D2BBE /* personlogCellTableViewCell.xib in Resources */,
@@ -3360,6 +3396,7 @@
 				2C57571F1994657900858A7F /* myorder.xib in Resources */,
 				2C3AED6A19A57C7D00D981C3 /* t_man.png in Resources */,
 				2CFEAA59199AF7BA00FCB5C1 /* filecenterDetail.xib in Resources */,
+				2C41688D19BEABB2001A28A9 /* guidancemiddle.png in Resources */,
 				2C281147199898B30072D08C /* prowantedlist.xib in Resources */,
 				2C3AED6819A57C7D00D981C3 /* t_home.png in Resources */,
 				2C3AECF619A57C7D00D981C3 /* bg_gray.png in Resources */,
@@ -3380,6 +3417,7 @@
 				2C4AD4D819B5B6E400C28F06 /* Alixpay.bundle in Resources */,
 				2C3AED5B19A57C7D00D981C3 /* setting2.png in Resources */,
 				2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */,
+				2C41688F19BEABB2001A28A9 /* guidancestart.png in Resources */,
 				2C281134199871560072D08C /* rentorshelllist.xib in Resources */,
 				2C3AED6419A57C7D00D981C3 /* steward.png in Resources */,
 				2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */,
@@ -3438,6 +3476,7 @@
 				2C2810EF199850EF0072D08C /* download.xib in Resources */,
 				2C3AED1719A57C7D00D981C3 /* dis_about_sina.png in Resources */,
 				2C3AECFE19A57C7D00D981C3 /* btn_driving_record1.png in Resources */,
+				2C41688C19BEABB2001A28A9 /* guidanceend.png in Resources */,
 				2C3AED4719A57C7D00D981C3 /* no_back.png in Resources */,
 				2CE4572219B9B5DF001AEA90 /* succourDetail.xib in Resources */,
 				2C5757321994B17500858A7F /* myappraise.xib in Resources */,
@@ -3446,6 +3485,7 @@
 				2C1FE6571995C8AC008DBB58 /* cpdetali.xib in Resources */,
 				2C3AECF719A57C7D00D981C3 /* bg_retweet_frame.9.png in Resources */,
 				2C3AED1019A57C7D00D981C3 /* chatfrom_bg_normal.9.png in Resources */,
+				2C41689119BEABB2001A28A9 /* ihome.png in Resources */,
 				2C57573D1994B63900858A7F /* myappraiseCell.xib in Resources */,
 				2C1FE6651995C8AC008DBB58 /* SpecialPeople.xib in Resources */,
 				2C3AED0A19A57C7D00D981C3 /* button_photonews.png in Resources */,
@@ -3472,6 +3512,7 @@
 				2C1FE6671995C8AC008DBB58 /* SpecialPeopleDetail.xib in Resources */,
 				2C3AED3919A57C7D00D981C3 /* login.png in Resources */,
 				2C41DEA619B9544700623483 /* myelectricDetail.xib in Resources */,
+				2C41689019BEABB2001A28A9 /* igenerate.png in Resources */,
 				7CE63199198C7C2A00730C64 /* CHANGELOG.md in Resources */,
 				2C2811601998A78B0072D08C /* aboutus.xib in Resources */,
 				2C2810FC1998547C0072D08C /* consultlist.xib in Resources */,
@@ -3521,6 +3562,7 @@
 				2C5404C119936DE7003D2BBE /* Paymentfunction.m in Sources */,
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
 				2C42F680198F785B004F2A38 /* UIScrollView+MJRefresh.m in Sources */,
+				2C41688419BE9B49001A28A9 /* showAD.m in Sources */,
 				2C493C7319B815AE001C4DD5 /* SDWebImagePrefetcher.m in Sources */,
 				2C2811701998AE370072D08C /* goodslistCell.m in Sources */,
 				2C493C6E19B815AE001C4DD5 /* SDWebImageCompat.m in Sources */,

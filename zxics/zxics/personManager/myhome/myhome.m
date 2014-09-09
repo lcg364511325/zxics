@@ -7,6 +7,7 @@
 //
 
 #import "myhome.h"
+#import "personIndex.h"
 
 @interface myhome ()
 
@@ -34,8 +35,15 @@
     //设置web view
     NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@api/homemap",domainser]]];
     
+    myhomeWView.scrollView.bounces=NO;
     [myhomeWView setScalesPageToFit:YES];
     [myhomeWView loadRequest:request];
+}
+
+-(IBAction)goback:(id)sender
+{
+    personIndex *_personIndex=[[personIndex alloc]init];
+    [self.navigationController pushViewController:_personIndex animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

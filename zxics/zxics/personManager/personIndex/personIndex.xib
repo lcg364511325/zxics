@@ -228,7 +228,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWd-CQ-0yP">
                     <rect key="frame" x="29" y="381" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button" image="house.png">
+                    <state key="normal" title="Button" image="ihome.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -239,7 +239,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSh-NL-EN1">
                     <rect key="frame" x="135" y="381" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button" image="house.png">
+                    <state key="normal" title="Button" image="igenerate.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -357,6 +357,8 @@
         <image name="card.png" width="80" height="80"/>
         <image name="guide.png" width="37" height="41"/>
         <image name="house.png" width="80" height="80"/>
+        <image name="igenerate.png" width="80" height="80"/>
+        <image name="ihome.png" width="80" height="80"/>
         <image name="member_center.png" width="80" height="80"/>
         <image name="my_log.png" width="80" height="80"/>
         <image name="settings_account.png" width="34" height="36"/>

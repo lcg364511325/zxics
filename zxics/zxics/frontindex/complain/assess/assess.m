@@ -7,6 +7,8 @@
 //
 
 #import "assess.h"
+#import "DataService.h"
+#import "complainlist.h"
 
 @interface assess ()
 
@@ -14,7 +16,7 @@
 
 @implementation assess
 
-@synthesize assessTextView;
+@synthesize mid;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +33,8 @@
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
     
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
+    
     //创建textview
     [self setTextView];
 }
@@ -38,7 +42,7 @@
 //创建textview
 -(void)setTextView
 {
-    HPGrowingTextView *textView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(20, 136, 280, 30)];
+    textView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(20, 136, 280, 30)];
     textView.isScrollable = NO;
     textView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
     
@@ -61,6 +65,42 @@
 -(IBAction)goback:(id)sender
 {
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+
+//获得评分
+-(IBAction)setassessvalue:(id)sender
+{
+    UIButton *btn=(UIButton *)sender;
+    assessvalue=[NSString stringWithFormat:@"%d",btn.tag];
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        beforebtn.backgroundColor=[UIColor darkGrayColor];
+    }
+    btn.backgroundColor=[UIColor redColor];
+}
+
+
+//提交评价
+-(IBAction)submitassess:(id)sender
+{
+    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/ComplaintEvaluateInfo",domainser] postDatas:[NSString stringWithFormat:@"id=%@&text=%@&rank=%@",mid,textView.text,assessvalue]];
+    NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+    
+    NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alter show];
+    if ([status isEqualToString:@"1"]) {
+        complainlist *_complainlist=[[complainlist alloc]init];
+        [self.navigationController pushViewController:_complainlist animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning

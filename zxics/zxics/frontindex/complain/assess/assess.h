@@ -10,7 +10,12 @@
 #import "HPGrowingTextView.h"
 
 @interface assess : UIViewController<HPGrowingTextViewDelegate>
+{
+    NSString *assessvalue;
+    NSMutableArray *btnlist;
+    HPGrowingTextView *textView;
+}
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
-@property (weak, nonatomic) IBOutlet UITextView *assessTextView;
+@property(retain , nonatomic) NSString * mid;//投诉信息id
 @end

@@ -6,6 +6,7 @@
 //
 
 #import "VisaIntroduce.h"
+#import "fontindex.h"
 
 @interface VisaIntroduce ()
 
@@ -51,21 +52,21 @@
 
 - (void)showIntroWithCrossDissolve {
     EAIntroPage *page1 = [EAIntroPage page];
-    page1.title = @"家好123";
-    page1.desc = @"家好月圆，服务尽情，贴心为你";
-    page1.bgImage = [UIImage imageNamed:@"u2"];
+//    page1.title = @"家好123";
+//    page1.desc = @"家好月圆，服务尽情，贴心为你";
+    page1.bgImage = [UIImage imageNamed:@"guidancestart"];
     page1.titleImage = [self OriginImage:[UIImage imageNamed:@"u4"] scaleToSize:CGSizeMake(100.0, 100.0)];
     
     EAIntroPage *page2 = [EAIntroPage page];
-    page2.title = @"家好123";
-    page2.desc = @"家好月圆，服务尽情，贴心为你";
-    page2.bgImage = [UIImage imageNamed:@"u2"];
+//    page2.title = @"家好123";
+//    page2.desc = @"家好月圆，服务尽情，贴心为你";
+    page2.bgImage = [UIImage imageNamed:@"guidancemiddle"];
     page2.titleImage = [self OriginImage:[UIImage imageNamed:@"u4"] scaleToSize:CGSizeMake(100.0, 100.0)];
     
     EAIntroPage *page3 = [EAIntroPage page];
-    page3.title = @"家好123";
-    page3.desc = @"家好月圆，服务尽情，贴心为你";
-    page3.bgImage = [UIImage imageNamed:@"u2"];
+//    page3.title = @"家好123";
+//    page3.desc = @"家好月圆，服务尽情，贴心为你";
+    page3.bgImage = [UIImage imageNamed:@"guidanceend"];
     page3.titleImage = [self OriginImage:[UIImage imageNamed:@"u4"] scaleToSize:CGSizeMake(100.0, 100.0)];
     
     EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds andPages:@[page1,page2,page3]];
@@ -226,9 +227,9 @@
 
 - (void)introDidFinish {
     NSLog(@"Intro callback");
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstset"];
-    [self.navigationController.navigationBar setHidden:NO];
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    fontindex *_fontindex=[[fontindex alloc]init];
+    [self.navigationController pushViewController:_fontindex animated:NO];
 }
 
 @end

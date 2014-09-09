@@ -12,6 +12,7 @@
 #import "login.h"
 #import "fontindex.h"
 #import "ASIFormDataRequest.h"
+#import "showAD.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

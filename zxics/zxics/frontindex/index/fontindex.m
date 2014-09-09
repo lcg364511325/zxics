@@ -10,6 +10,8 @@
 #import "download.h"
 #import "goodslist.h"
 #import "DataService.h"
+#import "succourlist.h"
+#import "VisaIntroduce.h"
 
 @interface fontindex ()
 
@@ -56,13 +58,20 @@
         loginbutton.titleLabel.text=@"登录";
     }
     
-    NSString * firstin=[[NSUserDefaults standardUserDefaults] objectForKey:@"firstin"];
-    if([firstin isEqualToString:@"0"])
-    {
-        [self findVersion];
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstapp"]){
+        
+        NSLog(@"第一次启动");
+        VisaIntroduce *sysmenu=[[VisaIntroduce alloc] init];
+        [self.navigationController pushViewController:sysmenu animated:NO];
+        
+    }else{
+        NSLog(@"已经不是第一次启动了");
+        NSString * firstin=[[NSUserDefaults standardUserDefaults] objectForKey:@"firstin"];
+        if([firstin isEqualToString:@"0"])
+        {
+            [self findVersion];
+        }
     }
-    
-    
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -156,6 +165,14 @@
     }
 }
 
+//招商信息页面跳转
+-(IBAction)Merchantslist:(id)sender
+{
+    Merchantslist * _Merchantslist=[[Merchantslist alloc] init];
+    
+    [self.navigationController pushViewController:_Merchantslist animated:NO];
+}
+
 //在线调查页面跳转
 -(IBAction)surveylist:(id)sender
 {
@@ -189,12 +206,19 @@
     }
 }
 
-//招商信息页面跳转
--(IBAction)Merchantslist:(id)sender
+//救助申请页面跳转
+-(IBAction)succourlist:(id)sender
 {
-    Merchantslist * _Merchantslist=[[Merchantslist alloc] init];
-    
-    [self.navigationController pushViewController:_Merchantslist animated:NO];
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        succourlist * _succourlist=[[succourlist alloc] init];
+        
+        [self.navigationController pushViewController:_succourlist animated:NO];
+    }else{
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 //常见问题页面跳转

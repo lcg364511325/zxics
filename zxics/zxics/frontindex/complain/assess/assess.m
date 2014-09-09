@@ -7,8 +7,6 @@
 //
 
 #import "assess.h"
-#import "RadioBox.h"
-#import "RadioGroup.h"
 
 @interface assess ()
 
@@ -35,54 +33,6 @@
     
     //创建textview
     [self setTextView];
-    
-    //创建Radiao
-    [self setRadiao];
-}
-
-//创建Radiao
--(void)setRadiao
-{
-    UILabel *lable=[[UILabel alloc]initWithFrame:CGRectMake(20, 70, 280, 20)];
-    lable.font=[UIFont systemFontOfSize:14.0f];
-    [lable setTintColor:[UIColor blackColor]];
-    lable.text=@"请选择评分";
-     
-    
-    //代码实现
-    RadioBox *radiobox1 = [[RadioBox alloc] initWithFrame:CGRectMake(0, 0, 40, 10)];
-    RadioBox *radiobox2 = [[RadioBox alloc] initWithFrame:CGRectMake(60, 0, 40, 10)];
-    RadioBox *radiobox3 = [[RadioBox alloc] initWithFrame:CGRectMake(120, 0, 40, 10)];
-    RadioBox *radiobox4 = [[RadioBox alloc] initWithFrame:CGRectMake(180, 0, 40, 10)];
-    RadioBox *radiobox5 = [[RadioBox alloc] initWithFrame:CGRectMake(240, 0, 40, 10)];
-    
-    radiobox1.text = @"1";
-    radiobox2.text = @"2";
-    radiobox3.text = @"3";
-    radiobox4.text = @"4";
-    radiobox5.text = @"5";
-    
-    radiobox1.value = 1;
-    radiobox2.value = 2;
-    radiobox3.value = 3;
-    radiobox4.value = 4;
-    radiobox5.value = 5;
-    
-    NSArray *controls = [NSArray arrayWithObjects:radiobox1,radiobox2,radiobox3,radiobox4,radiobox5, nil];
-    
-    RadioGroup * radioGroup1 = [[RadioGroup alloc] initWithFrame:CGRectMake(20, 100, 320, 30) WithControl:controls];
-    
-    [radioGroup1 addSubview:radiobox1];
-    [radioGroup1 addSubview:radiobox2];
-    [radioGroup1 addSubview:radiobox3];
-    [radioGroup1 addSubview:radiobox4];
-    [radioGroup1 addSubview:radiobox5];
-    
-    radioGroup1.textFont = [UIFont systemFontOfSize:14.0];
-    radioGroup1.selectValue = 5;
-    
-    [self.view addSubview:lable];
-    [self.view addSubview:radioGroup1];
 }
 
 //创建textview

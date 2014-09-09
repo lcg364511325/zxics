@@ -124,6 +124,9 @@
                             <state key="normal" title="救助申请" image="succour.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="succourlist:" destination="-1" eventType="touchDown" id="H1f-1l-S9u"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gOH-6U-zbn">
                             <rect key="frame" x="177" y="90" width="50" height="50"/>

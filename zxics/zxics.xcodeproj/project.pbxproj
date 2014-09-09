@@ -261,6 +261,14 @@
 		2C3C05F1199DF54000369A63 /* RadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05EF199DF54000369A63 /* RadioGroup.m */; };
 		2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05F4199EFBAB00369A63 /* surveyDetail.m */; };
 		2C3C05F7199EFBAB00369A63 /* surveyDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */; };
+		2C41DE9419B9467E00623483 /* myelectric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9219B9467E00623483 /* myelectric.m */; };
+		2C41DE9519B9467E00623483 /* myelectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DE9319B9467E00623483 /* myelectric.xib */; };
+		2C41DE9F19B9495D00623483 /* myelectricCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9D19B9495D00623483 /* myelectricCell.m */; };
+		2C41DEA019B9495D00623483 /* myelectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DE9E19B9495D00623483 /* myelectricCell.xib */; };
+		2C41DEA519B9544700623483 /* myelectricDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DEA319B9544700623483 /* myelectricDetail.m */; };
+		2C41DEA619B9544700623483 /* myelectricDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DEA419B9544700623483 /* myelectricDetail.xib */; };
+		2C41DEAC19B9918F00623483 /* addelectric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DEAA19B9918F00623483 /* addelectric.m */; };
+		2C41DEAD19B9918F00623483 /* addelectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DEAB19B9918F00623483 /* addelectric.xib */; };
 		2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F66A198F785B004F2A38 /* MJRefresh.bundle */; };
 		2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66D198F785B004F2A38 /* MJRefreshBaseView.m */; };
 		2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66F198F785B004F2A38 /* MJRefreshConst.m */; };
@@ -271,6 +279,11 @@
 		2C42F681198F785B004F2A38 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F679198F785B004F2A38 /* UIView+Extension.m */; };
 		2C42F68D198F7A1F004F2A38 /* lifemdcellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */; };
 		2C42F68E198F7A1F004F2A38 /* lifemdcellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */; };
+		2C435B2319BAAAE600364164 /* succouradd.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C435B2119BAAAE600364164 /* succouradd.m */; };
+		2C435B2419BAAAE600364164 /* succouradd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C435B2219BAAAE600364164 /* succouradd.xib */; };
+		2C435B2819BABA1E00364164 /* VisaIntroduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C435B2719BABA1E00364164 /* VisaIntroduce.m */; };
+		2C435B2E19BABB2100364164 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C435B2B19BABB2100364164 /* EAIntroPage.m */; };
+		2C435B2F19BABB2100364164 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C435B2D19BABB2100364164 /* EAIntroView.m */; };
 		2C493C5019B815AE001C4DD5 /* MWCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C493BF119B815AD001C4DD5 /* MWCaptionView.m */; };
 		2C493C5119B815AE001C4DD5 /* MWGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C493BF419B815AD001C4DD5 /* MWGridCell.m */; };
 		2C493C5219B815AE001C4DD5 /* MWGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C493BF619B815AD001C4DD5 /* MWGridViewController.m */; };
@@ -402,6 +415,12 @@
 		2C5A242D19922201003712D5 /* personInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242B19922201003712D5 /* personInfo.xib */; };
 		2C67794C19B418C6003A8D33 /* updatepassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C67794A19B418C6003A8D33 /* updatepassword.m */; };
 		2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C67794B19B418C6003A8D33 /* updatepassword.xib */; };
+		2CE4571519B9AABC001AEA90 /* succourlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571319B9AABC001AEA90 /* succourlist.m */; };
+		2CE4571619B9AABC001AEA90 /* succourlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4571419B9AABC001AEA90 /* succourlist.xib */; };
+		2CE4571B19B9AB54001AEA90 /* succourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571919B9AB54001AEA90 /* succourCell.m */; };
+		2CE4571C19B9AB54001AEA90 /* succourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4571A19B9AB54001AEA90 /* succourCell.xib */; };
+		2CE4572119B9B5DF001AEA90 /* succourDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571F19B9B5DF001AEA90 /* succourDetail.m */; };
+		2CE4572219B9B5DF001AEA90 /* succourDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4572019B9B5DF001AEA90 /* succourDetail.xib */; };
 		2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */; };
 		2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */; };
 		2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */; };
@@ -780,6 +799,18 @@
 		2C3C05F3199EFBAB00369A63 /* surveyDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = surveyDetail.h; path = surveyDetail/surveyDetail.h; sourceTree = "<group>"; };
 		2C3C05F4199EFBAB00369A63 /* surveyDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = surveyDetail.m; path = surveyDetail/surveyDetail.m; sourceTree = "<group>"; };
 		2C3C05F5199EFBAB00369A63 /* surveyDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = surveyDetail.xib; path = surveyDetail/surveyDetail.xib; sourceTree = "<group>"; };
+		2C41DE9119B9467E00623483 /* myelectric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myelectric.h; path = personManager/myelectric/myelectric.h; sourceTree = "<group>"; };
+		2C41DE9219B9467E00623483 /* myelectric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myelectric.m; path = personManager/myelectric/myelectric.m; sourceTree = "<group>"; };
+		2C41DE9319B9467E00623483 /* myelectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myelectric.xib; path = personManager/myelectric/myelectric.xib; sourceTree = "<group>"; };
+		2C41DE9C19B9495D00623483 /* myelectricCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myelectricCell.h; path = Cell/myelectricCell/myelectricCell.h; sourceTree = "<group>"; };
+		2C41DE9D19B9495D00623483 /* myelectricCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myelectricCell.m; path = Cell/myelectricCell/myelectricCell.m; sourceTree = "<group>"; };
+		2C41DE9E19B9495D00623483 /* myelectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myelectricCell.xib; path = Cell/myelectricCell/myelectricCell.xib; sourceTree = "<group>"; };
+		2C41DEA219B9544700623483 /* myelectricDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myelectricDetail.h; path = personManager/myelectric/myelectricDetail/myelectricDetail.h; sourceTree = "<group>"; };
+		2C41DEA319B9544700623483 /* myelectricDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myelectricDetail.m; path = personManager/myelectric/myelectricDetail/myelectricDetail.m; sourceTree = "<group>"; };
+		2C41DEA419B9544700623483 /* myelectricDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myelectricDetail.xib; path = personManager/myelectric/myelectricDetail/myelectricDetail.xib; sourceTree = "<group>"; };
+		2C41DEA919B9918F00623483 /* addelectric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addelectric.h; path = personManager/myelectric/addelectric/addelectric.h; sourceTree = "<group>"; };
+		2C41DEAA19B9918F00623483 /* addelectric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addelectric.m; path = personManager/myelectric/addelectric/addelectric.m; sourceTree = "<group>"; };
+		2C41DEAB19B9918F00623483 /* addelectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = addelectric.xib; path = personManager/myelectric/addelectric/addelectric.xib; sourceTree = "<group>"; };
 		2C42F66A198F785B004F2A38 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		2C42F66B198F785B004F2A38 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		2C42F66C198F785B004F2A38 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -799,6 +830,15 @@
 		2C42F68A198F7A1F004F2A38 /* lifemdcellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lifemdcellTableViewCell.h; path = Cell/lifemdcell/lifemdcellTableViewCell.h; sourceTree = "<group>"; };
 		2C42F68B198F7A1F004F2A38 /* lifemdcellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lifemdcellTableViewCell.m; path = Cell/lifemdcell/lifemdcellTableViewCell.m; sourceTree = "<group>"; };
 		2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = lifemdcellTableViewCell.xib; path = Cell/lifemdcell/lifemdcellTableViewCell.xib; sourceTree = "<group>"; };
+		2C435B2019BAAAE600364164 /* succouradd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succouradd.h; path = frontindex/succourwanted/succouradd/succouradd.h; sourceTree = "<group>"; };
+		2C435B2119BAAAE600364164 /* succouradd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succouradd.m; path = frontindex/succourwanted/succouradd/succouradd.m; sourceTree = "<group>"; };
+		2C435B2219BAAAE600364164 /* succouradd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succouradd.xib; path = frontindex/succourwanted/succouradd/succouradd.xib; sourceTree = "<group>"; };
+		2C435B2619BABA1E00364164 /* VisaIntroduce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisaIntroduce.h; sourceTree = "<group>"; };
+		2C435B2719BABA1E00364164 /* VisaIntroduce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisaIntroduce.m; sourceTree = "<group>"; };
+		2C435B2A19BABB2100364164 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
+		2C435B2B19BABB2100364164 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
+		2C435B2C19BABB2100364164 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
+		2C435B2D19BABB2100364164 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
 		2C493BF019B815AD001C4DD5 /* MWCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCaptionView.h; sourceTree = "<group>"; };
 		2C493BF119B815AD001C4DD5 /* MWCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCaptionView.m; sourceTree = "<group>"; };
 		2C493BF219B815AD001C4DD5 /* MWCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommon.h; sourceTree = "<group>"; };
@@ -1027,6 +1067,15 @@
 		2C67794919B418C6003A8D33 /* updatepassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = updatepassword.h; path = personManager/personInfo/updatepassword/updatepassword.h; sourceTree = "<group>"; };
 		2C67794A19B418C6003A8D33 /* updatepassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = updatepassword.m; path = personManager/personInfo/updatepassword/updatepassword.m; sourceTree = "<group>"; };
 		2C67794B19B418C6003A8D33 /* updatepassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = updatepassword.xib; path = personManager/personInfo/updatepassword/updatepassword.xib; sourceTree = "<group>"; };
+		2CE4571219B9AABC001AEA90 /* succourlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succourlist.h; path = frontindex/succourwanted/succourlist/succourlist.h; sourceTree = "<group>"; };
+		2CE4571319B9AABC001AEA90 /* succourlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succourlist.m; path = frontindex/succourwanted/succourlist/succourlist.m; sourceTree = "<group>"; };
+		2CE4571419B9AABC001AEA90 /* succourlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succourlist.xib; path = frontindex/succourwanted/succourlist/succourlist.xib; sourceTree = "<group>"; };
+		2CE4571819B9AB54001AEA90 /* succourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succourCell.h; path = Cell/succourCell/succourCell.h; sourceTree = "<group>"; };
+		2CE4571919B9AB54001AEA90 /* succourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succourCell.m; path = Cell/succourCell/succourCell.m; sourceTree = "<group>"; };
+		2CE4571A19B9AB54001AEA90 /* succourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succourCell.xib; path = Cell/succourCell/succourCell.xib; sourceTree = "<group>"; };
+		2CE4571E19B9B5DF001AEA90 /* succourDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succourDetail.h; path = frontindex/succourwanted/succourDetail/succourDetail.h; sourceTree = "<group>"; };
+		2CE4571F19B9B5DF001AEA90 /* succourDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succourDetail.m; path = frontindex/succourwanted/succourDetail/succourDetail.m; sourceTree = "<group>"; };
+		2CE4572019B9B5DF001AEA90 /* succourDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succourDetail.xib; path = frontindex/succourwanted/succourDetail/succourDetail.xib; sourceTree = "<group>"; };
 		2CFEAA50199AF5CC00FCB5C1 /* filecenterlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterlist.h; path = filecenter/filecenterlist/filecenterlist.h; sourceTree = "<group>"; };
 		2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterlist.m; path = filecenter/filecenterlist/filecenterlist.m; sourceTree = "<group>"; };
 		2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterlist.xib; path = filecenter/filecenterlist/filecenterlist.xib; sourceTree = "<group>"; };
@@ -1231,6 +1280,7 @@
 		2C1FE6121995C839008DBB58 /* frontindex */ = {
 			isa = PBXGroup;
 			children = (
+				2CE4570F19B9AA82001AEA90 /* succourwanted */,
 				2C2811411998982E0072D08C /* prowanted */,
 				2C28112E199870E60072D08C /* rentorshell */,
 				2C28112219986A510072D08C /* questions */,
@@ -1864,6 +1914,48 @@
 			name = surveyDetail;
 			sourceTree = "<group>";
 		};
+		2C41DE8F19B9462500623483 /* myelectric */ = {
+			isa = PBXGroup;
+			children = (
+				2C41DEA819B9916B00623483 /* addelectric */,
+				2C41DEA119B9541C00623483 /* myelectricDetail */,
+				2C41DE9119B9467E00623483 /* myelectric.h */,
+				2C41DE9219B9467E00623483 /* myelectric.m */,
+				2C41DE9319B9467E00623483 /* myelectric.xib */,
+			);
+			name = myelectric;
+			sourceTree = "<group>";
+		};
+		2C41DE9619B946BB00623483 /* myelectricCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C41DE9C19B9495D00623483 /* myelectricCell.h */,
+				2C41DE9D19B9495D00623483 /* myelectricCell.m */,
+				2C41DE9E19B9495D00623483 /* myelectricCell.xib */,
+			);
+			name = myelectricCell;
+			sourceTree = "<group>";
+		};
+		2C41DEA119B9541C00623483 /* myelectricDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C41DEA219B9544700623483 /* myelectricDetail.h */,
+				2C41DEA319B9544700623483 /* myelectricDetail.m */,
+				2C41DEA419B9544700623483 /* myelectricDetail.xib */,
+			);
+			name = myelectricDetail;
+			sourceTree = "<group>";
+		};
+		2C41DEA819B9916B00623483 /* addelectric */ = {
+			isa = PBXGroup;
+			children = (
+				2C41DEA919B9918F00623483 /* addelectric.h */,
+				2C41DEAA19B9918F00623483 /* addelectric.m */,
+				2C41DEAB19B9918F00623483 /* addelectric.xib */,
+			);
+			name = addelectric;
+			sourceTree = "<group>";
+		};
 		2C42F669198F785B004F2A38 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1891,6 +1983,8 @@
 		2C42F688198F79B4004F2A38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2CE4571719B9AB36001AEA90 /* succourCell */,
+				2C41DE9619B946BB00623483 /* myelectricCell */,
 				2C59A31F19AED02D0064CD04 /* goodsDetailCell */,
 				2C54EC2F19AD8846004D580C /* Deliveryaddress */,
 				2C2E267919A6CEA100083026 /* personfootprintCell */,
@@ -1926,6 +2020,36 @@
 				2C42F68C198F7A1F004F2A38 /* lifemdcellTableViewCell.xib */,
 			);
 			name = lifemdcell;
+			sourceTree = "<group>";
+		};
+		2C435B1E19BAAAC600364164 /* succouradd */ = {
+			isa = PBXGroup;
+			children = (
+				2C435B2019BAAAE600364164 /* succouradd.h */,
+				2C435B2119BAAAE600364164 /* succouradd.m */,
+				2C435B2219BAAAE600364164 /* succouradd.xib */,
+			);
+			name = succouradd;
+			sourceTree = "<group>";
+		};
+		2C435B2519BABA1E00364164 /* VisaIntroduce */ = {
+			isa = PBXGroup;
+			children = (
+				2C435B2619BABA1E00364164 /* VisaIntroduce.h */,
+				2C435B2719BABA1E00364164 /* VisaIntroduce.m */,
+			);
+			path = VisaIntroduce;
+			sourceTree = "<group>";
+		};
+		2C435B2919BABB2100364164 /* EAIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				2C435B2A19BABB2100364164 /* EAIntroPage.h */,
+				2C435B2B19BABB2100364164 /* EAIntroPage.m */,
+				2C435B2C19BABB2100364164 /* EAIntroView.h */,
+				2C435B2D19BABB2100364164 /* EAIntroView.m */,
+			);
+			path = EAIntroView;
 			sourceTree = "<group>";
 		};
 		2C493BEE19B815AD001C4DD5 /* MWPhotoBrowser */ = {
@@ -2532,6 +2656,7 @@
 		2C5A2421199213EF003712D5 /* personManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C41DE8F19B9462500623483 /* myelectric */,
 				2C493C8019B85F87001C4DD5 /* myhome */,
 				2C54EC2819AD765C004D580C /* payfor */,
 				2C3AED7C19A5F5A100D981C3 /* personfootprint */,
@@ -2577,6 +2702,46 @@
 				2C67794B19B418C6003A8D33 /* updatepassword.xib */,
 			);
 			name = updatepassword;
+			sourceTree = "<group>";
+		};
+		2CE4570F19B9AA82001AEA90 /* succourwanted */ = {
+			isa = PBXGroup;
+			children = (
+				2C435B1E19BAAAC600364164 /* succouradd */,
+				2CE4571D19B9B5B6001AEA90 /* succourDetail */,
+				2CE4571119B9AA8E001AEA90 /* succourlist */,
+			);
+			name = succourwanted;
+			sourceTree = "<group>";
+		};
+		2CE4571119B9AA8E001AEA90 /* succourlist */ = {
+			isa = PBXGroup;
+			children = (
+				2CE4571219B9AABC001AEA90 /* succourlist.h */,
+				2CE4571319B9AABC001AEA90 /* succourlist.m */,
+				2CE4571419B9AABC001AEA90 /* succourlist.xib */,
+			);
+			name = succourlist;
+			sourceTree = "<group>";
+		};
+		2CE4571719B9AB36001AEA90 /* succourCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CE4571819B9AB54001AEA90 /* succourCell.h */,
+				2CE4571919B9AB54001AEA90 /* succourCell.m */,
+				2CE4571A19B9AB54001AEA90 /* succourCell.xib */,
+			);
+			name = succourCell;
+			sourceTree = "<group>";
+		};
+		2CE4571D19B9B5B6001AEA90 /* succourDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2CE4571E19B9B5DF001AEA90 /* succourDetail.h */,
+				2CE4571F19B9B5DF001AEA90 /* succourDetail.m */,
+				2CE4572019B9B5DF001AEA90 /* succourDetail.xib */,
+			);
+			name = succourDetail;
 			sourceTree = "<group>";
 		};
 		2CFEAA4F199AF52D00FCB5C1 /* filecenter */ = {
@@ -2704,6 +2869,8 @@
 		7CE63158198C7C2900730C64 /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				2C435B2919BABB2100364164 /* EAIntroView */,
+				2C435B2519BABA1E00364164 /* VisaIntroduce */,
 				2C493BEE19B815AD001C4DD5 /* MWPhotoBrowser */,
 				2C4AD4BA19B5B6E400C28F06 /* alipay */,
 				2C3C05EB199DF54000369A63 /* RadioControl */,
@@ -3064,6 +3231,7 @@
 				2C2806981990AD69007838A6 /* complainCell.xib in Resources */,
 				2C3AECFA19A57C7D00D981C3 /* btn_add_community.png in Resources */,
 				2C3AED6C19A57C7D00D981C3 /* tab_profile_disabled.png in Resources */,
+				2CE4571619B9AABC001AEA90 /* succourlist.xib in Resources */,
 				2C281140199895650072D08C /* rentorshellDetail.xib in Resources */,
 				2C3AED6619A57C7D00D981C3 /* sure.png in Resources */,
 				2C3AECEA19A57C7D00D981C3 /* activity.png in Resources */,
@@ -3097,6 +3265,7 @@
 				2C3AED1619A57C7D00D981C3 /* cricle_time.png in Resources */,
 				2C3AED2A19A57C7D00D981C3 /* ic_more_item_default.9.png in Resources */,
 				2C3AECEE19A57C7D00D981C3 /* attention_button.9.png in Resources */,
+				2C41DEA019B9495D00623483 /* myelectricCell.xib in Resources */,
 				2C1FE6551995C8AC008DBB58 /* complainlist.xib in Resources */,
 				2C3AED4419A57C7D00D981C3 /* nav_bg.png in Resources */,
 				7CE6313C198C7A8200730C64 /* Images.xcassets in Resources */,
@@ -3186,6 +3355,7 @@
 				2C5404E11993817B003D2BBE /* topup.xib in Resources */,
 				2C3AED5219A57C7D00D981C3 /* rent.png in Resources */,
 				2C3AED2219A57C7D00D981C3 /* head_portrait.png in Resources */,
+				2C435B2419BAAAE600364164 /* succouradd.xib in Resources */,
 				2C3AECF419A57C7D00D981C3 /* bad.png in Resources */,
 				2C57571F1994657900858A7F /* myorder.xib in Resources */,
 				2C3AED6A19A57C7D00D981C3 /* t_man.png in Resources */,
@@ -3213,6 +3383,7 @@
 				2C281134199871560072D08C /* rentorshelllist.xib in Resources */,
 				2C3AED6419A57C7D00D981C3 /* steward.png in Resources */,
 				2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */,
+				2C41DEAD19B9918F00623483 /* addelectric.xib in Resources */,
 				2C3AED2D19A57C7D00D981C3 /* ic_pulltorefresh_arrow.png in Resources */,
 				2C3AED5C19A57C7D00D981C3 /* settings_about.9.png in Resources */,
 				2C3AED0619A57C7D00D981C3 /* button_guess.png in Resources */,
@@ -3268,6 +3439,7 @@
 				2C3AED1719A57C7D00D981C3 /* dis_about_sina.png in Resources */,
 				2C3AECFE19A57C7D00D981C3 /* btn_driving_record1.png in Resources */,
 				2C3AED4719A57C7D00D981C3 /* no_back.png in Resources */,
+				2CE4572219B9B5DF001AEA90 /* succourDetail.xib in Resources */,
 				2C5757321994B17500858A7F /* myappraise.xib in Resources */,
 				2C3AED3E19A57C7D00D981C3 /* marquee.png in Resources */,
 				2C3AED5A19A57C7D00D981C3 /* setting.png in Resources */,
@@ -3291,6 +3463,7 @@
 				2C3AED5F19A57C7D00D981C3 /* settings_feedback.png in Resources */,
 				2C5757251994681000858A7F /* myorderCell.xib in Resources */,
 				2C3AED0819A57C7D00D981C3 /* button_long.png in Resources */,
+				2CE4571C19B9AB54001AEA90 /* succourCell.xib in Resources */,
 				2C3AED5119A57C7D00D981C3 /* release_information.png in Resources */,
 				2C5404C219936DE7003D2BBE /* Paymentfunction.xib in Resources */,
 				2C3AECF519A57C7D00D981C3 /* battery.png in Resources */,
@@ -3298,10 +3471,12 @@
 				2C3AED5619A57C7D00D981C3 /* round.png in Resources */,
 				2C1FE6671995C8AC008DBB58 /* SpecialPeopleDetail.xib in Resources */,
 				2C3AED3919A57C7D00D981C3 /* login.png in Resources */,
+				2C41DEA619B9544700623483 /* myelectricDetail.xib in Resources */,
 				7CE63199198C7C2A00730C64 /* CHANGELOG.md in Resources */,
 				2C2811601998A78B0072D08C /* aboutus.xib in Resources */,
 				2C2810FC1998547C0072D08C /* consultlist.xib in Resources */,
 				2C3AED5919A57C7D00D981C3 /* seller.png in Resources */,
+				2C41DE9519B9467E00623483 /* myelectric.xib in Resources */,
 				2C57571319945B4B00858A7F /* topupmoney.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3325,14 +3500,19 @@
 				7CE63190198C7C2A00730C64 /* ASINSStringAdditions.m in Sources */,
 				7CE6318F198C7C2A00730C64 /* ASINetworkQueue.m in Sources */,
 				7CE6319A198C7C2A00730C64 /* JSONKit.m in Sources */,
+				2C435B2319BAAAE600364164 /* succouradd.m in Sources */,
 				2C54048D19932E46003D2BBE /* personLog.m in Sources */,
 				2C1FE5F61995B433008DBB58 /* floorlist.m in Sources */,
+				2C41DE9F19B9495D00623483 /* myelectricCell.m in Sources */,
 				2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */,
 				2C4AD4E119B5B6E400C28F06 /* SBJsonParser.m in Sources */,
 				7CE6318C198C7C2A00730C64 /* ASIFormDataRequest.m in Sources */,
 				2C5404BB199363C1003D2BBE /* arrearageDetail.m in Sources */,
+				2C41DE9419B9467E00623483 /* myelectric.m in Sources */,
+				2C41DEAC19B9918F00623483 /* addelectric.m in Sources */,
 				2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */,
 				2C493C5019B815AE001C4DD5 /* MWCaptionView.m in Sources */,
+				2CE4572119B9B5DF001AEA90 /* succourDetail.m in Sources */,
 				2C493C7219B815AE001C4DD5 /* SDWebImageManager.m in Sources */,
 				2C493C7419B815AE001C4DD5 /* UIButton+WebCache.m in Sources */,
 				2C4AD4DE19B5B6E400C28F06 /* NSString+SBJSON.m in Sources */,
@@ -3349,6 +3529,7 @@
 				7CE63192198C7C2A00730C64 /* Reachability.m in Sources */,
 				2C493C5419B815AE001C4DD5 /* MWPhotoBrowser.m in Sources */,
 				2C28111A199867490072D08C /* merchantsCell.m in Sources */,
+				2C41DEA519B9544700623483 /* myelectricDetail.m in Sources */,
 				2C1FE6101995C568008DBB58 /* Vicecardadd.m in Sources */,
 				7CE63193198C7C2A00730C64 /* Commons.m in Sources */,
 				7CE6319D198C7C2A00730C64 /* login.m in Sources */,
@@ -3401,6 +3582,7 @@
 				2C493C5B19B815AE001C4DD5 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				7CE63134198C7A8200730C64 /* AppDelegate.m in Sources */,
 				2C3C059F199DB15200369A63 /* assess.m in Sources */,
+				2CE4571B19B9AB54001AEA90 /* succourCell.m in Sources */,
 				2C1FE65C1995C8AC008DBB58 /* lifemd.m in Sources */,
 				2C493C6219B815AE001C4DD5 /* PSTCollectionViewLayout.m in Sources */,
 				2C493C5619B815AE001C4DD5 /* MWTapDetectingView.m in Sources */,
@@ -3423,6 +3605,7 @@
 				2C2806971990AD69007838A6 /* complainCell.m in Sources */,
 				2C1FE6581995C8AC008DBB58 /* cplist.m in Sources */,
 				2C2811661998A98B0072D08C /* goodslist.m in Sources */,
+				2CE4571519B9AABC001AEA90 /* succourlist.m in Sources */,
 				2C5757241994681000858A7F /* myorderCell.m in Sources */,
 				2C493C7019B815AE001C4DD5 /* SDWebImageDownloader.m in Sources */,
 				2C1FE6621995C8AC008DBB58 /* repairlist.m in Sources */,
@@ -3450,6 +3633,7 @@
 				7CE63196198C7C2A00730C64 /* WebService.m in Sources */,
 				2C5404CE199377F2003D2BBE /* consumelistCell.m in Sources */,
 				2C493C7719B815AE001C4DD5 /* UIImage+WebP.m in Sources */,
+				2C435B2F19BABB2100364164 /* EAIntroView.m in Sources */,
 				2C493C6D19B815AE001C4DD5 /* SDImageCache.m in Sources */,
 				2C4AD4DC19B5B6E400C28F06 /* AlixPayResult.m in Sources */,
 				2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */,
@@ -3474,10 +3658,12 @@
 				2C5404A319935B7B003D2BBE /* updateinfo.m in Sources */,
 				2C57571219945B4B00858A7F /* topupmoney.m in Sources */,
 				2C281101199855DF0072D08C /* consultCell.m in Sources */,
+				2C435B2E19BABB2100364164 /* EAIntroPage.m in Sources */,
 				2C1FE65A1995C8AC008DBB58 /* fontindex.m in Sources */,
 				2C493C8419B85FDF001C4DD5 /* myhome.m in Sources */,
 				2C493C6B19B815AE001C4DD5 /* NSData+GIF.m in Sources */,
 				2C281139199872530072D08C /* rentorshellCell.m in Sources */,
+				2C435B2819BABA1E00364164 /* VisaIntroduce.m in Sources */,
 				2C493C6119B815AE001C4DD5 /* PSTCollectionViewItemKey.m in Sources */,
 				2C3AED8219A5F67800D981C3 /* personfootprintlist.m in Sources */,
 				2C54EC3319AD8864004D580C /* DeliveryaddressCell.m in Sources */,

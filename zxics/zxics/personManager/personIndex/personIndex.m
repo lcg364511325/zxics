@@ -10,6 +10,7 @@
 #import "goodslist.h"
 #import "personfootprintlist.h"
 #import "myhome.h"
+#import "myelectric.h"
 
 @interface personIndex ()
 
@@ -121,6 +122,14 @@
     myhome * _myhome=[[myhome alloc] init];
     
     [self.navigationController pushViewController:_myhome animated:NO];
+}
+
+//我的发电
+-(IBAction)myelectric:(id)sender
+{
+    myelectric * _myelectric=[[myelectric alloc] init];
+    
+    [self.navigationController pushViewController:_myelectric animated:NO];
 }
 
 //会员中心页面跳转

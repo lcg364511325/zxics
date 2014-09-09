@@ -32,6 +32,16 @@
         [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithBool:YES] forKey:@"firstLaunch"];
     }
     
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstapp"];
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstapp"];
+    }
+    
+    
+    
     //初始化实体
     //self.entityl=[[LoginEntity alloc] init];
     

@@ -13,6 +13,10 @@
     NSMutableArray *list;
     NSInteger page;
 }
+
+@property(retain , nonatomic) NSString * goodsname;//商品名称
+@property(retain , nonatomic) NSString * cid;//分类id
+
 @property (weak, nonatomic) IBOutlet UICollectionView *goodscollectionview;
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 

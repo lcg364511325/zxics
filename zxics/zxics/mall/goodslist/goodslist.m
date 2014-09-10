@@ -14,12 +14,17 @@
 #import "goodsDetail.h"
 #import "DataService.h"
 #import "ImageCacher.h"
+#import "nameforgoods.h"
+#import "classforgoods.h"
 
 @interface goodslist ()
 
 @end
 
 @implementation goodslist
+
+@synthesize goodsname;
+@synthesize cid;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,9 +68,22 @@
 -(void)loaddata
 {
     NSMutableDictionary * gds = [NSMutableDictionary dictionaryWithCapacity:5];
-    gds=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileshopping",domainser] postDatas:nil forPage:page forPageSize:10];
-    NSArray *gdslist=[gds objectForKey:@"datas"];
-    [list addObjectsFromArray:gdslist];
+    if(goodsname || cid)
+    {
+        if (!cid) {
+            cid=@"";
+        }
+        if (!goodsname) {
+            goodsname=@"";
+        }
+        gds=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileshopping",domainser] postDatas:[NSString stringWithFormat:@"pid=%@&text=%@",cid,goodsname] forPage:page forPageSize:10];
+        NSArray *gdslist=[gds objectForKey:@"datas"];
+        [list addObjectsFromArray:gdslist];
+    }else{
+        gds=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileshopping",domainser] postDatas:nil forPage:page forPageSize:10];
+        NSArray *gdslist=[gds objectForKey:@"datas"];
+        [list addObjectsFromArray:gdslist];
+    }
 }
 
 //首页跳转
@@ -131,6 +149,25 @@
     NSDictionary *gdsdetail = [list objectAtIndex:[indexPath row]];
     _goodsDetail.gdsdetail=gdsdetail;
     [self.navigationController pushViewController:_goodsDetail animated:NO];
+}
+
+//修改性别
+-(IBAction)searchtype:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请选择查询类型" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"按分类查询", @"按名称查询", nil];
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==2) {
+        nameforgoods *_nameforgoods=[[nameforgoods alloc]init];
+        [self.navigationController pushViewController:_nameforgoods animated:NO];
+    }else if (buttonIndex==1)
+    {
+        classforgoods *_classforgoods=[[classforgoods alloc]init];
+        [self.navigationController pushViewController:_classforgoods animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning

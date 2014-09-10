@@ -25,6 +25,7 @@
     NSString *addrid;
     NSString *sendwayid;
     float pricecount;
+    NSMutableArray *btnlist;
 }
 @property (strong, nonatomic) IBOutlet UIView *scview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;

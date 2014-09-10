@@ -77,13 +77,13 @@
     if ([btnlist count]>2) {
         [btnlist removeObjectAtIndex:0];
         UIButton *beforebtn=[btnlist objectAtIndex:0];
-        beforebtn.backgroundColor=[UIColor darkGrayColor];
+        [beforebtn setImage:[UIImage imageNamed:@"noselect"] forState:UIControlStateNormal];
     }else if ([btnlist count]==2)
     {
         UIButton *beforebtn=[btnlist objectAtIndex:0];
-        beforebtn.backgroundColor=[UIColor darkGrayColor];
+        [beforebtn setImage:[UIImage imageNamed:@"noselect"] forState:UIControlStateNormal];
     }
-    btn.backgroundColor=[UIColor redColor];
+    [btn setImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
 }
 
 

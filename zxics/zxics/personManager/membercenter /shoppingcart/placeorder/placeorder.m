@@ -62,6 +62,7 @@
     pricecount=0;
     sendwaylist=[[NSMutableArray alloc]initWithCapacity:5];
     addrlist=[[NSMutableArray alloc]initWithCapacity:5];
+    btnlist=[[NSMutableArray alloc]initWithCapacity:5];
     
     //查询配送方式和配送地址
     [self findsendwayandaddr];
@@ -351,31 +352,46 @@
 {
     UIButton *btn=(UIButton *)sender;
     paywayvalue=btn.tag;
-    zhiButton.backgroundColor=huoButton.backgroundColor=yiButton.backgroundColor=[UIColor lightGrayColor];
-    btn.backgroundColor=[UIColor redColor];
+    [btnlist addObject:btn];
+    if ([btnlist count]>2) {
+        [btnlist removeObjectAtIndex:0];
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        [beforebtn setImage:[UIImage imageNamed:@"noselect"] forState:UIControlStateNormal];
+    }else if ([btnlist count]==2)
+    {
+        UIButton *beforebtn=[btnlist objectAtIndex:0];
+        [beforebtn setImage:[UIImage imageNamed:@"noselect"] forState:UIControlStateNormal];
+    }
+    [btn setImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
     
 }
 
 //生成订单
 -(IBAction)createorder:(id)sender
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    if (nowcount) {
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrderBuyNow",domainser] postDatas:[NSString stringWithFormat:@"pay=%d&addr=%@&lmsn=%@&mId=%@&gId=%@&gNum=%@&ship=%@",paywayvalue,addrid,textView.text,myDelegate.entityl.userid,gid,nowcount,sendwayid]];
+    if (paywayvalue) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        if (nowcount) {
+            state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrderBuyNow",domainser] postDatas:[NSString stringWithFormat:@"pay=%d&addr=%@&lmsn=%@&mId=%@&gId=%@&gNum=%@&ship=%@",paywayvalue,addrid,textView.text,myDelegate.entityl.userid,gid,nowcount,sendwayid]];
+        }else{
+            state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrder",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&pay=%d&gids=%@&addr=%@&lMsn=%@&ships=%@_%@",myDelegate.entityl.userid,paywayvalue,gid,addrid,textView.text,sendwayid,shopid]];
+        }
+        NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        if ([status isEqualToString:@"1"]) {
+            successorder *_successorder=[[successorder alloc]init];
+            _successorder.so=state;
+            _successorder.price=[NSString stringWithFormat:@"%.2fs",pricecount];
+            _successorder.sendway=[NSString stringWithFormat:@"%d",paywayvalue];;
+            [self.navigationController pushViewController:_successorder animated:NO];
+        }else
+        {
+            NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+            UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alter show];
+        }
     }else{
-        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileCreateGoodsOrder",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&pay=%d&gids=%@&addr=%@&lMsn=%@&ships=%@_%@",myDelegate.entityl.userid,paywayvalue,gid,addrid,textView.text,sendwayid,shopid]];
-    }
-    NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
-    if ([status isEqualToString:@"1"]) {
-        successorder *_successorder=[[successorder alloc]init];
-        _successorder.so=state;
-        _successorder.price=[NSString stringWithFormat:@"%.2fs",pricecount];
-        _successorder.sendway=[NSString stringWithFormat:@"%d",paywayvalue];;
-        [self.navigationController pushViewController:_successorder animated:NO];
-    }else
-    {
-        NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
+        NSString *rowString =@"请选择支付方式";
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];
     }

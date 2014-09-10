@@ -386,20 +386,22 @@
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
-    
-    state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&sex=%d",myDelegate.entityl.userid,myDelegate.entityl.account,buttonIndex-1]];
-    
-    
-    NSString *rowString =[state objectForKey:@"info"];
-    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alter show];
-    
-    
-    NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
-    if ([status isEqualToString:@"1"]) {
-        [self loaddata];
+    if (buttonIndex!=0) {
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:5];
+        
+        state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/changeMyInfo",domainser] postDatas:[NSString stringWithFormat:@"userid=%@&account=%@&sex=%d",myDelegate.entityl.userid,myDelegate.entityl.account,buttonIndex-1]];
+        
+        
+        NSString *rowString =[state objectForKey:@"info"];
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+        
+        
+        NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        if ([status isEqualToString:@"1"]) {
+            [self loaddata];
+        }
     }
 }
 

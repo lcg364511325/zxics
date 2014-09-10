@@ -269,6 +269,10 @@
 		2C41688F19BEABB2001A28A9 /* guidancestart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688919BEABB2001A28A9 /* guidancestart.png */; };
 		2C41689019BEABB2001A28A9 /* igenerate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688A19BEABB2001A28A9 /* igenerate.png */; };
 		2C41689119BEABB2001A28A9 /* ihome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688B19BEABB2001A28A9 /* ihome.png */; };
+		2C41689419BEDBC3001A28A9 /* noselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41689219BEDBC3001A28A9 /* noselect.png */; };
+		2C41689519BEDBC3001A28A9 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41689319BEDBC3001A28A9 /* selected.png */; };
+		2C41689919BEE78A001A28A9 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41689719BEE78A001A28A9 /* sed.png */; };
+		2C41689A19BEE78A001A28A9 /* uns.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41689819BEE78A001A28A9 /* uns.png */; };
 		2C41DE9419B9467E00623483 /* myelectric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9219B9467E00623483 /* myelectric.m */; };
 		2C41DE9519B9467E00623483 /* myelectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DE9319B9467E00623483 /* myelectric.xib */; };
 		2C41DE9F19B9495D00623483 /* myelectricCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DE9D19B9495D00623483 /* myelectricCell.m */; };
@@ -423,6 +427,10 @@
 		2C5A242D19922201003712D5 /* personInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A242B19922201003712D5 /* personInfo.xib */; };
 		2C67794C19B418C6003A8D33 /* updatepassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C67794A19B418C6003A8D33 /* updatepassword.m */; };
 		2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C67794B19B418C6003A8D33 /* updatepassword.xib */; };
+		2CA029D319BEFCF900F6E2B2 /* nameforgoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA029D119BEFCF900F6E2B2 /* nameforgoods.m */; };
+		2CA029D419BEFCF900F6E2B2 /* nameforgoods.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA029D219BEFCF900F6E2B2 /* nameforgoods.xib */; };
+		2CA029D919BF044D00F6E2B2 /* classforgoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA029D719BF044D00F6E2B2 /* classforgoods.m */; };
+		2CA029DA19BF044D00F6E2B2 /* classforgoods.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA029D819BF044D00F6E2B2 /* classforgoods.xib */; };
 		2CE4571519B9AABC001AEA90 /* succourlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571319B9AABC001AEA90 /* succourlist.m */; };
 		2CE4571619B9AABC001AEA90 /* succourlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4571419B9AABC001AEA90 /* succourlist.xib */; };
 		2CE4571B19B9AB54001AEA90 /* succourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571919B9AB54001AEA90 /* succourCell.m */; };
@@ -816,6 +824,10 @@
 		2C41688919BEABB2001A28A9 /* guidancestart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidancestart.png; sourceTree = "<group>"; };
 		2C41688A19BEABB2001A28A9 /* igenerate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = igenerate.png; sourceTree = "<group>"; };
 		2C41688B19BEABB2001A28A9 /* ihome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ihome.png; sourceTree = "<group>"; };
+		2C41689219BEDBC3001A28A9 /* noselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noselect.png; sourceTree = "<group>"; };
+		2C41689319BEDBC3001A28A9 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
+		2C41689719BEE78A001A28A9 /* sed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sed.png; sourceTree = "<group>"; };
+		2C41689819BEE78A001A28A9 /* uns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uns.png; sourceTree = "<group>"; };
 		2C41DE9119B9467E00623483 /* myelectric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myelectric.h; path = personManager/myelectric/myelectric.h; sourceTree = "<group>"; };
 		2C41DE9219B9467E00623483 /* myelectric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myelectric.m; path = personManager/myelectric/myelectric.m; sourceTree = "<group>"; };
 		2C41DE9319B9467E00623483 /* myelectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myelectric.xib; path = personManager/myelectric/myelectric.xib; sourceTree = "<group>"; };
@@ -1084,6 +1096,12 @@
 		2C67794919B418C6003A8D33 /* updatepassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = updatepassword.h; path = personManager/personInfo/updatepassword/updatepassword.h; sourceTree = "<group>"; };
 		2C67794A19B418C6003A8D33 /* updatepassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = updatepassword.m; path = personManager/personInfo/updatepassword/updatepassword.m; sourceTree = "<group>"; };
 		2C67794B19B418C6003A8D33 /* updatepassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = updatepassword.xib; path = personManager/personInfo/updatepassword/updatepassword.xib; sourceTree = "<group>"; };
+		2CA029D019BEFCF900F6E2B2 /* nameforgoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nameforgoods.h; path = mall/nameforgoods/nameforgoods.h; sourceTree = "<group>"; };
+		2CA029D119BEFCF900F6E2B2 /* nameforgoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = nameforgoods.m; path = mall/nameforgoods/nameforgoods.m; sourceTree = "<group>"; };
+		2CA029D219BEFCF900F6E2B2 /* nameforgoods.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = nameforgoods.xib; path = mall/nameforgoods/nameforgoods.xib; sourceTree = "<group>"; };
+		2CA029D619BF044D00F6E2B2 /* classforgoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = classforgoods.h; path = mall/classforgoods/classforgoods.h; sourceTree = "<group>"; };
+		2CA029D719BF044D00F6E2B2 /* classforgoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = classforgoods.m; path = mall/classforgoods/classforgoods.m; sourceTree = "<group>"; };
+		2CA029D819BF044D00F6E2B2 /* classforgoods.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = classforgoods.xib; path = mall/classforgoods/classforgoods.xib; sourceTree = "<group>"; };
 		2CE4571219B9AABC001AEA90 /* succourlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succourlist.h; path = frontindex/succourwanted/succourlist/succourlist.h; sourceTree = "<group>"; };
 		2CE4571319B9AABC001AEA90 /* succourlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succourlist.m; path = frontindex/succourwanted/succourlist/succourlist.m; sourceTree = "<group>"; };
 		2CE4571419B9AABC001AEA90 /* succourlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succourlist.xib; path = frontindex/succourwanted/succourlist/succourlist.xib; sourceTree = "<group>"; };
@@ -1784,6 +1802,8 @@
 		2C2811611998A91F0072D08C /* mall */ = {
 			isa = PBXGroup;
 			children = (
+				2CA029D519BF043800F6E2B2 /* classforgoods */,
+				2CA029CE19BEFCCD00F6E2B2 /* nameforgoods */,
 				2C59A31919AECCFE0064CD04 /* goodsDetail */,
 				2C2811621998A9570072D08C /* goodslist */,
 			);
@@ -2731,6 +2751,26 @@
 			name = updatepassword;
 			sourceTree = "<group>";
 		};
+		2CA029CE19BEFCCD00F6E2B2 /* nameforgoods */ = {
+			isa = PBXGroup;
+			children = (
+				2CA029D019BEFCF900F6E2B2 /* nameforgoods.h */,
+				2CA029D119BEFCF900F6E2B2 /* nameforgoods.m */,
+				2CA029D219BEFCF900F6E2B2 /* nameforgoods.xib */,
+			);
+			name = nameforgoods;
+			sourceTree = "<group>";
+		};
+		2CA029D519BF043800F6E2B2 /* classforgoods */ = {
+			isa = PBXGroup;
+			children = (
+				2CA029D619BF044D00F6E2B2 /* classforgoods.h */,
+				2CA029D719BF044D00F6E2B2 /* classforgoods.m */,
+				2CA029D819BF044D00F6E2B2 /* classforgoods.xib */,
+			);
+			name = classforgoods;
+			sourceTree = "<group>";
+		};
 		2CE4570F19B9AA82001AEA90 /* succourwanted */ = {
 			isa = PBXGroup;
 			children = (
@@ -2990,6 +3030,10 @@
 		7CE63183198C7C2A00730C64 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2C41689719BEE78A001A28A9 /* sed.png */,
+				2C41689819BEE78A001A28A9 /* uns.png */,
+				2C41689219BEDBC3001A28A9 /* noselect.png */,
+				2C41689319BEDBC3001A28A9 /* selected.png */,
 				2C41688619BEABB2001A28A9 /* guidanceend.png */,
 				2C41688719BEABB2001A28A9 /* guidancemiddle.png */,
 				2C41688819BEABB2001A28A9 /* guidancemr.png */,
@@ -3311,6 +3355,7 @@
 				2C3AED4D19A57C7D00D981C3 /* prompt_photo.png in Resources */,
 				2C3AECF219A57C7D00D981C3 /* back_title_select.png in Resources */,
 				2C3AED5D19A57C7D00D981C3 /* settings_account.png in Resources */,
+				2C41689419BEDBC3001A28A9 /* noselect.png in Resources */,
 				2C1FE6111995C568008DBB58 /* Vicecardadd.xib in Resources */,
 				2C1FE5F11995AEB1008DBB58 /* communityCell.xib in Resources */,
 				2C1FE6041995C077008DBB58 /* ViewController.xib in Resources */,
@@ -3387,6 +3432,7 @@
 				2C3AED2619A57C7D00D981C3 /* home1.png in Resources */,
 				2C28115319989A500072D08C /* prowantedDetail.xib in Resources */,
 				2C3AED0919A57C7D00D981C3 /* button_nolike.png in Resources */,
+				2CA029DA19BF044D00F6E2B2 /* classforgoods.xib in Resources */,
 				2C28112D19986C700072D08C /* questionsCell.xib in Resources */,
 				2C5404E11993817B003D2BBE /* topup.xib in Resources */,
 				2C3AED5219A57C7D00D981C3 /* rent.png in Resources */,
@@ -3398,6 +3444,7 @@
 				2CFEAA59199AF7BA00FCB5C1 /* filecenterDetail.xib in Resources */,
 				2C41688D19BEABB2001A28A9 /* guidancemiddle.png in Resources */,
 				2C281147199898B30072D08C /* prowantedlist.xib in Resources */,
+				2C41689519BEDBC3001A28A9 /* selected.png in Resources */,
 				2C3AED6819A57C7D00D981C3 /* t_home.png in Resources */,
 				2C3AECF619A57C7D00D981C3 /* bg_gray.png in Resources */,
 				2C493C7919B815AE001C4DD5 /* MWPhotoBrowser.bundle in Resources */,
@@ -3427,6 +3474,7 @@
 				2C3AED0619A57C7D00D981C3 /* button_guess.png in Resources */,
 				2C281115199866CE0072D08C /* Merchantslist.xib in Resources */,
 				2C3AED1A19A57C7D00D981C3 /* download.png in Resources */,
+				2C41689919BEE78A001A28A9 /* sed.png in Resources */,
 				2C493C6919B815AE001C4DD5 /* README.md in Resources */,
 				2C5404B0199360F0003D2BBE /* arrearageCell.xib in Resources */,
 				2C3AED1819A57C7D00D981C3 /* dis_about_weixin.png in Resources */,
@@ -3440,6 +3488,7 @@
 				2C28110819985B400072D08C /* consultDetail.xib in Resources */,
 				2C3AED4619A57C7D00D981C3 /* neighbour.png in Resources */,
 				2C28110E199860820072D08C /* consultadd.xib in Resources */,
+				2C41689A19BEE78A001A28A9 /* uns.png in Resources */,
 				2C3AED4E19A57C7D00D981C3 /* red_nav.png in Resources */,
 				2C1FE6631995C8AC008DBB58 /* repairlist.xib in Resources */,
 				2C3AED6919A57C7D00D981C3 /* t_mall.png in Resources */,
@@ -3487,6 +3536,7 @@
 				2C3AED1019A57C7D00D981C3 /* chatfrom_bg_normal.9.png in Resources */,
 				2C41689119BEABB2001A28A9 /* ihome.png in Resources */,
 				2C57573D1994B63900858A7F /* myappraiseCell.xib in Resources */,
+				2CA029D419BEFCF900F6E2B2 /* nameforgoods.xib in Resources */,
 				2C1FE6651995C8AC008DBB58 /* SpecialPeople.xib in Resources */,
 				2C3AED0A19A57C7D00D981C3 /* button_photonews.png in Resources */,
 				2C3AED4819A57C7D00D981C3 /* notice.png in Resources */,
@@ -3713,12 +3763,14 @@
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C493C5F19B815AE001C4DD5 /* PSTCollectionViewData.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,
+				2CA029D319BEFCF900F6E2B2 /* nameforgoods.m in Sources */,
 				2C59A32A19AF229B0064CD04 /* addinfo.m in Sources */,
 				2C5A241F1991D5EF003712D5 /* CustomIOS7AlertView.m in Sources */,
 				2C5757561994D06C00858A7F /* Deliveryaddress.m in Sources */,
 				7CE6318E198C7C2A00730C64 /* ASIInputStream.m in Sources */,
 				2C59A31D19AECCFE0064CD04 /* goodsDetail.m in Sources */,
 				2C5404DA19937CA0003D2BBE /* balancelist.m in Sources */,
+				2CA029D919BF044D00F6E2B2 /* classforgoods.m in Sources */,
 				2C28112C19986C700072D08C /* questionsCell.m in Sources */,
 				2C493C5519B815AE001C4DD5 /* MWTapDetectingImageView.m in Sources */,
 			);

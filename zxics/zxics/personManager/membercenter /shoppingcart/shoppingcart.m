@@ -227,16 +227,17 @@
     
     if ([orgid isEqualToString:[NSString stringWithFormat:@"%@",[scdetail objectForKey:@"orgId"]]]) {
         BOOL isequal=NO;
-        for (NSString *reid in ridlist) {
+        NSArray *array=[NSArray arrayWithArray:ridlist];
+        for (NSString *reid in array) {
             isequal=[goodsId isEqualToString:reid];
             if (isequal) {
                 [ridlist removeObject:reid];
-                [btn setBackgroundColor:[UIColor lightGrayColor]];
+                [btn setImage:[UIImage imageNamed:@"uns"] forState:UIControlStateNormal];
             }
         }
         if (!isequal) {
             [ridlist addObject:goodsId];
-            [btn setBackgroundColor:[UIColor redColor]];
+            [btn setImage:[UIImage imageNamed:@"sed"] forState:UIControlStateNormal];
         }
     }else
     {

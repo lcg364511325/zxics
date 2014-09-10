@@ -73,11 +73,10 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na1-Ln-0hj">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na1-Ln-0hj">
                         <rect key="frame" x="7" y="10" width="15" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.51510638900000005" green="0.52215050139999997" blue="0.53792649869999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal">
+                        <state key="normal" image="uns.png">
                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -97,5 +96,6 @@
     </objects>
     <resources>
         <image name="login.png" width="82" height="42"/>
+        <image name="uns.png" width="44" height="44"/>
     </resources>
 </document>

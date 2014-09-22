@@ -125,6 +125,15 @@
     [self.navigationController pushViewController:_prowantedlist animated:NO];
 }
 
+
+//业主评价
+-(IBAction)surveylist:(id)sender
+{
+    surveylist * _surveylist=[[surveylist alloc] init];
+    _surveylist.btntag=@"0";
+    [self.navigationController pushViewController:_surveylist animated:NO];
+}
+
 //检查是否有版本更新
 -(void)findVersion{
     

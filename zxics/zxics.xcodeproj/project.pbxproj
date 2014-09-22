@@ -4080,7 +4080,6 @@
 				INFOPLIST_FILE = "zxics/zxics-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/zxics/extend/alixPay",
 					"$(PROJECT_DIR)/zxics/extend/alipay",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4098,7 +4097,6 @@
 				INFOPLIST_FILE = "zxics/zxics-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/zxics/extend/alixPay",
 					"$(PROJECT_DIR)/zxics/extend/alipay",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -83,9 +83,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    SpecialPeopleDetail *spd = [[SpecialPeopleDetail alloc] initWithNibName:@"SpecialPeopleDetail" bundle:nil];
-    spd.spdbtntag=@"0";
-    [self.navigationController pushViewController:spd animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (void)didReceiveMemoryWarning

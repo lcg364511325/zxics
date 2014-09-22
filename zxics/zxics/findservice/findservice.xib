@@ -41,6 +41,9 @@
                     <state key="normal" title="特殊人群关怀" image="thought.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="specialpeople:" destination="-1" eventType="touchDown" id="gNV-2M-U4D"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-ja-e9O">
                     <rect key="frame" x="250" y="231" width="50" height="50"/>
@@ -90,6 +93,9 @@
                     <state key="normal" title="救助申请" image="succour.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="succourlist:" destination="-1" eventType="touchDown" id="ELr-Fl-Y1T"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="投诉管理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9H-c8-1yb">
                     <rect key="frame" x="28" y="357" width="42" height="10"/>

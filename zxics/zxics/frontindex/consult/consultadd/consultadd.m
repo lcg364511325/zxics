@@ -43,7 +43,7 @@
     
     //初始化
     target=@"0";
-    [webButton setBackgroundColor:[UIColor redColor]];
+    [webButton setBackgroundColor:[UIColor darkGrayColor]];
     
     [self settextviewShow:introduceLabel];
     [self settextviewShow:detailLabel];
@@ -81,14 +81,14 @@
     NSInteger btntag=btn.tag;
     if (btntag==0) {
         target=@"0";
-        [webButton setBackgroundColor:[UIColor redColor]];
-        [comButton setBackgroundColor:[UIColor whiteColor]];
+        [webButton setBackgroundColor:[UIColor darkGrayColor]];
+        [comButton setBackgroundColor:[UIColor lightGrayColor]];
     }else if (btntag==1)
     {
         AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
         target=myDelegate.entityl.communityid;
-        [comButton setBackgroundColor:[UIColor redColor]];
-        [webButton setBackgroundColor:[UIColor whiteColor]];
+        [comButton setBackgroundColor:[UIColor darkGrayColor]];
+        [webButton setBackgroundColor:[UIColor lightGrayColor]];
     }
 }
 
@@ -117,8 +117,7 @@
 {
     if ([status isEqualToString:@"1"]) {
         
-        consultlist *_consultlist=[[consultlist alloc]init];
-        [self.navigationController pushViewController:_consultlist animated:NO];
+        [self.navigationController popViewControllerAnimated:NO];
     }
 }
 

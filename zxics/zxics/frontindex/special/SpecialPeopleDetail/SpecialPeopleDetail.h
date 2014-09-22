@@ -16,6 +16,7 @@
     NSMutableArray * list;
     NSString *caid;
     NSInteger page;
+    NSInteger isfirst;
 
 }
 

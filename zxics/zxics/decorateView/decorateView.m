@@ -212,13 +212,15 @@
 {
     comTView.hidden=NO;
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableDictionary * comlist = [NSMutableDictionary dictionaryWithCapacity:5];
-    comlist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findCommunityList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
-    NSArray *com=[comlist objectForKey:@"datas"];
-    [list removeAllObjects];
-    [list addObjectsFromArray:com];
-    
-    [comTView reloadData];
+    if (myDelegate.entityl) {
+        NSMutableDictionary * comlist = [NSMutableDictionary dictionaryWithCapacity:5];
+        comlist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findCommunityList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+        NSArray *com=[comlist objectForKey:@"datas"];
+        [list removeAllObjects];
+        [list addObjectsFromArray:com];
+        
+        [comTView reloadData];
+    }
 }
 
 //alertview响应事件

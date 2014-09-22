@@ -69,9 +69,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    SpecialPeople * _SpecialPeople=[[SpecialPeople alloc] init];
-    
-    [self.navigationController pushViewController:_SpecialPeople animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //初始化tableview数据

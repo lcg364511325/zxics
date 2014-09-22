@@ -32,12 +32,25 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (isfirst==1) {
+        isfirst=0;
+    }else{
+        [list removeAllObjects];
+        page=1;
+        [self loaddata];
+        [suTView reloadData];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
     
+    isfirst=1;
     page=1;
     list=[[NSMutableArray alloc]initWithCapacity:5];
     
@@ -70,8 +83,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    fontindex *_fontindex=[[fontindex alloc]init];
-    [self.navigationController pushViewController:_fontindex animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //初始化tableview数据

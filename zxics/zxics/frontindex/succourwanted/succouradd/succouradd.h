@@ -12,6 +12,7 @@
 {
     NSArray *list;
     NSString *value;
+    NSString *status;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

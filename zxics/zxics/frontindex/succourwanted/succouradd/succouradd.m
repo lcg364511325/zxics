@@ -64,8 +64,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    succourlist *_succourlist=[[succourlist alloc]init];
-    [self.navigationController pushViewController:_succourlist animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(IBAction)showtype:(id)sender
@@ -122,20 +121,24 @@
     NSMutableDictionary * state = [NSMutableDictionary dictionaryWithCapacity:1];
     if (![typeText.text isEqualToString:@""] && ![userText.text isEqualToString:@""] && ![mobileText.text isEqualToString:@""] && ![emailText.text isEqualToString:@""] && ![addrText.text isEqualToString:@""] && ![titleText.text isEqualToString:@""] && ![detailText.text isEqualToString:@""]) {
         state=[DataService PostDataService:[NSString stringWithFormat:@"%@api/helpApplyApi",domainser] postDatas:[NSString stringWithFormat:@"account=%@&title=%@&contents=%@&phone=%@&email=%@&address=%@&type=%@&name=%@",myDelegate.entityl.account,titleText.text,detailText.text,mobileText.text,emailText.text,addrText.text,value,userText.text]];
-        NSString *status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
+        status=[NSString stringWithFormat:@"%@",[state objectForKey:@"status"]];
         
         NSString *rowString =[NSString stringWithFormat:@"%@",[state objectForKey:@"info"]];
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];
-        if ([status isEqualToString:@"1"]) {
-            [self goback:nil];
-        }
     }else{
         NSString *rowString =@"输入的内容不能为空";
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];
     }
     
+}
+
+ -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([status isEqualToString:@"1"]) {
+        [self goback:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,6 +12,7 @@
 {
     NSMutableArray *list;
     NSInteger page;
+    NSInteger isfirst;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

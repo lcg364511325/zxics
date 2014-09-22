@@ -69,9 +69,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    fontindex * _fontindex=[[fontindex alloc] init];
-    
-    [self.navigationController pushViewController:_fontindex animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //初始化tableview数据

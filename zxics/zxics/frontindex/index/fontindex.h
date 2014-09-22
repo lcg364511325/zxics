@@ -29,10 +29,4 @@
     NSString *isExit;
 }
 
-
-@property (weak, nonatomic) IBOutlet UIScrollView *functionscroll;
-@property (weak, nonatomic) IBOutlet UIPageControl *functionpage;
-@property (strong, nonatomic) IBOutlet UIView *secondview;
-@property (weak, nonatomic) IBOutlet UIButton *loginbutton;
-
 @end

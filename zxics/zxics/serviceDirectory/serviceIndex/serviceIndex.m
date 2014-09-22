@@ -38,28 +38,6 @@
     [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色    
 }
 
-//首页跳转
--(IBAction)frontindex:(id)sender
-{
-    fontindex * _fontindex=[[fontindex alloc] init];
-    
-    [self.navigationController pushViewController:_fontindex animated:NO];
-}
-
-//个人管理页面跳转
--(IBAction)personindex:(id)sender
-{
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        personIndex *_personIndex=[[personIndex alloc]init];
-        [self.navigationController pushViewController:_personIndex animated:NO];
-    }else{
-        NSString *rowString =@"请先登陆！";
-        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
-    }
-}
-
 //下载管理页面跳转
 -(IBAction)download:(id)sender
 {
@@ -90,22 +68,6 @@
     surveylist * _surveylist=[[surveylist alloc] init];
     _surveylist.btntag=@"0";
     [self.navigationController pushViewController:_surveylist animated:NO];
-}
-
-//关于我们页面跳转
--(IBAction)aboutus:(id)sender
-{
-    aboutus * _aboutus=[[aboutus alloc] init];
-    
-    [self.navigationController pushViewController:_aboutus animated:NO];
-}
-
-//社区商城页面跳转
--(IBAction)goodslist:(id)sender
-{
-    goodslist * _goodslist=[[goodslist alloc] init];
-    
-    [self.navigationController pushViewController:_goodslist animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

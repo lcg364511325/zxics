@@ -216,7 +216,7 @@
     orderscrollview.contentSize=CGSizeMake(320, secondview.frame.size.height);
     orderscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     orderscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
-    orderscrollview.scrollEnabled=YES;//
+    orderscrollview.scrollEnabled=YES;
 }
 
 

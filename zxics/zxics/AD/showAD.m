@@ -7,10 +7,10 @@
 //
 
 #import "showAD.h"
-#import "fontindex.h"
 #import "VisaIntroduce.h"
 #import "DataService.h"
 #import "ImageCacher.h"
+#import "decorateView.h"
 
 @interface showAD ()
 
@@ -74,8 +74,8 @@
 //首页跳转
 -(void)turntofrontindex
 {
-    fontindex *_fontindex=[[fontindex alloc]init];
-    [self.navigationController pushViewController:_fontindex animated:NO];
+    decorateView *_decorateView=[[decorateView alloc]init];
+    [self.navigationController pushViewController:_decorateView animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

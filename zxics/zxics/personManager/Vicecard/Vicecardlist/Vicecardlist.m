@@ -1,21 +1,21 @@
 //
-//  ViewController.m
+//  Vicecardlist.m
 //  zxics
 //
-//  Created by johnson on 14-8-9.
+//  Created by johnson on 14-9-22.
 //  Copyright (c) 2014年 moko. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "Vicecardlist.h"
 #import "AppDelegate.h"
 #import "DataService.h"
 #import "MJRefresh.h"
 
-@interface ViewController ()
+@interface Vicecardlist ()
 
 @end
 
-@implementation ViewController
+@implementation Vicecardlist
 
 @synthesize vicecTView;
 @synthesize cardnoLabel;
@@ -54,6 +54,7 @@
         [vicecTView reloadData];
         [vicecTView footerEndRefreshing];
     }];
+
 }
 
 -(void)loaddata

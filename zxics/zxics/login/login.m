@@ -40,8 +40,7 @@ NSInteger i=0;
     //shengyu    222222   13428706220  111111
     [self.navigationController setNavigationBarHidden:YES];
     
-    [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
-    
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    
     if ([[NSUserDefaults standardUserDefaults]objectForKey:@"_account"]) {
         
         _account.text=(NSString *)[[NSUserDefaults standardUserDefaults]objectForKey:@"_account"];

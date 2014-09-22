@@ -18,6 +18,10 @@
                     <rect key="frame" x="0.0" y="94" width="320" height="118"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="combg.png" id="iId-xc-AHo">
+                    <rect key="frame" x="0.0" y="212" width="320" height="296"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oGF-y0-NRi">
                     <rect key="frame" x="20" y="233" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,6 +150,7 @@
     <resources>
         <image name="activity.png" width="80" height="80"/>
         <image name="appraise.png" width="80" height="80"/>
+        <image name="combg.png" width="430" height="336"/>
         <image name="hire.png" width="80" height="80"/>
         <image name="marquee.png" width="429" height="116"/>
         <image name="notice.png" width="80" height="80"/>

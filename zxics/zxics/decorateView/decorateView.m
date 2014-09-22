@@ -44,6 +44,8 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl) {
         scomtext.text=myDelegate.entityl.communityName;
+        [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
+        [settingbtn addTarget:self action:@selector(personindex) forControlEvents:UIControlEventTouchDown];
     }
 }
 
@@ -90,7 +92,7 @@
     [topview addSubview:logoimg];
     
     //登录按钮
-    UIButton *settingbtn=[[UIButton alloc]initWithFrame:CGRectMake(245, 15, 40, 40)];
+    settingbtn=[[UIButton alloc]initWithFrame:CGRectMake(245, 15, 40, 40)];
     [settingbtn setImage:[UIImage imageNamed:@"login_title"] forState:UIControlStateNormal];
     [settingbtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
     [topview addSubview:settingbtn];
@@ -148,11 +150,13 @@
     UIImageView *bgimg=[[UIImageView alloc]initWithFrame:rect];
     [bgimg setImage:[UIImage imageNamed:@"footer_bg1"]];
     for (int i=0; i<count-1; i++) {
-        UIImageView *lineimg=[[UIImageView alloc]init];
-        [lineimg setImage:[UIImage imageNamed:@"footer_line"]];
-        NSInteger width=self.view.frame.size.width/count;
-        lineimg.frame=CGRectMake(width*(i+1), 0, 2, 50);
-        [bgimg addSubview:lineimg];
+        if (i>0) {
+            UIImageView *lineimg=[[UIImageView alloc]init];
+            [lineimg setImage:[UIImage imageNamed:@"footer_line"]];
+            NSInteger width=self.view.frame.size.width/count;
+            lineimg.frame=CGRectMake(width*(i+1), 0, 2, 50);
+            [bgimg addSubview:lineimg];
+        }
     }
     [self.tabBar addSubview:bgimg];
     XNTabBar *myView = [[XNTabBar alloc] init]; //设置代理必须改掉前面的类型,不能用UIView
@@ -208,6 +212,22 @@
     }
 }
 
+//个人管理首页
+-(void)personindex
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        personIndex * _personIndex=[[personIndex alloc] init];
+        
+        [self.navigationController pushViewController:_personIndex animated:NO];
+    }else{
+        NSString *rowString =@"请先登陆！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
+}
+
+// 显示社区列表
 -(void)showmycom
 {
     comTView.hidden=NO;

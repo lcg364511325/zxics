@@ -295,6 +295,7 @@
 		2C3C76C719CFF96700B94DD7 /* guideindex.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C76C619CFF96700B94DD7 /* guideindex.png */; };
 		2C3C76CC19D0085500B94DD7 /* Vicecardlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C76CA19D0085400B94DD7 /* Vicecardlist.m */; };
 		2C3C76CD19D0085500B94DD7 /* Vicecardlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C76CB19D0085500B94DD7 /* Vicecardlist.xib */; };
+		2C3C76D019D0199900B94DD7 /* combg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C76CF19D0199900B94DD7 /* combg.png */; };
 		2C41688419BE9B49001A28A9 /* showAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41688219BE9B49001A28A9 /* showAD.m */; };
 		2C41688519BE9B49001A28A9 /* showAD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688319BE9B49001A28A9 /* showAD.xib */; };
 		2C41688C19BEABB2001A28A9 /* guidanceend.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C41688619BEABB2001A28A9 /* guidanceend.png */; };
@@ -888,6 +889,7 @@
 		2C3C76C919D0085400B94DD7 /* Vicecardlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vicecardlist.h; path = personManager/Vicecard/Vicecardlist/Vicecardlist.h; sourceTree = "<group>"; };
 		2C3C76CA19D0085400B94DD7 /* Vicecardlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vicecardlist.m; path = personManager/Vicecard/Vicecardlist/Vicecardlist.m; sourceTree = "<group>"; };
 		2C3C76CB19D0085500B94DD7 /* Vicecardlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Vicecardlist.xib; path = personManager/Vicecard/Vicecardlist/Vicecardlist.xib; sourceTree = "<group>"; };
+		2C3C76CF19D0199900B94DD7 /* combg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combg.png; sourceTree = "<group>"; };
 		2C41688119BE9B49001A28A9 /* showAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = showAD.h; path = AD/showAD.h; sourceTree = "<group>"; };
 		2C41688219BE9B49001A28A9 /* showAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = showAD.m; path = AD/showAD.m; sourceTree = "<group>"; };
 		2C41688319BE9B49001A28A9 /* showAD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = showAD.xib; path = AD/showAD.xib; sourceTree = "<group>"; };
@@ -3147,6 +3149,7 @@
 		7CE63183198C7C2A00730C64 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2C3C76CF19D0199900B94DD7 /* combg.png */,
 				2C3C76C619CFF96700B94DD7 /* guideindex.png */,
 				2C3C76C419CFF87300B94DD7 /* mallindex.png */,
 				2C3C76BC19CFF4E000B94DD7 /* serviceindex.png */,
@@ -3587,6 +3590,7 @@
 				2C3AED6119A57C7D00D981C3 /* settings_out.png in Resources */,
 				2C28112719986AD20072D08C /* questionslist.xib in Resources */,
 				2C3C76AC19CFC71300B94DD7 /* wycomacitivity.png in Resources */,
+				2C3C76D019D0199900B94DD7 /* combg.png in Resources */,
 				2C3C76A619CFC71300B94DD7 /* TabBar2.png in Resources */,
 				2C3AED3819A57C7D00D981C3 /* login_green.png in Resources */,
 				2C3AED7119A57C7D00D981C3 /* wifi.png in Resources */,

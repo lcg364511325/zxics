@@ -14,5 +14,6 @@
     UITextField *scomtext;
     UITableView *comTView;
     NSMutableArray *list;
+    UIButton *settingbtn;
 }
 @end

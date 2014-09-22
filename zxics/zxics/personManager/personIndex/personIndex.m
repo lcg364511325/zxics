@@ -33,17 +33,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.UINavigationBar setBarTintColor:[UIColor colorWithRed:7.0/255.0 green:3.0/255.0 blue:164.0/255.0 alpha:1]];//设置bar背景颜色
-    self.UINavigationItem.title=@"个人管理";
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    self.UINavigationItem.title=@"个人管理";
     
 }
 
 //首页页面跳转
 -(IBAction)fontindex:(id)sender
 {
-    fontindex * _fontindex=[[fontindex alloc] init];
-    
-    [self.navigationController pushViewController:_fontindex animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //首页跳转

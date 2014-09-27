@@ -6,7 +6,7 @@
 //
 
 #import "VisaIntroduce.h"
-#import "fontindex.h"
+#import "decorateView.h"
 
 @interface VisaIntroduce ()
 
@@ -228,8 +228,8 @@
 - (void)introDidFinish {
     NSLog(@"Intro callback");
     
-    fontindex *_fontindex=[[fontindex alloc]init];
-    [self.navigationController pushViewController:_fontindex animated:NO];
+    decorateView *_decorateView=[[decorateView alloc]init];
+    [self.navigationController pushViewController:_decorateView animated:NO];
 }
 
 @end

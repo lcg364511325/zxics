@@ -15,6 +15,7 @@
 #import "serviceIndex.h"
 #import "AppDelegate.h"
 #import "DataService.h"
+#import "ImageCacher.h"
 
 @interface decorateView ()
 
@@ -43,6 +44,17 @@
     
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl) {
+        //头像
+        NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
+        NSURL *imgUrl=[NSURL URLWithString:url];
+        NSData* data = [NSData dataWithContentsOfURL:imgUrl];
+        UIImage *img=[UIImage imageWithData:data];
+        [settingbtn setImage:img forState:UIControlStateNormal];
+        settingbtn.layer.cornerRadius = settingbtn.frame.size.width / 2;
+        settingbtn.clipsToBounds = YES;
+        settingbtn.layer.borderWidth = 3.0f;
+        settingbtn.layer.borderColor = [UIColor whiteColor].CGColor;
+        
         scomtext.text=myDelegate.entityl.communityName;
         [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
         [settingbtn addTarget:self action:@selector(personindex) forControlEvents:UIControlEventTouchDown];
@@ -180,6 +192,15 @@
 /**永远别忘记设置代理*/
 - (void)tabBar:(XNTabBar *)tabBar selectedFrom:(NSInteger)from to:(NSInteger)to {
     self.selectedIndex = to;
+    CATransition *animation =[CATransition animation];
+    [animation setDuration:0.75f];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromRight];
+    [self.view.layer addAnimation:animation forKey:@"change"];
+    
+    int index = self.selectedIndex;
+    NSLog(@"tabbarSelected index:%d",index);
 }
 
 

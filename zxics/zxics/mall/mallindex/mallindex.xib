@@ -6,6 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mallindex">
             <connections>
+                <outlet property="fourButton" destination="a5G-9r-IUG" id="oAD-2R-j9K"/>
+                <outlet property="fourLabel" destination="p1Z-LH-QRB" id="xlu-4T-6bH"/>
+                <outlet property="oneLabel" destination="sRp-9q-Cej" id="Itx-um-5PK"/>
+                <outlet property="onebutton" destination="FR0-3r-o0L" id="NLi-IC-WTl"/>
+                <outlet property="threeButton" destination="tOm-Tq-BXF" id="VFL-Qs-ODG"/>
+                <outlet property="threeLabel" destination="sde-St-gW7" id="ryJ-gt-syZ"/>
+                <outlet property="twoButton" destination="PVR-7p-CSR" id="ooY-cO-1EI"/>
+                <outlet property="twoLabel" destination="Ljy-py-y3T" id="uRm-MB-3NL"/>
                 <outlet property="view" destination="IX1-q3-9uM" id="x4e-4q-3DV"/>
             </connections>
         </placeholder>

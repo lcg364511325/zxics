@@ -8,6 +8,7 @@
 
 #import "mallindex.h"
 #import "DataService.h"
+#import "goodslist.h"
 
 @interface mallindex ()
 
@@ -60,10 +61,10 @@
         }
         if (row==0) {
             btn=[[UIButton alloc]initWithFrame:CGRectMake(20, 231+50*line, 50, 50)];
-            label=[[UILabel alloc]initWithFrame:CGRectMake(30, 283+50*line, 50, 10)];
+            label=[[UILabel alloc]initWithFrame:CGRectMake(20, 283+50*line, 50, 10)];
         }else if (row==1){
             btn=[[UIButton alloc]initWithFrame:CGRectMake(97, 231+50*line, 50, 50)];
-            label=[[UILabel alloc]initWithFrame:CGRectMake(107, 283+50*line, 50, 10)];
+            label=[[UILabel alloc]initWithFrame:CGRectMake(97, 283+50*line, 50, 10)];
         }else if (row==2)
         {
             btn=[[UIButton alloc]initWithFrame:CGRectMake(177, 231+50*line, 50, 50)];
@@ -71,16 +72,43 @@
         }else if (row==3)
         {
             btn=[[UIButton alloc]initWithFrame:CGRectMake(250, 231+50*line, 50, 50)];
-            label=[[UILabel alloc]initWithFrame:CGRectMake(260, 283+50*line, 50, 10)];
+            label=[[UILabel alloc]initWithFrame:CGRectMake(250, 283+50*line, 50, 10)];
         }
-        label.font=[UIFont systemFontOfSize:12.0f];
+        label.font=[UIFont systemFontOfSize:10.0f];
         label.text=[dict objectForKey:@"name"];
         label.textAlignment=NSTextAlignmentCenter;
+        
+        NSString *logo=[NSString stringWithFormat:@"%@",[dict objectForKey:@"logo"]];
+        NSString *gid=[NSString stringWithFormat:@"%@",[dict objectForKey:@"id"]];
+        NSURL *imgUrl=[NSURL URLWithString:logo];
+        btn.tag=[gid integerValue];
+        [btn setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(searchgoods:) forControlEvents:UIControlEventTouchDown];
         
         [self.view addSubview:btn];
         [self.view addSubview:label];
     }
     
+}
+
+//查找商品
+-(void)searchgoods:(UIButton *)btn
+{
+    goodslist *_goodslist=[[goodslist alloc]init];
+    NSMutableDictionary * class = [NSMutableDictionary dictionaryWithCapacity:5];
+    class=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getGoodsClassify",domainser] postDatas:[NSString stringWithFormat:@"pid=%d",btn.tag]];
+    NSArray *classlist=[class objectForKey:@"datas"];
+    NSMutableString *inlayindex=[[NSMutableString alloc] init];
+    for (NSDictionary *index in classlist) {
+        if (inlayindex.length!=0) {
+            [inlayindex appendString:@","];
+            [inlayindex appendString:[NSString stringWithFormat:@"%@",[index objectForKey:@"id"]]];
+        }else{
+            [inlayindex appendString:[NSString stringWithFormat:@"%@",[index objectForKey:@"id"]]];
+        }
+    }
+    _goodslist.cid=inlayindex;
+    [self.navigationController pushViewController:_goodslist animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

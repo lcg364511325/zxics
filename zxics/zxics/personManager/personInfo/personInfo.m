@@ -147,8 +147,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    personIndex *_personIndex=[[personIndex alloc]init];
-    [self.navigationController pushViewController:_personIndex animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //修改个人信息

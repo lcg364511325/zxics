@@ -37,8 +37,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    personInfo *_personInfo=[[personInfo alloc]init];
-    [self.navigationController pushViewController:_personInfo animated:NO];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 //更新个人信息

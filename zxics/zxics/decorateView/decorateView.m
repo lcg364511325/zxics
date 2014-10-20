@@ -40,25 +40,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden=YES;
-    
-    
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        //头像
-        NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
-        NSURL *imgUrl=[NSURL URLWithString:url];
-        NSData* data = [NSData dataWithContentsOfURL:imgUrl];
-        UIImage *img=[UIImage imageWithData:data];
-        [settingbtn setImage:img forState:UIControlStateNormal];
-        settingbtn.layer.cornerRadius = settingbtn.frame.size.width / 2;
-        settingbtn.clipsToBounds = YES;
-        settingbtn.layer.borderWidth = 3.0f;
-        settingbtn.layer.borderColor = [UIColor whiteColor].CGColor;
-        
-        scomtext.text=myDelegate.entityl.communityName;
-        [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
-        [settingbtn addTarget:self action:@selector(personindex) forControlEvents:UIControlEventTouchDown];
-    }
 }
 
 - (void)viewDidLoad
@@ -75,6 +56,9 @@
     
     //自定义tabbar
     [self identitytabbar];
+    
+    //判断是否已登录
+    [self islogin];
     
     
 }
@@ -189,6 +173,28 @@
     }
 }
 
+//判断是否已登录
+-(void)islogin
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        //头像
+        NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
+        NSURL *imgUrl=[NSURL URLWithString:url];
+        NSData* data = [NSData dataWithContentsOfURL:imgUrl];
+        UIImage *img=[UIImage imageWithData:data];
+        [settingbtn setImage:img forState:UIControlStateNormal];
+        settingbtn.layer.cornerRadius = settingbtn.frame.size.width / 2;
+        settingbtn.clipsToBounds = YES;
+        settingbtn.layer.borderWidth = 3.0f;
+        settingbtn.layer.borderColor = [UIColor whiteColor].CGColor;
+        
+        scomtext.text=myDelegate.entityl.communityName;
+        [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
+        [settingbtn addTarget:self action:@selector(personindex) forControlEvents:UIControlEventTouchDown];
+    }
+}
+
 /**永远别忘记设置代理*/
 - (void)tabBar:(XNTabBar *)tabBar selectedFrom:(NSInteger)from to:(NSInteger)to {
     self.selectedIndex = to;
@@ -238,9 +244,9 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl) {
-        personIndex * _personIndex=[[personIndex alloc] init];
-        
-        [self.navigationController pushViewController:_personIndex animated:NO];
+        personIndex * add = [[personIndex alloc] initWithNibName:NSStringFromClass([personIndex class]) bundle:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:add];
+        [self presentViewController:nav animated:NO completion:nil];
     }else{
         NSString *rowString =@"请先登陆！";
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

@@ -78,7 +78,11 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     accountLabel.text=myDelegate.entityl.account;
     
-    ipLabel.text=[psd objectForKey:@"ip"];
+    
+    id ip=[psd objectForKey:@"ip"];
+    if (ip!=[NSNull null]) {
+        ipLabel.text=[psd objectForKey:@"ip"];
+    }
     
     Commons *_Commons=[[Commons alloc]init];
     NSString *timestr=[NSString stringWithFormat:@"%@",[psd objectForKey:@"create_time"]];

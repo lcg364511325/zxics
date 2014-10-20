@@ -46,8 +46,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view from its nib.
-    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    piclist=[[NSMutableArray alloc]initWithCapacity:5];
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
+    piclist=[[NSMutableArray alloc]initWithCapacity:5];
     
     [self loaddata];
 }
@@ -147,7 +149,8 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    personIndex *_personIndex=[[personIndex alloc]init];
+    [self.navigationController pushViewController:_personIndex animated:NO];
 }
 
 //修改个人信息

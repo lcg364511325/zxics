@@ -60,51 +60,20 @@
     }
 }
 
-//个人管理首页
--(IBAction)personindex:(id)sender
-{
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        personIndex * _personIndex=[[personIndex alloc] init];
-        
-        [self.navigationController pushViewController:_personIndex animated:NO];
-    }else{
-        NSString *rowString =@"请先登陆！";
-        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
-    }
-}
-
-//我的发电
--(IBAction)myelectric:(id)sender
-{
-    myelectric * _myelectric=[[myelectric alloc] init];
-    
-    [self.navigationController pushViewController:_myelectric animated:NO];
-}
-
 //物业报修
 -(IBAction)repairlist:(id)sender
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl.communityid) {
-        repairlist * _repairlist=[[repairlist alloc] init];
-        
-        [self.navigationController pushViewController:_repairlist animated:NO];
+        repairlist * add = [[repairlist alloc] initWithNibName:NSStringFromClass([repairlist class]) bundle:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:add];
+        [self presentViewController:nav animated:NO completion:nil];
     }else
     {
         NSString *rowString =@"请先加入社区！";
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alter show];
     }
-}
-
-//招商信息页面跳转
--(IBAction)Merchantslist:(id)sender
-{
-    Merchantslist * _Merchantslist=[[Merchantslist alloc] init];
-    
-    [self.navigationController pushViewController:_Merchantslist animated:NO];
 }
 
 //物业出租出售页面跳转
@@ -130,7 +99,7 @@
 -(IBAction)surveylist:(id)sender
 {
     surveylist * _surveylist=[[surveylist alloc] init];
-    _surveylist.btntag=@"0";
+    _surveylist.btntag=@"1";
     [self.navigationController pushViewController:_surveylist animated:NO];
 }
 

@@ -34,9 +34,9 @@
 //特殊人群关怀页面跳转
 -(IBAction)specialpeople:(id)sender
 {
-    SpecialPeople * _SpecialPeople=[[SpecialPeople alloc] init];
-    
-    [self.navigationController pushViewController:_SpecialPeople animated:NO];
+    SpecialPeople * add = [[SpecialPeople alloc] initWithNibName:NSStringFromClass([SpecialPeople class]) bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:add];
+    [self presentViewController:nav animated:NO completion:nil];
 }
 
 //生活管家页面跳转
@@ -68,9 +68,9 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl) {
-        succourlist * _succourlist=[[succourlist alloc] init];
-        
-        [self.navigationController pushViewController:_succourlist animated:NO];
+        succourlist * add = [[succourlist alloc] initWithNibName:NSStringFromClass([succourlist class]) bundle:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:add];
+        [self presentViewController:nav animated:NO completion:nil];
     }else{
         NSString *rowString =@"请先登陆！";
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

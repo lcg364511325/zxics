@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="特殊人群关怀" id="XB0-aN-OBY">
+                        <navigationItem title="关怀信息" id="XB0-aN-OBY">
                             <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="5vD-Os-Vsz">
                                 <connections>
                                     <action selector="goback:" destination="-1" id="O1g-XZ-YmP"/>
@@ -49,7 +49,6 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="buttonclick:" destination="-1" eventType="touchDown" id="Oub-zZ-xl7"/>
                         <action selector="filecenter:" destination="-1" eventType="touchDown" id="THc-yb-Jaz"/>
                     </connections>
                 </button>

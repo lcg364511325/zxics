@@ -10,6 +10,8 @@
 #import "goodslist.h"
 #import "personfootprintlist.h"
 #import "myhome.h"
+#import "decorateView.h"
+#import "myelectric.h"
 
 @interface personIndex ()
 
@@ -33,22 +35,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    self.UINavigationItem.title=@"个人管理";
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
+    self.UINavigationItem.title=@"个人管理";
     
 }
 
 //首页页面跳转
 -(IBAction)fontindex:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
-}
-
-//首页跳转
--(IBAction)frontindex:(id)sender
-{
-    serviceIndex * _serviceIndex=[[serviceIndex alloc] init];
-    
-    [self.navigationController pushViewController:_serviceIndex animated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil];
+//    decorateView *_decorateView=[[decorateView alloc]init];
+//    [self.navigationController pushViewController:_decorateView animated:NO ];
 }
 
 //个人信息
@@ -74,14 +72,6 @@
     personfootprintlist * _personfootprintlist=[[personfootprintlist alloc] init];
     
     [self.navigationController pushViewController:_personfootprintlist animated:NO];
-}
-
-//社区商城页面跳转
--(IBAction)goodslist:(id)sender
-{
-    goodslist * _goodslist=[[goodslist alloc] init];
-    
-    [self.navigationController pushViewController:_goodslist animated:NO];
 }
 
 //欠费（缴费）查询页面跳转
@@ -150,6 +140,34 @@
     Vicecardlist * _Vicecardlist=[[Vicecardlist alloc] init];
     
     [self.navigationController pushViewController:_Vicecardlist animated:NO];
+}
+
+//我的发电
+-(IBAction)myelectric:(id)sender
+{
+    myelectric * _myelectric=[[myelectric alloc] init];
+    
+    [self.navigationController pushViewController:_myelectric animated:NO];
+}
+
+//退出登录
+-(IBAction)logout:(id)sender
+{
+    NSString *rowString =@"是否退出登录？";
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alter show];
+}
+
+//alertview响应事件
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+        if (buttonIndex==1) {
+            AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+            myDelegate.entityl=[[LoginEntity alloc]init];
+            
+            login * _login=[[login alloc] init];
+            [self.navigationController pushViewController:_login animated:NO];
+        }
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,6 +10,7 @@
 #import "DataService.h"
 #import "LoginEntity.h"
 #import "regeditmember.h"
+#import "decorateView.h"
 
 @interface login ()
 
@@ -118,6 +119,8 @@ NSInteger i=0;
                     NSString *rowString =@"登录成功";
                     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     [alter show];
+                    decorateView *_decorateView=[[decorateView alloc]init];
+                    [self.navigationController pushViewController:_decorateView animated:NO];
                     
                     
                 }else{
@@ -142,14 +145,6 @@ NSInteger i=0;
         
     }
     
-}
-
--(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        [self goback:nil];
-    }
 }
 
 //注册

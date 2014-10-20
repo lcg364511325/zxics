@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C12854B19F4E9B60085C3D6 /* t_quit_m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C12854A19F4E9B60085C3D6 /* t_quit_m.png */; };
 		2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E81995ACA7008DBB58 /* communitylist.m */; };
 		2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E91995ACA7008DBB58 /* communitylist.xib */; };
 		2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EE1995AEB1008DBB58 /* communityCell.m */; };
@@ -538,6 +539,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C12854A19F4E9B60085C3D6 /* t_quit_m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_quit_m.png; sourceTree = "<group>"; };
 		2C1FE5E71995ACA7008DBB58 /* communitylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communitylist.h; path = personManager/community/communitylist/communitylist.h; sourceTree = "<group>"; };
 		2C1FE5E81995ACA7008DBB58 /* communitylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communitylist.m; path = personManager/community/communitylist/communitylist.m; sourceTree = "<group>"; };
 		2C1FE5E91995ACA7008DBB58 /* communitylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communitylist.xib; path = personManager/community/communitylist/communitylist.xib; sourceTree = "<group>"; };
@@ -3149,6 +3151,7 @@
 		7CE63183198C7C2A00730C64 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2C12854A19F4E9B60085C3D6 /* t_quit_m.png */,
 				2C3C76CF19D0199900B94DD7 /* combg.png */,
 				2C3C76C619CFF96700B94DD7 /* guideindex.png */,
 				2C3C76C419CFF87300B94DD7 /* mallindex.png */,
@@ -3454,6 +3457,7 @@
 				2C1FE6511995C8AC008DBB58 /* complainAdd.xib in Resources */,
 				2C54EC2E19AD7682004D580C /* yikatong.xib in Resources */,
 				2C1FE60B1995C221008DBB58 /* VicecardDetail.xib in Resources */,
+				2C12854B19F4E9B60085C3D6 /* t_quit_m.png in Resources */,
 				2C2806981990AD69007838A6 /* complainCell.xib in Resources */,
 				2C3AECFA19A57C7D00D981C3 /* btn_add_community.png in Resources */,
 				2C3AED6C19A57C7D00D981C3 /* tab_profile_disabled.png in Resources */,

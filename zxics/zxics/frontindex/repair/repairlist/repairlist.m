@@ -34,6 +34,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:YES];
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    source=@"";//初始化状态为全部
     list=[[NSMutableArray alloc]initWithCapacity:5];
     btnlist=[[NSMutableArray alloc]initWithCapacity:5];
@@ -99,7 +100,7 @@
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 -(IBAction)repairadd:(id)sender

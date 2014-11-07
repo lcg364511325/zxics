@@ -11,6 +11,7 @@
 #import "prowantedDetail.h"
 #import "DataService.h"
 #import "Commons.h"
+#import "addproWanted.h"
 
 @interface prowantedlist ()
 
@@ -62,6 +63,22 @@
     pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/mobileNeedRentAndBuy",domainser] postDatas:nil forPage:page forPageSize:10];
     NSArray *pwlist=[pw objectForKey:@"datas"];
     [list addObjectsFromArray:pwlist];
+}
+
+
+//添加页面跳转
+-(IBAction)addprowanted:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl) {
+        
+        addproWanted *_addproWanted=[[addproWanted alloc]init];
+        [self.navigationController pushViewController:_addproWanted animated:NO];
+    }else{
+        NSString *rowString =@"请先登录！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 -(IBAction)goback:(id)sender

@@ -133,7 +133,7 @@
     //说明
     UILabel *detailLabel=[[UILabel alloc] init];
     detailLabel.font=[UIFont systemFontOfSize:12.0f];
-    id detail=[me objectForKey:@"remark"] ;
+    id detail=[me objectForKey:@"remark"];
     if (detail==[NSNull null]) {
         detailLabel.text=@"说明：";
         detailLabel.frame=CGRectMake(10, appuserLabel.frame.origin.y+30, 280, 30);

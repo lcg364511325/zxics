@@ -23,6 +23,7 @@
 @synthesize stateLabel;
 @synthesize re;
 @synthesize reSView;
+@synthesize resultname;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -93,6 +94,47 @@
     }
     stateLabel.text=[NSString stringWithFormat:@"保修状态：%@",status];
     stateLabel.frame=CGRectMake(stateLabel.frame.origin.x, contentLabel.frame.origin.y+contentLabel.frame.size.height, stateLabel.frame.size.width, stateLabel.frame.size.height);
+    
+    if (repairsource>1) {
+        //维修人员
+        UILabel * dousernameLabel=[[UILabel alloc]initWithFrame:CGRectMake(dateLabel.frame.origin.x, stateLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height)];
+        dousernameLabel.font=[UIFont systemFontOfSize:12.0f];
+        dousernameLabel.text=[NSString stringWithFormat:@"维修人员：%@",[re objectForKey:@"dousername"]];
+        
+        [reSView addSubview:dousernameLabel];
+        
+        //维修人员联系方式
+        UILabel * dophoneLabel=[[UILabel alloc]initWithFrame:CGRectMake(dateLabel.frame.origin.x, dousernameLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height)];
+        dophoneLabel.font=[UIFont systemFontOfSize:12.0f];
+        dophoneLabel.text=[NSString stringWithFormat:@"联系方式：%@",[re objectForKey:@"dophone"]];
+        
+        [reSView addSubview:dophoneLabel];
+        
+        if (repairsource>3) {
+            //维修结果说明
+            UILabel * resultsLabel=[[UILabel alloc]init];
+            resultsLabel.font=[UIFont systemFontOfSize:12.0f];
+            actualsize =[[re objectForKey:@"contents"] boundingRectWithSize:size options:
+                         NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+            resultsLabel.frame=CGRectMake(dateLabel.frame.origin.x, dophoneLabel.frame.origin.y+30, dateLabel.frame.size.width, actualsize.height+24);
+            resultsLabel.text=[NSString stringWithFormat:@"维修结果：%@",[re objectForKey:@"results"]];
+            [reSView addSubview:resultsLabel];
+            
+            if (repairsource==4) {
+                
+                
+                //评价
+                UILabel * assessLabel=[[UILabel alloc]initWithFrame:CGRectMake(dateLabel.frame.origin.x, resultsLabel.frame.origin.y+resultsLabel.frame.size.height, dateLabel.frame.size.width, dateLabel.frame.size.height)];
+                assessLabel.font=[UIFont systemFontOfSize:12.0f];
+                assessLabel.text=[NSString stringWithFormat:@"用户评价：%@",resultname];
+                
+                [reSView addSubview:assessLabel];
+            }
+        }
+        
+        
+    }
+    
     
     reSView.contentSize=CGSizeMake(320, stateLabel.frame.origin.y-titleLabel.frame.origin.y+stateLabel.frame.size.height+10);
     reSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线

@@ -163,6 +163,7 @@
     NSDictionary *repair = [list objectAtIndex:[indexPath row]];
     NSDictionary *pc=[repair objectForKey:@"pc"];
     _repairDetail.re=pc;
+    _repairDetail.resultname=[NSString stringWithFormat:@"%@",[repair objectForKey:@"rankName"]];
     [self.navigationController pushViewController:_repairDetail animated:NO];
     
 }

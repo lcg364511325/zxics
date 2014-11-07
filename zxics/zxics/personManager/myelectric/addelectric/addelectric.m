@@ -36,6 +36,7 @@
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    
     picno=0;
     piclist=[[NSMutableArray alloc]initWithCapacity:1];
+    countText.keyboardType=UIKeyboardTypeDecimalPad;
 }
 
 //上传图片
@@ -172,49 +173,56 @@
 -(IBAction)submitOrder:(id)sender{
     
     @try {
-        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-        alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"提交信息中。。" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
-        
-        
-        NSString *URL = [NSString stringWithFormat:@"%@api/addGenerating",domainser];
-        
-        
-        ASIFormDataRequest *uploadImageRequest= [ ASIFormDataRequest requestWithURL : [NSURL URLWithString:[URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ]];
-        
-        [uploadImageRequest setStringEncoding:NSUTF8StringEncoding];
-        [uploadImageRequest setRequestMethod:@"POST"];
-        [uploadImageRequest setPostValue:myDelegate.entityl.userid forKey:@"userid"];
-        [uploadImageRequest setPostValue:myDelegate.entityl.communityid forKey:@"communityid"];
-        [uploadImageRequest setPostValue:countText.text forKey:@"generating"];
-        [uploadImageRequest setPostFormat:ASIMultipartFormDataPostFormat];
-        
-        int i=0;
-        for (NSString *eImage in piclist)
-        {
-            i++;
-            NSData *imageData = [NSData dataWithContentsOfFile:eImage];
-            //NSData *imageData=UIImageJPEGRepresentation(eImage,100);
-            //NSString *photoName=[NSString stringWithFormat:@"file%d.jpg",i];
-            NSString * photoName=[eImage lastPathComponent];//从路径中获得完整的文件名（带后缀）
-            photoName=[NSString stringWithFormat:@"%d%@",i,photoName];
-            //NSString *photoDescribe=@" ";
-            //NSLog(@"photoName=%@",photoName);
-            //NSLog(@"photoDescribe=%@",photoDescribe);
-            NSLog(@"图片名字+++++%@",photoName);
-            NSLog(@"图片大小+++++%d",[imageData length]/1024);
-            //照片content
-            //[uploadImageRequest setPostValue:photoDescribe forKey:@"photoContent"];
-            //[uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:@"photoContent"];
-            //[requset addData:imageData withFileName:[NSString stringWithFormat:@"%@_%d.png",self.TF_tel.text,ranNum] andContentType:@"image/png" forKey:[NSString stringWithFormat:@"uploadImage%d",index]];
+        NSInteger count=[countText.text integerValue];
+        if (0<count && count<10000) {
+            AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+            alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"提交信息中。。" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alter show];
             
-            [uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:[NSString stringWithFormat:@"uploadImage%d",i]];
+            
+            NSString *URL = [NSString stringWithFormat:@"%@api/addGenerating",domainser];
+            
+            
+            ASIFormDataRequest *uploadImageRequest= [ ASIFormDataRequest requestWithURL : [NSURL URLWithString:[URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ]];
+            
+            [uploadImageRequest setStringEncoding:NSUTF8StringEncoding];
+            [uploadImageRequest setRequestMethod:@"POST"];
+            [uploadImageRequest setPostValue:myDelegate.entityl.userid forKey:@"userid"];
+            [uploadImageRequest setPostValue:myDelegate.entityl.communityid forKey:@"communityid"];
+            [uploadImageRequest setPostValue:countText.text forKey:@"generating"];
+            [uploadImageRequest setPostFormat:ASIMultipartFormDataPostFormat];
+            
+            int i=0;
+            for (NSString *eImage in piclist)
+            {
+                i++;
+                NSData *imageData = [NSData dataWithContentsOfFile:eImage];
+                //NSData *imageData=UIImageJPEGRepresentation(eImage,100);
+                //NSString *photoName=[NSString stringWithFormat:@"file%d.jpg",i];
+                NSString * photoName=[eImage lastPathComponent];//从路径中获得完整的文件名（带后缀）
+                photoName=[NSString stringWithFormat:@"%d%@",i,photoName];
+                //NSString *photoDescribe=@" ";
+                //NSLog(@"photoName=%@",photoName);
+                //NSLog(@"photoDescribe=%@",photoDescribe);
+                NSLog(@"图片名字+++++%@",photoName);
+                NSLog(@"图片大小+++++%d",[imageData length]/1024);
+                //照片content
+                //[uploadImageRequest setPostValue:photoDescribe forKey:@"photoContent"];
+                //[uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:@"photoContent"];
+                //[requset addData:imageData withFileName:[NSString stringWithFormat:@"%@_%d.png",self.TF_tel.text,ranNum] andContentType:@"image/png" forKey:[NSString stringWithFormat:@"uploadImage%d",index]];
+                
+                [uploadImageRequest addData:imageData withFileName:photoName andContentType:@"image/jpeg" forKey:[NSString stringWithFormat:@"uploadImage%d",i]];
+            }
+            
+            [uploadImageRequest setDelegate : self ];
+            [uploadImageRequest setDidFinishSelector : @selector (responseComplete:)];
+            [uploadImageRequest setDidFailSelector : @selector (responseFailed:)];
+            [uploadImageRequest startAsynchronous];
+        }else{
+            alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"发电量不能少等于0，大于10000" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alter show];
         }
         
-        [uploadImageRequest setDelegate : self ];
-        [uploadImageRequest setDidFinishSelector : @selector (responseComplete:)];
-        [uploadImageRequest setDidFailSelector : @selector (responseFailed:)];
-        [uploadImageRequest startAsynchronous];
         
         
     }@catch (NSException *exception) {

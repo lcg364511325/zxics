@@ -116,9 +116,6 @@ NSInteger i=0;
                     //登录成功，进入系统首页
                     NSLog(@"登录成功，进入系统首页");
                     [alter dismissWithClickedButtonIndex:0 animated:YES];
-                    NSString *rowString =@"登录成功";
-                    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                    [alter show];
                     decorateView *_decorateView=[[decorateView alloc]init];
                     [self.navigationController pushViewController:_decorateView animated:NO];
                     

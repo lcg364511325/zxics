@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C12854B19F4E9B60085C3D6 /* t_quit_m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C12854A19F4E9B60085C3D6 /* t_quit_m.png */; };
+		2C189AD91A0CB6B800431BAC /* addproWanted.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C189AD71A0CB6B800431BAC /* addproWanted.m */; };
+		2C189ADA1A0CB6B800431BAC /* addproWanted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C189AD81A0CB6B800431BAC /* addproWanted.xib */; };
 		2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E81995ACA7008DBB58 /* communitylist.m */; };
 		2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E91995ACA7008DBB58 /* communitylist.xib */; };
 		2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EE1995AEB1008DBB58 /* communityCell.m */; };
@@ -540,6 +542,9 @@
 
 /* Begin PBXFileReference section */
 		2C12854A19F4E9B60085C3D6 /* t_quit_m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_quit_m.png; sourceTree = "<group>"; };
+		2C189AD61A0CB6B800431BAC /* addproWanted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addproWanted.h; path = frontindex/prowanted/addproWanted/addproWanted.h; sourceTree = "<group>"; };
+		2C189AD71A0CB6B800431BAC /* addproWanted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addproWanted.m; path = frontindex/prowanted/addproWanted/addproWanted.m; sourceTree = "<group>"; };
+		2C189AD81A0CB6B800431BAC /* addproWanted.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = addproWanted.xib; path = frontindex/prowanted/addproWanted/addproWanted.xib; sourceTree = "<group>"; };
 		2C1FE5E71995ACA7008DBB58 /* communitylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communitylist.h; path = personManager/community/communitylist/communitylist.h; sourceTree = "<group>"; };
 		2C1FE5E81995ACA7008DBB58 /* communitylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communitylist.m; path = personManager/community/communitylist/communitylist.m; sourceTree = "<group>"; };
 		2C1FE5E91995ACA7008DBB58 /* communitylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communitylist.xib; path = personManager/community/communitylist/communitylist.xib; sourceTree = "<group>"; };
@@ -1299,6 +1304,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C189AD41A0CB66E00431BAC /* addproWanted */ = {
+			isa = PBXGroup;
+			children = (
+				2C189AD61A0CB6B800431BAC /* addproWanted.h */,
+				2C189AD71A0CB6B800431BAC /* addproWanted.m */,
+				2C189AD81A0CB6B800431BAC /* addproWanted.xib */,
+			);
+			name = addproWanted;
+			sourceTree = "<group>";
+		};
 		2C1FE5E51995AC75008DBB58 /* community */ = {
 			isa = PBXGroup;
 			children = (
@@ -1811,6 +1826,7 @@
 		2C2811411998982E0072D08C /* prowanted */ = {
 			isa = PBXGroup;
 			children = (
+				2C189AD41A0CB66E00431BAC /* addproWanted */,
 				2C28114E19989A2F0072D08C /* prowantedDetail */,
 				2C281142199898940072D08C /* prowantedlist */,
 			);
@@ -3563,6 +3579,7 @@
 				2C2811671998A98B0072D08C /* goodslist.xib in Resources */,
 				2C5404BC199363C1003D2BBE /* arrearageDetail.xib in Resources */,
 				2C3AED1B19A57C7D00D981C3 /* dynamic_work.png in Resources */,
+				2C189ADA1A0CB6B800431BAC /* addproWanted.xib in Resources */,
 				2C1FE6591995C8AC008DBB58 /* cplist.xib in Resources */,
 				2C3AED0B19A57C7D00D981C3 /* button_title_more.png in Resources */,
 				2C3C768C19CFB53300B94DD7 /* logo_bg.png in Resources */,
@@ -3774,6 +3791,7 @@
 				2C435B2319BAAAE600364164 /* succouradd.m in Sources */,
 				2C54048D19932E46003D2BBE /* personLog.m in Sources */,
 				2C3C76CC19D0085500B94DD7 /* Vicecardlist.m in Sources */,
+				2C189AD91A0CB6B800431BAC /* addproWanted.m in Sources */,
 				2C1FE5F61995B433008DBB58 /* floorlist.m in Sources */,
 				2C41DE9F19B9495D00623483 /* myelectricCell.m in Sources */,
 				2C1FE60A1995C221008DBB58 /* VicecardDetail.m in Sources */,

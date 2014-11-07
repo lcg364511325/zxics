@@ -11,6 +11,7 @@
 @interface repairDetail : UIViewController
 
 @property(retain , nonatomic) NSDictionary * re;//物业报修详情
+@property(retain , nonatomic) NSString *resultname;//物业报修详情
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *reSView;

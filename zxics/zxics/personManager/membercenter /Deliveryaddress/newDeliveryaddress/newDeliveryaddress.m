@@ -38,7 +38,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    areadetail=nil;
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
+    areadetail=nil;
     coutryid=@"";
     provinceid=@"";
     cityid=@"";

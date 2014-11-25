@@ -1199,7 +1199,7 @@
 		2CFEAA55199AF7BA00FCB5C1 /* filecenterDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterDetail.h; path = filecenter/filecenterDetail/filecenterDetail.h; sourceTree = "<group>"; };
 		2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterDetail.m; path = filecenter/filecenterDetail/filecenterDetail.m; sourceTree = "<group>"; };
 		2CFEAA57199AF7BA00FCB5C1 /* filecenterDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterDetail.xib; path = filecenter/filecenterDetail/filecenterDetail.xib; sourceTree = "<group>"; };
-		7CE63120198C7A8100730C64 /* zxics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zxics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE63120198C7A8100730C64 /* 智慧社区.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "智慧社区.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE63123198C7A8100730C64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CE63125198C7A8100730C64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7CE63127198C7A8100730C64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -2987,7 +2987,7 @@
 		7CE63121198C7A8100730C64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CE63120198C7A8100730C64 /* zxics.app */,
+				7CE63120198C7A8100730C64 /* 智慧社区.app */,
 				7CE63141198C7A8300730C64 /* zxicsTests.xctest */,
 			);
 			name = Products;
@@ -3390,7 +3390,7 @@
 			);
 			name = zxics;
 			productName = zxics;
-			productReference = 7CE63120198C7A8100730C64 /* zxics.app */;
+			productReference = 7CE63120198C7A8100730C64 /* 智慧社区.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7CE63140198C7A8300730C64 /* zxicsTests */ = {
@@ -4109,7 +4109,7 @@
 					"$(PROJECT_DIR)/zxics/extend/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "智慧社区";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4128,7 +4128,7 @@
 					"$(PROJECT_DIR)/zxics/extend/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "智慧社区";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

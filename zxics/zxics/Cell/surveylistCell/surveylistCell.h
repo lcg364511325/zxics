@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *joinButton;
 @property (weak, nonatomic) IBOutlet UIButton *resultButton;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

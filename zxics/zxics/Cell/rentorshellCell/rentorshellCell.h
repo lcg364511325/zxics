@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *addrLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

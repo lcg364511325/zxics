@@ -109,6 +109,7 @@ NSInteger i=0;
                     loginuser.communityName=[login objectForKey:@"communityName"];
                     loginuser.userMoney=[login objectForKey:@"userMoney"];
                     loginuser.communityid=[login objectForKey:@"communityid"];
+                    loginuser.orgId=[login objectForKey:@"orgId"];
                     myDelegate.entityl=loginuser;
                     
                     

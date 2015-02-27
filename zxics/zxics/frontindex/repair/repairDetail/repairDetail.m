@@ -95,6 +95,7 @@
     stateLabel.text=[NSString stringWithFormat:@"保修状态：%@",status];
     stateLabel.frame=CGRectMake(stateLabel.frame.origin.x, contentLabel.frame.origin.y+contentLabel.frame.size.height, stateLabel.frame.size.width, stateLabel.frame.size.height);
     
+    int nowHeight=stateLabel.frame.origin.y+stateLabel.frame.size.height;
     if (repairsource>1) {
         //维修人员
         UILabel * dousernameLabel=[[UILabel alloc]initWithFrame:CGRectMake(dateLabel.frame.origin.x, stateLabel.frame.origin.y+30, dateLabel.frame.size.width, dateLabel.frame.size.height)];
@@ -110,6 +111,7 @@
         
         [reSView addSubview:dophoneLabel];
         
+        nowHeight=dophoneLabel.frame.origin.y+dophoneLabel.frame.size.height;
         if (repairsource>3) {
             //维修结果说明
             UILabel * resultsLabel=[[UILabel alloc]init];
@@ -120,6 +122,7 @@
             resultsLabel.text=[NSString stringWithFormat:@"维修结果：%@",[re objectForKey:@"results"]];
             [reSView addSubview:resultsLabel];
             
+            nowHeight=resultsLabel.frame.origin.y+resultsLabel.frame.size.height;
             if (repairsource==4) {
                 
                 
@@ -129,6 +132,7 @@
                 assessLabel.text=[NSString stringWithFormat:@"用户评价：%@",resultname];
                 
                 [reSView addSubview:assessLabel];
+                nowHeight=assessLabel.frame.origin.y+assessLabel.frame.size.height;
             }
         }
         
@@ -136,7 +140,19 @@
     }
     
     
-    reSView.contentSize=CGSizeMake(320, stateLabel.frame.origin.y-titleLabel.frame.origin.y+stateLabel.frame.size.height+10);
+    reSView.contentSize=CGSizeMake(320, nowHeight-titleLabel.frame.origin.y+10);
+    
+    //设置圆角边框
+    UIImageView *borderImage=[[UIImageView alloc] init];
+    borderImage.frame=CGRectMake(4,titleLabel.frame.origin.y-10,self.view.frame.size.width-8, nowHeight-titleLabel.frame.origin.y+10);
+    borderImage.layer.cornerRadius = 5;
+    borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    borderImage.layer.borderWidth = 0.8;
+    borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    [reSView addSubview:borderImage];
+    
+    
     reSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     reSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     reSView.scrollEnabled=YES;

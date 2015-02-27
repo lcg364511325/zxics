@@ -55,7 +55,7 @@
     textView.internalTextView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 5, 0);
     textView.backgroundColor = [UIColor whiteColor];
     textView.placeholder = @"请输入评价内容!";
-    textView.layer.borderColor=[UIColor blueColor].CGColor;
+    textView.layer.borderColor=[UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f].CGColor;
     textView.layer.borderWidth=1.0f;
     textView.layer.cornerRadius=3.0f;
     [self.view addSubview:textView];

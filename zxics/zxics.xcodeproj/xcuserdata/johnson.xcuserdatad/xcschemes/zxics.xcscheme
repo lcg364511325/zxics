@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7CE6311F198C7A8100730C64"
-               BuildableName = "zxics.app"
+               BuildableName = "&#x667a;&#x6167;&#x793e;&#x533a;.app"
                BlueprintName = "zxics"
                ReferencedContainer = "container:zxics.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CE6311F198C7A8100730C64"
-            BuildableName = "zxics.app"
+            BuildableName = "&#x667a;&#x6167;&#x793e;&#x533a;.app"
             BlueprintName = "zxics"
             ReferencedContainer = "container:zxics.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CE6311F198C7A8100730C64"
-            BuildableName = "zxics.app"
+            BuildableName = "&#x667a;&#x6167;&#x793e;&#x533a;.app"
             BlueprintName = "zxics"
             ReferencedContainer = "container:zxics.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CE6311F198C7A8100730C64"
-            BuildableName = "zxics.app"
+            BuildableName = "&#x667a;&#x6167;&#x793e;&#x533a;.app"
             BlueprintName = "zxics"
             ReferencedContainer = "container:zxics.xcodeproj">
          </BuildableReference>

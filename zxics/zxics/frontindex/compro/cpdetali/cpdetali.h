@@ -21,5 +21,6 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;
 @property (weak, nonatomic) IBOutlet UIScrollView *cpScrollview;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

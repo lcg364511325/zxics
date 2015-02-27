@@ -52,7 +52,7 @@
         if (i==count-1) {
             width = self.bounds.size.width / count;
         }else{
-            width = self.bounds.size.width / count-3;
+            width = self.bounds.size.width / count-1;
         }
         CGFloat height = self.bounds.size.height;
         btn.frame = CGRectMake(x, y, width, height);

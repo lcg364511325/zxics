@@ -9,6 +9,7 @@
 #import "findservice.h"
 #import "AppDelegate.h"
 #import "succourlist.h"
+#import "livingArea.h"
 
 @interface findservice ()
 
@@ -43,6 +44,14 @@
 -(IBAction)lifemd:(id)sender
 {
     lifemd * _lifemd=[[lifemd alloc] init];
+    
+    [self.navigationController pushViewController:_lifemd animated:NO];
+}
+
+//便民生活圈
+-(IBAction)livingArea:(id)sender
+{
+    livingArea * _lifemd=[[livingArea alloc] init];
     
     [self.navigationController pushViewController:_lifemd animated:NO];
 }

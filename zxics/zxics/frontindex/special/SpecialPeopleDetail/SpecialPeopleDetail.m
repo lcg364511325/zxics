@@ -97,7 +97,7 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * spd = [NSMutableDictionary dictionaryWithCapacity:5];
     if (myDelegate.entityl && [caid isEqualToString:@"73"]) {
-        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid] forPage:page forPageSize:10];
+        spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=%@&memberId=%@&communityid=%@&type=1&orgId=%@",caid,myDelegate.entityl.userid,myDelegate.entityl.communityid,myDelegate.entityl.orgId] forPage:page forPageSize:10];
     }else{
         spd=[DataService PostDataService:[NSString stringWithFormat:@"%@api/releaseInfoApi",domainser] postDatas:[NSString stringWithFormat:@"categoryId=%@&type=1",caid] forPage:page forPageSize:10];
     }
@@ -132,6 +132,13 @@
     
     Commons *_Commons=[[Commons alloc]init];
     cell.dateLabel.text=[_Commons stringtoDate:[detail objectForKey:@"createDate"]];
+    
+    //设置圆角边框
+    cell.borderImage.layer.cornerRadius = 5;
+    cell.borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    cell.borderImage.layer.borderWidth = 0.8;
+    cell.borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
     
     return cell;
 }

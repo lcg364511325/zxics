@@ -242,7 +242,18 @@
             }
         }
     }
-    suSView.contentSize=CGSizeMake(320, y-title.frame.origin.y+height+20);
+    suSView.contentSize=CGSizeMake(self.view.frame.size.width, y-title.frame.origin.y+height+20);
+    
+    //设置圆角边框
+    UIImageView *borderImage=[[UIImageView alloc] init];
+    borderImage.frame=CGRectMake(4,title.frame.origin.y+2,self.view.frame.size.width-8, y-title.frame.origin.y+height+20);
+    borderImage.layer.cornerRadius = 5;
+    borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    borderImage.layer.borderWidth = 0.8;
+    borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    [suSView addSubview:borderImage];
+    
     suSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     suSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     suSView.scrollEnabled=YES;

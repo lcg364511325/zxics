@@ -128,21 +128,16 @@
         if (rid!=nil && ![rid isEqualToString:@"<null>"]) {
             
             CGSize size1 =CGSizeMake(245,0);
-            UIWebView *replycontentview=[[UIWebView alloc]init];
-            replycontentview.scrollView.bounces=NO;
-            [replycontentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
-                                              "<head> \n"
-                                              "<style type=\"text/css\"> \n"
-                                              "body {font-size: %f; color: %@;}\n"
-                                              "</style> \n"
-                                              "</head> \n"
-                                              "<body>回复内容：%@</body> \n"
-                                              "</html>",10.0,@"black",[complaininfo objectForKey:@"reply_contents"]] baseURL:nil];
-            actualsize =[[complaininfo objectForKey:@"reply_contents"] boundingRectWithSize:size1 options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
-            replycontentview.frame=CGRectMake(detailsLabel.frame.origin.x-10, dealstateLabel.frame.origin.y+30, detailsLabel.frame.size.width, actualsize.height+24);
+            UILabel *replycontentview=[[UILabel alloc]init];
+            replycontentview.font=[UIFont systemFontOfSize:10.0f];
+            replycontentview.numberOfLines=0;
+            NSString *recontentsStr=[self flattenHTML:[NSString stringWithFormat:@"%@",[complaininfo objectForKey:@"reply_contents"]]];
+            replycontentview.text=[NSString stringWithFormat:@"回复内容：%@",recontentsStr];
+            actualsize =[recontentsStr boundingRectWithSize:size1 options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
+            replycontentview.frame=CGRectMake(detailsLabel.frame.origin.x, dealstateLabel.frame.origin.y+30, detailsLabel.frame.size.width, actualsize.height+24);
             [comscrollview addSubview:replycontentview];
             
-            replydataLabel.frame=CGRectMake(replydataLabel.frame.origin.x, replycontentview.frame.origin.y+actualsize.height+24, replydataLabel.frame.size.width, replydataLabel.frame.size.height);
+            replydataLabel.frame=CGRectMake(dealstateLabel.frame.origin.x, replycontentview.frame.origin.y+actualsize.height+24, replydataLabel.frame.size.width, replydataLabel.frame.size.height);
             replydataLabel.text=[NSString stringWithFormat:@"回复时间：%@",[_Commons stringtoDateforsecond:[complaininfo objectForKey:@"reply_createtime"]]];
             
             //是否已评价
@@ -183,17 +178,30 @@
     }
     [comscrollview addSubview:assessbutton];
     
+    int nowHeight=0;
     if (rid!=nil && ![rid isEqualToString:@"<null>"])
     {
         if (![assess isEqualToString:@"0"] && ![assess isEqualToString:@"<null>"] )
         {
-            comscrollview.contentSize=CGSizeMake(320, assessdetailLabel.frame.origin.y-complainaboutLabel.frame.origin.y+assessdetailLabel.frame.size.height);
+            nowHeight=assessdetailLabel.frame.origin.y-complainaboutLabel.frame.origin.y+assessdetailLabel.frame.size.height;
         }else{
-            comscrollview.contentSize=CGSizeMake(320, replydataLabel.frame.origin.y-complainaboutLabel.frame.origin.y+replydataLabel.frame.size.height);
+            nowHeight=replydataLabel.frame.origin.y-complainaboutLabel.frame.origin.y+replydataLabel.frame.size.height;
         }
     }else{
-        comscrollview.contentSize=CGSizeMake(320, complainstateLabel.frame.origin.y-complainaboutLabel.frame.origin.y+complainstateLabel.frame.size.height+20);
+        nowHeight=complainstateLabel.frame.origin.y-complainaboutLabel.frame.origin.y+complainstateLabel.frame.size.height+20;
     }
+    comscrollview.contentSize=CGSizeMake(self.view.frame.size.width, nowHeight);
+    
+    //设置圆角边框
+    UIImageView *borderImage=[[UIImageView alloc] init];
+    borderImage.frame=CGRectMake(4,complainaboutLabel.frame.origin.y-10,self.view.frame.size.width-8, nowHeight+20);
+    borderImage.layer.cornerRadius = 5;
+    borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    borderImage.layer.borderWidth = 0.8;
+    borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    [comscrollview addSubview:borderImage];
+    
     comscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     comscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     comscrollview.scrollEnabled=YES;
@@ -210,6 +218,29 @@
     assess *_assess=[[assess alloc]init];
     _assess.mid=[NSString stringWithFormat:@"%@",[complaininfo objectForKey:@"id"]];
     [self.navigationController pushViewController:_assess animated:NO];
+}
+
+- (NSString *)flattenHTML:(NSString *)html {
+    
+    NSScanner *theScanner;
+    NSString *text = nil;
+    
+    theScanner = [NSScanner scannerWithString:html];
+    
+    while ([theScanner isAtEnd] == NO) {
+        // find start of tag
+        [theScanner scanUpToString:@"<" intoString:NULL] ;
+        // find end of tag
+        [theScanner scanUpToString:@">" intoString:&text] ;
+        // replace the found tag with a space
+        //(you can filter multi-spaces out later if you wish)
+        html = [html stringByReplacingOccurrencesOfString:
+                [NSString stringWithFormat:@"%@>", text]
+                                               withString:@""];
+    } // while //
+    
+    NSLog(@"-----===%@",html);
+    return html;
 }
 
 - (void)didReceiveMemoryWarning

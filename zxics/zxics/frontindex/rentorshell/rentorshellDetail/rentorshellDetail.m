@@ -32,6 +32,7 @@
 @synthesize fixtureLabel;
 @synthesize rsd;
 @synthesize btntag;
+@synthesize HouseImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +60,16 @@
 
 -(void)loaddata
 {
+    //图片
+    NSString *url=[NSString stringWithFormat:@"%@%@",domainser,[rsd objectForKey:@"headurl"]];
+    NSURL *imgUrl=[NSURL URLWithString:url];
+    if (hasCachedImage(imgUrl)) {
+        [HouseImage setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+    }else{
+        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",HouseImage,@"imageView",nil];
+        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+    }
+    
     //名称
     nameLabel.text=[NSString stringWithFormat:@"名称：%@",[rsd objectForKey:@"title"]];
     

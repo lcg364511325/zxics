@@ -78,57 +78,24 @@
 -(void)createtopmenu
 {
     //菜单背景
-    UIView *topview=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 94)];
-    UIImageView *topimg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
+    UIView *topview=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    UIImageView *topimg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     [topimg setImage:[UIImage imageNamed:@"logo_bg"]];
     
     //logo图片
-    UIImageView *logoimg=[[UIImageView alloc]initWithFrame:CGRectMake(24, 20, 70, 30)];
+    UIImageView *logoimg=[[UIImageView alloc]initWithFrame:CGRectMake(10, 5, 100, 30)];
     [logoimg setImage:[UIImage imageNamed:@"logo_title"]];
     [topview addSubview:logoimg];
     
     //登录按钮
-    settingbtn=[[UIButton alloc]initWithFrame:CGRectMake(245, 15, 40, 40)];
+    settingbtn=[[UIButton alloc]initWithFrame:CGRectMake(275, 5, 30, 30)];
     [settingbtn setImage:[UIImage imageNamed:@"login_title"] forState:UIControlStateNormal];
     [settingbtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
     [topview addSubview:settingbtn];
     
-    //选择社区背景图
-    UIImageView *comimg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 64, 320, 30)];
-    [comimg setBackgroundColor:[UIColor colorWithRed:75/255.0 green:192/255.0 blue:250/255.0 alpha:1.0f]];
-    [topview addSubview:comimg];
-    
-    //选择社区
-    UILabel *selectcom=[[UILabel alloc]initWithFrame:CGRectMake(85, 64, 50, 30)];
-    [selectcom setFont:[UIFont boldSystemFontOfSize:12.0f]];
-    selectcom.text=@"选择小区";
-    [selectcom setTextColor:[UIColor whiteColor]];
-    [topview addSubview:selectcom];
-    
-    //社区按钮
-    UIButton *selectcombtn=[[UIButton alloc]initWithFrame:CGRectMake(215, 68, 20, 20)];
-    [selectcombtn setImage:[UIImage imageNamed:@"scombtn"] forState:UIControlStateNormal];
-    [selectcombtn addTarget:self action:@selector(showmycom) forControlEvents:UIControlEventTouchDown];
-    [topview addSubview:selectcombtn];
-    
-    //社区text
-    scomtext=[[UITextField alloc]initWithFrame:CGRectMake(135, 68, 80, 19)];
-    [scomtext setBorderStyle:UITextBorderStyleNone];
-    [scomtext setBackgroundColor:[UIColor whiteColor]];
-    scomtext.userInteractionEnabled=NO;
-    scomtext.font=[UIFont boldSystemFontOfSize:12.0f];
-    [topview addSubview:scomtext];
-    
-    //社区下拉框
-    comTView=[[UITableView alloc]initWithFrame:CGRectMake(135, 87, 100, 100)];
-    comTView.delegate=self;
-    comTView.dataSource=self;
-    comTView.hidden=YES;
-    
 
     [self.view addSubview:topimg];
     [self.view addSubview:topview];
-    [self.view addSubview:comTView];
 }
 
 
@@ -137,7 +104,7 @@
 {
     
     //删除现有的tabBar
-    [self.tabBar setFrame:CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.origin.y-11, self.tabBar.frame.size.width, 60)];
+    [self.tabBar setFrame:CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.origin.y-1, self.tabBar.frame.size.width, 50)];
     CGRect rect = self.tabBar.bounds; //这里要用bounds来加, 否则会加到下面去.看不见
     //LogFrame(self.tabBar);
     
@@ -192,6 +159,56 @@
         scomtext.text=myDelegate.entityl.communityName;
         [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
         [settingbtn addTarget:self action:@selector(personindex) forControlEvents:UIControlEventTouchDown];
+        
+        //选择社区背景图
+        UIImageView *comimg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 40, 320, 30)];
+        [comimg setBackgroundColor:[UIColor colorWithRed:75/255.0 green:192/255.0 blue:250/255.0 alpha:1.0f]];
+        [self.view addSubview:comimg];
+        
+        //选择社区
+        UILabel *selectcom=[[UILabel alloc]initWithFrame:CGRectMake(65, 40, 100, 30)];
+        [selectcom setFont:[UIFont boldSystemFontOfSize:15.0f]];
+        selectcom.text=@"选择小区:";
+        [selectcom setTextColor:[UIColor whiteColor]];
+        [self.view addSubview:selectcom];
+        
+        //社区按钮
+        UIButton *selectcombtn=[[UIButton alloc]initWithFrame:CGRectMake(215, 44, 20, 20)];
+        [selectcombtn setImage:[UIImage imageNamed:@"scombtn"] forState:UIControlStateNormal];
+        [selectcombtn addTarget:self action:@selector(showmycom) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:selectcombtn];
+        
+        //社区text
+        scomtext=[[UITextField alloc]initWithFrame:CGRectMake(135, 44, 80, 19)];
+        [scomtext setBorderStyle:UITextBorderStyleNone];
+        [scomtext setBackgroundColor:[UIColor whiteColor]];
+        scomtext.userInteractionEnabled=NO;
+        scomtext.font=[UIFont boldSystemFontOfSize:12.0f];
+        [self.view addSubview:scomtext];
+        
+        //社区下拉框
+        comTView=[[UITableView alloc]initWithFrame:CGRectMake(135, 63, 100, 100)];
+        comTView.delegate=self;
+        comTView.dataSource=self;
+        comTView.hidden=YES;
+        [self.view addSubview:comTView];
+        
+        NSMutableDictionary * comlist = [NSMutableDictionary dictionaryWithCapacity:5];
+        comlist=[DataService PostDataService:[NSString stringWithFormat:@"%@api/findCommunityList",domainser] postDatas:[NSString stringWithFormat:@"userid=%@",myDelegate.entityl.userid]];
+        NSArray *com=[comlist objectForKey:@"datas"];
+        [list removeAllObjects];
+        [list addObjectsFromArray:com];
+        
+        if ([list count]>0) {
+            AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+            NSDictionary *retype=[list objectAtIndex:0];
+            myDelegate.entityl.communityid=[retype objectForKey:@"id"];
+            myDelegate.entityl.communityName=[retype objectForKey:@"name"];
+            scomtext.text=myDelegate.entityl.communityName;
+        }
+
+        
+        
     }
 }
 
@@ -292,7 +309,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableSampleIdentifier];
     }
-    cell.textLabel.font=[UIFont boldSystemFontOfSize:12.0f];
+    cell.textLabel.font=[UIFont boldSystemFontOfSize:10.0f];
     NSUInteger row = [indexPath row];
     NSDictionary *retype=[list objectAtIndex:row];
     cell.textLabel.text = [retype objectForKey:@"name"];
@@ -307,9 +324,6 @@
     NSDictionary *retype=[list objectAtIndex:row];
     myDelegate.entityl.communityid=[retype objectForKey:@"id"];
     myDelegate.entityl.communityName=[retype objectForKey:@"name"];
-    NSString *rowString =@"切换成功";
-    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alter show];
     scomtext.text=myDelegate.entityl.communityName;
     comTView.hidden=YES;
     

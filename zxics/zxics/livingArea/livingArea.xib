@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="filecenterDetail">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="livingArea">
             <connections>
-                <outlet property="UINavigationBar" destination="2vG-QF-aZl" id="B58-W8-eqG"/>
-                <outlet property="filecenterWView" destination="M5G-tP-s26" id="PBR-ds-akg"/>
+                <outlet property="UINavigationBar" destination="32x-2M-wis" id="ge5-cN-dK0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wView" destination="kew-qP-evq" id="8PW-WT-ZxI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vG-QF-aZl">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32x-2M-wis">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,18 +24,18 @@
                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="信息详情" id="26Y-FO-9s4">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="vqp-qs-luE">
+                        <navigationItem title="便民生活圈" id="RGJ-1t-Q6G">
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="YcQ-lz-Amp">
                                 <connections>
-                                    <action selector="goback:" destination="-1" id="nsw-Vf-Ou7"/>
+                                    <action selector="goback:" destination="-1" id="UBw-Xh-Yg3"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-tP-s26">
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kew-qP-evq">
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </webView>
             </subviews>

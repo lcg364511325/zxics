@@ -10,6 +10,7 @@
 
 @interface SpecialPeopleDetailCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @end

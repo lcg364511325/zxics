@@ -11,5 +11,6 @@
 @interface cplistCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dataLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

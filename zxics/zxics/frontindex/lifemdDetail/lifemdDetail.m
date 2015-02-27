@@ -76,15 +76,17 @@
     UIFont * tfont = introduceLabel.font;
     NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
     
-    CGSize  actualsize =[[pc objectForKey:@"commet"] boundingRectWithSize:size options:
+    NSString *commetStr=[self flattenHTML:[NSString stringWithFormat:@"%@",[pc objectForKey:@"commet"]]];
+    CGSize  actualsize =[commetStr boundingRectWithSize:size options:
                          NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
-    introduceLabel.text=[NSString stringWithFormat:@"介绍：%@",[pc objectForKey:@"commet"]];
+    introduceLabel.text=[NSString stringWithFormat:@"介绍：%@",commetStr];
     introduceLabel.frame=CGRectMake(introduceLabel.frame.origin.x, introduceLabel.frame.origin.y, introduceLabel.frame.size.width, actualsize.height+24);
     
+    NSString *introduceStr=[self flattenHTML:[NSString stringWithFormat:@"%@",[pc objectForKey:@"introduce"]]];
     DetailsLabel.numberOfLines=0;
-    actualsize =[[pc objectForKey:@"introduce"] boundingRectWithSize:size options:
+    actualsize =[introduceStr boundingRectWithSize:size options:
                  NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
-    DetailsLabel.text=[NSString stringWithFormat:@"详细：%@",[pc objectForKey:@"introduce"]];
+    DetailsLabel.text=[NSString stringWithFormat:@"详细：%@",introduceStr];
     DetailsLabel.frame=CGRectMake(DetailsLabel.frame.origin.x, introduceLabel.frame.origin.y+introduceLabel.frame.size.height, DetailsLabel.frame.size.width, actualsize.height+24);
     
     
@@ -102,10 +104,45 @@
     [webSite setText:[pc objectForKey:@"openurl"]];
     [lfmdscrollview addSubview:webSite];
     
-    lfmdscrollview.contentSize=CGSizeMake(320, dateLabel.frame.origin.y-logoImage.frame.origin.y+dateLabel.frame.size.height+10);
+    lfmdscrollview.contentSize=CGSizeMake(self.view.frame.size.width, dateLabel.frame.origin.y-logoImage.frame.origin.y+dateLabel.frame.size.height+20);
+    
+    //设置圆角边框
+    UIImageView *borderImage=[[UIImageView alloc] init];
+    borderImage.frame=CGRectMake(4,logoImage.frame.origin.y-2,self.view.frame.size.width-8, dateLabel.frame.origin.y-logoImage.frame.origin.y+dateLabel.frame.size.height+20);
+    borderImage.layer.cornerRadius = 5;
+    borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    borderImage.layer.borderWidth = 0.8;
+    borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    [lfmdscrollview addSubview:borderImage];
+    
+    
     lfmdscrollview.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
     lfmdscrollview.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
     lfmdscrollview.scrollEnabled=YES;
+}
+
+- (NSString *)flattenHTML:(NSString *)html {
+    
+    NSScanner *theScanner;
+    NSString *text = nil;
+    
+    theScanner = [NSScanner scannerWithString:html];
+    
+    while ([theScanner isAtEnd] == NO) {
+        // find start of tag
+        [theScanner scanUpToString:@"<" intoString:NULL] ;
+        // find end of tag
+        [theScanner scanUpToString:@">" intoString:&text] ;
+        // replace the found tag with a space
+        //(you can filter multi-spaces out later if you wish)
+        html = [html stringByReplacingOccurrencesOfString:
+                [NSString stringWithFormat:@"%@>", text]
+                                               withString:@""];
+    } // while //
+    
+    NSLog(@"-----===%@",html);
+    return html;
 }
 
 -(IBAction)goback:(id)sender

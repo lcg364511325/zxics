@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *telLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

@@ -102,6 +102,13 @@
     cell.dataLabel.text=[_commons stringtoDate:[cpdetail objectForKey:@"createDate"]];
     cell.titleLabel.text=[cpdetail objectForKey:@"title"];
     
+    //设置圆角边框
+    cell.borderImage.layer.cornerRadius = 5;
+    cell.borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    cell.borderImage.layer.borderWidth = 0.8;
+    cell.borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    
     
     return cell;
 }

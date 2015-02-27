@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *targetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fixtureLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *HouseImage;
 
 @property (nonatomic, strong) NSMutableArray *photos;
 

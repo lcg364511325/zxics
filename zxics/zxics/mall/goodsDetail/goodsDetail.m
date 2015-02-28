@@ -33,12 +33,8 @@
 @synthesize detailButton;
 @synthesize introductButton;
 @synthesize assessButton;
-@synthesize miaoshu;
-@synthesize maoshuLabel;
-@synthesize xiangqing;
-@synthesize xiangqingLabel;
 @synthesize assessTView;
-@synthesize introSView;
+@synthesize contentview;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -211,38 +207,21 @@
     sellnoLabel.text=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"saleCount"]];
     
     //商品描述
-    maoshuLabel.numberOfLines=0;
-    CGSize size =CGSizeMake(maoshuLabel.frame.size.width,0);
-    UIFont * tfont = maoshuLabel.font;
-    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
-    
-    CGSize  actualsize =[[gdsdetail objectForKey:@"goodsBrief"] boundingRectWithSize:size options:
-                         NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
-    maoshuLabel.text=[NSString stringWithFormat:@"%@",[gdsdetail objectForKey:@"goodsBrief"]];
-    maoshuLabel.frame=CGRectMake(maoshuLabel.frame.origin.x, maoshuLabel.frame.origin.y, maoshuLabel.frame.size.width, actualsize.height+24);
-    
-    //详情描述
-    xiangqing.frame=CGRectMake(xiangqing.frame.origin.x, maoshuLabel.frame.origin.y+maoshuLabel.frame.size.height, xiangqing.frame.size.width, xiangqing.frame.size.height);
-    
-    UIWebView *contentview=[[UIWebView alloc]init];
-    contentview.scrollView.bounces=NO;
-    [contentview loadHTMLString:[NSString stringWithFormat:@"<html> \n"
-                                 "<head> \n"
-                                 "<style type=\"text/css\"> \n"
-                                 "body {font-family: \"%@\"; font-size: %f; color: %@;}\n"
-                                 "</style> \n"
-                                 "</head> \n"
-                                 "<body>%@</body> \n"
-                                 "</html>", @"宋体", 12.0,@"black",[gdsdetail objectForKey:@"goodsDesc"]] baseURL:nil];
-    actualsize =[[gdsdetail objectForKey:@"goodsDesc"] boundingRectWithSize:size options:
-                 NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
-    contentview.frame=CGRectMake(xiangqingLabel.frame.origin.x, xiangqing.frame.origin.y+30, xiangqingLabel.frame.size.width, actualsize.height+24);
-    [introSView addSubview:contentview];
-    
-    introSView.contentSize=CGSizeMake(320, contentview.frame.size.height+contentview.frame.origin.y-maoshuLabel.frame.origin.y+50);
-    introSView.showsHorizontalScrollIndicator=NO;//不显示水平滑动线
-    introSView.showsVerticalScrollIndicator=YES;//不显示垂直滑动线
-    introSView.scrollEnabled=YES;
+    NSString * webStr=[NSString stringWithFormat:@"<html> \n"
+                       "<head> \n"
+                       "<style type=\"text/css\"> \n"
+                       "body {font-family: \"%@\"; font-size: %f; color: %@;}\n"
+                       "#dtitle{color:orange;}"
+                       "</style> \n"
+                       "</head> \n"
+                       "<body><span id='dtitle'>商品描述</span>：%@<br/><br/><span id='dtitle'>详细描述</span>：%@</body> \n"
+                       "</html>", @"宋体", 20.0,@"black",[gdsdetail objectForKey:@"goodsBrief"],[gdsdetail objectForKey:@"goodsDesc"]];
+    [contentview loadHTMLString:webStr baseURL:nil];
+    [contentview setHidden:YES];
+    Commons *_Commons=[[Commons alloc]init];
+    NSString *goodsDescStr=[_Commons webViewDidFinishLoad:contentview webStr:webStr];
+    [contentview loadHTMLString:goodsDescStr baseURL:nil];
+    [contentview setHidden:NO];
     
     
     //商品评价
@@ -270,7 +249,7 @@
     detailButton.backgroundColor=assessButton.backgroundColor=[UIColor darkGrayColor];
     introductButton.backgroundColor=[UIColor lightGrayColor];
     
-    secondView.frame=CGRectMake(secondView.frame.origin.x, 226, secondView.frame.size.width, secondView.frame.size.height);
+    secondView.frame=CGRectMake(secondView.frame.origin.x, goodsimageSView.frame.origin.y+goodsimageSView.frame.size.height+40, secondView.frame.size.width, secondView.frame.size.height);
     
     [self.view addSubview:secondView];
     
@@ -283,7 +262,7 @@
     
     detailButton.backgroundColor=introductButton.backgroundColor=[UIColor darkGrayColor];
     assessButton.backgroundColor=[UIColor lightGrayColor];
-    thirdView.frame=CGRectMake(thirdView.frame.origin.x, 226, thirdView.frame.size.width, thirdView.frame.size.height);
+    thirdView.frame=CGRectMake(thirdView.frame.origin.x, goodsimageSView.frame.origin.y+goodsimageSView.frame.size.height+40, thirdView.frame.size.width, thirdView.frame.size.height);
     [self.view addSubview:thirdView];
 }
 
@@ -390,5 +369,6 @@
         [alter show];
     }
 }
+
 
 @end

@@ -66,6 +66,7 @@
 
 -(void)loaddata
 {
+    [list removeAllObjects];
     NSMutableDictionary * gds = [NSMutableDictionary dictionaryWithCapacity:5];
     if(goodsname || cid)
     {
@@ -89,6 +90,14 @@
 -(IBAction)frontindex:(id)sender
 {
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)passValue:(NSString *)value key:(NSString *)key tag:(NSInteger)tag
+{
+    cid=value;
+    goodsname=key;
+    [self loaddata];
+    [self.goodscollectionview reloadData];
 }
 
 //个人管理页面跳转
@@ -159,10 +168,12 @@
 {
     if (buttonIndex==2) {
         nameforgoods *_nameforgoods=[[nameforgoods alloc]init];
+        _nameforgoods.delegate=self;
         [self.navigationController pushViewController:_nameforgoods animated:NO];
     }else if (buttonIndex==1)
     {
         classforgoods *_classforgoods=[[classforgoods alloc]init];
+        _classforgoods.delegate=self;
         [self.navigationController pushViewController:_classforgoods animated:NO];
     }
 }

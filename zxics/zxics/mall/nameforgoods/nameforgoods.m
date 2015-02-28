@@ -16,6 +16,7 @@
 @implementation nameforgoods
 
 @synthesize goodsnameText;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,9 +35,8 @@
 
 -(IBAction)searchofname:(id)sender
 {
-    goodslist *_goodslist=[[goodslist alloc]init];
-    _goodslist.goodsname=goodsnameText.text;
-    [self.navigationController pushViewController:_goodslist animated:NO];
+    [delegate passValue:nil key:goodsnameText.text tag:0];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (void)didReceiveMemoryWarning

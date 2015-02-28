@@ -17,6 +17,7 @@
 @implementation classforgoods
 
 @synthesize classTView;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,14 +80,12 @@
     if ([list count]>0) {
         [classTView reloadData];
     }else{
-        goodslist *_goodslist=[[goodslist alloc]init];
-        if ([value isEqualToString:@"all"]) {
-            _goodslist.cid=@"";
-        }else
-        {
-            _goodslist.cid=value;
+        NSString *valueStr=@"";
+        if (![value isEqualToString:@"all"]) {
+            valueStr=value;
         }
-        [self.navigationController pushViewController:_goodslist animated:NO];
+        [delegate passValue:valueStr key:nil tag:0];
+        [self.navigationController popViewControllerAnimated:NO];
     }
 }
 

@@ -26,4 +26,7 @@
 
 -(NSString *)stringtoDateforsecond:(NSString *)str;
 
+//webviewHtml内容自适应屏幕宽度
+-(NSString *)webViewDidFinishLoad:(UIWebView *)webView webStr:(NSString *)webStr;
+
 @end

@@ -144,17 +144,17 @@
 -(void)islogin
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
+    if (myDelegate.entityl.userid) {
         //头像
         NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
         NSURL *imgUrl=[NSURL URLWithString:url];
         NSData* data = [NSData dataWithContentsOfURL:imgUrl];
         UIImage *img=[UIImage imageWithData:data];
         [settingbtn setImage:img forState:UIControlStateNormal];
-        settingbtn.layer.cornerRadius = settingbtn.frame.size.width / 2;
-        settingbtn.clipsToBounds = YES;
-        settingbtn.layer.borderWidth = 3.0f;
-        settingbtn.layer.borderColor = [UIColor whiteColor].CGColor;
+//        settingbtn.layer.cornerRadius = settingbtn.frame.size.width / 2;
+//        settingbtn.clipsToBounds = YES;
+//        settingbtn.layer.borderWidth = 3.0f;
+//        settingbtn.layer.borderColor = [UIColor whiteColor].CGColor;
         
         scomtext.text=myDelegate.entityl.communityName;
         [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];
@@ -209,6 +209,8 @@
 
         
         
+    }else{
+//        [self.view removeFromSuperview];
     }
 }
 
@@ -241,19 +243,9 @@
 //登录页面跳转
 -(void)login
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        myDelegate.entityl=nil;
-        NSString *rowString =@"退出成功";
-        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
-        [self reloadInputViews];
-    }else
-    {
-        login * _login=[[login alloc] init];
-        
-        [self.navigationController pushViewController:_login animated:NO];
-    }
+    login * _login=[[login alloc] init];
+    
+    [self.navigationController pushViewController:_login animated:NO];
 }
 
 //个人管理首页

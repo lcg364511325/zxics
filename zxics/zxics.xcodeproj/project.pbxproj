@@ -1047,6 +1047,7 @@
 		2C493C8119B85FDF001C4DD5 /* myhome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myhome.h; path = personManager/myhome/myhome.h; sourceTree = "<group>"; };
 		2C493C8219B85FDF001C4DD5 /* myhome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myhome.m; path = personManager/myhome/myhome.m; sourceTree = "<group>"; };
 		2C493C8319B85FDF001C4DD5 /* myhome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myhome.xib; path = personManager/myhome/myhome.xib; sourceTree = "<group>"; };
+		2C4991521AA1AF9800A16303 /* UIViewPassValueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPassValueDelegate.h; sourceTree = "<group>"; };
 		2C4AD4BB19B5B6E400C28F06 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
 		2C4AD4BC19B5B6E400C28F06 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
 		2C4AD4BD19B5B6E400C28F06 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
@@ -2418,6 +2419,14 @@
 			name = myhome;
 			sourceTree = "<group>";
 		};
+		2C4991511AA1AF9800A16303 /* UIViewPassValueDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C4991521AA1AF9800A16303 /* UIViewPassValueDelegate.h */,
+			);
+			path = UIViewPassValueDelegate;
+			sourceTree = "<group>";
+		};
 		2C4AD4BA19B5B6E400C28F06 /* alipay */ = {
 			isa = PBXGroup;
 			children = (
@@ -3089,6 +3098,7 @@
 		7CE63158198C7C2900730C64 /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				2C4991511AA1AF9800A16303 /* UIViewPassValueDelegate */,
 				2C3C767C19CFB20000B94DD7 /* tabbar */,
 				2C435B2919BABB2100364164 /* EAIntroView */,
 				2C435B2519BABA1E00364164 /* VisaIntroduce */,

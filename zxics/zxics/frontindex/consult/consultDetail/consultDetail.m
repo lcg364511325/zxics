@@ -72,6 +72,16 @@
     createdateLabel.text=[NSString stringWithFormat:@"时间：%@",[_Commons stringtoDateforsecond:[consultinfo objectForKey:@"createtime"]]];
     createdateLabel.frame=CGRectMake(createdateLabel.frame.origin.x, detailLabel.frame.origin.y+detailLabel.frame.size.height, createdateLabel.frame.size.width, createdateLabel.frame.size.height);
     
+    //设置圆角边框
+    UIImageView *borderImage=[[UIImageView alloc] init];
+    borderImage.frame=CGRectMake(4,titleLabel.frame.origin.y-2,self.view.frame.size.width-8, createdateLabel.frame.size.height+createdateLabel.frame.origin.y-titleLabel.frame.origin.y+13);
+    borderImage.layer.cornerRadius = 5;
+    borderImage.layer.masksToBounds = YES;
+    //设置边框及边框颜色
+    borderImage.layer.borderWidth = 0.8;
+    borderImage.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+    [conSView addSubview:borderImage];
+    
     //回答
     answerLabel.frame=CGRectMake(answerLabel.frame.origin.x, createdateLabel.frame.origin.y+30, answerLabel.frame.size.width, answerLabel.frame.size.height);
     
@@ -116,14 +126,28 @@
         assessLabel.frame=CGRectMake(assessLabel.frame.origin.x, replyuserLabel.frame.origin.y+30, assessLabel.frame.size.width, assessLabel.frame.size.height);
         
         //详细评价
-        replydetailLabel.text=[NSString stringWithFormat:@"详细评价：%@",[consultinfo objectForKey:@"assessdetail"]];
+        NSString *assessdetailStr=[NSString stringWithFormat:@"%@",[consultinfo objectForKey:@"assessdetail"]];
+        if ([assessdetailStr isEqualToString:@"<null>"]) {
+            assessdetailStr=@"";
+        }
+        replydetailLabel.text=[NSString stringWithFormat:@"详细评价：%@",assessdetailStr];
         replydetailLabel.numberOfLines=0;
-        actualsize =[[consultinfo objectForKey:@"assessdetail"] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
+        actualsize =[[NSString stringWithFormat:@"%@",[consultinfo objectForKey:@"assessdetail"]] boundingRectWithSize:size options:NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin  attributes:tdic context:nil].size;
         replydetailLabel.frame=CGRectMake(replydetailLabel.frame.origin.x, assessLabel.frame.origin.y+30, replydetailLabel.frame.size.width, actualsize.height+24);
         
         //回复时间
         replyDateLabel.text=[NSString stringWithFormat:@"时间：%@",[_Commons stringtoDateforsecond:[consultinfo objectForKey:@"apptime"]]];
         replyDateLabel.frame=CGRectMake(replyDateLabel.frame.origin.x, replydetailLabel.frame.origin.y+replydetailLabel.frame.size.height, replyDateLabel.frame.size.width, replyDateLabel.frame.size.height);
+        
+        //设置圆角边框
+        UIImageView *borderImage1=[[UIImageView alloc] init];
+        borderImage1.frame=CGRectMake(4,replyDetailview.frame.origin.y-2,self.view.frame.size.width-8, replyDateLabel.frame.size.height+replyDateLabel.frame.origin.y-replyDetailview.frame.origin.y+13);
+        borderImage1.layer.cornerRadius = 5;
+        borderImage1.layer.masksToBounds = YES;
+        //设置边框及边框颜色
+        borderImage1.layer.borderWidth = 0.8;
+        borderImage1.layer.borderColor =[ [UIColor colorWithRed:200.0/255 green:199.0/255  blue:204.0/255 alpha:1.0f] CGColor];
+        [conSView addSubview:borderImage1];
     }
     if (appaccount!=[NSNull null])
     {

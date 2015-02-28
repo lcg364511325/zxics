@@ -163,7 +163,7 @@
 {
         if (buttonIndex==1) {
             AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-            myDelegate.entityl=[[LoginEntity alloc]init];
+            myDelegate.entityl=nil;
             
             login * _login=[[login alloc] init];
             [self.navigationController pushViewController:_login animated:NO];

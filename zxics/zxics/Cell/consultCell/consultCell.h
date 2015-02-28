@@ -11,5 +11,6 @@
 @interface consultCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *borderImage;
 
 @end

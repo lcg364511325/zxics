@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zxics/frontindex/complain/complainDetail/complainDetail.m"
-            timestampString = "446718344.563353"
+            filePath = "zxics/mall/goodslist/goodslist.m"
+            timestampString = "446804622.143638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "-loaddata"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-passValue:key:tag:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

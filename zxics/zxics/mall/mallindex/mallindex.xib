@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mallindex.png" translatesAutoresizingMaskIntoConstraints="NO" id="9E8-GF-cqg">
-                    <rect key="frame" x="0.0" y="94" width="320" height="118"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="136"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
             </subviews>

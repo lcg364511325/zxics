@@ -192,7 +192,8 @@ NSInteger i=0;
 
 -(IBAction)goback:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    decorateView *_decorateView=[[decorateView alloc]init];
+    [self.navigationController pushViewController:_decorateView animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

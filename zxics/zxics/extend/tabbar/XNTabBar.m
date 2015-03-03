@@ -23,6 +23,7 @@
     
     [btn setImage:image forState:UIControlStateNormal];
     [btn setImage:selectedImage forState:UIControlStateSelected];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
     [self addSubview:btn];
     

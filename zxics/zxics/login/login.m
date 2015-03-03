@@ -101,15 +101,25 @@ NSInteger i=0;
                         [[NSUserDefaults standardUserDefaults]setObject:nil forKey:@"_password"];
                     }
                     LoginEntity *loginuser=[[LoginEntity alloc]init];
-                    loginuser.pay_points=[login objectForKey:@"pay_points"];
-                    loginuser.account=[login objectForKey:@"account"];
-                    loginuser.userid=[login objectForKey:@"userid"];
-                    loginuser.name=[login objectForKey:@"name"];
-                    loginuser.headimg=[login objectForKey:@"headimg"];
-                    loginuser.communityName=[login objectForKey:@"communityName"];
-                    loginuser.userMoney=[login objectForKey:@"userMoney"];
-                    loginuser.communityid=[login objectForKey:@"communityid"];
-                    loginuser.orgId=[login objectForKey:@"orgId"];
+                    NSString *orgid=[NSString stringWithFormat:@"%@",[login objectForKey:@"orgId"]];
+                    if (orgid!=nil && ![orgid isEqualToString:@""]) {
+                        loginuser.account=[login objectForKey:@"uAccount"];
+                        loginuser.userid=[login objectForKey:@"uId"];
+                        loginuser.name=[login objectForKey:@"uName"];
+                        loginuser.communityid=[login objectForKey:@"communityIds"];
+                        loginuser.orgId=[login objectForKey:@"orgId"];
+                        loginuser.orgName=[login objectForKey:@"orgName"];
+                    }else{
+                        loginuser.pay_points=[login objectForKey:@"pay_points"];
+                        loginuser.account=[login objectForKey:@"account"];
+                        loginuser.userid=[login objectForKey:@"userid"];
+                        loginuser.name=[login objectForKey:@"name"];
+                        loginuser.headimg=[login objectForKey:@"headimg"];
+                        loginuser.communityName=[login objectForKey:@"communityName"];
+                        loginuser.userMoney=[login objectForKey:@"userMoney"];
+                        loginuser.communityid=[login objectForKey:@"communityid"];
+                        loginuser.orgId=[login objectForKey:@"orgId"];
+                    }
                     myDelegate.entityl=loginuser;
                     
                     

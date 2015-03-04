@@ -30,7 +30,6 @@
                                     <action selector="goback:" destination="-1" id="5P6-yn-Ed8"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="申请" id="Lwx-ya-CYD"/>
                         </navigationItem>
                     </items>
                 </navigationBar>

@@ -37,7 +37,7 @@
         isfirst=0;
     }else{
         [list removeAllObjects];
-        page=1;
+        page=0;
         [self loaddata];
         [suTView reloadData];
     }

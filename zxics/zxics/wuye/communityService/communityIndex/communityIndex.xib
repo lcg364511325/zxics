@@ -41,6 +41,9 @@
                     <state key="normal" title="物业消息" image="activity.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="wuyeInfo:" destination="-1" eventType="touchDown" id="Del-Ad-VP8"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="物业消息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-6B-MTr">
                     <rect key="frame" x="101" y="244" width="42" height="10"/>

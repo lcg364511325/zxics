@@ -9,6 +9,7 @@
 #import "residentDetail.h"
 #import "DataService.h"
 #import "Commons.h"
+#import "ImageCacher.h"
 
 @interface residentDetail ()
 
@@ -33,6 +34,7 @@
 @synthesize wordLabel;
 @synthesize reLabel;
 @synthesize borderImage;
+@synthesize headImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,6 +68,18 @@
     NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
     pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getOwnerResidentDetail",domainser] postDatas:[NSString stringWithFormat:@"id=%@",uid]];
     NSDictionary *user=[pw objectForKey:@"data"];
+    
+    //头像
+    NSString *url=[self turnNullValue:@"headimg" Object:user];
+    NSURL *imgUrl=[NSURL URLWithString:url];
+    if (hasCachedImage(imgUrl)) {
+        [headImage setImage:[UIImage imageWithContentsOfFile:pathForURL(imgUrl)]];
+    }else{
+        NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:imgUrl,@"url",headImage,@"imageView",nil];
+        [NSThread detachNewThreadSelector:@selector(cacheImage:) toTarget:[ImageCacher defaultCacher] withObject:dic];
+    }
+    headImage.layer.cornerRadius = headImage.frame.size.width / 2;
+    headImage.clipsToBounds = YES;
     
     accountLabel.text=[NSString stringWithFormat:@"账号：%@",[self turnNullValue:@"account" Object:user]];
     nameLabel.text=[NSString stringWithFormat:@"姓名：%@",[self turnNullValue:@"name" Object:user]];

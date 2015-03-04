@@ -259,6 +259,10 @@
 		2C3AED8319A5F67800D981C3 /* personfootprintlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AED8119A5F67800D981C3 /* personfootprintlist.xib */; };
 		2C3AED8719A5F69800D981C3 /* personfootprintDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AED8519A5F69800D981C3 /* personfootprintDetail.m */; };
 		2C3AED8819A5F69800D981C3 /* personfootprintDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AED8619A5F69800D981C3 /* personfootprintDetail.xib */; };
+		2C3BC5F91AA6A39900386396 /* auditResidentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BC5F71AA6A39900386396 /* auditResidentList.m */; };
+		2C3BC5FA1AA6A39900386396 /* auditResidentList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BC5F81AA6A39900386396 /* auditResidentList.xib */; };
+		2C3BC5FF1AA6B95F00386396 /* wuyeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BC5FD1AA6B95F00386396 /* wuyeInfo.m */; };
+		2C3BC6001AA6B95F00386396 /* wuyeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BC5FE1AA6B95F00386396 /* wuyeInfo.xib */; };
 		2C3C059F199DB15200369A63 /* assess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C059D199DB15200369A63 /* assess.m */; };
 		2C3C05A0199DB15200369A63 /* assess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C059E199DB15200369A63 /* assess.xib */; };
 		2C3C05E7199DE6EC00369A63 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C05E4199DE6EC00369A63 /* HPGrowingTextView.m */; };
@@ -337,6 +341,10 @@
 		2C41DEA619B9544700623483 /* myelectricDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DEA419B9544700623483 /* myelectricDetail.xib */; };
 		2C41DEAC19B9918F00623483 /* addelectric.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C41DEAA19B9918F00623483 /* addelectric.m */; };
 		2C41DEAD19B9918F00623483 /* addelectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C41DEAB19B9918F00623483 /* addelectric.xib */; };
+		2C424BA91AA6DE9B0000AA04 /* threeLineBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424BA71AA6DE9B0000AA04 /* threeLineBtnCell.m */; };
+		2C424BAA1AA6DE9B0000AA04 /* threeLineBtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C424BA81AA6DE9B0000AA04 /* threeLineBtnCell.xib */; };
+		2C424BAF1AA6F3390000AA04 /* threeLineTwoBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424BAD1AA6F3390000AA04 /* threeLineTwoBtnCell.m */; };
+		2C424BB01AA6F3390000AA04 /* threeLineTwoBtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C424BAE1AA6F3390000AA04 /* threeLineTwoBtnCell.xib */; };
 		2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C42F66A198F785B004F2A38 /* MJRefresh.bundle */; };
 		2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66D198F785B004F2A38 /* MJRefreshBaseView.m */; };
 		2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42F66F198F785B004F2A38 /* MJRefreshConst.m */; };
@@ -864,6 +872,12 @@
 		2C3AED8419A5F69800D981C3 /* personfootprintDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personfootprintDetail.h; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.h; sourceTree = "<group>"; };
 		2C3AED8519A5F69800D981C3 /* personfootprintDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = personfootprintDetail.m; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.m; sourceTree = "<group>"; };
 		2C3AED8619A5F69800D981C3 /* personfootprintDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = personfootprintDetail.xib; path = personManager/personfootprint/personfootprintDetail/personfootprintDetail.xib; sourceTree = "<group>"; };
+		2C3BC5F61AA6A39900386396 /* auditResidentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = auditResidentList.h; path = wuye/communityService/residentManager/auditResidentList/auditResidentList.h; sourceTree = "<group>"; };
+		2C3BC5F71AA6A39900386396 /* auditResidentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = auditResidentList.m; path = wuye/communityService/residentManager/auditResidentList/auditResidentList.m; sourceTree = "<group>"; };
+		2C3BC5F81AA6A39900386396 /* auditResidentList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = auditResidentList.xib; path = wuye/communityService/residentManager/auditResidentList/auditResidentList.xib; sourceTree = "<group>"; };
+		2C3BC5FC1AA6B95F00386396 /* wuyeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wuyeInfo.h; path = wuye/communityService/wuyeInfo/wuyeInfo.h; sourceTree = "<group>"; };
+		2C3BC5FD1AA6B95F00386396 /* wuyeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wuyeInfo.m; path = wuye/communityService/wuyeInfo/wuyeInfo.m; sourceTree = "<group>"; };
+		2C3BC5FE1AA6B95F00386396 /* wuyeInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wuyeInfo.xib; path = wuye/communityService/wuyeInfo/wuyeInfo.xib; sourceTree = "<group>"; };
 		2C3C059C199DB15200369A63 /* assess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assess.h; path = assess/assess.h; sourceTree = "<group>"; };
 		2C3C059D199DB15200369A63 /* assess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = assess.m; path = assess/assess.m; sourceTree = "<group>"; };
 		2C3C059E199DB15200369A63 /* assess.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = assess.xib; path = assess/assess.xib; sourceTree = "<group>"; };
@@ -965,6 +979,12 @@
 		2C41DEA919B9918F00623483 /* addelectric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addelectric.h; path = personManager/myelectric/addelectric/addelectric.h; sourceTree = "<group>"; };
 		2C41DEAA19B9918F00623483 /* addelectric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addelectric.m; path = personManager/myelectric/addelectric/addelectric.m; sourceTree = "<group>"; };
 		2C41DEAB19B9918F00623483 /* addelectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = addelectric.xib; path = personManager/myelectric/addelectric/addelectric.xib; sourceTree = "<group>"; };
+		2C424BA61AA6DE9B0000AA04 /* threeLineBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threeLineBtnCell.h; path = Cell/threeLineBtnCell/threeLineBtnCell.h; sourceTree = "<group>"; };
+		2C424BA71AA6DE9B0000AA04 /* threeLineBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = threeLineBtnCell.m; path = Cell/threeLineBtnCell/threeLineBtnCell.m; sourceTree = "<group>"; };
+		2C424BA81AA6DE9B0000AA04 /* threeLineBtnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = threeLineBtnCell.xib; path = Cell/threeLineBtnCell/threeLineBtnCell.xib; sourceTree = "<group>"; };
+		2C424BAC1AA6F3390000AA04 /* threeLineTwoBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threeLineTwoBtnCell.h; path = Cell/threeLineTwoBtnCell/threeLineTwoBtnCell.h; sourceTree = "<group>"; };
+		2C424BAD1AA6F3390000AA04 /* threeLineTwoBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = threeLineTwoBtnCell.m; path = Cell/threeLineTwoBtnCell/threeLineTwoBtnCell.m; sourceTree = "<group>"; };
+		2C424BAE1AA6F3390000AA04 /* threeLineTwoBtnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = threeLineTwoBtnCell.xib; path = Cell/threeLineTwoBtnCell/threeLineTwoBtnCell.xib; sourceTree = "<group>"; };
 		2C42F66A198F785B004F2A38 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		2C42F66B198F785B004F2A38 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		2C42F66C198F785B004F2A38 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -2057,6 +2077,26 @@
 			name = personfootprintDetail;
 			sourceTree = "<group>";
 		};
+		2C3BC5F31AA6A33B00386396 /* auditResidentList */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BC5F61AA6A39900386396 /* auditResidentList.h */,
+				2C3BC5F71AA6A39900386396 /* auditResidentList.m */,
+				2C3BC5F81AA6A39900386396 /* auditResidentList.xib */,
+			);
+			name = auditResidentList;
+			sourceTree = "<group>";
+		};
+		2C3BC5FB1AA6B64700386396 /* wuyeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2C3BC5FC1AA6B95F00386396 /* wuyeInfo.h */,
+				2C3BC5FD1AA6B95F00386396 /* wuyeInfo.m */,
+				2C3BC5FE1AA6B95F00386396 /* wuyeInfo.xib */,
+			);
+			name = wuyeInfo;
+			sourceTree = "<group>";
+		};
 		2C3C059B199DB13A00369A63 /* assess */ = {
 			isa = PBXGroup;
 			children = (
@@ -2152,6 +2192,7 @@
 		2C3D19471AA54CBC00BDF4B5 /* communityService */ = {
 			isa = PBXGroup;
 			children = (
+				2C3BC5FB1AA6B64700386396 /* wuyeInfo */,
 				2C3D19621AA5596E00BDF4B5 /* residentManager */,
 				2C3D19491AA54CF200BDF4B5 /* communityIndex */,
 			);
@@ -2189,6 +2230,7 @@
 		2C3D19621AA5596E00BDF4B5 /* residentManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C3BC5F31AA6A33B00386396 /* auditResidentList */,
 				2C3D197E1AA5A98100BDF4B5 /* residentDetail */,
 				2C3D196E1AA5935C00BDF4B5 /* residentInfo */,
 				2C3D19631AA559B500BDF4B5 /* residentManager.h */,
@@ -2280,6 +2322,26 @@
 			name = addelectric;
 			sourceTree = "<group>";
 		};
+		2C424BA41AA6DE640000AA04 /* threeLineBtnCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C424BA61AA6DE9B0000AA04 /* threeLineBtnCell.h */,
+				2C424BA71AA6DE9B0000AA04 /* threeLineBtnCell.m */,
+				2C424BA81AA6DE9B0000AA04 /* threeLineBtnCell.xib */,
+			);
+			name = threeLineBtnCell;
+			sourceTree = "<group>";
+		};
+		2C424BAB1AA6F3020000AA04 /* threeLineTwoBtnCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C424BAC1AA6F3390000AA04 /* threeLineTwoBtnCell.h */,
+				2C424BAD1AA6F3390000AA04 /* threeLineTwoBtnCell.m */,
+				2C424BAE1AA6F3390000AA04 /* threeLineTwoBtnCell.xib */,
+			);
+			name = threeLineTwoBtnCell;
+			sourceTree = "<group>";
+		};
 		2C42F669198F785B004F2A38 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -2307,6 +2369,8 @@
 		2C42F688198F79B4004F2A38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2C424BAB1AA6F3020000AA04 /* threeLineTwoBtnCell */,
+				2C424BA41AA6DE640000AA04 /* threeLineBtnCell */,
 				2C3D19681AA58BF300BDF4B5 /* residentMCell */,
 				2CE4571719B9AB36001AEA90 /* succourCell */,
 				2C41DE9619B946BB00623483 /* myelectricCell */,
@@ -3822,6 +3886,7 @@
 				2C282F151990CABC0061F987 /* surveylistCell.xib in Resources */,
 				2C41688F19BEABB2001A28A9 /* guidancestart.png in Resources */,
 				2C281134199871560072D08C /* rentorshelllist.xib in Resources */,
+				2C3BC6001AA6B95F00386396 /* wuyeInfo.xib in Resources */,
 				2C3C768D19CFB53300B94DD7 /* logo_title.png in Resources */,
 				2C3AED6419A57C7D00D981C3 /* steward.png in Resources */,
 				2C67794D19B418C6003A8D33 /* updatepassword.xib in Resources */,
@@ -3839,6 +3904,7 @@
 				2C5404B0199360F0003D2BBE /* arrearageCell.xib in Resources */,
 				2C3AED1819A57C7D00D981C3 /* dis_about_weixin.png in Resources */,
 				2C3AED3A19A57C7D00D981C3 /* logo.png in Resources */,
+				2C424BAA1AA6DE9B0000AA04 /* threeLineBtnCell.xib in Resources */,
 				2C3AECF019A57C7D00D981C3 /* back_textview_default.9.png in Resources */,
 				2C3AED1E19A57C7D00D981C3 /* good.png in Resources */,
 				2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */,
@@ -3878,6 +3944,7 @@
 				2C3AECE619A57C7D00D981C3 /* 0001_bg.png in Resources */,
 				2C54EC3419AD8864004D580C /* DeliveryaddressCell.xib in Resources */,
 				2C3AED7419A57C7D00D981C3 /* word1.png in Resources */,
+				2C424BB01AA6F3390000AA04 /* threeLineTwoBtnCell.xib in Resources */,
 				2C3AED1919A57C7D00D981C3 /* document_center.png in Resources */,
 				2C3AECF319A57C7D00D981C3 /* back_title.png in Resources */,
 				2C3AED4919A57C7D00D981C3 /* people.png in Resources */,
@@ -3928,6 +3995,7 @@
 				2C1FE6671995C8AC008DBB58 /* SpecialPeopleDetail.xib in Resources */,
 				2C3AED3919A57C7D00D981C3 /* login.png in Resources */,
 				2C41DEA619B9544700623483 /* myelectricDetail.xib in Resources */,
+				2C3BC5FA1AA6A39900386396 /* auditResidentList.xib in Resources */,
 				2C41689019BEABB2001A28A9 /* igenerate.png in Resources */,
 				7CE63199198C7C2A00730C64 /* CHANGELOG.md in Resources */,
 				2C2811601998A78B0072D08C /* aboutus.xib in Resources */,
@@ -4027,6 +4095,7 @@
 				2C493C5919B815AE001C4DD5 /* MBProgressHUD.m in Sources */,
 				2C28115919989F840072D08C /* serviceIndex.m in Sources */,
 				2C1FE66A1995C8AC008DBB58 /* surveylist.m in Sources */,
+				2C424BA91AA6DE9B0000AA04 /* threeLineBtnCell.m in Sources */,
 				2C3C768719CFB22C00B94DD7 /* decorateView.m in Sources */,
 				2C5757311994B17500858A7F /* myappraise.m in Sources */,
 				2C1FE6641995C8AC008DBB58 /* SpecialPeople.m in Sources */,
@@ -4049,6 +4118,7 @@
 				2C493C5719B815AE001C4DD5 /* MWZoomingScrollView.m in Sources */,
 				2C493C5B19B815AE001C4DD5 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				7CE63134198C7A8200730C64 /* AppDelegate.m in Sources */,
+				2C3BC5F91AA6A39900386396 /* auditResidentList.m in Sources */,
 				2C3C76B919CFD61100B94DD7 /* findservice.m in Sources */,
 				2C3C059F199DB15200369A63 /* assess.m in Sources */,
 				2CE4571B19B9AB54001AEA90 /* succourCell.m in Sources */,
@@ -4062,6 +4132,7 @@
 				7CE63195198C7C2A00730C64 /* Tool.m in Sources */,
 				2C493C7819B815AE001C4DD5 /* UIImageView+WebCache.m in Sources */,
 				2C493C5819B815AE001C4DD5 /* DACircularProgressView.m in Sources */,
+				2C3BC5FF1AA6B95F00386396 /* wuyeInfo.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,
 				2C2810FB1998547C0072D08C /* consultlist.m in Sources */,
 				2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */,
@@ -4069,6 +4140,7 @@
 				2C54EC2D19AD7682004D580C /* yikatong.m in Sources */,
 				2C493C5319B815AE001C4DD5 /* MWPhoto.m in Sources */,
 				2C493C6519B815AE001C4DD5 /* PSTGridLayoutItem.m in Sources */,
+				2C424BAF1AA6F3390000AA04 /* threeLineTwoBtnCell.m in Sources */,
 				2C28113F199895650072D08C /* rentorshellDetail.m in Sources */,
 				2C57572A1994708500858A7F /* myorderDetail.m in Sources */,
 				2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */,

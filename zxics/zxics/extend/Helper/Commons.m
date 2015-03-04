@@ -181,4 +181,28 @@
     return str;
 }
 
+//计算文本获得对应的高度
+-(CGSize)NSStringHeightForLabel:(UIFont*)font width:(int)width Str:(NSString *)Str
+{
+    CGSize size =CGSizeMake(width,0);
+    UIFont * tfont = font;
+    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:tfont,NSFontAttributeName,nil];
+    
+    CGSize  actualsize =[Str boundingRectWithSize:size options:
+                         NSStringDrawingUsesFontLeading |NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+    return actualsize;
+}
+
+
+//把<null>和(null)转为@“”
+-(NSString *)turnNullValue:(NSString *)key Object:(NSDictionary *)Object
+{
+    NSString *str=[NSString stringWithFormat:@"%@",[Object objectForKey:key]];
+    if ([str isEqualToString:@"<null>"] || [str isEqualToString:@"(null)"]) {
+        return @"";
+    }else{
+        return str;
+    }
+}
+
 @end

@@ -9,6 +9,7 @@
 #import "communityIndex.h"
 #import "residentManager.h"
 #import "AppDelegate.h"
+#import "wuyeInfo.h"
 
 @interface communityIndex ()
 
@@ -37,6 +38,22 @@
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     if (myDelegate.entityl.orgId) {
         residentManager * _complainlist=[[residentManager alloc] init];
+        
+        [self.navigationController pushViewController:_complainlist animated:NO];
+    }else
+    {
+        NSString *rowString =@"你不是物业管理员无法进行此操作！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
+}
+
+//物业消息页面跳转
+-(IBAction)wuyeInfo:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl.orgId) {
+        wuyeInfo * _complainlist=[[wuyeInfo alloc] init];
         
         [self.navigationController pushViewController:_complainlist animated:NO];
     }else

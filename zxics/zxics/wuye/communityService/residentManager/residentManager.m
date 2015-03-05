@@ -21,6 +21,8 @@
 @implementation residentManager
 
 @synthesize suTView;
+@synthesize type;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -146,6 +148,7 @@
 //退出登录
 -(void)turntoredent:(NSString *)cname
 {
+    comname=cname;
     NSString *rowString =[NSString stringWithFormat:@"确定是否选择：%@？",cname];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alter show];
@@ -155,9 +158,14 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==1) {
-        residentInfo *_succourDetail=[[residentInfo alloc]init];
-        _succourDetail.cid=comid;
-        [self.navigationController pushViewController:_succourDetail animated:NO];
+        if ([type isEqualToString:@"1"]) {
+            [delegate passValue:comid key:comname tag:0];
+            [self.navigationController popViewControllerAnimated:NO];
+        }else{
+            residentInfo *_succourDetail=[[residentInfo alloc]init];
+            _succourDetail.cid=comid;
+            [self.navigationController pushViewController:_succourDetail animated:NO];
+        }
     }
 }
 

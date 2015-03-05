@@ -52,6 +52,14 @@
 		2C1FE6691995C8AC008DBB58 /* specialPeopleIntroduce.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE64A1995C8AC008DBB58 /* specialPeopleIntroduce.xib */; };
 		2C1FE66A1995C8AC008DBB58 /* surveylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE64E1995C8AC008DBB58 /* surveylist.m */; };
 		2C1FE66B1995C8AC008DBB58 /* surveylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE64F1995C8AC008DBB58 /* surveylist.xib */; };
+		2C28058D1AA7E4D90029EFD5 /* wuyeNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28058B1AA7E4D90029EFD5 /* wuyeNotice.m */; };
+		2C28058E1AA7E4D90029EFD5 /* wuyeNotice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C28058C1AA7E4D90029EFD5 /* wuyeNotice.xib */; };
+		2C2805921AA7FB460029EFD5 /* wuyeNoticeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2805901AA7FB460029EFD5 /* wuyeNoticeDetail.m */; };
+		2C2805931AA7FB460029EFD5 /* wuyeNoticeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2805911AA7FB460029EFD5 /* wuyeNoticeDetail.xib */; };
+		2C2805971AA8301E0029EFD5 /* wuyeNoticeEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2805951AA8301E0029EFD5 /* wuyeNoticeEdit.m */; };
+		2C2805981AA8301E0029EFD5 /* wuyeNoticeEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2805961AA8301E0029EFD5 /* wuyeNoticeEdit.xib */; };
+		2C28059D1AA857140029EFD5 /* wyConsultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28059B1AA857140029EFD5 /* wyConsultManager.m */; };
+		2C28059E1AA857140029EFD5 /* wyConsultManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C28059C1AA857140029EFD5 /* wyConsultManager.xib */; };
 		2C280676199067B3007838A6 /* SpecialPeopleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C280674199067B3007838A6 /* SpecialPeopleDetailCell.m */; };
 		2C280677199067B3007838A6 /* SpecialPeopleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C280675199067B3007838A6 /* SpecialPeopleDetailCell.xib */; };
 		2C28068619907457007838A6 /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28068519907457007838A6 /* myLabel.m */; };
@@ -634,6 +642,18 @@
 		2C1FE64D1995C8AC008DBB58 /* surveylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = surveylist.h; sourceTree = "<group>"; };
 		2C1FE64E1995C8AC008DBB58 /* surveylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = surveylist.m; sourceTree = "<group>"; };
 		2C1FE64F1995C8AC008DBB58 /* surveylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = surveylist.xib; sourceTree = "<group>"; };
+		2C28058A1AA7E4D90029EFD5 /* wuyeNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wuyeNotice.h; path = wuye/communityService/wuyeNotice/wuyeNotice.h; sourceTree = "<group>"; };
+		2C28058B1AA7E4D90029EFD5 /* wuyeNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wuyeNotice.m; path = wuye/communityService/wuyeNotice/wuyeNotice.m; sourceTree = "<group>"; };
+		2C28058C1AA7E4D90029EFD5 /* wuyeNotice.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wuyeNotice.xib; path = wuye/communityService/wuyeNotice/wuyeNotice.xib; sourceTree = "<group>"; };
+		2C28058F1AA7FB460029EFD5 /* wuyeNoticeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wuyeNoticeDetail.h; path = wuye/communityService/wuyeNotice/wuyeNoticeDetail.h; sourceTree = "<group>"; };
+		2C2805901AA7FB460029EFD5 /* wuyeNoticeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wuyeNoticeDetail.m; path = wuye/communityService/wuyeNotice/wuyeNoticeDetail.m; sourceTree = "<group>"; };
+		2C2805911AA7FB460029EFD5 /* wuyeNoticeDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wuyeNoticeDetail.xib; path = wuye/communityService/wuyeNotice/wuyeNoticeDetail.xib; sourceTree = "<group>"; };
+		2C2805941AA8301E0029EFD5 /* wuyeNoticeEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wuyeNoticeEdit.h; path = wuye/communityService/wuyeNotice/wuyeNoticeEdit.h; sourceTree = "<group>"; };
+		2C2805951AA8301E0029EFD5 /* wuyeNoticeEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wuyeNoticeEdit.m; path = wuye/communityService/wuyeNotice/wuyeNoticeEdit.m; sourceTree = "<group>"; };
+		2C2805961AA8301E0029EFD5 /* wuyeNoticeEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wuyeNoticeEdit.xib; path = wuye/communityService/wuyeNotice/wuyeNoticeEdit.xib; sourceTree = "<group>"; };
+		2C28059A1AA857140029EFD5 /* wyConsultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wyConsultManager.h; path = wuye/communityService/wyConsultManager/wyConsultManager.h; sourceTree = "<group>"; };
+		2C28059B1AA857140029EFD5 /* wyConsultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wyConsultManager.m; path = wuye/communityService/wyConsultManager/wyConsultManager.m; sourceTree = "<group>"; };
+		2C28059C1AA857140029EFD5 /* wyConsultManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wyConsultManager.xib; path = wuye/communityService/wyConsultManager/wyConsultManager.xib; sourceTree = "<group>"; };
 		2C280673199067B3007838A6 /* SpecialPeopleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialPeopleDetailCell.h; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.h; sourceTree = "<group>"; };
 		2C280674199067B3007838A6 /* SpecialPeopleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialPeopleDetailCell.m; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.m; sourceTree = "<group>"; };
 		2C280675199067B3007838A6 /* SpecialPeopleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpecialPeopleDetailCell.xib; path = Cell/SpecialPeopleDetailCell/SpecialPeopleDetailCell.xib; sourceTree = "<group>"; };
@@ -1699,6 +1719,32 @@
 			path = surveylist;
 			sourceTree = "<group>";
 		};
+		2C2805881AA7E4B50029EFD5 /* wuyeNotice */ = {
+			isa = PBXGroup;
+			children = (
+				2C28058A1AA7E4D90029EFD5 /* wuyeNotice.h */,
+				2C28058B1AA7E4D90029EFD5 /* wuyeNotice.m */,
+				2C28058C1AA7E4D90029EFD5 /* wuyeNotice.xib */,
+				2C28058F1AA7FB460029EFD5 /* wuyeNoticeDetail.h */,
+				2C2805901AA7FB460029EFD5 /* wuyeNoticeDetail.m */,
+				2C2805911AA7FB460029EFD5 /* wuyeNoticeDetail.xib */,
+				2C2805941AA8301E0029EFD5 /* wuyeNoticeEdit.h */,
+				2C2805951AA8301E0029EFD5 /* wuyeNoticeEdit.m */,
+				2C2805961AA8301E0029EFD5 /* wuyeNoticeEdit.xib */,
+			);
+			name = wuyeNotice;
+			sourceTree = "<group>";
+		};
+		2C2805991AA856380029EFD5 /* wyConsultManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C28059A1AA857140029EFD5 /* wyConsultManager.h */,
+				2C28059B1AA857140029EFD5 /* wyConsultManager.m */,
+				2C28059C1AA857140029EFD5 /* wyConsultManager.xib */,
+			);
+			name = wyConsultManager;
+			sourceTree = "<group>";
+		};
 		2C28067219906783007838A6 /* SpecialPeopleDetailCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2192,6 +2238,8 @@
 		2C3D19471AA54CBC00BDF4B5 /* communityService */ = {
 			isa = PBXGroup;
 			children = (
+				2C2805991AA856380029EFD5 /* wyConsultManager */,
+				2C2805881AA7E4B50029EFD5 /* wuyeNotice */,
 				2C3BC5FB1AA6B64700386396 /* wuyeInfo */,
 				2C3D19621AA5596E00BDF4B5 /* residentManager */,
 				2C3D19491AA54CF200BDF4B5 /* communityIndex */,
@@ -3710,6 +3758,7 @@
 				2C42F67A198F785B004F2A38 /* MJRefresh.bundle in Resources */,
 				2C57571919945F8100858A7F /* membercenter.xib in Resources */,
 				2C1FE6611995C8AC008DBB58 /* repairadd.xib in Resources */,
+				2C28059E1AA857140029EFD5 /* wyConsultManager.xib in Resources */,
 				2C3AED2419A57C7D00D981C3 /* hire.png in Resources */,
 				2C5404CF199377F2003D2BBE /* consumelistCell.xib in Resources */,
 				2C3AECFC19A57C7D00D981C3 /* btn_balance.png in Resources */,
@@ -3734,6 +3783,7 @@
 				2C3AED7319A57C7D00D981C3 /* word.png in Resources */,
 				2C3AECEB19A57C7D00D981C3 /* add_photo.png in Resources */,
 				2C5404C919937539003D2BBE /* consumelist.xib in Resources */,
+				2C28058E1AA7E4D90029EFD5 /* wuyeNotice.xib in Resources */,
 				2C3AED4519A57C7D00D981C3 /* navigation_bg.png in Resources */,
 				2C57572B1994708500858A7F /* myorderDetail.xib in Resources */,
 				2C3AED1619A57C7D00D981C3 /* cricle_time.png in Resources */,
@@ -3803,6 +3853,7 @@
 				2C5757571994D06C00858A7F /* Deliveryaddress.xib in Resources */,
 				2C3AECF119A57C7D00D981C3 /* back_textview_selected.9.png in Resources */,
 				2C3AED2019A57C7D00D981C3 /* grey_nav3.png in Resources */,
+				2C2805981AA8301E0029EFD5 /* wuyeNoticeEdit.xib in Resources */,
 				2C3AED3219A57C7D00D981C3 /* investigate.png in Resources */,
 				2C2811671998A98B0072D08C /* goodslist.xib in Resources */,
 				2C5404BC199363C1003D2BBE /* arrearageDetail.xib in Resources */,
@@ -3964,6 +4015,7 @@
 				2C3AED5A19A57C7D00D981C3 /* setting.png in Resources */,
 				2C1FE6571995C8AC008DBB58 /* cpdetali.xib in Resources */,
 				2C3AECF719A57C7D00D981C3 /* bg_retweet_frame.9.png in Resources */,
+				2C2805931AA7FB460029EFD5 /* wuyeNoticeDetail.xib in Resources */,
 				2C3AED1019A57C7D00D981C3 /* chatfrom_bg_normal.9.png in Resources */,
 				2C41689119BEABB2001A28A9 /* ihome.png in Resources */,
 				2C57573D1994B63900858A7F /* myappraiseCell.xib in Resources */,
@@ -4026,6 +4078,7 @@
 				7CE6318F198C7C2A00730C64 /* ASINetworkQueue.m in Sources */,
 				7CE6319A198C7C2A00730C64 /* JSONKit.m in Sources */,
 				2C435B2319BAAAE600364164 /* succouradd.m in Sources */,
+				2C28059D1AA857140029EFD5 /* wyConsultManager.m in Sources */,
 				2C54048D19932E46003D2BBE /* personLog.m in Sources */,
 				2C3D196C1AA58C2600BDF4B5 /* residentMCell.m in Sources */,
 				2C3C76CC19D0085500B94DD7 /* Vicecardlist.m in Sources */,
@@ -4057,6 +4110,7 @@
 				2C2811701998AE370072D08C /* goodslistCell.m in Sources */,
 				2C493C6E19B815AE001C4DD5 /* SDWebImageCompat.m in Sources */,
 				2C3D19821AA5AADB00BDF4B5 /* residentDetail.m in Sources */,
+				2C28058D1AA7E4D90029EFD5 /* wuyeNotice.m in Sources */,
 				2C3C05E8199DE6EC00369A63 /* HPTextViewInternal.m in Sources */,
 				7CE6319C198C7C2A00730C64 /* sqlService.m in Sources */,
 				7CE63192198C7C2A00730C64 /* Reachability.m in Sources */,
@@ -4110,6 +4164,7 @@
 				2C5404931993506A003D2BBE /* personlogCellTableViewCell.m in Sources */,
 				2C493C6719B815AE001C4DD5 /* PSTGridLayoutSection.m in Sources */,
 				2C493C6019B815AE001C4DD5 /* PSTCollectionViewFlowLayout.m in Sources */,
+				2C2805971AA8301E0029EFD5 /* wuyeNoticeEdit.m in Sources */,
 				2C5757501994C9A800858A7F /* placeorder.m in Sources */,
 				2C57571E1994657900858A7F /* myorder.m in Sources */,
 				2C3AED8719A5F69800D981C3 /* personfootprintDetail.m in Sources */,
@@ -4224,6 +4279,7 @@
 				2C5404DA19937CA0003D2BBE /* balancelist.m in Sources */,
 				2CA029D919BF044D00F6E2B2 /* classforgoods.m in Sources */,
 				2C28112C19986C700072D08C /* questionsCell.m in Sources */,
+				2C2805921AA7FB460029EFD5 /* wuyeNoticeDetail.m in Sources */,
 				2C493C5519B815AE001C4DD5 /* MWTapDetectingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

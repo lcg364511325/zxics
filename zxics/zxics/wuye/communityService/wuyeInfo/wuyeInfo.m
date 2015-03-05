@@ -87,6 +87,8 @@
         NSArray * nib=[[NSBundle mainBundle]loadNibNamed:@"threeLineTwoBtnCell" owner:self options:nil];
         cell=[nib objectAtIndex:0];
     }
+    
+    cell.updatebtn.hidden=YES;
     Commons *_Commons=[[Commons alloc]init];
     NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
     
@@ -141,9 +143,9 @@
     
     
     //设置圆角边框
-    cell.borderImage.frame=CGRectMake(3, 3, cell.frame.size.width-6, cell.frame.size.height+cell.infoLabel.frame.size.height-cell.timeLabel.frame.size.height-30);
+    cell.borderImage.frame=CGRectMake(3, 3, cell.frame.size.width-6, cell.frame.size.height+cell.infoLabel.frame.size.height-cell.timeLabel.frame.size.height-6);
     
-    int cellheight=cell.frame.size.height+cell.infoLabel.frame.size.height-cell.timeLabel.frame.size.height-24;
+    int cellheight=cell.frame.size.height+cell.infoLabel.frame.size.height-cell.timeLabel.frame.size.height;
     
     //btn位置处理
     if ([isread isEqualToString:@"1"]) {
@@ -176,7 +178,7 @@
 {
     threeLineTwoBtnCell *cell = (threeLineTwoBtnCell *)[self tableView:suTView cellForRowAtIndexPath:indexPath];
     CGFloat height=cell.frame.size.height+cell.infoLabel.frame.size.height-cell.timeLabel.frame.size.height;
-    return height-24;
+    return height;
 }
 
 -(NSString *)turnNullValue:(NSString *)key Object:(NSDictionary *)Object

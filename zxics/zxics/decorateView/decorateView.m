@@ -170,11 +170,23 @@
         }else{
             
             //头像
-            NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
-            NSURL *imgUrl=[NSURL URLWithString:url];
-            NSData* data = [NSData dataWithContentsOfURL:imgUrl];
-            UIImage *img=[UIImage imageWithData:data];
-            [settingbtn setImage:img forState:UIControlStateNormal];
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                // 耗时的操作（异步操作）
+                
+                [settingbtn setImage:[UIImage imageNamed:@"head_portrait"] forState:UIControlStateNormal];
+                NSString *url=[NSString stringWithFormat:@"%@",myDelegate.entityl.headimg];
+                NSURL *imgUrl=[NSURL URLWithString:url];
+                NSData* data = [NSData dataWithContentsOfURL:imgUrl];
+                UIImage *img=[UIImage imageWithData:data];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [settingbtn setImage:img forState:UIControlStateNormal];
+                    
+                });
+            });
+            
             
             scomtext.text=myDelegate.entityl.communityName;
             [settingbtn removeTarget:self action:@selector(login) forControlEvents:UIControlEventTouchDown];

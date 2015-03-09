@@ -7,6 +7,8 @@
 //
 
 #import "wuyeIndex.h"
+#import "AppDelegate.h"
+#import "conservationPeople.h"
 
 @interface wuyeIndex ()
 
@@ -27,6 +29,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+//常住人口页面跳转
+-(IBAction)wyConsultManager:(id)sender
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    if (myDelegate.entityl.orgId) {
+        conservationPeople * _complainlist=[[conservationPeople alloc] init];
+        [self.navigationController pushViewController:_complainlist animated:NO];
+    }else
+    {
+        NSString *rowString =@"你不是物业管理员无法进行此操作！";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alter show];
+    }
 }
 
 - (void)didReceiveMemoryWarning

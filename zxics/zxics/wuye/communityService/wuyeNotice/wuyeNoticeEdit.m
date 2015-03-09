@@ -149,7 +149,7 @@
 {
     if (growingTextView==detailView) {
         int newheight=detailView.frame.size.height;
-        if (newheight>oldheight) {
+        if (newheight!=oldheight) {
             //其他要求
             [orderView removeFromSuperview];
             orderView.frame=CGRectMake(communityText.frame.origin.x, detailView.frame.origin.y+detailView.frame.size.height+3, titleText.frame.size.width, orderView.frame.size.height);

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Commons.h"
 #import "threeLineTwoBtnCell.h"
+#import "wyCManagerDetail.h"
 
 @interface wyConsultManager ()
 
@@ -20,6 +21,10 @@
 
 @synthesize suTView;
 @synthesize type;
+@synthesize undealBtn;
+@synthesize dealBtn;
+@synthesize somedealBtn;
+@synthesize notDealBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +41,14 @@
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
+    btnlist=[NSArray arrayWithObjects:undealBtn,dealBtn,somedealBtn,notDealBtn, nil];
+    
+    if ([type isEqualToString:@"consult"]) {
+        [self.UINavigationItem setTitle:@"咨询管理"];
+    }else{
+        [self.UINavigationItem setTitle:@"投诉管理"];
+    }
+    
     flag=@"0";
     page=0;
     list=[[NSMutableArray alloc]initWithCapacity:5];
@@ -92,43 +105,40 @@
     NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
     Commons *_Commons=[[Commons alloc]init];
     
+    cell.readBtn.hidden=YES;
+    cell.updatebtn.hidden=YES;
+    
     //标题
     NSString *titleStr=[_Commons turnNullValue:@"title" Object:sudetail];
     cell.nameLabel.text=titleStr;
     
-    //发布时间
-    NSString *createTime=[_Commons turnNullValue:@"create_date" Object:sudetail];
-    if (![createTime isEqualToString:@""]) {
-        cell.infoLabel.text=[NSString stringWithFormat:@"发布时间：%@",[_Commons stringtoDateforsecond:createTime]];
-    }else{
-        cell.infoLabel.text=@"发布时间：";
-    }
-    
     //审核状态
-    NSString *appflag=[_Commons turnNullValue:@"del_flag" Object:sudetail];
-    if ([appflag isEqualToString:@"2"]) {
-        cell.timeLabel.text=@"审核状态：未审核";
-    }else if ([appflag isEqualToString:@"0"]){
-        cell.timeLabel.text=@"审核状态：已审核";
-    }else{
-        cell.timeLabel.text=@"审核状态：已删除";
+    NSString *approverflag=[_Commons turnNullValue:@"approverflag" Object:sudetail];
+    if ([approverflag isEqualToString:@"0"]) {
+        cell.infoLabel.text=@"发布时间：未审核";
+    }else if ([approverflag isEqualToString:@"1"]){
+        cell.infoLabel.text=@"发布时间：审核通过";
+    }
+    else{
+        cell.infoLabel.text=@"发布时间：审核不通过";
     }
     
-    //审核
-    cell.readBtn.tag=[indexPath row];
-    [cell.readBtn setTitle:@"审核" forState:UIControlStateNormal];
-    [cell.readBtn addTarget:self action:@selector(Audit:) forControlEvents:UIControlEventTouchDown];
+    //发布时间
+    NSString *send_date=[_Commons turnNullValue:@"send_date" Object:sudetail];
+    send_date=[_Commons stringtoDateforsecond:send_date];
+    cell.timeLabel.text=[NSString stringWithFormat:@"发布时间：%@",send_date];
     
-    //修改
-    NSString *catid=[_Commons turnNullValue:@"id" Object:sudetail];
-    cell.deleteBtn.tag=[catid integerValue];
-    [cell.deleteBtn setTitle:@"修改" forState:UIControlStateNormal];
-    [cell.deleteBtn addTarget:self action:@selector(updatewuyeInfo:) forControlEvents:UIControlEventTouchDown];
-    
-    //删除
-    cell.updatebtn.tag=[indexPath row];
-    [cell.updatebtn setTitle:@"删除" forState:UIControlStateNormal];
-    [cell.updatebtn addTarget:self action:@selector(deleteflag:) forControlEvents:UIControlEventTouchDown];
+    //按钮处理状态
+    NSString *assessStr=[_Commons turnNullValue:@"assess" Object:sudetail];
+    if([assessStr isEqualToString:@""] || !assessStr){
+        
+        NSString *pid=[_Commons turnNullValue:@"id" Object:sudetail];
+        cell.deleteBtn.tag=[pid intValue];
+        [cell.deleteBtn setTitle:@"审核" forState:UIControlStateNormal];
+        [cell.deleteBtn addTarget:self action:@selector(changeDealFlag:) forControlEvents:UIControlEventTouchDown];
+    }else{
+        cell.deleteBtn.hidden=YES;
+    }
     
     int y=(cell.frame.size.height-cell.nameLabel.frame.size.height*3-4)/2;
     int x=cell.nameLabel.frame.origin.x;
@@ -160,21 +170,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Commons *_Commons=[[Commons alloc]init];
-//    NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
-//    wuyeNoticeDetail *_wuyeNoticeDetail=[[wuyeNoticeDetail alloc]init];
-//    NSString *caid=[_Commons turnNullValue:@"id" Object:sudetail];
-//    _wuyeNoticeDetail.cid=caid;
-//    _wuyeNoticeDetail.type=cid;
-//    [self.navigationController pushViewController:_wuyeNoticeDetail animated:NO];
+    NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
+    wyCManagerDetail *_wuyeNoticeDetail=[[wyCManagerDetail alloc]init];
+    NSString *caid=[_Commons turnNullValue:@"id" Object:sudetail];
+    _wuyeNoticeDetail.cid=caid;
+    _wuyeNoticeDetail.type=type;
+    [self.navigationController pushViewController:_wuyeNoticeDetail animated:NO];
 }
 
--(IBAction)changeFlag:(id)sender
+-(void)replyMessage:(UIButton *)btn
 {
-    UIButton *btn=(UIButton *)sender;
-    flag=[NSString stringWithFormat:@"%d",btn.tag];
-    [list removeAllObjects];
-    [self loaddata];
-    [suTView reloadData];
+    wyCManagerDetail *_wuyeNoticeDetail=[[wyCManagerDetail alloc]init];
+    NSString *caid=[NSString stringWithFormat:@"%d",btn.tag];
+    _wuyeNoticeDetail.cid=caid;
+    _wuyeNoticeDetail.type=type;
+    [self.navigationController pushViewController:_wuyeNoticeDetail animated:NO];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -182,6 +192,49 @@
     threeLineTwoBtnCell *cell = (threeLineTwoBtnCell *)[self tableView:suTView cellForRowAtIndexPath:indexPath];
     CGFloat height=cell.borderImage.frame.size.height+6;
     return height;
+}
+
+-(IBAction)changeFlag:(id)sender
+{
+    UIButton *btn=(UIButton *)sender;
+    for (UIButton *mybtn in btnlist) {
+        if (mybtn==btn) {
+            [mybtn setBackgroundImage:[UIImage imageNamed:@"selectedBtn"] forState:UIControlStateNormal];
+        }else{
+            [mybtn setBackgroundImage:[UIImage imageNamed:@"unseletedBtn"] forState:UIControlStateNormal];
+        }
+    }
+    flag=[NSString stringWithFormat:@"%d",btn.tag];
+    [list removeAllObjects];
+    [self loaddata];
+    [suTView reloadData];
+}
+
+
+-(void)changeDealFlag:(UIButton *)btn
+{
+    mid=btn.tag;
+    NSString *infoStr=@"请选择处理状态";
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:infoStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"处理完成",@"部分处理",@"无法处理", nil];
+    [alter show];
+}
+
+//alertview响应事件
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex!=0) {
+        
+        NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
+        pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/upAppDealDeleteReplyFix",domainser] postDatas:[NSString stringWithFormat:@"type=1&id=%d&flag=%d",mid,buttonIndex]];
+        NSString *rowString =[pw objectForKey:@"info"];
+        
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alter show];
+        
+        [list removeAllObjects];
+        [self loaddata];
+        [suTView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning

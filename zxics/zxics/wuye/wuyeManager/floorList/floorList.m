@@ -1,28 +1,26 @@
 //
-//  residentManager.m
+//  floorList.m
 //  zxics
 //
-//  Created by johnson on 15-3-3.
+//  Created by johnson on 15-3-9.
 //  Copyright (c) 2015年 moko. All rights reserved.
 //
 
-#import "residentManager.h"
-#import "succourlist.h"
-#import "DataService.h"
+#import "floorList.h"
 #import "AppDelegate.h"
-#import "succourCell.h"
+#import "DataService.h"
 #import "Commons.h"
-#import "residentInfo.h"
+#import "succourCell.h"
 
-@interface residentManager ()
+@interface floorList ()
 
 @end
 
-@implementation residentManager
+@implementation floorList
 
 @synthesize suTView;
-@synthesize type;
 @synthesize delegate;
+@synthesize cid;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,25 +31,13 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    if (isfirst==1) {
-        isfirst=0;
-    }else{
-        [list removeAllObjects];
-        page=0;
-        [self loaddata];
-        [suTView reloadData];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
-    isfirst=1;
+    pid=@"";
     page=0;
     list=[[NSMutableArray alloc]initWithCapacity:5];
     
@@ -75,11 +61,20 @@
 
 -(void)loaddata
 {
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
-    pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getCommunityList",domainser] postDatas:[NSString stringWithFormat:@"type=0&oId=%@&cIds=%@",myDelegate.entityl.orgId,myDelegate.entityl.communityid] forPage:page forPageSize:10];
+    pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getCommunityList",domainser] postDatas:[NSString stringWithFormat:@"type=1&pId=%@&communityid=%@",pid,cid] forPage:page forPageSize:10];
     NSArray *pwlist=[pw objectForKey:@"data"];
     [list addObjectsFromArray:pwlist];
+    if([list count]==0)
+    {
+        NSString *rowString =@"无下级数据显示，请重新选择";
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alter show];
+        pid=oldpid;
+        [list removeAllObjects];
+        [self loaddata];
+        [suTView reloadData];
+    }
 }
 
 -(IBAction)goback:(id)sender
@@ -106,20 +101,27 @@
     }
     NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
     
-    cell.titleLabel.text=[NSString stringWithFormat:@"名称：%@",[sudetail objectForKey:@"name"]];
+    cell.dateLabel.text=[NSString stringWithFormat:@"名称：%@",[sudetail objectForKey:@"name"]];
     
-    cell.dateLabel.text=[NSString stringWithFormat:@"地址：%@",[sudetail objectForKey:@"addr"]];
+    cell.dealstateLabel.text=[NSString stringWithFormat:@"面积（m²）：%@",[sudetail objectForKey:@"area"]];
     
-    NSString *isverify=[NSString stringWithFormat:@"%@",[sudetail objectForKey:@"isverify"]];
+    NSString *isverify=[NSString stringWithFormat:@"%@",[sudetail objectForKey:@"type"]];
     if ([isverify isEqualToString:@"0"]) {
-        cell.dealstateLabel.text=@"是否认证：否";
+        isverify=@"子社区";
     }else if ([isverify isEqualToString:@"1"])
     {
-        cell.dealstateLabel.text=@"是否认证：否";
+        isverify=@"楼盘";
     }else if ([isverify isEqualToString:@"2"])
     {
-        cell.dealstateLabel.text=@"是否认证：是";
+        isverify=@"单元";
+    }else if ([isverify isEqualToString:@"3"])
+    {
+        isverify=@"房号";
+    }else
+    {
+        isverify=@"商铺";
     }
+    cell.titleLabel.text=[NSString stringWithFormat:@"类型：%@",isverify];
     
     //设置圆角边框
     cell.borderImage.layer.cornerRadius = 5;
@@ -134,18 +136,27 @@
 //tableview点击操作
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Commons *_Commons=[[Commons alloc]init];
     NSDictionary *sudetail = [list objectAtIndex:[indexPath row]];
-    
-    comid=[NSString stringWithFormat:@"%@",[sudetail objectForKey:@"id"]];
-    NSString *name=[NSString stringWithFormat:@"%@",[sudetail objectForKey:@"name"]];
-    [self turntoredent:name];
+    NSString *isverify=[_Commons turnNullValue:@"type" Object:sudetail];
+    if ([isverify isEqualToString:@"3"]) {
+        hid=[_Commons turnNullValue:@"id" Object:sudetail];
+        NSString *name=[NSString stringWithFormat:@"%@",[sudetail objectForKey:@"name"]];
+        [self turntoredent:name];
+    }else{
+        pid=[_Commons turnNullValue:@"id" Object:sudetail];
+        oldpid=[_Commons turnNullValue:@"pid" Object:sudetail];
+        [list removeAllObjects];
+        [self loaddata];
+        [suTView reloadData];
+    }
     
 }
 
-//退出登录
+//确定选择房号
 -(void)turntoredent:(NSString *)cname
 {
-    comname=cname;
+    hname=cname;
     NSString *rowString =[NSString stringWithFormat:@"确定是否选择：%@？",cname];
     UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alter show];
@@ -155,16 +166,11 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==1) {
-        if ([type isEqualToString:@"1"]) {
-            [delegate passValue:comid key:comname tag:0];
-            [self.navigationController popViewControllerAnimated:NO];
-        }else{
-            residentInfo *_succourDetail=[[residentInfo alloc]init];
-            _succourDetail.cid=comid;
-            [self.navigationController pushViewController:_succourDetail animated:NO];
-        }
+        [delegate passValue:hid key:hname tag:1];
+        [self.navigationController popViewControllerAnimated:NO];
     }
 }
+
 
 - (void)didReceiveMemoryWarning
 {

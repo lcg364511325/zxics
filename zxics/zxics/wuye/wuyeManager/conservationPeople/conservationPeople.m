@@ -13,6 +13,7 @@
 #import "threeLineTwoBtnCell.h"
 #import "conservationPeopleDetail.h"
 #import "editConservationPeople.h"
+#import "conservationSearch.h"
 
 @interface conservationPeople ()
 
@@ -21,6 +22,18 @@
 @implementation conservationPeople
 
 @synthesize suTView;
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (isfirst==1) {
+        isfirst=0;
+    }else{
+        [list removeAllObjects];
+        page=0;
+        [self loaddata];
+        [suTView reloadData];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,11 +51,12 @@
     [self.navigationController setNavigationBarHidden:YES];
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
     
-    UIBarButtonItem *firstButton = [[UIBarButtonItem alloc] initWithTitle:@"查询" style:UIBarButtonItemStylePlain target:self action:@selector(addConservationPeople)];
+    UIBarButtonItem *firstButton = [[UIBarButtonItem alloc] initWithTitle:@"查询" style:UIBarButtonItemStylePlain target:self action:@selector(setSearchValue)];
     UIBarButtonItem *secondButton = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(addConservationPeople)];
     
     [self.UINavigationItem setRightBarButtonItems:[NSArray arrayWithObjects:firstButton, secondButton, nil]];
     
+    isfirst=1;
     page=0;
     username=@"";
     userphone=@"";
@@ -193,6 +207,29 @@
     editConservationPeople *_editConservationPeople=[[editConservationPeople alloc]init];
     _editConservationPeople.uid=[NSString stringWithFormat:@"%d",btn.tag];
     [self.navigationController pushViewController:_editConservationPeople animated:NO];
+}
+
+
+//搜索条件页面跳转
+-(void)setSearchValue
+{
+    conservationSearch *_conservationSearch=[[conservationSearch alloc]init];
+    _conservationSearch.delegate=self;
+    [self.navigationController pushViewController:_conservationSearch animated:NO];
+}
+
+//接受搜索条件
+-(void)passDictionaryValue:(NSDictionary *)value key:(NSDictionary *)key tag:(NSInteger)tag
+{
+    Commons *_Commons=[[Commons alloc]init];
+    username=[_Commons turnNullValue:@"name" Object:value];
+    userphone=[_Commons turnNullValue:@"mobile" Object:value];
+    blockcode=[_Commons turnNullValue:@"cardno" Object:value];
+    stime=[_Commons turnNullValue:@"stime" Object:value];
+    etime=[_Commons turnNullValue:@"etime" Object:value];
+    [list removeAllObjects];
+    [self loaddata];
+    [suTView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

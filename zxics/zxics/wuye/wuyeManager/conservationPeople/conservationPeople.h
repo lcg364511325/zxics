@@ -17,6 +17,7 @@
     NSString *stime;
     NSString *etime;
     NSString *blockcode;
+    NSInteger isfirst;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *UINavigationItem;

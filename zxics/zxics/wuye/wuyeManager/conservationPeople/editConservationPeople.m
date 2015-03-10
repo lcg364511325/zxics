@@ -52,8 +52,6 @@
     }else{
         [self loaddata];
     }
-    
-    NSDictionary *myTypeDict;
     myTypeDict = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"身份证",@"2",@"护照",@"3",@"军人证",@"4",@"香港证",@"5",@"台胞证",@"6",@"其他",nil];
     list=[NSArray arrayWithObjects:@"身份证",@"护照",@"军人证",@"香港证",@"台胞证",@"其他",nil];
 }
@@ -63,7 +61,7 @@
     Commons *_Commons=[[Commons alloc]init];
     NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
     pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/getPropertyDetail",domainser] postDatas:[NSString stringWithFormat:@"id=%@",uid]];
-    NSDictionary *user=[pw objectForKey:@"data"];
+    user=[pw objectForKey:@"data"];
     
     //姓名
     NSString *nameStr=[_Commons turnNullValue:@"name" Object:user];
@@ -108,10 +106,12 @@
     //社区名称
     NSString *cnameStr=[_Commons turnNullValue:@"cname" Object:user];
     cnameText.text=cnameStr;
+    cid=[_Commons turnNullValue:@"communityid" Object:user];
     
     //楼盘
     NSString *floornameStr=[_Commons turnNullValue:@"fname" Object:user];;
     floornameText.text=floornameStr;
+    fid=[_Commons turnNullValue:@"floorid" Object:user];
     
     NSString *pNubmberStr=[NSString stringWithFormat:@"%@",[pw objectForKey:@"pNubmber"]];
     if([pNubmberStr isEqualToString:@"<null>"] || [pNubmberStr isEqualToString:@"(null)"])
@@ -119,6 +119,42 @@
         pNubmberStr=@"";
     }
     blockcodeText.text=pNubmberStr;
+}
+
+
+
+//提交数据到服务器
+-(IBAction)saveEdit:(id)sender
+{
+    Commons *_Commons=[[Commons alloc]init];
+    NSMutableDictionary * pw = [NSMutableDictionary dictionaryWithCapacity:5];
+    NSString *cardtypevalue=@"";
+    NSString *porternubmber=@"";
+    if (uid) {
+        cardtypevalue=[_Commons turnNullValue:@"codetype" Object:user];
+        porternubmber=[_Commons turnNullValue:@"porternubmber" Object:user];
+    }else{
+        cardtypevalue=[myTypeDict objectForKey:cardtypeText.text];
+        porternubmber=ids;
+        uid=@"";
+    }
+    AppDelegate *mydelegate=[[UIApplication sharedApplication]delegate];
+    
+    
+    pw=[DataService PostDataService:[NSString stringWithFormat:@"%@api/modifyPopulation",domainser] postDatas:[NSString stringWithFormat:@"id=%@&name=%@&codeid=%@&codetype=%@&mobile=%@&issuedtime=%@&communityid=%@&floorid=%@&porternubmber=%@&createaccount=%@",uid,nameText.text,cardnoText.text,cardtypevalue,mobileText.text,signtimeText.text,cid,fid,porternubmber,mydelegate.entityl.userid]];
+    NSString *infoStr=[_Commons turnNullValue:@"info" Object:pw];
+    backstate=[_Commons turnNullValue:@"status" Object:pw];
+    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:infoStr delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alter show];
+}
+
+//alertview响应事件
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([backstate isEqualToString:@"1"]) {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
+    
 }
 
 
@@ -131,6 +167,8 @@
     [self.navigationController pushViewController:_residentManager animated:NO];
 }
 
+
+//传递值
 -(void)passValue:(NSString *)value key:(NSString *)key tag:(NSInteger)tag
 {
     if (tag==0) {
@@ -226,11 +264,16 @@
     return demoView;
 }
 
+
+//后退
 -(IBAction)goback:(id)sender
 {
     [self.navigationController popViewControllerAnimated:NO];
 }
 
+
+
+//显示证件类型下拉框
 -(IBAction)showcardtype:(id)sender
 {
     cardtypeView.hidden=NO;

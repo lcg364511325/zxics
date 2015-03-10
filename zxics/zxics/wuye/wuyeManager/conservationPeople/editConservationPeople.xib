@@ -39,7 +39,11 @@
                                     <action selector="goback:" destination="-1" id="B36-5V-3wG"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="提交" id="Xbk-fG-hpd"/>
+                            <barButtonItem key="rightBarButtonItem" title="提交" id="Xbk-fG-hpd">
+                                <connections>
+                                    <action selector="saveEdit:" destination="-1" id="yMn-gg-y6p"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

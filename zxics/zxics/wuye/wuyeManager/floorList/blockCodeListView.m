@@ -41,7 +41,7 @@
     page=0;
     list=[[NSMutableArray alloc]initWithCapacity:5];
     selectedlist=[[NSMutableArray alloc]initWithCapacity:5];
-    
+    selectedlistid=[[NSMutableArray alloc]initWithCapacity:5];
     //加载数据
     [self loaddata];
     

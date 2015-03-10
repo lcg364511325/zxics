@@ -16,6 +16,9 @@
     NSString *ids;
     NSString *cid;
     NSString *fid;
+    NSDictionary *user;
+    NSString* backstate;
+    NSDictionary *myTypeDict;
 }
 
 @property(retain,nonatomic)NSString *uid;

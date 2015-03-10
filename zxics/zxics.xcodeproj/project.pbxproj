@@ -12,6 +12,12 @@
 		2C189ADA1A0CB6B800431BAC /* addproWanted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C189AD81A0CB6B800431BAC /* addproWanted.xib */; };
 		2C1C7B2D1AA04B5000325473 /* livingArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C7B2B1AA04B5000325473 /* livingArea.m */; };
 		2C1C7B2E1AA04B5000325473 /* livingArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1C7B2C1AA04B5000325473 /* livingArea.xib */; };
+		2C1DA8901AAE8380008B3D6F /* conservationSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA88E1AAE8380008B3D6F /* conservationSearch.m */; };
+		2C1DA8911AAE8380008B3D6F /* conservationSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DA88F1AAE8380008B3D6F /* conservationSearch.xib */; };
+		2C1DA8971AAE8D37008B3D6F /* shopMlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA8951AAE8D37008B3D6F /* shopMlist.m */; };
+		2C1DA8981AAE8D37008B3D6F /* shopMlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DA8961AAE8D37008B3D6F /* shopMlist.xib */; };
+		2C1DA89C1AAE9154008B3D6F /* shopMlistDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA89A1AAE9154008B3D6F /* shopMlistDetail.m */; };
+		2C1DA89D1AAE9154008B3D6F /* shopMlistDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */; };
 		2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E81995ACA7008DBB58 /* communitylist.m */; };
 		2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E91995ACA7008DBB58 /* communitylist.xib */; };
 		2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EE1995AEB1008DBB58 /* communityCell.m */; };
@@ -525,6 +531,12 @@
 		2CE4571C19B9AB54001AEA90 /* succourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4571A19B9AB54001AEA90 /* succourCell.xib */; };
 		2CE4572119B9B5DF001AEA90 /* succourDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4571F19B9B5DF001AEA90 /* succourDetail.m */; };
 		2CE4572219B9B5DF001AEA90 /* succourDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4572019B9B5DF001AEA90 /* succourDetail.xib */; };
+		2CF191251AAED6DE0004D0FE /* staffSearchList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF191231AAED6DE0004D0FE /* staffSearchList.m */; };
+		2CF191261AAED6DE0004D0FE /* staffSearchList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF191241AAED6DE0004D0FE /* staffSearchList.xib */; };
+		2CF1912B1AAED86A0004D0FE /* staffSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF191291AAED86A0004D0FE /* staffSearchCell.m */; };
+		2CF1912C1AAED86A0004D0FE /* staffSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF1912A1AAED86A0004D0FE /* staffSearchCell.xib */; };
+		2CF191301AAEE1CA0004D0FE /* staffSearchType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1912E1AAEE1CA0004D0FE /* staffSearchType.m */; };
+		2CF191311AAEE1CA0004D0FE /* staffSearchType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF1912F1AAEE1CA0004D0FE /* staffSearchType.xib */; };
 		2CFEAA53199AF5CC00FCB5C1 /* filecenterlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */; };
 		2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */; };
 		2CFEAA58199AF7BA00FCB5C1 /* filecenterDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEAA56199AF7BA00FCB5C1 /* filecenterDetail.m */; };
@@ -598,6 +610,15 @@
 		2C1C7B2A1AA04B5000325473 /* livingArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = livingArea.h; path = livingArea/livingArea.h; sourceTree = "<group>"; };
 		2C1C7B2B1AA04B5000325473 /* livingArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = livingArea.m; path = livingArea/livingArea.m; sourceTree = "<group>"; };
 		2C1C7B2C1AA04B5000325473 /* livingArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = livingArea.xib; path = livingArea/livingArea.xib; sourceTree = "<group>"; };
+		2C1DA88D1AAE8380008B3D6F /* conservationSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = conservationSearch.h; path = wuye/wuyeManager/conservationPeople/conservationSearch.h; sourceTree = "<group>"; };
+		2C1DA88E1AAE8380008B3D6F /* conservationSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = conservationSearch.m; path = wuye/wuyeManager/conservationPeople/conservationSearch.m; sourceTree = "<group>"; };
+		2C1DA88F1AAE8380008B3D6F /* conservationSearch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = conservationSearch.xib; path = wuye/wuyeManager/conservationPeople/conservationSearch.xib; sourceTree = "<group>"; };
+		2C1DA8941AAE8D37008B3D6F /* shopMlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopMlist.h; path = wuye/wuyeManager/shopMlist/shopMlist.h; sourceTree = "<group>"; };
+		2C1DA8951AAE8D37008B3D6F /* shopMlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopMlist.m; path = wuye/wuyeManager/shopMlist/shopMlist.m; sourceTree = "<group>"; };
+		2C1DA8961AAE8D37008B3D6F /* shopMlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = shopMlist.xib; path = wuye/wuyeManager/shopMlist/shopMlist.xib; sourceTree = "<group>"; };
+		2C1DA8991AAE9154008B3D6F /* shopMlistDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopMlistDetail.h; path = wuye/wuyeManager/shopMlist/shopMlistDetail.h; sourceTree = "<group>"; };
+		2C1DA89A1AAE9154008B3D6F /* shopMlistDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopMlistDetail.m; path = wuye/wuyeManager/shopMlist/shopMlistDetail.m; sourceTree = "<group>"; };
+		2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = shopMlistDetail.xib; path = wuye/wuyeManager/shopMlist/shopMlistDetail.xib; sourceTree = "<group>"; };
 		2C1FE5E71995ACA7008DBB58 /* communitylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communitylist.h; path = personManager/community/communitylist/communitylist.h; sourceTree = "<group>"; };
 		2C1FE5E81995ACA7008DBB58 /* communitylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communitylist.m; path = personManager/community/communitylist/communitylist.m; sourceTree = "<group>"; };
 		2C1FE5E91995ACA7008DBB58 /* communitylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communitylist.xib; path = personManager/community/communitylist/communitylist.xib; sourceTree = "<group>"; };
@@ -1316,6 +1337,15 @@
 		2CE4571E19B9B5DF001AEA90 /* succourDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = succourDetail.h; path = frontindex/succourwanted/succourDetail/succourDetail.h; sourceTree = "<group>"; };
 		2CE4571F19B9B5DF001AEA90 /* succourDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = succourDetail.m; path = frontindex/succourwanted/succourDetail/succourDetail.m; sourceTree = "<group>"; };
 		2CE4572019B9B5DF001AEA90 /* succourDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = succourDetail.xib; path = frontindex/succourwanted/succourDetail/succourDetail.xib; sourceTree = "<group>"; };
+		2CF191221AAED6DE0004D0FE /* staffSearchList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = staffSearchList.h; path = wuye/wuyeManager/staffSearch/staffSearchList.h; sourceTree = "<group>"; };
+		2CF191231AAED6DE0004D0FE /* staffSearchList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = staffSearchList.m; path = wuye/wuyeManager/staffSearch/staffSearchList.m; sourceTree = "<group>"; };
+		2CF191241AAED6DE0004D0FE /* staffSearchList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = staffSearchList.xib; path = wuye/wuyeManager/staffSearch/staffSearchList.xib; sourceTree = "<group>"; };
+		2CF191281AAED86A0004D0FE /* staffSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = staffSearchCell.h; path = Cell/staffSearchCell/staffSearchCell.h; sourceTree = "<group>"; };
+		2CF191291AAED86A0004D0FE /* staffSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = staffSearchCell.m; path = Cell/staffSearchCell/staffSearchCell.m; sourceTree = "<group>"; };
+		2CF1912A1AAED86A0004D0FE /* staffSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = staffSearchCell.xib; path = Cell/staffSearchCell/staffSearchCell.xib; sourceTree = "<group>"; };
+		2CF1912D1AAEE1CA0004D0FE /* staffSearchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = staffSearchType.h; path = wuye/wuyeManager/staffSearch/staffSearchType.h; sourceTree = "<group>"; };
+		2CF1912E1AAEE1CA0004D0FE /* staffSearchType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = staffSearchType.m; path = wuye/wuyeManager/staffSearch/staffSearchType.m; sourceTree = "<group>"; };
+		2CF1912F1AAEE1CA0004D0FE /* staffSearchType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = staffSearchType.xib; path = wuye/wuyeManager/staffSearch/staffSearchType.xib; sourceTree = "<group>"; };
 		2CFEAA50199AF5CC00FCB5C1 /* filecenterlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filecenterlist.h; path = filecenter/filecenterlist/filecenterlist.h; sourceTree = "<group>"; };
 		2CFEAA51199AF5CC00FCB5C1 /* filecenterlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filecenterlist.m; path = filecenter/filecenterlist/filecenterlist.m; sourceTree = "<group>"; };
 		2CFEAA52199AF5CC00FCB5C1 /* filecenterlist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = filecenterlist.xib; path = filecenter/filecenterlist/filecenterlist.xib; sourceTree = "<group>"; };
@@ -1445,6 +1475,19 @@
 				2C1C7B2C1AA04B5000325473 /* livingArea.xib */,
 			);
 			name = livingArea;
+			sourceTree = "<group>";
+		};
+		2C1DA8931AAE8D15008B3D6F /* shopMlist */ = {
+			isa = PBXGroup;
+			children = (
+				2C1DA8941AAE8D37008B3D6F /* shopMlist.h */,
+				2C1DA8951AAE8D37008B3D6F /* shopMlist.m */,
+				2C1DA8961AAE8D37008B3D6F /* shopMlist.xib */,
+				2C1DA8991AAE9154008B3D6F /* shopMlistDetail.h */,
+				2C1DA89A1AAE9154008B3D6F /* shopMlistDetail.m */,
+				2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */,
+			);
+			name = shopMlist;
 			sourceTree = "<group>";
 		};
 		2C1FE5E51995AC75008DBB58 /* community */ = {
@@ -2271,6 +2314,7 @@
 		2C3D19451AA54CB300BDF4B5 /* wuye */ = {
 			isa = PBXGroup;
 			children = (
+				2CF1911F1AAED6AE0004D0FE /* staffSearch */,
 				2C3D19481AA54CD800BDF4B5 /* wuyeManager */,
 				2C3D19471AA54CBC00BDF4B5 /* communityService */,
 			);
@@ -2292,6 +2336,7 @@
 		2C3D19481AA54CD800BDF4B5 /* wuyeManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C1DA8931AAE8D15008B3D6F /* shopMlist */,
 				2C7B55771AAD72B40006A808 /* floorList */,
 				2C7B555F1AAD29850006A808 /* conservationPeople */,
 				2C3D19541AA54F9900BDF4B5 /* wuyeIndex */,
@@ -2461,6 +2506,7 @@
 		2C42F688198F79B4004F2A38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2CF191271AAED83C0004D0FE /* staffSearchCell */,
 				2C7B55881AAD95030006A808 /* blockcodeCell */,
 				2C424BAB1AA6F3020000AA04 /* threeLineTwoBtnCell */,
 				2C424BA41AA6DE640000AA04 /* threeLineBtnCell */,
@@ -3206,6 +3252,9 @@
 				2C7B556B1AAD3AA00006A808 /* editConservationPeople.h */,
 				2C7B556C1AAD3AA00006A808 /* editConservationPeople.m */,
 				2C7B556D1AAD3AA00006A808 /* editConservationPeople.xib */,
+				2C1DA88D1AAE8380008B3D6F /* conservationSearch.h */,
+				2C1DA88E1AAE8380008B3D6F /* conservationSearch.m */,
+				2C1DA88F1AAE8380008B3D6F /* conservationSearch.xib */,
 			);
 			name = conservationPeople;
 			sourceTree = "<group>";
@@ -3291,6 +3340,29 @@
 				2CE4572019B9B5DF001AEA90 /* succourDetail.xib */,
 			);
 			name = succourDetail;
+			sourceTree = "<group>";
+		};
+		2CF1911F1AAED6AE0004D0FE /* staffSearch */ = {
+			isa = PBXGroup;
+			children = (
+				2CF191221AAED6DE0004D0FE /* staffSearchList.h */,
+				2CF191231AAED6DE0004D0FE /* staffSearchList.m */,
+				2CF191241AAED6DE0004D0FE /* staffSearchList.xib */,
+				2CF1912D1AAEE1CA0004D0FE /* staffSearchType.h */,
+				2CF1912E1AAEE1CA0004D0FE /* staffSearchType.m */,
+				2CF1912F1AAEE1CA0004D0FE /* staffSearchType.xib */,
+			);
+			name = staffSearch;
+			sourceTree = "<group>";
+		};
+		2CF191271AAED83C0004D0FE /* staffSearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CF191281AAED86A0004D0FE /* staffSearchCell.h */,
+				2CF191291AAED86A0004D0FE /* staffSearchCell.m */,
+				2CF1912A1AAED86A0004D0FE /* staffSearchCell.xib */,
+			);
+			name = staffSearchCell;
 			sourceTree = "<group>";
 		};
 		2CFEAA4F199AF52D00FCB5C1 /* filecenter */ = {
@@ -3821,6 +3893,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF191311AAEE1CA0004D0FE /* staffSearchType.xib in Resources */,
 				2C3D19611AA5562D00BDF4B5 /* wuye2Sel.png in Resources */,
 				2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */,
 				2C1FE5FD1995BD86008DBB58 /* changecom.xib in Resources */,
@@ -3916,6 +3989,7 @@
 				2C3AECF819A57C7D00D981C3 /* bot_common.png in Resources */,
 				2C493C5A19B815AE001C4DD5 /* README.mdown in Resources */,
 				2C3C76C719CFF96700B94DD7 /* guideindex.png in Resources */,
+				2C1DA8911AAE8380008B3D6F /* conservationSearch.xib in Resources */,
 				2C3AECFF19A57C7D00D981C3 /* btn_footprint.png in Resources */,
 				2C3AED3D19A57C7D00D981C3 /* map.png in Resources */,
 				2C3C76A319CFC71300B94DD7 /* rentorsell.png in Resources */,
@@ -4046,6 +4120,7 @@
 				2C3C76A519CFC71300B94DD7 /* TabBar1Sel.png in Resources */,
 				2C5404B0199360F0003D2BBE /* arrearageCell.xib in Resources */,
 				2C3AED1819A57C7D00D981C3 /* dis_about_weixin.png in Resources */,
+				2CF191261AAED6DE0004D0FE /* staffSearchList.xib in Resources */,
 				2C3AED3A19A57C7D00D981C3 /* logo.png in Resources */,
 				2C424BAA1AA6DE9B0000AA04 /* threeLineBtnCell.xib in Resources */,
 				2C3AECF019A57C7D00D981C3 /* back_textview_default.9.png in Resources */,
@@ -4053,6 +4128,7 @@
 				2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */,
 				2C493C7E19B83A72001C4DD5 /* close.png in Resources */,
 				2C3AED7019A57C7D00D981C3 /* webview_load_default.png in Resources */,
+				2C1DA89D1AAE9154008B3D6F /* shopMlistDetail.xib in Resources */,
 				7CE6312E198C7A8200730C64 /* InfoPlist.strings in Resources */,
 				2C28110819985B400072D08C /* consultDetail.xib in Resources */,
 				2C3AED4619A57C7D00D981C3 /* neighbour.png in Resources */,
@@ -4085,6 +4161,7 @@
 				2C7B557D1AAD72D30006A808 /* floorList.xib in Resources */,
 				2C3AED7219A57C7D00D981C3 /* women.png in Resources */,
 				2C3AED4F19A57C7D00D981C3 /* red_nav2.png in Resources */,
+				2C1DA8981AAE8D37008B3D6F /* shopMlist.xib in Resources */,
 				2C3AED6B19A57C7D00D981C3 /* t_quit.png in Resources */,
 				2C3AECE619A57C7D00D981C3 /* 0001_bg.png in Resources */,
 				2C54EC3419AD8864004D580C /* DeliveryaddressCell.xib in Resources */,
@@ -4094,6 +4171,7 @@
 				2C3AECF319A57C7D00D981C3 /* back_title.png in Resources */,
 				2C3AED4919A57C7D00D981C3 /* people.png in Resources */,
 				2C3C76CD19D0085500B94DD7 /* Vicecardlist.xib in Resources */,
+				2CF1912C1AAED86A0004D0FE /* staffSearchCell.xib in Resources */,
 				2C5404DB19937CA0003D2BBE /* balancelist.xib in Resources */,
 				2C3AED2719A57C7D00D981C3 /* home2.png in Resources */,
 				2C2810EF199850EF0072D08C /* download.xib in Resources */,
@@ -4290,6 +4368,7 @@
 				2C3BC5FF1AA6B95F00386396 /* wuyeInfo.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,
 				2C2810FB1998547C0072D08C /* consultlist.m in Sources */,
+				2C1DA8971AAE8D37008B3D6F /* shopMlist.m in Sources */,
 				2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */,
 				2C493C6419B815AE001C4DD5 /* PSTGridLayoutInfo.m in Sources */,
 				2C54EC2D19AD7682004D580C /* yikatong.m in Sources */,
@@ -4301,11 +4380,14 @@
 				2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */,
 				2C57575E1994D3CD00858A7F /* newDeliveryaddress.m in Sources */,
 				2C2806971990AD69007838A6 /* complainCell.m in Sources */,
+				2CF1912B1AAED86A0004D0FE /* staffSearchCell.m in Sources */,
 				2C1FE6581995C8AC008DBB58 /* cplist.m in Sources */,
 				2C2811661998A98B0072D08C /* goodslist.m in Sources */,
+				2C1DA89C1AAE9154008B3D6F /* shopMlistDetail.m in Sources */,
 				2CE4571519B9AABC001AEA90 /* succourlist.m in Sources */,
 				2C5757241994681000858A7F /* myorderCell.m in Sources */,
 				2C493C7019B815AE001C4DD5 /* SDWebImageDownloader.m in Sources */,
+				2CF191301AAEE1CA0004D0FE /* staffSearchType.m in Sources */,
 				2C1FE6621995C8AC008DBB58 /* repairlist.m in Sources */,
 				2C59A32319AED0470064CD04 /* goodsDetailCell.m in Sources */,
 				2C5A242619921489003712D5 /* personIndex.m in Sources */,
@@ -4314,6 +4396,7 @@
 				7CE6319F198C7C2A00730C64 /* LoginEntity.m in Sources */,
 				2C493C6A19B815AE001C4DD5 /* MKAnnotationView+WebCache.m in Sources */,
 				2C2810F4199851F60072D08C /* downloadCell.m in Sources */,
+				2C1DA8901AAE8380008B3D6F /* conservationSearch.m in Sources */,
 				2C1FE6661995C8AC008DBB58 /* SpecialPeopleDetail.m in Sources */,
 				2C28110D199860820072D08C /* consultadd.m in Sources */,
 				2C493C5C19B815AE001C4DD5 /* PSTCollectionView.m in Sources */,
@@ -4332,6 +4415,7 @@
 				2C5404CE199377F2003D2BBE /* consumelistCell.m in Sources */,
 				2C493C7719B815AE001C4DD5 /* UIImage+WebP.m in Sources */,
 				2C435B2F19BABB2100364164 /* EAIntroView.m in Sources */,
+				2CF191251AAED6DE0004D0FE /* staffSearchList.m in Sources */,
 				2C493C6D19B815AE001C4DD5 /* SDImageCache.m in Sources */,
 				2C4AD4DC19B5B6E400C28F06 /* AlixPayResult.m in Sources */,
 				2C42F67B198F785B004F2A38 /* MJRefreshBaseView.m in Sources */,

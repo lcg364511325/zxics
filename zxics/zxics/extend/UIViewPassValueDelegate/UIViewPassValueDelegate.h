@@ -11,5 +11,5 @@
 @protocol UIViewPassValueDelegate <NSObject>
 
 - (void)passValue:(NSString *)value key:(NSString *)key tag:(NSInteger)tag;
-
+- (void)passDictionaryValue:(NSDictionary *)value key:(NSDictionary *)key tag:(NSInteger)tag;
 @end

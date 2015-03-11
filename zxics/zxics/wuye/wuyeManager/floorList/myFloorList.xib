@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="floorList">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="myFloorList">
             <connections>
-                <outlet property="UINavigationBar" destination="aO1-od-rDP" id="Syv-NN-3OL"/>
-                <outlet property="suTView" destination="boh-fD-hQb" id="oec-IN-Y7M"/>
-                <outlet property="view" destination="jFG-bL-orb" id="4UP-00-9Fh"/>
+                <outlet property="UINavigationBar" destination="1V3-iH-ooc" id="jTm-3B-2zy"/>
+                <outlet property="suTView" destination="m2W-4B-H3Z" id="Q98-Hj-WcX"/>
+                <outlet property="view" destination="dHr-R7-TR4" id="dYZ-cf-4cB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jFG-bL-orb">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dHr-R7-TR4">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" id="aO1-od-rDP">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-iH-ooc">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,23 +24,15 @@
                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="楼盘列表" id="v7O-Vh-Etk">
-                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="aXv-nB-Lpl">
-                                <connections>
-                                    <action selector="goback:" destination="-1" id="WCn-jb-5o4"/>
-                                </connections>
-                            </barButtonItem>
+                        <navigationItem title="楼盘列表" id="xHM-e5-Lwd">
+                            <barButtonItem key="leftBarButtonItem" image="button_details_gohome.png" id="vQf-y7-VFe"/>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="boh-fD-hQb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="m2W-4B-H3Z">
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="7nB-aI-eQd"/>
-                        <outlet property="delegate" destination="-1" id="IKZ-23-Lwq"/>
-                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

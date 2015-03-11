@@ -124,6 +124,8 @@
 		2C30163A19C197B0003CDCCF /* logo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C30163719C197AF003CDCCF /* logo58.png */; };
 		2C30163B19C197B0003CDCCF /* logo80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C30163819C197AF003CDCCF /* logo80.png */; };
 		2C30163C19C197B0003CDCCF /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C30163919C197B0003CDCCF /* logo120.png */; };
+		2C315AF31AAFCEFE001BBB95 /* myFloorList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C315AF11AAFCEFE001BBB95 /* myFloorList.m */; };
+		2C315AF41AAFCEFE001BBB95 /* myFloorList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C315AF21AAFCEFE001BBB95 /* myFloorList.xib */; };
 		2C3AECE619A57C7D00D981C3 /* 0001_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5719A57C7C00D981C3 /* 0001_bg.png */; };
 		2C3AECE719A57C7D00D981C3 /* about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5819A57C7C00D981C3 /* about_us.png */; };
 		2C3AECE819A57C7D00D981C3 /* accountactivity_new_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5919A57C7C00D981C3 /* accountactivity_new_dark.png */; };
@@ -515,8 +517,6 @@
 		2C7B556F1AAD3AA00006A808 /* editConservationPeople.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B556D1AAD3AA00006A808 /* editConservationPeople.xib */; };
 		2C7B55741AAD3AFA0006A808 /* conservationPeopleDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B55721AAD3AFA0006A808 /* conservationPeopleDetail.m */; };
 		2C7B55751AAD3AFA0006A808 /* conservationPeopleDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B55731AAD3AFA0006A808 /* conservationPeopleDetail.xib */; };
-		2C7B557C1AAD72D30006A808 /* floorList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B557A1AAD72D30006A808 /* floorList.m */; };
-		2C7B557D1AAD72D30006A808 /* floorList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B557B1AAD72D30006A808 /* floorList.xib */; };
 		2C7B55811AAD879D0006A808 /* blockCodeListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B557F1AAD879D0006A808 /* blockCodeListView.m */; };
 		2C7B55821AAD879D0006A808 /* blockCodeListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B55801AAD879D0006A808 /* blockCodeListView.xib */; };
 		2C7B55861AAD8AA70006A808 /* blockcodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B55841AAD8AA70006A808 /* blockcodeCell.m */; };
@@ -777,6 +777,9 @@
 		2C30163719C197AF003CDCCF /* logo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo58.png; sourceTree = "<group>"; };
 		2C30163819C197AF003CDCCF /* logo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo80.png; sourceTree = "<group>"; };
 		2C30163919C197B0003CDCCF /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
+		2C315AF01AAFCEFE001BBB95 /* myFloorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myFloorList.h; path = wuye/wuyeManager/floorList/myFloorList.h; sourceTree = "<group>"; };
+		2C315AF11AAFCEFE001BBB95 /* myFloorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myFloorList.m; path = wuye/wuyeManager/floorList/myFloorList.m; sourceTree = "<group>"; };
+		2C315AF21AAFCEFE001BBB95 /* myFloorList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myFloorList.xib; path = wuye/wuyeManager/floorList/myFloorList.xib; sourceTree = "<group>"; };
 		2C3AEC5719A57C7C00D981C3 /* 0001_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0001_bg.png; sourceTree = "<group>"; };
 		2C3AEC5819A57C7C00D981C3 /* about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_us.png; sourceTree = "<group>"; };
 		2C3AEC5919A57C7C00D981C3 /* accountactivity_new_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accountactivity_new_dark.png; sourceTree = "<group>"; };
@@ -1313,9 +1316,6 @@
 		2C7B55711AAD3AFA0006A808 /* conservationPeopleDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = conservationPeopleDetail.h; path = wuye/wuyeManager/conservationPeople/conservationPeopleDetail.h; sourceTree = "<group>"; };
 		2C7B55721AAD3AFA0006A808 /* conservationPeopleDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = conservationPeopleDetail.m; path = wuye/wuyeManager/conservationPeople/conservationPeopleDetail.m; sourceTree = "<group>"; };
 		2C7B55731AAD3AFA0006A808 /* conservationPeopleDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = conservationPeopleDetail.xib; path = wuye/wuyeManager/conservationPeople/conservationPeopleDetail.xib; sourceTree = "<group>"; };
-		2C7B55791AAD72D30006A808 /* floorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = floorList.h; path = wuye/wuyeManager/floorList/floorList.h; sourceTree = "<group>"; };
-		2C7B557A1AAD72D30006A808 /* floorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = floorList.m; path = wuye/wuyeManager/floorList/floorList.m; sourceTree = "<group>"; };
-		2C7B557B1AAD72D30006A808 /* floorList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = floorList.xib; path = wuye/wuyeManager/floorList/floorList.xib; sourceTree = "<group>"; };
 		2C7B557E1AAD879D0006A808 /* blockCodeListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blockCodeListView.h; path = wuye/wuyeManager/floorList/blockCodeListView.h; sourceTree = "<group>"; };
 		2C7B557F1AAD879D0006A808 /* blockCodeListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = blockCodeListView.m; path = wuye/wuyeManager/floorList/blockCodeListView.m; sourceTree = "<group>"; };
 		2C7B55801AAD879D0006A808 /* blockCodeListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = blockCodeListView.xib; path = wuye/wuyeManager/floorList/blockCodeListView.xib; sourceTree = "<group>"; };
@@ -2314,7 +2314,6 @@
 		2C3D19451AA54CB300BDF4B5 /* wuye */ = {
 			isa = PBXGroup;
 			children = (
-				2CF1911F1AAED6AE0004D0FE /* staffSearch */,
 				2C3D19481AA54CD800BDF4B5 /* wuyeManager */,
 				2C3D19471AA54CBC00BDF4B5 /* communityService */,
 			);
@@ -2336,6 +2335,7 @@
 		2C3D19481AA54CD800BDF4B5 /* wuyeManager */ = {
 			isa = PBXGroup;
 			children = (
+				2CF1911F1AAED6AE0004D0FE /* staffSearch */,
 				2C1DA8931AAE8D15008B3D6F /* shopMlist */,
 				2C7B55771AAD72B40006A808 /* floorList */,
 				2C7B555F1AAD29850006A808 /* conservationPeople */,
@@ -3262,12 +3262,12 @@
 		2C7B55771AAD72B40006A808 /* floorList */ = {
 			isa = PBXGroup;
 			children = (
-				2C7B55791AAD72D30006A808 /* floorList.h */,
-				2C7B557A1AAD72D30006A808 /* floorList.m */,
-				2C7B557B1AAD72D30006A808 /* floorList.xib */,
 				2C7B557E1AAD879D0006A808 /* blockCodeListView.h */,
 				2C7B557F1AAD879D0006A808 /* blockCodeListView.m */,
 				2C7B55801AAD879D0006A808 /* blockCodeListView.xib */,
+				2C315AF01AAFCEFE001BBB95 /* myFloorList.h */,
+				2C315AF11AAFCEFE001BBB95 /* myFloorList.m */,
+				2C315AF21AAFCEFE001BBB95 /* myFloorList.xib */,
 			);
 			name = floorList;
 			sourceTree = "<group>";
@@ -3911,6 +3911,7 @@
 				2CE4571619B9AABC001AEA90 /* succourlist.xib in Resources */,
 				2C41688E19BEABB2001A28A9 /* guidancemr.png in Resources */,
 				2C281140199895650072D08C /* rentorshellDetail.xib in Resources */,
+				2C315AF41AAFCEFE001BBB95 /* myFloorList.xib in Resources */,
 				2C3D19591AA54FBC00BDF4B5 /* wuyeIndex.xib in Resources */,
 				2C3AED6619A57C7D00D981C3 /* sure.png in Resources */,
 				2C3AECEA19A57C7D00D981C3 /* activity.png in Resources */,
@@ -4158,7 +4159,6 @@
 				2C3AED0519A57C7D00D981C3 /* button_disabuse.png in Resources */,
 				2C3AED1319A57C7D00D981C3 /* clock.png in Resources */,
 				2C3C05A0199DB15200369A63 /* assess.xib in Resources */,
-				2C7B557D1AAD72D30006A808 /* floorList.xib in Resources */,
 				2C3AED7219A57C7D00D981C3 /* women.png in Resources */,
 				2C3AED4F19A57C7D00D981C3 /* red_nav2.png in Resources */,
 				2C1DA8981AAE8D37008B3D6F /* shopMlist.xib in Resources */,
@@ -4276,7 +4276,6 @@
 				2C3C768219CFB20000B94DD7 /* XNTabBarButton.m in Sources */,
 				2C5404C819937539003D2BBE /* consumelist.m in Sources */,
 				2C7B55811AAD879D0006A808 /* blockCodeListView.m in Sources */,
-				2C7B557C1AAD72D30006A808 /* floorList.m in Sources */,
 				2C5404C119936DE7003D2BBE /* Paymentfunction.m in Sources */,
 				2C54049E199352CA003D2BBE /* personLogDetail.m in Sources */,
 				2C7671F91AA9426200D26EE4 /* wyCManagerDetail.m in Sources */,
@@ -4364,6 +4363,7 @@
 				2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */,
 				7CE63195198C7C2A00730C64 /* Tool.m in Sources */,
 				2C493C7819B815AE001C4DD5 /* UIImageView+WebCache.m in Sources */,
+				2C315AF31AAFCEFE001BBB95 /* myFloorList.m in Sources */,
 				2C493C5819B815AE001C4DD5 /* DACircularProgressView.m in Sources */,
 				2C3BC5FF1AA6B95F00386396 /* wuyeInfo.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,

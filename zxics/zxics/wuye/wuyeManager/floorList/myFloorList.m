@@ -1,22 +1,22 @@
 //
-//  floorList.m
+//  myFloorList.m
 //  zxics
 //
-//  Created by johnson on 15-3-9.
+//  Created by johnson on 15-3-11.
 //  Copyright (c) 2015年 moko. All rights reserved.
 //
 
-#import "floorList.h"
+#import "myFloorList.h"
 #import "AppDelegate.h"
 #import "DataService.h"
 #import "Commons.h"
 #import "succourCell.h"
 
-@interface floorList ()
+@interface myFloorList ()
 
 @end
 
-@implementation floorList
+@implementation myFloorList
 
 @synthesize suTView;
 @synthesize delegate;
@@ -170,7 +170,6 @@
         [self.navigationController popViewControllerAnimated:NO];
     }
 }
-
 
 - (void)didReceiveMemoryWarning
 {

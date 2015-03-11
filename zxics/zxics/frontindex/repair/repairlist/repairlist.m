@@ -35,11 +35,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
-    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];    source=@"";//初始化状态为全部
+    [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
+    source=@"";//初始化状态为全部
     list=[[NSMutableArray alloc]initWithCapacity:5];
     btnlist=[[NSMutableArray alloc]initWithCapacity:5];
     [btnlist addObject:allButton];
-    allButton.backgroundColor=[UIColor lightGrayColor];
     
     //加载数据
     page=1;

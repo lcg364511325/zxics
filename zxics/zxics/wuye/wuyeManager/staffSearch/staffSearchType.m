@@ -8,7 +8,7 @@
 
 #import "staffSearchType.h"
 #import "residentManager.h"
-#import "floorList.h"
+#import "myFloorList.h"
 
 @interface staffSearchType ()
 
@@ -141,7 +141,7 @@
         UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alter show];
     }else{
-        floorList *_residentManager=[[floorList alloc]init];
+        myFloorList *_residentManager=[[myFloorList alloc]init];
         _residentManager.cid=cid;
         _residentManager.delegate=self;
         [self.navigationController pushViewController:_residentManager animated:NO];

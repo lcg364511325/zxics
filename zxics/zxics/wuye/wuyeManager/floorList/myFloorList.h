@@ -1,15 +1,15 @@
 //
-//  floorList.h
+//  myFloorList.h
 //  zxics
 //
-//  Created by johnson on 15-3-9.
+//  Created by johnson on 15-3-11.
 //  Copyright (c) 2015年 moko. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "UIViewPassValueDelegate.h"
 
-@interface floorList : UIViewController
+@interface myFloorList : UIViewController
 {
     NSMutableArray *list;
     NSInteger page;

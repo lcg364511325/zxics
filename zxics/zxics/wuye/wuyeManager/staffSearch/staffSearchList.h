@@ -13,6 +13,8 @@
     NSMutableArray *list;
     NSInteger page;
     NSString *searchtype;
+    NSInteger ctype;
+    NSInteger oldtag;
     NSString *front_communityid;
     NSString *name;
     NSString *codeid;
@@ -22,9 +24,17 @@
     NSString *account;
     NSString *communityid;
     NSString *floorid;
+    NSArray *btnlist;
+    UIButton *cardbtn;
+    UIButton *personbtn;
+    NSMutableDictionary * pw;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UITableView *suTView;
+@property (weak, nonatomic) IBOutlet UIButton *firstBtn;
+@property (weak, nonatomic) IBOutlet UIButton *secondBtn;
+@property (weak, nonatomic) IBOutlet UIButton *thridBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *btnbgImg;
 
 @end

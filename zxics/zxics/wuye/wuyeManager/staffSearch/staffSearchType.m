@@ -9,6 +9,7 @@
 #import "staffSearchType.h"
 #import "residentManager.h"
 #import "myFloorList.h"
+#import "staffSearchList.h"
 
 @interface staffSearchType ()
 
@@ -120,6 +121,8 @@
         [self.view addSubview:secondLable];
         [self.view addSubview:fristText];
         [self.view addSubview:secondText];
+        [self.view addSubview:firstBtn];
+        [self.view addSubview:secondBtn];
     }
     
 }
@@ -158,6 +161,17 @@
         fid=value;
         secondText.text=key;
     }
+}
+
+-(IBAction)returnToStaffSearch:(id)sender
+{
+    if (![type isEqualToString:@"3"]) {
+        cid=fristText.text;
+        fid=secondText.text;
+    }
+    NSDictionary *searchterm=[NSDictionary dictionaryWithObjectsAndKeys:cid,@"firstvalue",fid,@"secondvalue",thirdText.text,@"thirdvalue", nil];
+    [delegate passDictionaryValue:searchterm key:nil tag:[type integerValue]];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(IBAction)goback:(id)sender

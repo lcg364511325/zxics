@@ -126,6 +126,10 @@
 		2C30163C19C197B0003CDCCF /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C30163919C197B0003CDCCF /* logo120.png */; };
 		2C315AF31AAFCEFE001BBB95 /* myFloorList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C315AF11AAFCEFE001BBB95 /* myFloorList.m */; };
 		2C315AF41AAFCEFE001BBB95 /* myFloorList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C315AF21AAFCEFE001BBB95 /* myFloorList.xib */; };
+		2C315AF91AAFF13E001BBB95 /* repairManagerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C315AF71AAFF13E001BBB95 /* repairManagerList.m */; };
+		2C315AFA1AAFF13E001BBB95 /* repairManagerList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C315AF81AAFF13E001BBB95 /* repairManagerList.xib */; };
+		2C315AFF1AB01A9E001BBB95 /* repairManagerDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C315AFD1AB01A9E001BBB95 /* repairManagerDetail.m */; };
+		2C315B001AB01A9E001BBB95 /* repairManagerDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C315AFE1AB01A9E001BBB95 /* repairManagerDetail.xib */; };
 		2C3AECE619A57C7D00D981C3 /* 0001_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5719A57C7C00D981C3 /* 0001_bg.png */; };
 		2C3AECE719A57C7D00D981C3 /* about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5819A57C7C00D981C3 /* about_us.png */; };
 		2C3AECE819A57C7D00D981C3 /* accountactivity_new_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3AEC5919A57C7C00D981C3 /* accountactivity_new_dark.png */; };
@@ -780,6 +784,12 @@
 		2C315AF01AAFCEFE001BBB95 /* myFloorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myFloorList.h; path = wuye/wuyeManager/floorList/myFloorList.h; sourceTree = "<group>"; };
 		2C315AF11AAFCEFE001BBB95 /* myFloorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myFloorList.m; path = wuye/wuyeManager/floorList/myFloorList.m; sourceTree = "<group>"; };
 		2C315AF21AAFCEFE001BBB95 /* myFloorList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myFloorList.xib; path = wuye/wuyeManager/floorList/myFloorList.xib; sourceTree = "<group>"; };
+		2C315AF61AAFF13E001BBB95 /* repairManagerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairManagerList.h; path = wuye/wuyeManager/repairManager/repairManagerList.h; sourceTree = "<group>"; };
+		2C315AF71AAFF13E001BBB95 /* repairManagerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairManagerList.m; path = wuye/wuyeManager/repairManager/repairManagerList.m; sourceTree = "<group>"; };
+		2C315AF81AAFF13E001BBB95 /* repairManagerList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairManagerList.xib; path = wuye/wuyeManager/repairManager/repairManagerList.xib; sourceTree = "<group>"; };
+		2C315AFC1AB01A9E001BBB95 /* repairManagerDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = repairManagerDetail.h; path = wuye/wuyeManager/repairManager/repairManagerDetail.h; sourceTree = "<group>"; };
+		2C315AFD1AB01A9E001BBB95 /* repairManagerDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = repairManagerDetail.m; path = wuye/wuyeManager/repairManager/repairManagerDetail.m; sourceTree = "<group>"; };
+		2C315AFE1AB01A9E001BBB95 /* repairManagerDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = repairManagerDetail.xib; path = wuye/wuyeManager/repairManager/repairManagerDetail.xib; sourceTree = "<group>"; };
 		2C3AEC5719A57C7C00D981C3 /* 0001_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0001_bg.png; sourceTree = "<group>"; };
 		2C3AEC5819A57C7C00D981C3 /* about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_us.png; sourceTree = "<group>"; };
 		2C3AEC5919A57C7C00D981C3 /* accountactivity_new_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accountactivity_new_dark.png; sourceTree = "<group>"; };
@@ -2169,6 +2179,19 @@
 			name = personfootprintCell;
 			sourceTree = "<group>";
 		};
+		2C315AF51AAFF110001BBB95 /* repairManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C315AF61AAFF13E001BBB95 /* repairManagerList.h */,
+				2C315AF71AAFF13E001BBB95 /* repairManagerList.m */,
+				2C315AF81AAFF13E001BBB95 /* repairManagerList.xib */,
+				2C315AFC1AB01A9E001BBB95 /* repairManagerDetail.h */,
+				2C315AFD1AB01A9E001BBB95 /* repairManagerDetail.m */,
+				2C315AFE1AB01A9E001BBB95 /* repairManagerDetail.xib */,
+			);
+			name = repairManager;
+			sourceTree = "<group>";
+		};
 		2C3AED7619A58BC400D981C3 /* regedit */ = {
 			isa = PBXGroup;
 			children = (
@@ -2335,6 +2358,7 @@
 		2C3D19481AA54CD800BDF4B5 /* wuyeManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C315AF51AAFF110001BBB95 /* repairManager */,
 				2CF1911F1AAED6AE0004D0FE /* staffSearch */,
 				2C1DA8931AAE8D15008B3D6F /* shopMlist */,
 				2C7B55771AAD72B40006A808 /* floorList */,
@@ -4036,6 +4060,7 @@
 				2C3AED6719A57C7D00D981C3 /* t_bg.png in Resources */,
 				2C54048E19932E46003D2BBE /* personLog.xib in Resources */,
 				2C3AED5819A57C7D00D981C3 /* sell.png in Resources */,
+				2C315B001AB01A9E001BBB95 /* repairManagerDetail.xib in Resources */,
 				2C3AED3C19A57C7D00D981C3 /* magnifier_bt.png in Resources */,
 				2C3AED7B19A58C4300D981C3 /* regeditmember.xib in Resources */,
 				2C3AED0D19A57C7D00D981C3 /* button.9.png in Resources */,
@@ -4138,6 +4163,7 @@
 				2C3AED4E19A57C7D00D981C3 /* red_nav.png in Resources */,
 				2C1FE6631995C8AC008DBB58 /* repairlist.xib in Resources */,
 				2C3AED6919A57C7D00D981C3 /* t_mall.png in Resources */,
+				2C315AFA1AAFF13E001BBB95 /* repairManagerList.xib in Resources */,
 				7CE6319B198C7C2A00730C64 /* README.md in Resources */,
 				2C1FE6691995C8AC008DBB58 /* specialPeopleIntroduce.xib in Resources */,
 				2C3AED2C19A57C7D00D981C3 /* ic_pulltorefresh_arrow_up.png in Resources */,
@@ -4248,6 +4274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CE63190198C7C2A00730C64 /* ASINSStringAdditions.m in Sources */,
+				2C315AFF1AB01A9E001BBB95 /* repairManagerDetail.m in Sources */,
 				7CE6318F198C7C2A00730C64 /* ASINetworkQueue.m in Sources */,
 				7CE6319A198C7C2A00730C64 /* JSONKit.m in Sources */,
 				2C435B2319BAAAE600364164 /* succouradd.m in Sources */,
@@ -4415,6 +4442,7 @@
 				2C5404CE199377F2003D2BBE /* consumelistCell.m in Sources */,
 				2C493C7719B815AE001C4DD5 /* UIImage+WebP.m in Sources */,
 				2C435B2F19BABB2100364164 /* EAIntroView.m in Sources */,
+				2C315AF91AAFF13E001BBB95 /* repairManagerList.m in Sources */,
 				2CF191251AAED6DE0004D0FE /* staffSearchList.m in Sources */,
 				2C493C6D19B815AE001C4DD5 /* SDImageCache.m in Sources */,
 				2C4AD4DC19B5B6E400C28F06 /* AlixPayResult.m in Sources */,

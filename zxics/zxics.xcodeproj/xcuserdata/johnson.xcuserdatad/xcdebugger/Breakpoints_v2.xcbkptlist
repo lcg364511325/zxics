@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zxics/wuye/wuyeManager/conservationPeople/editConservationPeople.m"
-            timestampString = "447644133.249476"
+            filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
+            timestampString = "447755422.496298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-saveEdit:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-loadMyView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zxics/frontindex/repair/repairlist/repairlist.m"
-            timestampString = "447729834.602374"
+            filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
+            timestampString = "447758092.501636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-changestate:"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-loadMyView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
+            timestampString = "447758489.1155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "-loadMyView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

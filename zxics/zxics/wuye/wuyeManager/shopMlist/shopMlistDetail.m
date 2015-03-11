@@ -73,7 +73,7 @@
 
 -(void)loaddata
 {
-    Commons *_Commons=[[Commons alloc]init];
+        Commons *_Commons=[[Commons alloc]init];
         //商铺详情
         
         

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWPhotoBrowser.h"
+#import "CustomIOS7AlertView.h"
 
-@interface repairManagerDetail : UIViewController
+@interface repairManagerDetail : UIViewController<MWPhotoBrowserDelegate,CustomIOS7AlertViewDelegate,UITextFieldDelegate>
 {
     UILabel *firstLable;
     UILabel *secondLable;
@@ -18,6 +20,12 @@
     UITextField *secondText;
     UITextField *thirdText;
     UITextField *fourthText;
+    NSArray *imglist;
+    NSString *rstatus;
+    NSMutableDictionary * rdtetailnow;
+    UIDatePicker *datePickerView;
+    CGRect oldframe;
+    CGRect frame;
 }
 
 @property(retain , nonatomic)NSDictionary * rdetail;
@@ -25,5 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *imgSview;
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *suSview;
+
+@property (nonatomic, strong) NSMutableArray *photos;
 
 @end

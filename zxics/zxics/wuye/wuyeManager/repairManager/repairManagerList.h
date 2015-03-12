@@ -15,6 +15,7 @@
     NSInteger page;
     NSString *cid;
     NSString *type;
+    NSInteger isfirst;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *UINavigationBar;

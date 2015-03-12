@@ -26,6 +26,18 @@
 @synthesize thirdBtn;
 @synthesize fourthBtn;
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (isfirst==1) {
+        isfirst=0;
+    }else{
+        [list removeAllObjects];
+        page=0;
+        [self loaddata];
+        [suTView reloadData];
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,6 +54,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     [self.UINavigationBar setBackgroundImage:[UIImage imageNamed:@"logo_bg"] forBarMetrics:UIBarMetricsDefault];
     
+    isfirst=1;
     type=@"0";
     page=0;
     list=[[NSMutableArray alloc]initWithCapacity:5];

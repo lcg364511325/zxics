@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
-            timestampString = "447755422.496298"
+            timestampString = "447842364.868208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-loadMyView"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,28 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
-            timestampString = "447758092.501636"
+            timestampString = "447842931.258259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-loadMyView"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zxics/wuye/wuyeManager/repairManager/repairManagerDetail.m"
-            timestampString = "447758489.1155"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "-loadMyView"
+            startingLineNumber = "627"
+            endingLineNumber = "627"
+            landmarkName = "-submitData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

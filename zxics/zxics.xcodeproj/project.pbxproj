@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C030AD71AB295F3005D348D /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AC81AB295F3005D348D /* LSCollectionViewHelper.m */; };
+		2C030AD81AB295F3005D348D /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030ACA1AB295F3005D348D /* LSCollectionViewLayoutHelper.m */; };
+		2C030AD91AB295F3005D348D /* UICollectionView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030ACC1AB295F3005D348D /* UICollectionView+Draggable.m */; };
+		2C030ADA1AB295F3005D348D /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AD01AB295F3005D348D /* MTCardLayout.m */; };
+		2C030ADB1AB295F3005D348D /* MTCollectionViewCardLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AD21AB295F3005D348D /* MTCollectionViewCardLayoutHelper.m */; };
+		2C030ADC1AB295F3005D348D /* MTDraggableCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AD41AB295F3005D348D /* MTDraggableCardLayout.m */; };
+		2C030ADD1AB295F3005D348D /* UICollectionView+CardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AD61AB295F3005D348D /* UICollectionView+CardLayout.m */; };
+		2C030AE21AB2BEF6005D348D /* chargeQueryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AE01AB2BEF6005D348D /* chargeQueryDetail.m */; };
+		2C030AE31AB2BEF6005D348D /* chargeQueryDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C030AE11AB2BEF6005D348D /* chargeQueryDetail.xib */; };
+		2C030AE71AB2C581005D348D /* chargeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C030AE61AB2C581005D348D /* chargeCell.m */; };
+		2C030AE91AB2C596005D348D /* chargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C030AE81AB2C596005D348D /* chargeCell.xib */; };
 		2C12854B19F4E9B60085C3D6 /* t_quit_m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C12854A19F4E9B60085C3D6 /* t_quit_m.png */; };
 		2C189AD91A0CB6B800431BAC /* addproWanted.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C189AD71A0CB6B800431BAC /* addproWanted.m */; };
 		2C189ADA1A0CB6B800431BAC /* addproWanted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C189AD81A0CB6B800431BAC /* addproWanted.xib */; };
@@ -18,6 +29,8 @@
 		2C1DA8981AAE8D37008B3D6F /* shopMlist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DA8961AAE8D37008B3D6F /* shopMlist.xib */; };
 		2C1DA89C1AAE9154008B3D6F /* shopMlistDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA89A1AAE9154008B3D6F /* shopMlistDetail.m */; };
 		2C1DA89D1AAE9154008B3D6F /* shopMlistDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */; };
+		2C1DF8B11AB2735A00BA58B4 /* chargeQPersonList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DF8AF1AB2735A00BA58B4 /* chargeQPersonList.m */; };
+		2C1DF8B21AB2735A00BA58B4 /* chargeQPersonList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DF8B01AB2735A00BA58B4 /* chargeQPersonList.xib */; };
 		2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E81995ACA7008DBB58 /* communitylist.m */; };
 		2C1FE5EB1995ACA7008DBB58 /* communitylist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FE5E91995ACA7008DBB58 /* communitylist.xib */; };
 		2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FE5EE1995AEB1008DBB58 /* communityCell.m */; };
@@ -607,6 +620,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C030AC71AB295F3005D348D /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewHelper.h; sourceTree = "<group>"; };
+		2C030AC81AB295F3005D348D /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewHelper.m; sourceTree = "<group>"; };
+		2C030AC91AB295F3005D348D /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
+		2C030ACA1AB295F3005D348D /* LSCollectionViewLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewLayoutHelper.m; sourceTree = "<group>"; };
+		2C030ACB1AB295F3005D348D /* UICollectionView+Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Draggable.h"; sourceTree = "<group>"; };
+		2C030ACC1AB295F3005D348D /* UICollectionView+Draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Draggable.m"; sourceTree = "<group>"; };
+		2C030ACD1AB295F3005D348D /* UICollectionViewDataSource_Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDataSource_Draggable.h; sourceTree = "<group>"; };
+		2C030ACE1AB295F3005D348D /* UICollectionViewLayout_Warpable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLayout_Warpable.h; sourceTree = "<group>"; };
+		2C030ACF1AB295F3005D348D /* MTCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCardLayout.h; sourceTree = "<group>"; };
+		2C030AD01AB295F3005D348D /* MTCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCardLayout.m; sourceTree = "<group>"; };
+		2C030AD11AB295F3005D348D /* MTCollectionViewCardLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectionViewCardLayoutHelper.h; sourceTree = "<group>"; };
+		2C030AD21AB295F3005D348D /* MTCollectionViewCardLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectionViewCardLayoutHelper.m; sourceTree = "<group>"; };
+		2C030AD31AB295F3005D348D /* MTDraggableCardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDraggableCardLayout.h; sourceTree = "<group>"; };
+		2C030AD41AB295F3005D348D /* MTDraggableCardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDraggableCardLayout.m; sourceTree = "<group>"; };
+		2C030AD51AB295F3005D348D /* UICollectionView+CardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+CardLayout.h"; sourceTree = "<group>"; };
+		2C030AD61AB295F3005D348D /* UICollectionView+CardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+CardLayout.m"; sourceTree = "<group>"; };
+		2C030ADF1AB2BEF6005D348D /* chargeQueryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chargeQueryDetail.h; path = wuye/wuyeManager/chargeQuery/chargeQueryDetail.h; sourceTree = "<group>"; };
+		2C030AE01AB2BEF6005D348D /* chargeQueryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chargeQueryDetail.m; path = wuye/wuyeManager/chargeQuery/chargeQueryDetail.m; sourceTree = "<group>"; };
+		2C030AE11AB2BEF6005D348D /* chargeQueryDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = chargeQueryDetail.xib; path = wuye/wuyeManager/chargeQuery/chargeQueryDetail.xib; sourceTree = "<group>"; };
+		2C030AE51AB2C581005D348D /* chargeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chargeCell.h; path = Cell/chargeCell/chargeCell.h; sourceTree = "<group>"; };
+		2C030AE61AB2C581005D348D /* chargeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chargeCell.m; path = Cell/chargeCell/chargeCell.m; sourceTree = "<group>"; };
+		2C030AE81AB2C596005D348D /* chargeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = chargeCell.xib; path = Cell/chargeCell/chargeCell.xib; sourceTree = "<group>"; };
 		2C12854A19F4E9B60085C3D6 /* t_quit_m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_quit_m.png; sourceTree = "<group>"; };
 		2C189AD61A0CB6B800431BAC /* addproWanted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addproWanted.h; path = frontindex/prowanted/addproWanted/addproWanted.h; sourceTree = "<group>"; };
 		2C189AD71A0CB6B800431BAC /* addproWanted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addproWanted.m; path = frontindex/prowanted/addproWanted/addproWanted.m; sourceTree = "<group>"; };
@@ -623,6 +658,9 @@
 		2C1DA8991AAE9154008B3D6F /* shopMlistDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopMlistDetail.h; path = wuye/wuyeManager/shopMlist/shopMlistDetail.h; sourceTree = "<group>"; };
 		2C1DA89A1AAE9154008B3D6F /* shopMlistDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopMlistDetail.m; path = wuye/wuyeManager/shopMlist/shopMlistDetail.m; sourceTree = "<group>"; };
 		2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = shopMlistDetail.xib; path = wuye/wuyeManager/shopMlist/shopMlistDetail.xib; sourceTree = "<group>"; };
+		2C1DF8AE1AB2735A00BA58B4 /* chargeQPersonList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chargeQPersonList.h; path = wuye/wuyeManager/chargeQuery/chargeQPersonList.h; sourceTree = "<group>"; };
+		2C1DF8AF1AB2735A00BA58B4 /* chargeQPersonList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = chargeQPersonList.m; path = wuye/wuyeManager/chargeQuery/chargeQPersonList.m; sourceTree = "<group>"; };
+		2C1DF8B01AB2735A00BA58B4 /* chargeQPersonList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = chargeQPersonList.xib; path = wuye/wuyeManager/chargeQuery/chargeQPersonList.xib; sourceTree = "<group>"; };
 		2C1FE5E71995ACA7008DBB58 /* communitylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communitylist.h; path = personManager/community/communitylist/communitylist.h; sourceTree = "<group>"; };
 		2C1FE5E81995ACA7008DBB58 /* communitylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = communitylist.m; path = personManager/community/communitylist/communitylist.m; sourceTree = "<group>"; };
 		2C1FE5E91995ACA7008DBB58 /* communitylist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = communitylist.xib; path = personManager/community/communitylist/communitylist.xib; sourceTree = "<group>"; };
@@ -1467,6 +1505,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C030AC41AB295F3005D348D /* MTCardLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2C030AC51AB295F3005D348D /* DraggableCollectionView */,
+				2C030ACF1AB295F3005D348D /* MTCardLayout.h */,
+				2C030AD01AB295F3005D348D /* MTCardLayout.m */,
+				2C030AD11AB295F3005D348D /* MTCollectionViewCardLayoutHelper.h */,
+				2C030AD21AB295F3005D348D /* MTCollectionViewCardLayoutHelper.m */,
+				2C030AD31AB295F3005D348D /* MTDraggableCardLayout.h */,
+				2C030AD41AB295F3005D348D /* MTDraggableCardLayout.m */,
+				2C030AD51AB295F3005D348D /* UICollectionView+CardLayout.h */,
+				2C030AD61AB295F3005D348D /* UICollectionView+CardLayout.m */,
+			);
+			path = MTCardLayout;
+			sourceTree = "<group>";
+		};
+		2C030AC51AB295F3005D348D /* DraggableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2C030AC61AB295F3005D348D /* Helpers */,
+				2C030ACB1AB295F3005D348D /* UICollectionView+Draggable.h */,
+				2C030ACC1AB295F3005D348D /* UICollectionView+Draggable.m */,
+				2C030ACD1AB295F3005D348D /* UICollectionViewDataSource_Draggable.h */,
+				2C030ACE1AB295F3005D348D /* UICollectionViewLayout_Warpable.h */,
+			);
+			path = DraggableCollectionView;
+			sourceTree = "<group>";
+		};
+		2C030AC61AB295F3005D348D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C030AC71AB295F3005D348D /* LSCollectionViewHelper.h */,
+				2C030AC81AB295F3005D348D /* LSCollectionViewHelper.m */,
+				2C030AC91AB295F3005D348D /* LSCollectionViewLayoutHelper.h */,
+				2C030ACA1AB295F3005D348D /* LSCollectionViewLayoutHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C030AE41AB2C55B005D348D /* chargeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C030AE51AB2C581005D348D /* chargeCell.h */,
+				2C030AE61AB2C581005D348D /* chargeCell.m */,
+				2C030AE81AB2C596005D348D /* chargeCell.xib */,
+			);
+			name = chargeCell;
+			sourceTree = "<group>";
+		};
 		2C189AD41A0CB66E00431BAC /* addproWanted */ = {
 			isa = PBXGroup;
 			children = (
@@ -1498,6 +1585,19 @@
 				2C1DA89B1AAE9154008B3D6F /* shopMlistDetail.xib */,
 			);
 			name = shopMlist;
+			sourceTree = "<group>";
+		};
+		2C1DF8AC1AB270F400BA58B4 /* chargeQuery */ = {
+			isa = PBXGroup;
+			children = (
+				2C1DF8AE1AB2735A00BA58B4 /* chargeQPersonList.h */,
+				2C1DF8AF1AB2735A00BA58B4 /* chargeQPersonList.m */,
+				2C1DF8B01AB2735A00BA58B4 /* chargeQPersonList.xib */,
+				2C030ADF1AB2BEF6005D348D /* chargeQueryDetail.h */,
+				2C030AE01AB2BEF6005D348D /* chargeQueryDetail.m */,
+				2C030AE11AB2BEF6005D348D /* chargeQueryDetail.xib */,
+			);
+			name = chargeQuery;
 			sourceTree = "<group>";
 		};
 		2C1FE5E51995AC75008DBB58 /* community */ = {
@@ -2358,6 +2458,7 @@
 		2C3D19481AA54CD800BDF4B5 /* wuyeManager */ = {
 			isa = PBXGroup;
 			children = (
+				2C1DF8AC1AB270F400BA58B4 /* chargeQuery */,
 				2C315AF51AAFF110001BBB95 /* repairManager */,
 				2CF1911F1AAED6AE0004D0FE /* staffSearch */,
 				2C1DA8931AAE8D15008B3D6F /* shopMlist */,
@@ -2530,6 +2631,7 @@
 		2C42F688198F79B4004F2A38 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2C030AE41AB2C55B005D348D /* chargeCell */,
 				2CF191271AAED83C0004D0FE /* staffSearchCell */,
 				2C7B55881AAD95030006A808 /* blockcodeCell */,
 				2C424BAB1AA6F3020000AA04 /* threeLineTwoBtnCell */,
@@ -3518,6 +3620,7 @@
 		7CE63158198C7C2900730C64 /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				2C030AC41AB295F3005D348D /* MTCardLayout */,
 				2C4991511AA1AF9800A16303 /* UIViewPassValueDelegate */,
 				2C3C767C19CFB20000B94DD7 /* tabbar */,
 				2C435B2919BABB2100364164 /* EAIntroView */,
@@ -3978,6 +4081,7 @@
 				2C41DEA019B9495D00623483 /* myelectricCell.xib in Resources */,
 				2C1FE6551995C8AC008DBB58 /* complainlist.xib in Resources */,
 				2C3AED4419A57C7D00D981C3 /* nav_bg.png in Resources */,
+				2C1DF8B21AB2735A00BA58B4 /* chargeQPersonList.xib in Resources */,
 				7CE6313C198C7A8200730C64 /* Images.xcassets in Resources */,
 				2C2811211998686E0072D08C /* MerchantsDetail.xib in Resources */,
 				2C2810F5199851F60072D08C /* downloadCell.xib in Resources */,
@@ -4149,6 +4253,7 @@
 				2CF191261AAED6DE0004D0FE /* staffSearchList.xib in Resources */,
 				2C3AED3A19A57C7D00D981C3 /* logo.png in Resources */,
 				2C424BAA1AA6DE9B0000AA04 /* threeLineBtnCell.xib in Resources */,
+				2C030AE31AB2BEF6005D348D /* chargeQueryDetail.xib in Resources */,
 				2C3AECF019A57C7D00D981C3 /* back_textview_default.9.png in Resources */,
 				2C3AED1E19A57C7D00D981C3 /* good.png in Resources */,
 				2CFEAA54199AF5CC00FCB5C1 /* filecenterlist.xib in Resources */,
@@ -4167,6 +4272,7 @@
 				7CE6319B198C7C2A00730C64 /* README.md in Resources */,
 				2C1FE6691995C8AC008DBB58 /* specialPeopleIntroduce.xib in Resources */,
 				2C3AED2C19A57C7D00D981C3 /* ic_pulltorefresh_arrow_up.png in Resources */,
+				2C030AE91AB2C596005D348D /* chargeCell.xib in Resources */,
 				2C3D19831AA5AADB00BDF4B5 /* residentDetail.xib in Resources */,
 				2C3AED5319A57C7D00D981C3 /* repair.png in Resources */,
 				2C59A31E19AECCFE0064CD04 /* goodsDetail.xib in Resources */,
@@ -4297,6 +4403,7 @@
 				2C493C5019B815AE001C4DD5 /* MWCaptionView.m in Sources */,
 				2CE4572119B9B5DF001AEA90 /* succourDetail.m in Sources */,
 				2C493C7219B815AE001C4DD5 /* SDWebImageManager.m in Sources */,
+				2C030AD81AB295F3005D348D /* LSCollectionViewLayoutHelper.m in Sources */,
 				2C493C7419B815AE001C4DD5 /* UIButton+WebCache.m in Sources */,
 				2C4AD4DE19B5B6E400C28F06 /* NSString+SBJSON.m in Sources */,
 				2C493C6C19B815AE001C4DD5 /* NSData+ImageContentType.m in Sources */,
@@ -4337,6 +4444,7 @@
 				2C42F67C198F785B004F2A38 /* MJRefreshConst.m in Sources */,
 				2C1FE6681995C8AC008DBB58 /* specialPeopleIntroduce.m in Sources */,
 				2C3D19581AA54FBC00BDF4B5 /* wuyeIndex.m in Sources */,
+				2C1DF8B11AB2735A00BA58B4 /* chargeQPersonList.m in Sources */,
 				2C493C5D19B815AE001C4DD5 /* PSTCollectionViewCell.m in Sources */,
 				2C4AD4DD19B5B6E400C28F06 /* NSObject+SBJSON.m in Sources */,
 				7CE63191198C7C2A00730C64 /* NSHTTPCookieAdditions.m in Sources */,
@@ -4360,7 +4468,9 @@
 				2C3D197C1AA5941E00BDF4B5 /* residentInfo.m in Sources */,
 				2C5404B519936385003D2BBE /* arrearagecheck.m in Sources */,
 				2C54EC2619AD7004004D580C /* successorder.m in Sources */,
+				2C030AE71AB2C581005D348D /* chargeCell.m in Sources */,
 				2C493C6319B815AE001C4DD5 /* PSTCollectionViewUpdateItem.m in Sources */,
+				2C030AD71AB295F3005D348D /* LSCollectionViewHelper.m in Sources */,
 				7CE6318B198C7C2A00730C64 /* ASIAuthenticationDialog.m in Sources */,
 				2C5A22E719A472960022B4AE /* questionsDetail.m in Sources */,
 				2C493C7119B815AE001C4DD5 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -4386,6 +4496,7 @@
 				2C3D19661AA559B500BDF4B5 /* residentManager.m in Sources */,
 				2C493C6219B815AE001C4DD5 /* PSTCollectionViewLayout.m in Sources */,
 				2C493C5619B815AE001C4DD5 /* MWTapDetectingView.m in Sources */,
+				2C030AD91AB295F3005D348D /* UICollectionView+Draggable.m in Sources */,
 				2C42F67F198F785B004F2A38 /* UIScrollView+Extension.m in Sources */,
 				2C3C05F6199EFBAB00369A63 /* surveyDetail.m in Sources */,
 				7CE63195198C7C2A00730C64 /* Tool.m in Sources */,
@@ -4395,6 +4506,7 @@
 				2C3BC5FF1AA6B95F00386396 /* wuyeInfo.m in Sources */,
 				2C282F141990CABC0061F987 /* surveylistCell.m in Sources */,
 				2C2810FB1998547C0072D08C /* consultlist.m in Sources */,
+				2C030ADD1AB295F3005D348D /* UICollectionView+CardLayout.m in Sources */,
 				2C1DA8971AAE8D37008B3D6F /* shopMlist.m in Sources */,
 				2C1FE5EA1995ACA7008DBB58 /* communitylist.m in Sources */,
 				2C493C6419B815AE001C4DD5 /* PSTGridLayoutInfo.m in Sources */,
@@ -4406,6 +4518,7 @@
 				2C57572A1994708500858A7F /* myorderDetail.m in Sources */,
 				2C1FE5F01995AEB1008DBB58 /* communityCell.m in Sources */,
 				2C57575E1994D3CD00858A7F /* newDeliveryaddress.m in Sources */,
+				2C030ADB1AB295F3005D348D /* MTCollectionViewCardLayoutHelper.m in Sources */,
 				2C2806971990AD69007838A6 /* complainCell.m in Sources */,
 				2CF1912B1AAED86A0004D0FE /* staffSearchCell.m in Sources */,
 				2C1FE6581995C8AC008DBB58 /* cplist.m in Sources */,
@@ -4483,6 +4596,7 @@
 				7CE6318D198C7C2A00730C64 /* ASIHTTPRequest.m in Sources */,
 				2C493C5F19B815AE001C4DD5 /* PSTCollectionViewData.m in Sources */,
 				2C42F67E198F785B004F2A38 /* MJRefreshHeaderView.m in Sources */,
+				2C030AE21AB2BEF6005D348D /* chargeQueryDetail.m in Sources */,
 				2CA029D319BEFCF900F6E2B2 /* nameforgoods.m in Sources */,
 				2C3C768119CFB20000B94DD7 /* XNTabBar.m in Sources */,
 				2C59A32A19AF229B0064CD04 /* addinfo.m in Sources */,
@@ -4491,9 +4605,11 @@
 				7CE6318E198C7C2A00730C64 /* ASIInputStream.m in Sources */,
 				2C59A31D19AECCFE0064CD04 /* goodsDetail.m in Sources */,
 				2C5404DA19937CA0003D2BBE /* balancelist.m in Sources */,
+				2C030ADC1AB295F3005D348D /* MTDraggableCardLayout.m in Sources */,
 				2CA029D919BF044D00F6E2B2 /* classforgoods.m in Sources */,
 				2C28112C19986C700072D08C /* questionsCell.m in Sources */,
 				2C2805921AA7FB460029EFD5 /* wuyeNoticeDetail.m in Sources */,
+				2C030ADA1AB295F3005D348D /* MTCardLayout.m in Sources */,
 				2C493C5519B815AE001C4DD5 /* MWTapDetectingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

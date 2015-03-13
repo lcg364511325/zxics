@@ -100,27 +100,6 @@
     [self.goodscollectionview reloadData];
 }
 
-//个人管理页面跳转
--(IBAction)personindex:(id)sender
-{
-    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
-    if (myDelegate.entityl) {
-        personIndex *_personIndex=[[personIndex alloc]init];
-        [self.navigationController pushViewController:_personIndex animated:NO];
-    }else{
-        NSString *rowString =@"请先登陆！";
-        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alter show];
-    }
-}
-
-//服务指南页面跳转
--(IBAction)serviceIndex:(id)sender
-{
-    serviceIndex *_serviceIndex=[[serviceIndex alloc]init];
-    [self.navigationController pushViewController:_serviceIndex animated:NO];
-}
-
 //搜索结果数目
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

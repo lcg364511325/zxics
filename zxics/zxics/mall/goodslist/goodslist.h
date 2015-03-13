@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTCardLayout.h"
+
 
 @interface goodslist : UIViewController
 {

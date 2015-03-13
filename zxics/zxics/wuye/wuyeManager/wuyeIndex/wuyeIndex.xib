@@ -89,6 +89,9 @@
                     <state key="normal" title="收费查询" image="notice.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="chargeQPersonList:" destination="-1" eventType="touchDown" id="P4z-XC-kZS"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="收费查询" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzI-IB-Bbh">
                     <rect key="frame" x="24" y="318" width="42" height="10"/>
